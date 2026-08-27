@@ -1,0 +1,274 @@
+{
+  "date": "2026-08-26",
+  "label": "Wednesday, 26 August 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "TechCrunch",
+        "date": "24 Aug 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
+        "hed": "OpenAI is building AI agents for everything. Will everyone use them?",
+        "fact": "TechCrunch reports that 98% of OpenAI's own employees use Codex while only 17% of organizational subscribers and under 1% of individual subscribers do, as the company pushes agentic tools beyond engineers into general white-collar work via ChatGPT Work at $20/month. The account of internal debates is not attributed to named sources.",
+        "why": "This is the clearest public evidence yet that the bottleneck for agentic AI is interface and permission design, not model capability. The gap between 98% and 1% is a UX gap, and it is the gap product designers are being hired to close.",
+        "hook": "98% of OpenAI uses Codex. Under 1% of you do.",
+        "teach": "Audit one agentic flow in your product for its permission moment, the point where the agent asks to act. Write down what the user must understand to say yes, and how they would undo it. If either answer takes more than a sentence, that is your redesign brief.",
+        "signal": "The cliff between org seats at 17% and individual seats under 1% suggests agent adoption is carried by mandate and IT rollout rather than desire. Most of the agent engagement metrics your team celebrates may be measuring procurement, not product-market fit."
+      },
+      {
+        "pub": "Smashing Magazine",
+        "date": "13 Aug 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.smashingmagazine.com/2026/08/eu-guidelines-ai-labelling/",
+        "hed": "New EU guidelines for AI labelling",
+        "fact": "The EU AI Act's Article 50(4) transparency obligations took effect on 2 August 2026, requiring clear, accessible AI disclosure for deepfakes, chatbot interactions, unreviewed AI-written text on matters of public interest, and emotion-recognition tools, for any company serving EU citizens worldwide. Per the article, the Commission holds that an icon alone is not sufficient. This is Smashing's reading of the guidelines, not the legal text.",
+        "why": "This is the first regulation that directly invalidates a specific, ubiquitous UI convention currently sitting in most design systems as the AI affordance.",
+        "hook": "Your sparkle icon is not a compliance strategy.",
+        "teach": "Search your design system for the sparkle or AI icon and check every instance: is there adjacent plain text saying AI-generated, does it survive screen-reader output, does it persist through screenshot, share and download, and is it visible without hover? An icon-only AI affordance is now a compliance defect, not a style preference.",
+        "signal": "The named-human-reviewer exemption is the detail most teams will miss. Substantive editorial review with named accountability removes the disclosure requirement, while grammar and formatting passes do not count. That turns the question of who reviewed this, and whether their name is attached, into a schema field and a reviewer-attribution UI nobody has budgeted for."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Aug 2026",
+        "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/",
+        "hed": "Claude Cowork finally remembers what you told the app in chat",
+        "fact": "Anthropic unified Claude's memory across chat and Cowork so topics are added during conversation rather than at summary time, enabled by default on Free, Pro and Max across web, desktop and mobile, with sensitive categories excluded by default and government IDs and criminal history never stored. Safeguards are as characterized by Anthropic and relayed by TechCrunch.",
+        "why": "It is a shipped, inspectable reference implementation of the hardest pattern in agentic UX, persistent memory with a privacy default, and the category-exclusion list is effectively a published design spec you can borrow.",
+        "hook": "Memory is now a default. So is the opt-out.",
+        "teach": "If your product retains user context, write an explicit exclusion list before you write the retention logic. Name the categories you will never store and the ones users must opt into. The split between excluded-by-default and never-stored is a usable two-tier model.",
+        "signal": "The shift from summary-time to conversation-time capture is the real change. Memory formed mid-conversation is memory the user never gets a review moment for, so the burden moves from a consent gate to a legible, editable memory surface after the fact. Products that copy the capture behaviour without building that inspection UI import the liability without the mitigation."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "14 Aug 2026",
+        "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
+        "hed": "Google will now allow users to remove visible watermarks from its AI generations",
+        "fact": "Google is making visible watermarks optional on AI-generated images, video and music from its Nano Banana, Omni and Lyria models across Gemini, Flow and soon Search, while invisible SynthID watermarks and C2PA metadata remain active regardless. Google is also open-sourcing a library called Credentio for local content-credential validation. Rollout was described as beginning in the coming days.",
+        "why": "Visible provenance is moving from a platform default to a product decision, which means the question of whether a user can see that something was AI-made now lands on your team's roadmap rather than Google's.",
+        "hook": "Provenance just moved from the pixel to the metadata.",
+        "teach": "If your product ingests or displays AI-generated media, stop relying on visible watermarks to identify it and start reading C2PA metadata. Credentio gives you a local validation path, so a content-credentials affordance is now buildable rather than aspirational.",
+        "signal": "Invisible-only provenance quietly relocates disclosure from the viewer to the platform. SynthID protects detection systems, not the person looking at the image. Set against the EU rules above, that leaves a gap only product design can fill: the metadata exists, but somebody has to decide it renders."
+      },
+      {
+        "pub": "Adobe",
+        "date": "20 Aug 2026",
+        "url": "https://blog.adobe.com/en/publish/2026/08/20/adobe-firefly-expands-its-creative-ai-studio-generate-music-speech-and-sound-effects-in-one-place",
+        "hed": "Adobe Firefly expands its creative AI studio to music, speech and sound effects",
+        "fact": "Adobe moved Generate Music, Generate Speech and Generate Sound Effects to general availability in Firefly with commercial licensing, added a free tier of the Firefly AI Assistant with daily generation limits plus Create Storyboard and Create Brand Kit skills, and added Google's Gemini Omni Flash to its third-party model roster alongside Kling, Luma, OpenAI and Runway. First-party announcement with no independent testing or benchmarks.",
+        "why": "Commercially licensed generated audio removes the clearance blocker that kept sound out of most prototypes, and Create Brand Kit signals Adobe treating brand consistency rather than raw generation as the differentiator.",
+        "hook": "Prototype audio just cleared legal.",
+        "teach": "Add sound to your next prototype instead of deferring it. Licensed generated sound effects and voiceover let you test whether an interaction actually needs audio feedback before you brief a sound designer, rather than after.",
+        "signal": "Firefly is quietly becoming a model router rather than a model. Putting Gemini Omni Flash next to OpenAI and Runway is Adobe betting its moat is brand governance and licensing indemnity, not generation quality. The transferable lesson: inside an aggregator, the design system is the product surface."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "Nielsen Norman Group",
+        "date": "21 Aug 2026",
+        "flag": "Top story",
+        "url": "https://www.nngroup.com/articles/ai-generated-images/",
+        "hed": "AI-generated images can perform as well as stock photography",
+        "fact": "In a study of 77 U.S. adults rating six otherwise-identical webpage versions after 10-second exposures, AI-generated hero images scored equal to or slightly above real stock photos on trust and professionalism, both by 0.2 points on a 7-point scale, and 0.4 points higher on authenticity, the only difference reaching statistical significance. Participants who suspected an image was AI rated the site less favourably regardless of quality.",
+        "why": "Hero imagery is one of the most-argued, most-expensive decisions in a marketing or onboarding flow, and this is the first well-controlled evidence that the assumption about AI images destroying trust does not hold when users cannot tell.",
+        "hook": "Users don't punish AI images. They punish images that look AI.",
+        "teach": "Stop treating whether it is AI as the screening question in image review and start treating whether it reads as AI as the one. Add a detectability check to asset QA covering hands, teeth, symmetrical crowds, plastic-looking skin and impossible reflections, and kill assets that trip it regardless of provenance.",
+        "signal": "The real finding is a penalty for suspicion, not for synthesis, which makes this a detection-threshold result rather than a quality result. The advantage decays as public AI literacy rises, so an image library approved on this data needs re-testing each quarter rather than one-time sign-off. Anyone planning a 2027 brand system on it is extrapolating from a moving baseline."
+      },
+      {
+        "pub": "Nielsen Norman Group",
+        "date": "14 Aug 2026",
+        "url": "https://www.nngroup.com/articles/eval-ai-output/",
+        "hed": "One AI output is an example, not an evaluation",
+        "fact": "Because language models are nondeterministic, evaluating an AI feature requires multiple representative inputs run repeatedly, then reporting averages with confidence intervals while distinguishing test-input variability from run-to-run variability, and documenting model version, prompts, settings and evaluation date. The worked figures in the article are illustrative, not a recommended standard.",
+        "why": "Designers are increasingly the people demoing AI features to stakeholders, and the default demo of a single good output is methodologically worthless. This gives you a defensible research frame for work currently run on vibes.",
+        "hook": "Your AI demo is an anecdote with a screenshot.",
+        "teach": "Build a fixed set of about ten representative user inputs, run each five times, and bring the success rate with its spread instead of a hand-picked transcript. Log the model version and date alongside the screenshots, because an eval without a version stamp is unreproducible a fortnight later.",
+        "signal": "Two systems can post the same success rate with completely different failure shapes, one failing a single question type consistently and another failing unpredictably across all of them, and those demand opposite design responses: a routing guardrail for the first, visible uncertainty and an escape hatch for the second. That makes the eval an input to design, not a QA gate after it."
+      },
+      {
+        "pub": "Chrome for Developers",
+        "date": "25 Aug 2026",
+        "url": "https://developer.chrome.com/blog/new-in-chrome-152/",
+        "hed": "New in Chrome 152",
+        "fact": "Chrome 152 extends the CSSPseudoElement interface to ::backdrop, ::scroll-marker and ::view-transition, adds a CPU Performance API letting sites read a device's CPU performance tier with a user override in browser settings, and adds Connection-Allowlist, an HTTP response header restricting which URL patterns a page may connect to. The post does not state Firefox or Safari support.",
+        "why": "Scriptable ::view-transition makes view transitions interceptable and geometry-aware mid-flight rather than fire-and-forget, and a readable CPU tier means motion and visual richness can be specified as tiers instead of a single compromise.",
+        "hook": "Motion specs can now branch on the device, not the guess.",
+        "teach": "Write your next motion spec in two tiers, a full version and a reduced-cost version, and hand engineering the CPU-tier signal as the switch, keeping prefers-reduced-motion as a separate and non-negotiable override. If you use scroll-marker carousels, scriptable ::scroll-marker finally lets you instrument which markers people actually tap.",
+        "signal": "Device-performance tier is a new axis of design variation that no design system currently models. Teams already carry light and dark, density, and reduced-motion; this adds a fourth that is invisible in Figma and untestable on a designer's laptop, which is exactly the condition under which the low tier silently rots."
+      },
+      {
+        "pub": "W3C",
+        "date": "11 Aug 2026",
+        "url": "https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/",
+        "hed": "Updated W3C Recommendation: ARIA in HTML",
+        "fact": "W3C published an updated Recommendation for ARIA in HTML, the specification defining author conformance requirements for applying WAI-ARIA 1.2 and Digital Publishing WAI-ARIA Module 1.1 attributes to HTML elements, aimed principally at conformance-checking tools. The announcement does not itemise what changed from the previous version.",
+        "why": "This is the document your automated accessibility linter enforces. When it updates, the set of ARIA usages your CI flags changes, and that lands on design system components before it lands on anyone's product backlog.",
+        "hook": "The spec your a11y linter obeys just moved.",
+        "teach": "Re-run your accessibility linter across your component library, not just your app, and specifically re-check custom widgets where ARIA roles were layered onto native HTML elements, because that overlay is what this spec constrains. Log new violations as design system tickets, not product tickets.",
+        "signal": "The spec exists to standardise what tools flag, so its practical effect arrives on axe-core's release schedule rather than W3C's. The gap between the two is a window where a component is conformant by the old rules and failing by the new ones with nobody noticing. It also reinforces the unglamorous perennial: most ARIA findings are ARIA that should never have been added."
+      },
+      {
+        "pub": "Smashing Magazine",
+        "date": "11 Aug 2026",
+        "url": "https://www.smashingmagazine.com/2026/08/building-tactile-ux-honoring-intentional-design-lottie/",
+        "hed": "Building tactile UX: honouring intentional design with Lottie",
+        "fact": "Isadora Agency built an interactive stress-relief game without a physics engine, driving hand-animated Lottie frame ranges via playSegments(), using Pythagorean distance from the character's centre to define concentric scoring zones, with a bullseye under 10px scoring 100 points and misses beyond 145px scoring zero, plus per-asset quality reduction for background elements. Single self-reported case study with no comparative benchmarks.",
+        "why": "A rare, specific account of choosing hand-authored motion over generative physics on art-direction grounds, with the engineering consequences spelled out, which is the exact argument designers usually lose because they cannot articulate the tradeoff technically.",
+        "hook": "When physics engines flatten your animator's intent.",
+        "teach": "If your motion has a deliberate character, spec animations as named frame ranges in the Lottie file rather than as a target end-state, so engineering triggers segments instead of approximating them. Borrow the per-asset quality tiering too: full quality for the element under the user's finger, reduced for everything decorative.",
+        "signal": "The distance-band scoring is an input-forgiveness model expressed in pixels, which is the same problem as touch-target sizing wearing a game-design costume. Most teams define a hit area as a binary rectangle when a graded response zone would let them give confidence feedback on near-misses instead of silently dropping them."
+      },
+      {
+        "pub": "Nielsen Norman Group",
+        "date": "14 Aug 2026",
+        "url": "https://www.nngroup.com/articles/psychological-ownership/",
+        "hed": "Psychological ownership: own the right things",
+        "fact": "Sunwall identifies three sources of psychological ownership, namely control, deep knowledge and invested effort, argues design work supplies all three, and maps four failure modes: preferring solo work, prototype defensiveness, defensive reactions to feedback, and resentment when builds diverge from designs. He recommends redirecting ownership toward the collaborative process, shared goals, research evidence and documented UX debt.",
+        "why": "Feedback defensiveness and build-divergence resentment are two of the most common reasons a competent designer stalls at mid-level, and this names the mechanism rather than the symptom.",
+        "hook": "Own your judgment. Don't own the pixels.",
+        "teach": "Change your language in the next critique, saying we and the current direction rather than my design, and when a build ships off-spec, open a UX-debt ticket the same day instead of raising it in retro. The ticket is ownership; the complaint isn't.",
+        "signal": "Psychological ownership is usually a symptom of an unclear decision-making structure rather than a personality flaw. Designers grip prototypes hardest where authorship is the only legible signal of contribution, so a team that rewards documented decisions and research provenance drains the defensiveness without anyone being coached out of it. A manager treating this as an individual growth area is often mis-diagnosing a process problem."
+      }
+    ],
+    "product": [
+      {
+        "pub": "TechCrunch",
+        "date": "21 Aug 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/08/21/tesla-recalls-3-million-cars-as-part-of-china-wide-push-to-stop-hidden-door-handles/",
+        "hed": "Tesla recalls 3 million cars in a China-wide push to stop hidden door handles",
+        "fact": "Tesla is recalling nearly 3 million vehicles in China as part of an 11-automaker action over hidden emergency door releases. Nine makers including Tesla, Xiaomi, Xpeng and Zeekr will add warning labels showing occupants where the manual release is, and all 11 will ship software updates, ahead of China's announced 2027 ban on hidden electronically actuated exterior handles. The parallel US bill is proposed, not enacted.",
+        "why": "A design decision, the flush electronically actuated handle, is being recalled at national scale, and the remedy is a label explaining the interface. It is the clearest current example of aesthetic minimalism removing an affordance users need most when they are panicking.",
+        "hook": "Three million cars recalled because the door didn't look like a door.",
+        "teach": "Audit your product's failure-state paths the way you audit the happy path. For every flow that depends on power, network or auth, find the manual fallback and ask whether a stressed first-time user could locate it without being taught. If your answer is that you will add a tooltip, you have just designed Tesla's recall remedy.",
+        "signal": "Watch the regulatory pattern, not the recall. China is not mandating better labels, it is banning the interaction pattern outright from 2027, and NHTSA has an open investigation plus a proposed bill requiring releases be intuitive and readily accessible. Once discoverable under duress becomes a legal standard rather than a heuristic, hidden-affordance minimalism stops being a taste argument your PM can overrule."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "14 Aug 2026",
+        "url": "https://techcrunch.com/2026/08/14/apple-proposes-to-take-a-15-cut-of-purchases-made-outside-the-app-store/",
+        "hed": "Apple proposes to take a 15% cut of purchases made outside the App Store",
+        "fact": "In a court filing after the Supreme Court rejected its bid to delay Epic proceedings, Apple proposed tiered commissions on external-link purchases: 15% standard, 5% for Small Business Program developers, 10% for Video, News and Mini Apps Partner Program participants, and 10% on subscription renewals. Epic argued the Ninth Circuit's necessary costs definition implies zero. This is a proposal, not adopted policy.",
+        "why": "The economics of the external checkout link determine whether it is worth designing one at all. A 15% external cut against 30% in-app is a much thinner margin than the escape-the-App-Store-tax framing most product teams have been planning around.",
+        "hook": "The escape hatch now has a toll booth. Redo the math.",
+        "teach": "If an external-purchase flow is on your roadmap, re-run the unit economics at 15%, or 5% if you qualify for the Small Business Program, before you spend sprint time on the web checkout UI. If the delta over in-app purchase is now single digits, the better design bet is reducing drop-off in the native purchase sheet rather than building and maintaining a second funnel.",
+        "signal": "Tiering by partner program is the real move. It converts commission rate into a lever Apple can point at specific business models, which makes your checkout architecture a bet on which program bucket you will still be in two years from now. Treat payment flows as a one-time integration and you have hardcoded a pricing assumption into the product's surface area."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "21 Aug 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://techcrunch.com/2026/08/21/oura-faces-lawsuit-accusing-it-of-misleading-consumers-about-sleep-tracking-accuracy/",
+        "hed": "Oura faces a lawsuit accusing it of misleading consumers about sleep-tracking accuracy",
+        "fact": "Clarkson Law Firm filed a proposed class action alleging Oura's rings cannot measure the signals needed for accurate sleep staging and that its AI-derived estimates have a coin flip's chance of being correct, citing a shift from a claimed 79% accuracy to a more recent 95% claim. Oura says it stands behind its science, research and accuracy claims and points to independent validation against polysomnography. All claims are allegations in an undecided case.",
+        "why": "A lawsuit about how a product displays inference as fact. Every designer shipping an AI-derived number, whether a score, a stage or a confidence-free readout, is making the same call Oura made in its dashboard.",
+        "hook": "Your confident-looking number is now a legal exhibit.",
+        "teach": "Find every number in your product generated by a model and rendered with the same visual treatment as a measured value. Give inferred values a distinct treatment, a range, a confidence band or an estimated label, so the interface itself distinguishes what the device sensed from what it guessed.",
+        "signal": "The complaint targets both the marketing accuracy claim and years of user reports that the readout disagreed with lived experience, which is the same failure seen from two ends. When a product's inference contradicts the user's own direct knowledge, precision in the UI does not buy trust, it spends it. About six hours, roughly survives being wrong in a way that 6h 14m, Deep 47m does not."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Aug 2026",
+        "url": "https://techcrunch.com/2026/08/25/gamma-acquires-accel-backed-design-startup-lica/",
+        "hed": "Gamma acquires Accel-backed design startup Lica",
+        "fact": "AI presentation platform Gamma acquired Lica, founded in 2023 by Priyaa Kalyanaraman and Purvanshi Mehta, which raised $4M in 2024 from Accel, South Park Commons and Village Global, to found Gamma's own design research division led by Lica's co-founders, folding Lica's brand-compliant marketing-video generation into Gamma's user base. Price and headcount were not disclosed, and the user figure is Gamma's own.",
+        "why": "A design-research team bought as infrastructure rather than as a service function, and what it researches is automated visual output at scale. That is a live signal about where design headcount is moving.",
+        "hook": "Design research is now an acquisition target, not a cost center.",
+        "teach": "The acquired capability was brand-compliant generation, machine output that stays inside a system. If you own a design system, start writing your constraints as machine-checkable rules covering token-only values, allowed component compositions and forbidden overrides, rather than prose guidelines. That is the artifact that makes generated output usable.",
+        "signal": "Gamma paired frontier research with distribution, which is the explicit trade in the article and the shape of the whole category right now. Research capability is cheap relative to distribution, so the defensible design work is increasingly about what a system permits at scale rather than what any individual screen looks like. Senior leverage moves from artifacts to constraints."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "20 Aug 2026",
+        "url": "https://techcrunch.com/2026/08/20/patreon-launches-30-new-creator-features-including-short-form-clips-and-revamped-discovery/",
+        "hed": "Patreon launches 30 new creator features, including short-form Clips and revamped discovery",
+        "fact": "Patreon shipped roughly 30 new or revamped features, including Clips on iOS that turn creator video into shareable short-form, auto-extracted video previews from paid posts, topic-based Niches spaces, live Q&As, fan profiles and earnings dashboards, alongside a recommendation change that compares post by post on topic, craft, style and theme instead of favouring larger creators. No creator or earnings figures were disclosed.",
+        "why": "A paywalled product deliberately designing leakage, automatically surfacing slices of paid content as acquisition material. It is a reusable pattern for anyone whose growth is gated behind a purchase.",
+        "hook": "They built a machine that leaks their own paywall on purpose.",
+        "teach": "Take your most valuable gated content and design an automatic preview extraction, the interesting ten seconds or the pull-quote, rather than asking creators or users to make marketing assets by hand. The design win is that the preview becomes a byproduct of publishing rather than a separate task nobody does.",
+        "signal": "The discovery change is the bigger story and it is under-covered. Moving from creator-size ranking to post-level topical comparison redistributes attention toward small creators and changes who the product is actually for. Your ranking function is a product strategy decision made in code, and shipping 30 features around it is partly cover for the one change that reallocates everyone's income."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "17 Aug 2026",
+        "url": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
+        "hed": "Wispr raises $280M at a $2B valuation as it looks beyond dictation",
+        "fact": "Wispr raised a $280M Series B led by Menlo Ventures at a $2B valuation, bringing total funding to $361M, and is expanding into meeting notes and a new Wispr Interface Labs, launching a speech model called Canto that it says cuts error rates from 30% to under 10%, shipping Android, and partnering with hardware makers including the Oasis ring. The error-rate figure is Wispr's own claim, not an independent benchmark.",
+        "why": "Someone just raised $280M on the bet that voice becomes a primary input rather than an accessibility affordance, and the money is going into an interface lab rather than only a better model.",
+        "hook": "$280M says the keyboard isn't the default anymore.",
+        "teach": "Test your primary input flows with dictation turned on. Voice input produces long unpunctuated strings, no tab order and no way to hit a small target, so check that your text fields accept and format messy long-form input, and that anything requiring a precise tap has a spoken or keyboard equivalent.",
+        "signal": "Sub-10% error is still roughly one word in eleven wrong, which is why the product direction is meeting notes and hardware partnerships rather than pure transcription. Voice is becoming viable not because recognition got perfect but because the surrounding product absorbs the errors, so the design problem has moved from input accuracy to graceful correction UI, and that is the part almost nobody has solved well."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Aug 2026",
+        "url": "https://techcrunch.com/2026/08/25/andy-dunns-startup-pie-becomes-less-of-an-events-app-and-more-of-a-social-network/",
+        "hed": "Andy Dunn's startup Pie becomes less of an events app and more of a social network",
+        "fact": "Pie, founded by Bonobos co-founder Andy Dunn and backed by Forerunner, Lightspeed and Accel, launched Community Homes, persistent group spaces with feeds, event tools, admin controls and membership management, moving from one-off events toward an ongoing social network. The company says it has around 300,000 users and that a December feed change lifted time spent from 2 minutes to 10. Both figures are company-reported.",
+        "why": "A textbook object-model pivot. The app's core noun changes from event to group, and everything downstream, navigation, notifications and empty states, has to change with it.",
+        "hook": "They changed the noun, and the whole app followed.",
+        "teach": "When engagement is thin, look at whether your primary object is ephemeral. Events, orders and sessions all die on completion, which forces you to re-acquire attention each time. Giving users a persistent container that survives the transaction is usually a cheaper retention fix than another notification campaign.",
+        "signal": "A jump from 2 to 10 minutes reads as a win and can just as easily be a symptom. Persistent group feeds increase dwell because they are harder to finish, not necessarily because they are more valuable. The harder question is whether Community Homes still produces real-world meetups, which was the original point. Measure the outcome metric, not the surface one."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "Fast Company",
+        "date": "24 Aug 2026",
+        "flag": "Top story",
+        "url": "https://www.fastcompany.com/91591873/the-remarkably-human-task-of-giving-ai-good-enough-taste",
+        "hed": "The remarkably human task of giving AI good enough taste",
+        "fact": "AI design output has improved sharply but still lacks aesthetic judgment, so AI companies are paying human designers to curate training references and grade model output via expert feedback, with Contra Labs cited as paying designers $50 to $250 per hour to evaluate AI work. That range is supplied by a company with a commercial interest in the market, and the improvement claim is an investor's estimate rather than a benchmark.",
+        "why": "The first widely-reported account of a paid job category that did not exist for designers two years ago. It reframes the idea that AI is coming for design into AI buying design judgment by the hour, and it means your taste, the thing hardest to put in a portfolio, now has a market rate.",
+        "hook": "Your taste now has an hourly rate. Someone is paying it.",
+        "teach": "Look at the evaluation-work listings on Contra, Surge AI and Mercor and write down what a rubric for good UI would actually contain: spacing logic, hierarchy, state coverage. That rubric is both a side-income application and the sharpest critique document you will bring to your next design review.",
+        "signal": "If model taste is trained by a small pool of paid expert designers, the aesthetic ceiling of every AI design tool becomes a function of who got hired to grade it, which makes design homogeneity an upstream labour-market question rather than a downstream tooling one. The designers writing those rubrics are quietly setting defaults for everyone who ships with these tools later."
+      },
+      {
+        "pub": "Fast Company",
+        "date": "24 Aug 2026",
+        "url": "https://www.fastcompany.com/91594345/tech-layoffs-list-august-2026-apple-tiktok-linkedin-slash-jobs",
+        "hed": "Tech layoffs August 2026: Apple, TikTok, LinkedIn and Netflix join the list",
+        "fact": "The article reports 127,180 tech job cuts across 281 companies so far in 2026, already surpassing all of 2025 combined, including roughly 200 at Apple, 75 TikTok e-commerce workers in Seattle on top of 250 content-moderation cuts earlier in August, LinkedIn cuts in Tel Aviv R&D, and Netflix closing two games studios. Netflix disclosed no employee count, and no design or UX roles are named specifically.",
+        "why": "This is the market backdrop for every design compensation conversation this autumn. With 2026 already past 2025's full-year total, leverage sits with employers and internal mobility beats open-market moves. The studio closures in particular wipe out narrative and game design roles wholesale rather than trimming them.",
+        "hook": "2026 already beat all of 2025. It's August.",
+        "teach": "Before your next compensation or levelling conversation, pull the specific cut numbers for your company's sector from this list and pair them with a written record of what you shipped this quarter. Arguing scope on evidence works in a soft market where arguing market rate does not.",
+        "signal": "Studio closures concentrate loss differently from percentage-based layoffs. They remove entire craft specialisms at once, so the surviving design org drifts toward generalists by attrition rather than by strategy. Worth asking whether your own org still has anyone who only does one thing well."
+      },
+      {
+        "pub": "Axios",
+        "date": "14 Aug 2026",
+        "url": "https://www.axios.com/local/atlanta/2026/08/14/remote-work-unemployment-young-workers",
+        "hed": "The career ladder's disappearing rung",
+        "fact": "Economists from the University of Warwick, LSE and Oxford's Ellison Institute find remote work accounts for roughly 64% of the rise in youth unemployment since the pandemic, with unemployment for college graduates under 29 rising from 3.1% to 3.7%, and jobless rates rising nearly a percentage point for young grads in remote-capable occupations while falling for older workers in the same occupations. The 64% figure is an academic estimate, not an official statistic.",
+        "why": "Product design is about as remote-capable as a job gets, which puts junior designers squarely in the affected group, and it names a cause that is not AI. If employers are avoiding junior remote hires because training is harder over video, that is a fixable operational problem rather than an inevitability.",
+        "hook": "It might not be AI eating junior roles. It might be Zoom.",
+        "teach": "If you have any say in hiring, propose one concrete in-person or synchronous apprenticeship mechanism, a weekly paired critique or a shadowed research session, and attach this finding to the pitch. If you are junior, optimise ruthlessly for proximity to a senior designer over title or salary in your next move.",
+        "signal": "The industry attributes the collapse of the junior rung almost entirely to AI, which is convenient because it makes the problem nobody's fault. If two-thirds of it is actually a training-mode problem created by remote work, then the design orgs that solve mentorship logistics get a cheap talent pipeline while everyone else keeps bidding for the same scarce seniors."
+      },
+      {
+        "pub": "Axios",
+        "date": "18 Aug 2026",
+        "url": "https://www.axios.com/2026/08/18/young-adults-ai-job-loss",
+        "hed": "AI optimism fades among young adults",
+        "fact": "Pew Research Center polling of 3,488 U.S. adults fielded 22 to 28 June 2026 finds 55% of under-30s more concerned than excited about AI, up 24 points since 2021, with only 11% more excited than concerned, and 73% expecting AI to eliminate jobs over the next two decades, up from 61% in 2024. A separate figure on job loss comes from an Axios and Generation Lab poll whose sample size and method are not stated.",
+        "why": "This is the sentiment layer under every junior designer on your team and every candidate in your pipeline. A 24-point swing in five years changes how people respond to AI tooling mandates, and design leads pushing adoption are pushing into measurable, rising dread.",
+        "hook": "Only 11% of under-30s are excited. Plan accordingly.",
+        "teach": "If you are rolling out AI tooling to a team, stop framing it as speed and start framing it as which specific tasks it removes and what the person does with the reclaimed hours, and put that in writing, because the ambient assumption in the room is that the reclaimed hours are the prelude to a cut.",
+        "signal": "Note the gap between perception and measurement in the same piece: 27% of 18 to 34s believe they or someone they know lost a job to AI, while graduate unemployment moved only from 3.1% to 3.7%. Fear is running well ahead of displacement, and that gap is itself a workplace condition, because it depresses risk-taking and internal mobility regardless of whether the fear turns out to be justified."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "21 Aug 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://techcrunch.com/2026/08/21/apple-is-reportedly-cutting-hundreds-of-jobs-from-siri-vision-pro-teams/",
+        "hed": "Apple is reportedly cutting hundreds of jobs from Siri and Vision Pro teams",
+        "fact": "Per Bloomberg's reporting, Apple is cutting over 200 positions, roughly 100 from the Vision Pro team and roughly 100 from Siri and Intelligent Systems Experience, with Apple confirming to Bloomberg that the changes will impact a limited number of existing roles while new roles are created. The numbers are Bloomberg's; Apple has published none, and no design roles are named specifically.",
+        "why": "Spatial computing was, until recently, the safest-looking bet a product designer could make for a specialist pivot, and Apple has now cut roughly a hundred people out of it. Intelligent Systems Experience is an experience-design org by name, which puts this closer to design headcount than most layoff coverage gets.",
+        "hook": "Apple just cut 100 people out of spatial computing's flagship.",
+        "teach": "If you are weighing a specialist bet on spatial, voice or agents, size it as a portfolio allocation rather than a career: one project you can point at, not a title change, until the platform shows sustained hiring rather than sustained announcements.",
+        "signal": "Both cut teams share a trait. Each is a bet on a novel interaction paradigm whose adoption never arrived, and design specialists are the least portable people on such teams because their expertise is indexed to a paradigm rather than to a craft. The employable specialisms are the ones where the underlying problem survives the platform's failure."
+      }
+    ]
+  }
+}

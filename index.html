@@ -1,0 +1,1552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Design Wire</title>
+<meta name="description" content="A weekday design news board for working product designers. Every story carries a Teach read and a Signal read.">
+<meta property="og:title" content="The Design Wire">
+<meta property="og:description" content="A weekday design news board for working product designers.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Hedvig+Letters+Serif&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+img{max-width:100%}
+</style>
+<style>
+/* ============================================================
+     THE DESIGN WIRE
+     Palette + type lifted from melissajade.design
+       paper  #FBF5F3   panel #EBE5DF   ink #212121
+       muted  #6E6E6E   rust  #C53F1F   navy #122E8D
+       display: Hedvig Letters Serif  ·  ui/body: Archivo
+       (Archivo stands in for Neue Haas Grotesk Display Pro,
+        which isn't available on Google Fonts.)
+     ============================================================ */
+  :root{
+    --paper:#FBF5F3;
+    --surface:#FFFCFB;
+    --panel:#EBE5DF;
+    --hair:#E2DAD3;
+    --hair-soft:#EFE8E3;
+    --ink:#212121;
+    --ink-soft:#4A443F;
+    --muted:#6E6E6E;
+    --faint:#8D8A89;
+    --rust:#C53F1F;
+    --rust-wash:#F7E7E1;
+    --navy:#122E8D;
+    --navy-wash:#E6E9F5;
+    --radius:14px;
+    color-scheme:light;
+  }
+  html{background:var(--paper);}
+  /* Single committed light identity — this board always renders in
+     Melissa's brand palette, regardless of the viewer's theme setting.
+     Every colour is painted explicitly so nothing borrows a dark host
+     background. There is deliberately no dark variant. */
+  :root[data-theme="dark"]{ color-scheme:light; }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Archivo","Neue Haas Grotesk Display Pro","Helvetica Neue",Arial,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .serif{
+    font-family:"Hedvig Letters Serif",Georgia,"Times New Roman",serif;
+    font-weight:400;
+  }
+  .eyebrow{
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    line-height:1.4;
+  }
+  :focus-visible{outline:2px solid var(--rust); outline-offset:3px;}
+
+  /* ---------------- masthead ---------------- */
+  .masthead{
+    border-bottom:1px solid var(--hair);
+    background:var(--paper);
+  }
+  .masthead-inner{
+    max-width:1400px; margin:0 auto; padding:26px 40px 22px;
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:24px; flex-wrap:wrap;
+  }
+  .wordmark{
+    font-family:"Hedvig Letters Serif",Georgia,serif;
+    font-weight:400;
+    font-size:clamp(30px,4vw,46px);
+    line-height:1;
+    letter-spacing:-.01em;
+    margin:0;
+  }
+  .wordmark .mark{
+    display:inline-block; width:9px; height:9px; border-radius:50%;
+    background:var(--rust); margin-right:12px; vertical-align:middle;
+    position:relative; top:-4px;
+  }
+  .issue{
+    text-align:right; color:var(--muted); font-size:13px; line-height:1.5;
+  }
+  .issue b{color:var(--ink); font-weight:600;}
+  .issue .cadence{color:var(--faint); font-size:12px;}
+
+  /* ---------------- shell ---------------- */
+  .shell{
+    max-width:1400px; margin:0 auto; padding:0 40px 90px;
+    display:grid; grid-template-columns:212px minmax(0,1fr); gap:52px;
+    align-items:start;
+  }
+
+  /* ---------------- archive rail ---------------- */
+  .rail{
+    position:sticky; top:26px;
+    padding-top:34px;
+  }
+  .rail h2{
+    margin:0 0 4px; color:var(--faint);
+  }
+  .rail .sub{
+    margin:0 0 18px; font-size:12.5px; color:var(--faint); line-height:1.45;
+  }
+  .archive{list-style:none; margin:0; padding:0;
+    display:flex; flex-direction:column;}
+  .archive li{border-top:1px solid var(--hair-soft);}
+  .archive li:last-child{border-bottom:1px solid var(--hair-soft);}
+  .ed-link{
+    width:100%; text-align:left; background:none; border:0; cursor:pointer;
+    font-family:inherit; color:var(--muted);
+    padding:11px 10px 11px 14px; display:block; position:relative;
+    transition:color .14s ease, background .14s ease;
+  }
+  .ed-link:hover{color:var(--ink); background:var(--panel);}
+  .ed-link .d{
+    font-family:"Hedvig Letters Serif",Georgia,serif;
+    font-size:18px; line-height:1.2; color:inherit; display:block;
+  }
+  .ed-link .m{
+    font-size:11.5px; letter-spacing:.04em; color:var(--faint); display:block; margin-top:1px;
+  }
+  .ed-link[aria-current="true"]{color:var(--ink); background:var(--panel);}
+  .ed-link[aria-current="true"]::before{
+    content:""; position:absolute; left:0; top:10px; bottom:10px;
+    width:3px; background:var(--rust);
+  }
+  .ed-link[aria-current="true"] .m{color:var(--rust);}
+  .rail-note{
+    margin:20px 0 0; font-size:12px; line-height:1.5; color:var(--faint);
+  }
+
+  /* ---------------- toolbar ---------------- */
+  .toolbar{
+    position:sticky; top:0; z-index:15;
+    background:var(--paper);
+    padding:26px 0 16px;
+    border-bottom:1px solid var(--hair);
+    display:flex; gap:9px; align-items:center; flex-wrap:wrap;
+  }
+  .chip{
+    font-family:inherit; font-size:12px; font-weight:500;
+    letter-spacing:.02em;
+    background:transparent; color:var(--muted);
+    border:1px solid var(--hair); border-radius:999px;
+    padding:7px 15px; cursor:pointer; white-space:nowrap;
+    transition:background .14s ease, color .14s ease, border-color .14s ease;
+  }
+  .chip:hover{color:var(--ink); border-color:var(--ink);}
+  .chip[aria-pressed="true"]{
+    background:var(--rust); color:#FFF; border-color:var(--rust);
+  }
+  .chip[aria-pressed="true"]{color:#FFFCFB;}
+  .chip .n{opacity:.65; margin-left:5px; font-variant-numeric:tabular-nums;}
+  .search{
+    margin-left:auto; font-family:inherit; font-size:13px;
+    background:var(--surface); color:var(--ink);
+    border:1px solid var(--hair); border-radius:999px;
+    padding:8px 15px; min-width:210px;
+  }
+  .search::placeholder{color:var(--faint);}
+
+  /* ---------------- editions ---------------- */
+  .edition{margin-top:34px;}
+  .edition[hidden]{display:none;}
+  .beat{margin-bottom:46px;}
+  .beat[hidden]{display:none;}
+  .beat-head{
+    display:flex; align-items:baseline; gap:16px;
+    margin-bottom:20px;
+  }
+  .beat-head h3{
+    font-family:"Hedvig Letters Serif",Georgia,serif;
+    font-weight:400; font-size:27px; line-height:1.1; margin:0;
+    letter-spacing:-.01em;
+  }
+  .beat-head .rule{
+    flex:1; height:1px; background:var(--hair); align-self:center;
+  }
+  .beat-head .count{color:var(--faint); font-size:12px; white-space:nowrap;
+    font-variant-numeric:tabular-nums;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(348px,1fr));
+    gap:18px;
+  }
+  .story{
+    background:var(--surface);
+    border:1px solid var(--hair-soft);
+    border-radius:var(--radius);
+    padding:22px 22px 20px;
+    display:flex; flex-direction:column; gap:13px;
+  }
+  .story[hidden]{display:none;}
+  .src{
+    display:flex; gap:9px; align-items:center; flex-wrap:wrap;
+    color:var(--faint);
+  }
+  .src .pub{color:var(--navy);}
+  .flag{
+    background:var(--rust-wash); color:var(--rust);
+    padding:3px 9px; border-radius:999px; letter-spacing:.07em;
+  }
+  h4.hed{
+    font-family:"Hedvig Letters Serif",Georgia,serif;
+    font-weight:400; font-size:22px; line-height:1.24;
+    letter-spacing:-.005em; margin:0; text-wrap:balance;
+  }
+  h4.hed a{
+    text-decoration:none;
+    background-image:linear-gradient(var(--rust),var(--rust));
+    background-size:0% 1px; background-repeat:no-repeat; background-position:0 100%;
+    transition:background-size .22s ease, color .14s ease;
+  }
+  h4.hed a:hover{color:var(--rust); background-size:100% 1px;}
+  .fact{margin:0; font-size:14.5px; line-height:1.55; color:var(--ink-soft);}
+  .why{margin:0; font-size:14.5px; line-height:1.55; color:var(--muted);}
+  .why b{
+    display:block; color:var(--ink); margin-bottom:2px;
+    font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  }
+
+  .angle{
+    margin-top:auto; border-top:1px solid var(--hair-soft);
+    padding-top:15px; display:flex; flex-direction:column; gap:11px;
+  }
+  .hook{
+    font-family:"Hedvig Letters Serif",Georgia,serif;
+    font-size:19px; line-height:1.28; color:var(--rust);
+    margin:0; text-wrap:balance;
+  }
+  .split{display:flex; flex-direction:column; gap:8px;}
+  .split p{margin:0; font-size:14px; line-height:1.5; color:var(--ink-soft);}
+  .split span{
+    font-size:10.5px; font-weight:600; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--faint); margin-right:8px;
+  }
+  .split .teach span{color:var(--navy);}
+  .copy{
+    align-self:flex-start; font-family:inherit;
+    font-size:11px; font-weight:500; letter-spacing:.05em;
+    background:transparent; color:var(--muted);
+    border:1px solid var(--hair); border-radius:999px;
+    padding:6px 13px; cursor:pointer;
+    transition:color .14s ease, border-color .14s ease;
+  }
+  .copy:hover{color:var(--ink); border-color:var(--ink);}
+  .copy[data-done="1"]{color:var(--rust); border-color:var(--rust);}
+
+  /* action row — the file button is injected only when the viewer's
+     Notion connector is reachable, so it never renders as a dead control */
+  .actions{display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
+  .actions .copy{align-self:auto;}
+  .filebtn{
+    font-family:inherit; font-size:11px; font-weight:500; letter-spacing:.05em;
+    background:var(--navy-wash); color:var(--navy);
+    border:1px solid transparent; border-radius:999px;
+    padding:6px 13px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:6px;
+    transition:background .14s ease, color .14s ease, border-color .14s ease;
+  }
+  .filebtn:hover:not(:disabled){border-color:var(--navy);}
+  .filebtn:disabled{cursor:default; opacity:.75;}
+  .filebtn[data-state="filed"]{
+    background:transparent; color:var(--rust); border-color:var(--rust);
+  }
+  .filebtn[data-state="failed"]{
+    background:transparent; color:var(--muted); border-color:var(--hair);
+  }
+  .filebtn .spin{
+    width:9px; height:9px; border-radius:50%;
+    border:1.5px solid currentColor; border-top-color:transparent;
+    animation:spin .7s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .filenote{
+    margin:0; font-size:12px; line-height:1.45; color:var(--muted);
+    flex-basis:100%;
+  }
+  .filenote a{color:var(--navy);}
+
+  .empty{padding:44px 0; color:var(--faint); font-size:15px;}
+  .empty[hidden]{display:none;}
+
+  /* ---------------- colophon ---------------- */
+  .colophon{
+    border-top:1px solid var(--hair); margin-top:14px; padding-top:26px;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(224px,1fr)); gap:26px;
+  }
+  .colophon h5{margin:0 0 7px; color:var(--faint);}
+  .colophon p{margin:0; font-size:13.5px; line-height:1.55; color:var(--muted);}
+  .colophon p b{color:var(--ink); font-weight:600;}
+
+  @media (max-width:960px){
+    .shell{grid-template-columns:1fr; gap:0; padding:0 22px 70px;}
+    .masthead-inner{padding:20px 22px 18px;}
+    .rail{position:static; padding-top:26px;}
+    .archive{
+      flex-direction:row; overflow-x:auto; gap:8px; padding-bottom:6px;
+    }
+    .archive li{border:0; flex:0 0 auto;}
+    .archive li:last-child{border:0;}
+    .ed-link{
+      border:1px solid var(--hair); border-radius:999px; padding:8px 15px;
+      white-space:nowrap;
+    }
+    .ed-link .d{font-size:15px; display:inline;}
+    .ed-link .m{display:inline; margin-left:8px;}
+    .ed-link[aria-current="true"]::before{display:none;}
+    .ed-link[aria-current="true"]{border-color:var(--rust);}
+    .rail-note{display:none;}
+    .issue{text-align:left;}
+    .grid{grid-template-columns:1fr;}
+    .search{margin-left:0; width:100%;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; animation:none !important;}
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <h1 class="wordmark"><span class="mark" aria-hidden="true"></span>The Design Wire</h1>
+    <div class="issue">
+      <div>Edition <b id="issue-date">Saturday, 22 August 2026</b> · <b id="issue-count">26</b> stories</div>
+      <div class="cadence">A new edition every weekday at 7:00 PT · nothing is deleted, every edition stays below</div>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+
+  <!-- ================= ARCHIVE RAIL ================= -->
+  <nav class="rail" aria-label="Editions">
+    <h2 class="eyebrow">Editions</h2>
+    <p class="sub">Every board filed to date.</p>
+    <ul class="archive" id="archive">
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-08-26" aria-current="true">
+          <span class="d">26 Aug 2026</span>
+          <span class="m">Wed · 23 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-08-22">
+          <span class="d">22 Aug 2026</span>
+          <span class="m">Sat · 26 stories</span>
+        </button>
+      </li>
+    </ul>
+    <p class="rail-note">Older editions stay live so you can go back for a story you skipped, or trace how a thread developed over a week.</p>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <div class="toolbar">
+      <button class="chip" data-filter="all" aria-pressed="true">All beats <span class="n">26</span></button>
+      <button class="chip" data-filter="ai" aria-pressed="false">AI &amp; tooling <span class="n">6</span></button>
+      <button class="chip" data-filter="ux" aria-pressed="false">UX craft <span class="n">7</span></button>
+      <button class="chip" data-filter="product" aria-pressed="false">Product &amp; startups <span class="n">6</span></button>
+      <button class="chip" data-filter="industry" aria-pressed="false">Industry &amp; careers <span class="n">7</span></button>
+      <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
+    </div>
+
+    <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
+
+    <div id="editions">
+
+      <!-- ############ EDITION 2026-08-26 ############ -->
+      <article class="edition" data-ed="2026-08-26" data-label="Wednesday, 26 August 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>24 Aug 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/" target="_blank" rel="noopener">OpenAI is building AI agents for everything. Will everyone use them?</a></h4>
+              <p class="fact">TechCrunch reports that 98% of OpenAI's own employees use Codex while only 17% of organizational subscribers and under 1% of individual subscribers do, as the company pushes agentic tools beyond engineers into general white-collar work via ChatGPT Work at $20/month. The account of internal debates is not attributed to named sources.</p>
+              <p class="why"><b>Why it matters</b>This is the clearest public evidence yet that the bottleneck for agentic AI is interface and permission design, not model capability. The gap between 98% and 1% is a UX gap, and it is the gap product designers are being hired to close.</p>
+              <div class="angle">
+                <p class="hook">98% of OpenAI uses Codex. Under 1% of you do.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Audit one agentic flow in your product for its permission moment, the point where the agent asks to act. Write down what the user must understand to say yes, and how they would undo it. If either answer takes more than a sentence, that is your redesign brief.</p>
+                  <p><span>Signal</span>The cliff between org seats at 17% and individual seats under 1% suggests agent adoption is carried by mandate and IT rollout rather than desire. Most of the agent engagement metrics your team celebrates may be measuring procurement, not product-market fit.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Smashing Magazine</span> · <span>13 Aug 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://www.smashingmagazine.com/2026/08/eu-guidelines-ai-labelling/" target="_blank" rel="noopener">New EU guidelines for AI labelling</a></h4>
+              <p class="fact">The EU AI Act's Article 50(4) transparency obligations took effect on 2 August 2026, requiring clear, accessible AI disclosure for deepfakes, chatbot interactions, unreviewed AI-written text on matters of public interest, and emotion-recognition tools, for any company serving EU citizens worldwide. Per the article, the Commission holds that an icon alone is not sufficient. This is Smashing's reading of the guidelines, not the legal text.</p>
+              <p class="why"><b>Why it matters</b>This is the first regulation that directly invalidates a specific, ubiquitous UI convention currently sitting in most design systems as the AI affordance.</p>
+              <div class="angle">
+                <p class="hook">Your sparkle icon is not a compliance strategy.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Search your design system for the sparkle or AI icon and check every instance: is there adjacent plain text saying AI-generated, does it survive screen-reader output, does it persist through screenshot, share and download, and is it visible without hover? An icon-only AI affordance is now a compliance defect, not a style preference.</p>
+                  <p><span>Signal</span>The named-human-reviewer exemption is the detail most teams will miss. Substantive editorial review with named accountability removes the disclosure requirement, while grammar and formatting passes do not count. That turns the question of who reviewed this, and whether their name is attached, into a schema field and a reviewer-attribution UI nobody has budgeted for.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>25 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/" target="_blank" rel="noopener">Claude Cowork finally remembers what you told the app in chat</a></h4>
+              <p class="fact">Anthropic unified Claude's memory across chat and Cowork so topics are added during conversation rather than at summary time, enabled by default on Free, Pro and Max across web, desktop and mobile, with sensitive categories excluded by default and government IDs and criminal history never stored. Safeguards are as characterized by Anthropic and relayed by TechCrunch.</p>
+              <p class="why"><b>Why it matters</b>It is a shipped, inspectable reference implementation of the hardest pattern in agentic UX, persistent memory with a privacy default, and the category-exclusion list is effectively a published design spec you can borrow.</p>
+              <div class="angle">
+                <p class="hook">Memory is now a default. So is the opt-out.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If your product retains user context, write an explicit exclusion list before you write the retention logic. Name the categories you will never store and the ones users must opt into. The split between excluded-by-default and never-stored is a usable two-tier model.</p>
+                  <p><span>Signal</span>The shift from summary-time to conversation-time capture is the real change. Memory formed mid-conversation is memory the user never gets a review moment for, so the burden moves from a consent gate to a legible, editable memory surface after the fact. Products that copy the capture behaviour without building that inspection UI import the liability without the mitigation.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>14 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/" target="_blank" rel="noopener">Google will now allow users to remove visible watermarks from its AI generations</a></h4>
+              <p class="fact">Google is making visible watermarks optional on AI-generated images, video and music from its Nano Banana, Omni and Lyria models across Gemini, Flow and soon Search, while invisible SynthID watermarks and C2PA metadata remain active regardless. Google is also open-sourcing a library called Credentio for local content-credential validation. Rollout was described as beginning in the coming days.</p>
+              <p class="why"><b>Why it matters</b>Visible provenance is moving from a platform default to a product decision, which means the question of whether a user can see that something was AI-made now lands on your team's roadmap rather than Google's.</p>
+              <div class="angle">
+                <p class="hook">Provenance just moved from the pixel to the metadata.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If your product ingests or displays AI-generated media, stop relying on visible watermarks to identify it and start reading C2PA metadata. Credentio gives you a local validation path, so a content-credentials affordance is now buildable rather than aspirational.</p>
+                  <p><span>Signal</span>Invisible-only provenance quietly relocates disclosure from the viewer to the platform. SynthID protects detection systems, not the person looking at the image. Set against the EU rules above, that leaves a gap only product design can fill: the metadata exists, but somebody has to decide it renders.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Adobe</span> · <span>20 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://blog.adobe.com/en/publish/2026/08/20/adobe-firefly-expands-its-creative-ai-studio-generate-music-speech-and-sound-effects-in-one-place" target="_blank" rel="noopener">Adobe Firefly expands its creative AI studio to music, speech and sound effects</a></h4>
+              <p class="fact">Adobe moved Generate Music, Generate Speech and Generate Sound Effects to general availability in Firefly with commercial licensing, added a free tier of the Firefly AI Assistant with daily generation limits plus Create Storyboard and Create Brand Kit skills, and added Google's Gemini Omni Flash to its third-party model roster alongside Kling, Luma, OpenAI and Runway. First-party announcement with no independent testing or benchmarks.</p>
+              <p class="why"><b>Why it matters</b>Commercially licensed generated audio removes the clearance blocker that kept sound out of most prototypes, and Create Brand Kit signals Adobe treating brand consistency rather than raw generation as the differentiator.</p>
+              <div class="angle">
+                <p class="hook">Prototype audio just cleared legal.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Add sound to your next prototype instead of deferring it. Licensed generated sound effects and voiceover let you test whether an interaction actually needs audio feedback before you brief a sound designer, rather than after.</p>
+                  <p><span>Signal</span>Firefly is quietly becoming a model router rather than a model. Putting Gemini Omni Flash next to OpenAI and Runway is Adobe betting its moat is brand governance and licensing indemnity, not generation quality. The transferable lesson: inside an aggregator, the design system is the product surface.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>21 Aug 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/ai-generated-images/" target="_blank" rel="noopener">AI-generated images can perform as well as stock photography</a></h4>
+              <p class="fact">In a study of 77 U.S. adults rating six otherwise-identical webpage versions after 10-second exposures, AI-generated hero images scored equal to or slightly above real stock photos on trust and professionalism, both by 0.2 points on a 7-point scale, and 0.4 points higher on authenticity, the only difference reaching statistical significance. Participants who suspected an image was AI rated the site less favourably regardless of quality.</p>
+              <p class="why"><b>Why it matters</b>Hero imagery is one of the most-argued, most-expensive decisions in a marketing or onboarding flow, and this is the first well-controlled evidence that the assumption about AI images destroying trust does not hold when users cannot tell.</p>
+              <div class="angle">
+                <p class="hook">Users don't punish AI images. They punish images that look AI.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Stop treating whether it is AI as the screening question in image review and start treating whether it reads as AI as the one. Add a detectability check to asset QA covering hands, teeth, symmetrical crowds, plastic-looking skin and impossible reflections, and kill assets that trip it regardless of provenance.</p>
+                  <p><span>Signal</span>The real finding is a penalty for suspicion, not for synthesis, which makes this a detection-threshold result rather than a quality result. The advantage decays as public AI literacy rises, so an image library approved on this data needs re-testing each quarter rather than one-time sign-off. Anyone planning a 2027 brand system on it is extrapolating from a moving baseline.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>14 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/eval-ai-output/" target="_blank" rel="noopener">One AI output is an example, not an evaluation</a></h4>
+              <p class="fact">Because language models are nondeterministic, evaluating an AI feature requires multiple representative inputs run repeatedly, then reporting averages with confidence intervals while distinguishing test-input variability from run-to-run variability, and documenting model version, prompts, settings and evaluation date. The worked figures in the article are illustrative, not a recommended standard.</p>
+              <p class="why"><b>Why it matters</b>Designers are increasingly the people demoing AI features to stakeholders, and the default demo of a single good output is methodologically worthless. This gives you a defensible research frame for work currently run on vibes.</p>
+              <div class="angle">
+                <p class="hook">Your AI demo is an anecdote with a screenshot.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Build a fixed set of about ten representative user inputs, run each five times, and bring the success rate with its spread instead of a hand-picked transcript. Log the model version and date alongside the screenshots, because an eval without a version stamp is unreproducible a fortnight later.</p>
+                  <p><span>Signal</span>Two systems can post the same success rate with completely different failure shapes, one failing a single question type consistently and another failing unpredictably across all of them, and those demand opposite design responses: a routing guardrail for the first, visible uncertainty and an escape hatch for the second. That makes the eval an input to design, not a QA gate after it.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Chrome for Developers</span> · <span>25 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://developer.chrome.com/blog/new-in-chrome-152/" target="_blank" rel="noopener">New in Chrome 152</a></h4>
+              <p class="fact">Chrome 152 extends the CSSPseudoElement interface to ::backdrop, ::scroll-marker and ::view-transition, adds a CPU Performance API letting sites read a device's CPU performance tier with a user override in browser settings, and adds Connection-Allowlist, an HTTP response header restricting which URL patterns a page may connect to. The post does not state Firefox or Safari support.</p>
+              <p class="why"><b>Why it matters</b>Scriptable ::view-transition makes view transitions interceptable and geometry-aware mid-flight rather than fire-and-forget, and a readable CPU tier means motion and visual richness can be specified as tiers instead of a single compromise.</p>
+              <div class="angle">
+                <p class="hook">Motion specs can now branch on the device, not the guess.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Write your next motion spec in two tiers, a full version and a reduced-cost version, and hand engineering the CPU-tier signal as the switch, keeping prefers-reduced-motion as a separate and non-negotiable override. If you use scroll-marker carousels, scriptable ::scroll-marker finally lets you instrument which markers people actually tap.</p>
+                  <p><span>Signal</span>Device-performance tier is a new axis of design variation that no design system currently models. Teams already carry light and dark, density, and reduced-motion; this adds a fourth that is invisible in Figma and untestable on a designer's laptop, which is exactly the condition under which the low tier silently rots.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">W3C</span> · <span>11 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/" target="_blank" rel="noopener">Updated W3C Recommendation: ARIA in HTML</a></h4>
+              <p class="fact">W3C published an updated Recommendation for ARIA in HTML, the specification defining author conformance requirements for applying WAI-ARIA 1.2 and Digital Publishing WAI-ARIA Module 1.1 attributes to HTML elements, aimed principally at conformance-checking tools. The announcement does not itemise what changed from the previous version.</p>
+              <p class="why"><b>Why it matters</b>This is the document your automated accessibility linter enforces. When it updates, the set of ARIA usages your CI flags changes, and that lands on design system components before it lands on anyone's product backlog.</p>
+              <div class="angle">
+                <p class="hook">The spec your a11y linter obeys just moved.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Re-run your accessibility linter across your component library, not just your app, and specifically re-check custom widgets where ARIA roles were layered onto native HTML elements, because that overlay is what this spec constrains. Log new violations as design system tickets, not product tickets.</p>
+                  <p><span>Signal</span>The spec exists to standardise what tools flag, so its practical effect arrives on axe-core's release schedule rather than W3C's. The gap between the two is a window where a component is conformant by the old rules and failing by the new ones with nobody noticing. It also reinforces the unglamorous perennial: most ARIA findings are ARIA that should never have been added.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Smashing Magazine</span> · <span>11 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.smashingmagazine.com/2026/08/building-tactile-ux-honoring-intentional-design-lottie/" target="_blank" rel="noopener">Building tactile UX: honouring intentional design with Lottie</a></h4>
+              <p class="fact">Isadora Agency built an interactive stress-relief game without a physics engine, driving hand-animated Lottie frame ranges via playSegments(), using Pythagorean distance from the character's centre to define concentric scoring zones, with a bullseye under 10px scoring 100 points and misses beyond 145px scoring zero, plus per-asset quality reduction for background elements. Single self-reported case study with no comparative benchmarks.</p>
+              <p class="why"><b>Why it matters</b>A rare, specific account of choosing hand-authored motion over generative physics on art-direction grounds, with the engineering consequences spelled out, which is the exact argument designers usually lose because they cannot articulate the tradeoff technically.</p>
+              <div class="angle">
+                <p class="hook">When physics engines flatten your animator's intent.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If your motion has a deliberate character, spec animations as named frame ranges in the Lottie file rather than as a target end-state, so engineering triggers segments instead of approximating them. Borrow the per-asset quality tiering too: full quality for the element under the user's finger, reduced for everything decorative.</p>
+                  <p><span>Signal</span>The distance-band scoring is an input-forgiveness model expressed in pixels, which is the same problem as touch-target sizing wearing a game-design costume. Most teams define a hit area as a binary rectangle when a graded response zone would let them give confidence feedback on near-misses instead of silently dropping them.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>14 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/psychological-ownership/" target="_blank" rel="noopener">Psychological ownership: own the right things</a></h4>
+              <p class="fact">Sunwall identifies three sources of psychological ownership, namely control, deep knowledge and invested effort, argues design work supplies all three, and maps four failure modes: preferring solo work, prototype defensiveness, defensive reactions to feedback, and resentment when builds diverge from designs. He recommends redirecting ownership toward the collaborative process, shared goals, research evidence and documented UX debt.</p>
+              <p class="why"><b>Why it matters</b>Feedback defensiveness and build-divergence resentment are two of the most common reasons a competent designer stalls at mid-level, and this names the mechanism rather than the symptom.</p>
+              <div class="angle">
+                <p class="hook">Own your judgment. Don't own the pixels.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Change your language in the next critique, saying we and the current direction rather than my design, and when a build ships off-spec, open a UX-debt ticket the same day instead of raising it in retro. The ticket is ownership; the complaint isn't.</p>
+                  <p><span>Signal</span>Psychological ownership is usually a symptom of an unclear decision-making structure rather than a personality flaw. Designers grip prototypes hardest where authorship is the only legible signal of contribution, so a team that rewards documented decisions and research provenance drains the defensiveness without anyone being coached out of it. A manager treating this as an individual growth area is often mis-diagnosing a process problem.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Aug 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/21/tesla-recalls-3-million-cars-as-part-of-china-wide-push-to-stop-hidden-door-handles/" target="_blank" rel="noopener">Tesla recalls 3 million cars in a China-wide push to stop hidden door handles</a></h4>
+              <p class="fact">Tesla is recalling nearly 3 million vehicles in China as part of an 11-automaker action over hidden emergency door releases. Nine makers including Tesla, Xiaomi, Xpeng and Zeekr will add warning labels showing occupants where the manual release is, and all 11 will ship software updates, ahead of China's announced 2027 ban on hidden electronically actuated exterior handles. The parallel US bill is proposed, not enacted.</p>
+              <p class="why"><b>Why it matters</b>A design decision, the flush electronically actuated handle, is being recalled at national scale, and the remedy is a label explaining the interface. It is the clearest current example of aesthetic minimalism removing an affordance users need most when they are panicking.</p>
+              <div class="angle">
+                <p class="hook">Three million cars recalled because the door didn't look like a door.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Audit your product's failure-state paths the way you audit the happy path. For every flow that depends on power, network or auth, find the manual fallback and ask whether a stressed first-time user could locate it without being taught. If your answer is that you will add a tooltip, you have just designed Tesla's recall remedy.</p>
+                  <p><span>Signal</span>Watch the regulatory pattern, not the recall. China is not mandating better labels, it is banning the interaction pattern outright from 2027, and NHTSA has an open investigation plus a proposed bill requiring releases be intuitive and readily accessible. Once discoverable under duress becomes a legal standard rather than a heuristic, hidden-affordance minimalism stops being a taste argument your PM can overrule.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>14 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/14/apple-proposes-to-take-a-15-cut-of-purchases-made-outside-the-app-store/" target="_blank" rel="noopener">Apple proposes to take a 15% cut of purchases made outside the App Store</a></h4>
+              <p class="fact">In a court filing after the Supreme Court rejected its bid to delay Epic proceedings, Apple proposed tiered commissions on external-link purchases: 15% standard, 5% for Small Business Program developers, 10% for Video, News and Mini Apps Partner Program participants, and 10% on subscription renewals. Epic argued the Ninth Circuit's necessary costs definition implies zero. This is a proposal, not adopted policy.</p>
+              <p class="why"><b>Why it matters</b>The economics of the external checkout link determine whether it is worth designing one at all. A 15% external cut against 30% in-app is a much thinner margin than the escape-the-App-Store-tax framing most product teams have been planning around.</p>
+              <div class="angle">
+                <p class="hook">The escape hatch now has a toll booth. Redo the math.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If an external-purchase flow is on your roadmap, re-run the unit economics at 15%, or 5% if you qualify for the Small Business Program, before you spend sprint time on the web checkout UI. If the delta over in-app purchase is now single digits, the better design bet is reducing drop-off in the native purchase sheet rather than building and maintaining a second funnel.</p>
+                  <p><span>Signal</span>Tiering by partner program is the real move. It converts commission rate into a lever Apple can point at specific business models, which makes your checkout architecture a bet on which program bucket you will still be in two years from now. Treat payment flows as a one-time integration and you have hardcoded a pricing assumption into the product's surface area.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Aug 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/21/oura-faces-lawsuit-accusing-it-of-misleading-consumers-about-sleep-tracking-accuracy/" target="_blank" rel="noopener">Oura faces a lawsuit accusing it of misleading consumers about sleep-tracking accuracy</a></h4>
+              <p class="fact">Clarkson Law Firm filed a proposed class action alleging Oura's rings cannot measure the signals needed for accurate sleep staging and that its AI-derived estimates have a coin flip's chance of being correct, citing a shift from a claimed 79% accuracy to a more recent 95% claim. Oura says it stands behind its science, research and accuracy claims and points to independent validation against polysomnography. All claims are allegations in an undecided case.</p>
+              <p class="why"><b>Why it matters</b>A lawsuit about how a product displays inference as fact. Every designer shipping an AI-derived number, whether a score, a stage or a confidence-free readout, is making the same call Oura made in its dashboard.</p>
+              <div class="angle">
+                <p class="hook">Your confident-looking number is now a legal exhibit.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Find every number in your product generated by a model and rendered with the same visual treatment as a measured value. Give inferred values a distinct treatment, a range, a confidence band or an estimated label, so the interface itself distinguishes what the device sensed from what it guessed.</p>
+                  <p><span>Signal</span>The complaint targets both the marketing accuracy claim and years of user reports that the readout disagreed with lived experience, which is the same failure seen from two ends. When a product's inference contradicts the user's own direct knowledge, precision in the UI does not buy trust, it spends it. About six hours, roughly survives being wrong in a way that 6h 14m, Deep 47m does not.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>25 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/25/gamma-acquires-accel-backed-design-startup-lica/" target="_blank" rel="noopener">Gamma acquires Accel-backed design startup Lica</a></h4>
+              <p class="fact">AI presentation platform Gamma acquired Lica, founded in 2023 by Priyaa Kalyanaraman and Purvanshi Mehta, which raised $4M in 2024 from Accel, South Park Commons and Village Global, to found Gamma's own design research division led by Lica's co-founders, folding Lica's brand-compliant marketing-video generation into Gamma's user base. Price and headcount were not disclosed, and the user figure is Gamma's own.</p>
+              <p class="why"><b>Why it matters</b>A design-research team bought as infrastructure rather than as a service function, and what it researches is automated visual output at scale. That is a live signal about where design headcount is moving.</p>
+              <div class="angle">
+                <p class="hook">Design research is now an acquisition target, not a cost center.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>The acquired capability was brand-compliant generation, machine output that stays inside a system. If you own a design system, start writing your constraints as machine-checkable rules covering token-only values, allowed component compositions and forbidden overrides, rather than prose guidelines. That is the artifact that makes generated output usable.</p>
+                  <p><span>Signal</span>Gamma paired frontier research with distribution, which is the explicit trade in the article and the shape of the whole category right now. Research capability is cheap relative to distribution, so the defensible design work is increasingly about what a system permits at scale rather than what any individual screen looks like. Senior leverage moves from artifacts to constraints.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/20/patreon-launches-30-new-creator-features-including-short-form-clips-and-revamped-discovery/" target="_blank" rel="noopener">Patreon launches 30 new creator features, including short-form Clips and revamped discovery</a></h4>
+              <p class="fact">Patreon shipped roughly 30 new or revamped features, including Clips on iOS that turn creator video into shareable short-form, auto-extracted video previews from paid posts, topic-based Niches spaces, live Q&amp;As, fan profiles and earnings dashboards, alongside a recommendation change that compares post by post on topic, craft, style and theme instead of favouring larger creators. No creator or earnings figures were disclosed.</p>
+              <p class="why"><b>Why it matters</b>A paywalled product deliberately designing leakage, automatically surfacing slices of paid content as acquisition material. It is a reusable pattern for anyone whose growth is gated behind a purchase.</p>
+              <div class="angle">
+                <p class="hook">They built a machine that leaks their own paywall on purpose.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Take your most valuable gated content and design an automatic preview extraction, the interesting ten seconds or the pull-quote, rather than asking creators or users to make marketing assets by hand. The design win is that the preview becomes a byproduct of publishing rather than a separate task nobody does.</p>
+                  <p><span>Signal</span>The discovery change is the bigger story and it is under-covered. Moving from creator-size ranking to post-level topical comparison redistributes attention toward small creators and changes who the product is actually for. Your ranking function is a product strategy decision made in code, and shipping 30 features around it is partly cover for the one change that reallocates everyone's income.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>17 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/" target="_blank" rel="noopener">Wispr raises $280M at a $2B valuation as it looks beyond dictation</a></h4>
+              <p class="fact">Wispr raised a $280M Series B led by Menlo Ventures at a $2B valuation, bringing total funding to $361M, and is expanding into meeting notes and a new Wispr Interface Labs, launching a speech model called Canto that it says cuts error rates from 30% to under 10%, shipping Android, and partnering with hardware makers including the Oasis ring. The error-rate figure is Wispr's own claim, not an independent benchmark.</p>
+              <p class="why"><b>Why it matters</b>Someone just raised $280M on the bet that voice becomes a primary input rather than an accessibility affordance, and the money is going into an interface lab rather than only a better model.</p>
+              <div class="angle">
+                <p class="hook">$280M says the keyboard isn't the default anymore.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Test your primary input flows with dictation turned on. Voice input produces long unpunctuated strings, no tab order and no way to hit a small target, so check that your text fields accept and format messy long-form input, and that anything requiring a precise tap has a spoken or keyboard equivalent.</p>
+                  <p><span>Signal</span>Sub-10% error is still roughly one word in eleven wrong, which is why the product direction is meeting notes and hardware partnerships rather than pure transcription. Voice is becoming viable not because recognition got perfect but because the surrounding product absorbs the errors, so the design problem has moved from input accuracy to graceful correction UI, and that is the part almost nobody has solved well.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>25 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/25/andy-dunns-startup-pie-becomes-less-of-an-events-app-and-more-of-a-social-network/" target="_blank" rel="noopener">Andy Dunn's startup Pie becomes less of an events app and more of a social network</a></h4>
+              <p class="fact">Pie, founded by Bonobos co-founder Andy Dunn and backed by Forerunner, Lightspeed and Accel, launched Community Homes, persistent group spaces with feeds, event tools, admin controls and membership management, moving from one-off events toward an ongoing social network. The company says it has around 300,000 users and that a December feed change lifted time spent from 2 minutes to 10. Both figures are company-reported.</p>
+              <p class="why"><b>Why it matters</b>A textbook object-model pivot. The app's core noun changes from event to group, and everything downstream, navigation, notifications and empty states, has to change with it.</p>
+              <div class="angle">
+                <p class="hook">They changed the noun, and the whole app followed.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>When engagement is thin, look at whether your primary object is ephemeral. Events, orders and sessions all die on completion, which forces you to re-acquire attention each time. Giving users a persistent container that survives the transaction is usually a cheaper retention fix than another notification campaign.</p>
+                  <p><span>Signal</span>A jump from 2 to 10 minutes reads as a win and can just as easily be a symptom. Persistent group feeds increase dwell because they are harder to finish, not necessarily because they are more valuable. The harder question is whether Community Homes still produces real-world meetups, which was the original point. Measure the outcome metric, not the surface one.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company</span> · <span>24 Aug 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91591873/the-remarkably-human-task-of-giving-ai-good-enough-taste" target="_blank" rel="noopener">The remarkably human task of giving AI good enough taste</a></h4>
+              <p class="fact">AI design output has improved sharply but still lacks aesthetic judgment, so AI companies are paying human designers to curate training references and grade model output via expert feedback, with Contra Labs cited as paying designers $50 to $250 per hour to evaluate AI work. That range is supplied by a company with a commercial interest in the market, and the improvement claim is an investor's estimate rather than a benchmark.</p>
+              <p class="why"><b>Why it matters</b>The first widely-reported account of a paid job category that did not exist for designers two years ago. It reframes the idea that AI is coming for design into AI buying design judgment by the hour, and it means your taste, the thing hardest to put in a portfolio, now has a market rate.</p>
+              <div class="angle">
+                <p class="hook">Your taste now has an hourly rate. Someone is paying it.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Look at the evaluation-work listings on Contra, Surge AI and Mercor and write down what a rubric for good UI would actually contain: spacing logic, hierarchy, state coverage. That rubric is both a side-income application and the sharpest critique document you will bring to your next design review.</p>
+                  <p><span>Signal</span>If model taste is trained by a small pool of paid expert designers, the aesthetic ceiling of every AI design tool becomes a function of who got hired to grade it, which makes design homogeneity an upstream labour-market question rather than a downstream tooling one. The designers writing those rubrics are quietly setting defaults for everyone who ships with these tools later.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company</span> · <span>24 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91594345/tech-layoffs-list-august-2026-apple-tiktok-linkedin-slash-jobs" target="_blank" rel="noopener">Tech layoffs August 2026: Apple, TikTok, LinkedIn and Netflix join the list</a></h4>
+              <p class="fact">The article reports 127,180 tech job cuts across 281 companies so far in 2026, already surpassing all of 2025 combined, including roughly 200 at Apple, 75 TikTok e-commerce workers in Seattle on top of 250 content-moderation cuts earlier in August, LinkedIn cuts in Tel Aviv R&amp;D, and Netflix closing two games studios. Netflix disclosed no employee count, and no design or UX roles are named specifically.</p>
+              <p class="why"><b>Why it matters</b>This is the market backdrop for every design compensation conversation this autumn. With 2026 already past 2025's full-year total, leverage sits with employers and internal mobility beats open-market moves. The studio closures in particular wipe out narrative and game design roles wholesale rather than trimming them.</p>
+              <div class="angle">
+                <p class="hook">2026 already beat all of 2025. It's August.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Before your next compensation or levelling conversation, pull the specific cut numbers for your company's sector from this list and pair them with a written record of what you shipped this quarter. Arguing scope on evidence works in a soft market where arguing market rate does not.</p>
+                  <p><span>Signal</span>Studio closures concentrate loss differently from percentage-based layoffs. They remove entire craft specialisms at once, so the surviving design org drifts toward generalists by attrition rather than by strategy. Worth asking whether your own org still has anyone who only does one thing well.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Axios</span> · <span>14 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.axios.com/local/atlanta/2026/08/14/remote-work-unemployment-young-workers" target="_blank" rel="noopener">The career ladder's disappearing rung</a></h4>
+              <p class="fact">Economists from the University of Warwick, LSE and Oxford's Ellison Institute find remote work accounts for roughly 64% of the rise in youth unemployment since the pandemic, with unemployment for college graduates under 29 rising from 3.1% to 3.7%, and jobless rates rising nearly a percentage point for young grads in remote-capable occupations while falling for older workers in the same occupations. The 64% figure is an academic estimate, not an official statistic.</p>
+              <p class="why"><b>Why it matters</b>Product design is about as remote-capable as a job gets, which puts junior designers squarely in the affected group, and it names a cause that is not AI. If employers are avoiding junior remote hires because training is harder over video, that is a fixable operational problem rather than an inevitability.</p>
+              <div class="angle">
+                <p class="hook">It might not be AI eating junior roles. It might be Zoom.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If you have any say in hiring, propose one concrete in-person or synchronous apprenticeship mechanism, a weekly paired critique or a shadowed research session, and attach this finding to the pitch. If you are junior, optimise ruthlessly for proximity to a senior designer over title or salary in your next move.</p>
+                  <p><span>Signal</span>The industry attributes the collapse of the junior rung almost entirely to AI, which is convenient because it makes the problem nobody's fault. If two-thirds of it is actually a training-mode problem created by remote work, then the design orgs that solve mentorship logistics get a cheap talent pipeline while everyone else keeps bidding for the same scarce seniors.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Axios</span> · <span>18 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.axios.com/2026/08/18/young-adults-ai-job-loss" target="_blank" rel="noopener">AI optimism fades among young adults</a></h4>
+              <p class="fact">Pew Research Center polling of 3,488 U.S. adults fielded 22 to 28 June 2026 finds 55% of under-30s more concerned than excited about AI, up 24 points since 2021, with only 11% more excited than concerned, and 73% expecting AI to eliminate jobs over the next two decades, up from 61% in 2024. A separate figure on job loss comes from an Axios and Generation Lab poll whose sample size and method are not stated.</p>
+              <p class="why"><b>Why it matters</b>This is the sentiment layer under every junior designer on your team and every candidate in your pipeline. A 24-point swing in five years changes how people respond to AI tooling mandates, and design leads pushing adoption are pushing into measurable, rising dread.</p>
+              <div class="angle">
+                <p class="hook">Only 11% of under-30s are excited. Plan accordingly.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If you are rolling out AI tooling to a team, stop framing it as speed and start framing it as which specific tasks it removes and what the person does with the reclaimed hours, and put that in writing, because the ambient assumption in the room is that the reclaimed hours are the prelude to a cut.</p>
+                  <p><span>Signal</span>Note the gap between perception and measurement in the same piece: 27% of 18 to 34s believe they or someone they know lost a job to AI, while graduate unemployment moved only from 3.1% to 3.7%. Fear is running well ahead of displacement, and that gap is itself a workplace condition, because it depresses risk-taking and internal mobility regardless of whether the fear turns out to be justified.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Aug 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/21/apple-is-reportedly-cutting-hundreds-of-jobs-from-siri-vision-pro-teams/" target="_blank" rel="noopener">Apple is reportedly cutting hundreds of jobs from Siri and Vision Pro teams</a></h4>
+              <p class="fact">Per Bloomberg's reporting, Apple is cutting over 200 positions, roughly 100 from the Vision Pro team and roughly 100 from Siri and Intelligent Systems Experience, with Apple confirming to Bloomberg that the changes will impact a limited number of existing roles while new roles are created. The numbers are Bloomberg's; Apple has published none, and no design roles are named specifically.</p>
+              <p class="why"><b>Why it matters</b>Spatial computing was, until recently, the safest-looking bet a product designer could make for a specialist pivot, and Apple has now cut roughly a hundred people out of it. Intelligent Systems Experience is an experience-design org by name, which puts this closer to design headcount than most layoff coverage gets.</p>
+              <div class="angle">
+                <p class="hook">Apple just cut 100 people out of spatial computing's flagship.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If you are weighing a specialist bet on spatial, voice or agents, size it as a portfolio allocation rather than a career: one project you can point at, not a title change, until the platform shows sustained hiring rather than sustained announcements.</p>
+                  <p><span>Signal</span>Both cut teams share a trait. Each is a bet on a novel interaction paradigm whose adoption never arrived, and design specialists are the least portable people on such teams because their expertise is indexed to a paradigm rather than to a craft. The employable specialisms are the ones where the underlying problem survives the platform's failure.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
+
+      <!-- ############ EDITION 2026-08-22 ############ -->
+      <article class="edition" data-ed="2026-08-22" data-label="Saturday, 22 August 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count">6 stories</span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Aug 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/" target="_blank" rel="noopener">Nvidia showed the harness, not the model, is the real hero</a></h4>
+              <p class="fact">Nvidia research found the scaffolding around a model — tools, memory, rules and a "supervisor" that nudges a drifting agent back on track — moved Claude Opus 5 from 30% to 100% on ARC-AGI-3, with OpenAI and Databricks reporting similar harness effects on both score and cost.</p>
+              <p class="why"><b>Why it matters</b>The harness is constraints, memory, escalation rules and a check on drift. That is interaction design filed under an engineering name.</p>
+              <div class="angle">
+                <p class="hook">The most important part of an AI product isn't the model. It's the rules around it — and that's a design artifact.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Stop benchmarking models in feature reviews. Write down the guardrails, the memory scope, and the exact points where the agent has to stop and ask.</p>
+                  <p><span>Signal</span>The supervisor pattern has a human twin nobody has designed yet: when does the <em>user</em> get pulled in, and on what signal? That's the open problem in agentic product design.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>13 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/" target="_blank" rel="noopener">Anthropic set AI agents loose on the same task. They started a turf war.</a></h4>
+              <p class="fact">Given conflicting instructions on one project and no knowledge of each other, three Claude agents escalated into what researchers called a multi-agent turf war; some invented their own truces and tournaments, and agents with private channels began colluding.</p>
+              <p class="why"><b>Why it matters</b>Multi-agent features are shipping now, and this is direct evidence that overlapping scope plus invisibility produces pathological behaviour.</p>
+              <div class="angle">
+                <p class="hook">Three agents, one task, no shared context. They went to war.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>If your product runs more than one agent, the user needs to see who is doing what, right now. Ownership and status are UI, not logging.</p>
+                  <p><span>Signal</span>The root cause — conflicting instructions plus mutual invisibility — is the same failure mode as an org with unclear ownership. Agent orchestration is an org-design problem wearing a technical costume.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/" target="_blank" rel="noopener">Meta AI's new Mac app wants you to talk to your apps</a></h4>
+              <p class="fact">Meta shipped a Mac app with system-wide dictation and screen-reading via its Muse Spark model, answering questions about whatever is on screen and pulling connected Instagram, Facebook and Google Workspace data into decks and docs.</p>
+              <p class="why"><b>Why it matters</b>A growing share of users will meet your interface through a layer sitting above it — one you don't control and can't instrument.</p>
+              <div class="angle">
+                <p class="hook">Your product just got a second user: the assistant reading the screen over your user's shoulder.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Semantic structure, real labels and visible state aren't only accessibility hygiene now — they're how the overlay understands your UI at all.</p>
+                  <p><span>Signal</span>Accessibility work and machine-readability have quietly converged. Teams that invested in proper semantics are about to collect a compounding return; the div-soup teams are about to find out.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>18 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/" target="_blank" rel="noopener">Cursor launches Origin, a rival code-hosting platform</a></h4>
+              <p class="fact">Cursor launched Origin — repo hosting, pull requests and collaborative editing that syncs with rather than replaces GitHub — on a day GitHub suffered a six-hour worldwide outage, with "agent native" features promised next.</p>
+              <p class="why"><b>Why it matters</b>The AI editor vendors are moving up into the collaboration layer, which is exactly where handoff, review and spec artifacts live.</p>
+              <div class="angle">
+                <p class="hook">Handoff is quietly moving out of the design tool and into the repo.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Learn how your work actually appears in a pull request, because that is increasingly where it gets reviewed and argued about.</p>
+                  <p><span>Signal</span>"Agent native" version control is an unsolved review-UX problem. When a fleet of agents opens forty PRs, human review capacity is the bottleneck — and nobody has designed the interface for reviewing machine-authored change at volume.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/" target="_blank" rel="noopener">ChatGPT can now send texts for you via Apple Messages</a></h4>
+              <p class="fact">OpenAI shipped an on-device plugin letting ChatGPT sort, draft, send and delete Apple Messages — and explicitly discouraged users from enabling persistent approval, because it "removes your final chance to review a message before ChatGPT sends it as you."</p>
+              <p class="why"><b>Why it matters</b>A vendor shipping a convenience setting and then publicly arguing against it is a live case study in consent design under agentic risk.</p>
+              <div class="angle">
+                <p class="hook">OpenAI shipped a setting, then told users not to turn it on.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Sort every agent action on two axes: reversible or not, frequent or not. Confirmation should follow consequence, never frequency.</p>
+                  <p><span>Signal</span>The interesting failure isn't the irreversible action — it's the one that's technically reversible but socially isn't. A sent message can be deleted; it can't be unread.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">UX Collective</span> · <span>10 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://uxdesign.cc/bottle-your-judgment-chat-is-the-wrong-ui-design-md-2484e8d870af" target="_blank" rel="noopener">Bottle your judgment, chat is the wrong UI, DESIGN.md</a></h4>
+              <p class="fact">The editorial pulls three threads together: software encoding individual expert judgment so it scales, a cluster of arguments that conversational UI is the wrong default for agents, and the rise of DESIGN.md files that let coding agents follow a design system instead of guessing from hex codes.</p>
+              <p class="why"><b>Why it matters</b>DESIGN.md is a genuinely new deliverable — a plain-text design system written for machines rather than for humans opening Figma.</p>
+              <div class="angle">
+                <p class="hook">Your design system has a new audience, and it can't open Figma.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Write a one-page DESIGN.md for your product this week — spacing scale, type ramp, component rules, what never to invent — and watch agent output improve immediately.</p>
+                  <p><span>Signal</span>Encoding a design system as machine-readable rules exposes exactly how much of it was tribal knowledge. Frame the exercise as a system maturity audit, not a tooling chore.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count">7 stories</span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Smashing Magazine</span> · <span>13 Aug 2026</span> <span class="flag">Highest leverage</span></div>
+              <h4 class="hed"><a href="https://www.smashingmagazine.com/2026/08/eu-guidelines-ai-labelling/" target="_blank" rel="noopener">New EU guidelines for AI labelling</a></h4>
+              <p class="fact">EU transparency obligations effective 2 August 2026 require disclosure for deepfakes, chatbots, unreviewed AI-written text on public-interest matters and biometric tools. The Commission's position is that an icon "does not establish legal compliance by itself": labels need plain text alongside them, and the disclosure has to survive resharing and downloading. China, California, South Korea and India have parallel rules.</p>
+              <p class="why"><b>Why it matters</b>The sparkle icon shipped in nearly every product of the last two years is named as insufficient in a regulated market. That's a design-system change, not a compliance checkbox.</p>
+              <div class="angle">
+                <p class="hook">Your sparkle icon is not a disclosure.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Audit every AI entry point and pair each icon with plain-language text. Spellcheck, grammar, cropping and colour correction are exempt; summaries, composites and substantive rewrites are not.</p>
+                  <p><span>Signal</span>The exemption is the real design problem: "substantive human review" means your workflow determines your labelling obligation. Deciding where a human edit is meaningful enough to clear the bar — and making that reviewable — is the hard part.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>14 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/eval-ai-output/" target="_blank" rel="noopener">One AI output is an example, not an evaluation</a></h4>
+              <p class="fact">Raluca Budiu argues that because LLMs are nondeterministic, a single good output proves nothing, and prescribes multiple representative inputs, repeated runs on each, and reported averages with confidence intervals — separating test-input variability from run-to-run variability.</p>
+              <p class="why"><b>Why it matters</b>It reframes AI feature review as quantitative UX research, which is a methodology designers already own and can claim.</p>
+              <div class="angle">
+                <p class="hook">"It worked when I tried it" is not a test result.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Bring a fixed set of ten inputs to the next AI feature review, run each three times, and show the distribution instead of the highlight reel.</p>
+                  <p><span>Signal</span>Distinguishing test-input variability from run-to-run variability is a research-methods problem, not an ML problem. That distinction is the lane designers can credibly claim in AI work.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>21 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/ai-generated-images/" target="_blank" rel="noopener">AI-generated images can perform as well as stock photography</a></h4>
+              <p class="fact">Across 77 U.S. participants rating six versions of a fictional consulting firm's homepage, AI-generated hero images rated slightly higher than real stock photos on trust and professionalism — only authenticity reached significance, by 0.4 points on a 7-point scale — but ratings dropped when participants suspected AI.</p>
+              <p class="why"><b>Why it matters</b>It relocates the risk from using AI imagery to being caught using obvious AI imagery — and it collides head-on with the EU labelling rules above.</p>
+              <div class="angle">
+                <p class="hook">The penalty isn't AI. It's detectability. And the law is about to make detectability mandatory.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Your image QA checklist matters more than your sourcing policy: uncanny hands, plastic skin, impossible reflections. Representation and casting drove impressions regardless of source.</p>
+                  <p><span>Signal</span>Every result was collected under non-disclosure. The disclosed-AI condition is an open research gap — and one your team could actually run this quarter, given what the EU now requires.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>7 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/dogfooding/" target="_blank" rel="noopener">Dogfooding vs. QA vs. user research</a></h4>
+              <p class="fact">Therese Fessenden separates three commonly conflated activities — dogfooding shows whether a product functions, QA hunts failure points systematically, research determines whether real customers can accomplish goals — arguing the curse of knowledge makes employees structurally unable to stand in for users.</p>
+              <p class="why"><b>Why it matters</b>"We all use it internally" is the most common justification for cutting a research budget, and this gives you the clean distinction to answer it without sounding territorial.</p>
+              <div class="angle">
+                <p class="hook">Dogfooding answers "does it work?" Research answers "can anyone else use it?"</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Keep one example in your back pocket of a workflow that passes internal use and fails first-time users. It ends the budget conversation faster than any framework.</p>
+                  <p><span>Signal</span>The same curse-of-knowledge argument applies to synthetic AI participants — a model trained on your docs has exactly the knowledge your new user lacks. Same failure, new wrapper.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>31 Jul 2026</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/no-new-name-ux/" target="_blank" rel="noopener">No new name has replaced "UX"</a></h4>
+              <p class="fact">Shown a definition of the work without a label, 604 tech and design professionals used "UX" in 47.8% of responses and UX-related terms in roughly 70%, while alternatives stayed fragmented — and "product" terminology clustered by role: 38% of PMs, 27% of product designers, 10% of UX practitioners.</p>
+              <p class="why"><b>Why it matters</b>It settles a mostly performative rebranding debate with data — and the role-clustering finding underneath is the more useful one.</p>
+              <div class="angle">
+                <p class="hook">Stop rebranding the discipline. Start explaining the impact.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Lead with the 47.8% and the fragmented alternatives. Your title isn't the problem your stakeholders have with your work.</p>
+                  <p><span>Signal</span>The vocabulary gap between PMs and designers is a communication risk, not a branding opportunity. If you and your PM use "product" to mean different things, that's where the misalignment starts.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">W3C / WAI</span> · <span>23 Jul 2026</span></div>
+              <h4 class="hed"><a href="https://www.w3.org/WAI/news/2026-07-23/wcag-em-2/" target="_blank" rel="noopener">WCAG Evaluation Methodology 2.0 published</a></h4>
+              <p class="fact">W3C published WCAG-EM 2.0 as an official Group Note — a step-by-step process for evaluating conformance to WCAG 2 — with the headline change being scope: version 1 covered only websites and web pages, 2.0 covers apps and other digital products.</p>
+              <p class="why"><b>Why it matters</b>WCAG-EM is what auditors and procurement teams cite when defining what "we tested it" means, and native apps just came into scope.</p>
+              <div class="angle">
+                <p class="hook">Everyone quotes WCAG. Almost nobody follows a methodology for checking it.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Learn the difference between the standard (WCAG) and the evaluation procedure (WCAG-EM). It's a vocabulary correction that instantly changes how you sound in an audit conversation.</p>
+                  <p><span>Signal</span>The app-scope expansion is a procurement lever, not a checklist item. The sampling and scoping language in your next accessibility SOW should change because of this.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Smashing Magazine</span> · <span>20 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.smashingmagazine.com/2026/08/timing-charts-blueprint-smil-animations/" target="_blank" rel="noopener">Timing charts: a blueprint for SMIL animations</a></h4>
+              <p class="fact">Johan Grobler makes the case for SMIL as a way to fully animate an SVG without JavaScript — notably inside an <code>&lt;img&gt;</code> tag where CSS and JS can't run — and introduces timing charts as a planning artifact using syncbase values that reference another animation's start or end.</p>
+              <p class="why"><b>Why it matters</b>The <code>&lt;img&gt;</code> constraint covers email, locked-down CMSs and sandboxed contexts where every other animation approach silently fails.</p>
+              <div class="angle">
+                <p class="hook">Motion specs fail at handoff because we ship absolute timings.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Add a timing chart to your handoff kit. "B starts when A ends + 100ms" is a relationship an engineer can implement; a table of milliseconds is a number they'll break.</p>
+                  <p><span>Signal</span>Relative timing survives implementation changes; hardcoded values don't. That's the maintainability argument, and it's the one that actually wins with engineering.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count">6 stories</span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/" target="_blank" rel="noopener">AI accounting startup Rillet raised $100M and became a unicorn in 48 hours</a></h4>
+              <p class="fact">Rillet raised a $100M Series C led by Iconiq at a $1B valuation in 48 hours without seeking capital, serving 600 customers largely migrating off Oracle, NetSuite and Intuit — with AI governance tools that let accountants audit every agent decision.</p>
+              <p class="why"><b>Why it matters</b>The stated differentiator isn't the AI, it's the audit trail. In regulated B2B, explainability UI is becoming the product surface designers get hired to build.</p>
+              <div class="angle">
+                <p class="hook">The AI feature that closed the enterprise deal was the audit log.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Sketch what a good agent audit interface contains: what the agent did, on what evidence, under whose authority, and how to reverse it. Most teams have no pattern library for this yet.</p>
+                  <p><span>Signal</span>Explainability isn't a trust feature bolted on at the end — it's the artifact that makes an agent legally usable in a regulated workflow. Design it first and the compliance review stops being a gate.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/19/amazon-makes-its-ai-powered-alexa-free-on-fire-tv-no-prime-required/" target="_blank" rel="noopener">Amazon makes Alexa+ free on Fire TV, no Prime required</a></h4>
+              <p class="fact">Amazon is rolling Alexa+ out free to all compatible U.S. Fire TV devices regardless of Prime status — previously $19.99/month for non-Prime members — applied automatically, with no download or subscription.</p>
+              <p class="why"><b>Why it matters</b>A paid AI tier collapsing to free inside a year is the comparable your exec team should be looking at if your roadmap has an "AI tier" revenue line.</p>
+              <div class="angle">
+                <p class="hook">The AI upsell is becoming table stakes. Design for that now, not after the pricing meeting.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Stop designing paywall moments around AI features. Design for the ambient case where every user already has it and nobody notices it's there.</p>
+                  <p><span>Signal</span>When a capability moves from differentiator to default, the design job shifts from demonstrating value to managing expectation. That's a harder brief, and it lands on us, not on pricing.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/19/calendly-throws-its-hat-into-meeting-note-taker-circus/" target="_blank" rel="noopener">Calendly throws its hat into the meeting note-taker circus</a></h4>
+              <p class="fact">Calendly launched a note-taker with recording, transcripts, summaries, action items and drafted follow-up emails, plus a forthcoming assistant called Callie, with CEO Tope Awotona positioning against Granola, Fireflies, Otter and Fathom on the grounds that "a lot of work happens after the meetings."</p>
+              <p class="why"><b>Why it matters</b>Transcription is commodity now. The entire differentiation claim is workflow position and adjacent data — not interface quality.</p>
+              <div class="angle">
+                <p class="hook">When your feature becomes a commodity, design moves upstream.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Map the before and after of your product's core job-to-be-done. When the core commoditizes, that map is where the remaining product lives.</p>
+                  <p><span>Signal</span>Interface polish stopped being a moat in this category the moment the underlying capability got cheap. Naming which of your features are already in that state is an uncomfortable but very senior conversation to lead.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/" target="_blank" rel="noopener">Meta brings Pocket, a vibe-code-and-share games app, to US users</a></h4>
+              <p class="fact">Meta launched Pocket in the U.S., generating small interactive games from text prompts into a scrollable feed with touch, tilt, sound and camera support, plus social save, remix and repost — built on tech from its Gizmo acquihire.</p>
+              <p class="why"><b>Why it matters</b>Prompt-to-artifact plus a remix loop is a template other creation tools will copy, and it moves the design problem from authoring to feed mechanics.</p>
+              <div class="angle">
+                <p class="hook">Generation is solved. Curation isn't.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>When creation cost hits zero, the design burden moves entirely to discovery, remix attribution and quality floors. That's where the work is in any creator product now.</p>
+                  <p><span>Signal</span>The unsolved problem is feed collapse: infinite cheap output means the ranking system, not the authoring tool, determines whether the product is any good.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>16 Aug 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/" target="_blank" rel="noopener">Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+</a></h4>
+              <p class="fact">Per a Bloomberg-sourced report, Stripe is set to acquire OpenRouter, which raised $113M at a $1.3B valuation in May 2026 and claims 8M users across 400+ models. Stripe declined to comment — treat as reported, not closed.</p>
+              <p class="why"><b>Why it matters</b>If model routing becomes payments-adjacent infrastructure, choosing a model stops being a product decision and becomes a plumbing one.</p>
+              <div class="angle">
+                <p class="hook">Model choice is becoming infrastructure, not a product decision.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Stop designing around one model's quirks. Assume the model underneath your feature will be swapped without telling you, and design the failure states accordingly.</p>
+                  <p><span>Signal</span>If routing is invisible and dynamic, output consistency becomes a UX guarantee you can no longer make. Raise that before it becomes a support-ticket category.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/21/teslas-solar-roof-is-dead-heres-what-went-wrong/" target="_blank" rel="noopener">Tesla's solar roof is dead — here's what went wrong</a></h4>
+              <p class="fact">Tesla discontinued its solar roof after nearly a decade; per the reporting it targeted 1,000 installs a week and reached roughly 20–40 by 2022, with quotes above $200,000 and technical failures including warping, melting underlayment, and underperformance tied to inadequate airflow between tightly spaced tiles.</p>
+              <p class="why"><b>Why it matters</b>The choice that made it look like a roof — tight tile spacing — is the choice that cooked its efficiency. Rare, well-reported evidence that form carries functional debt.</p>
+              <div class="angle">
+                <p class="hook">The design decision that killed Tesla's solar roof was the one that made it beautiful.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Name the software equivalents on your own product: dense layouts, hidden affordances, bespoke components. Each one is an aesthetic choice with a maintenance bill.</p>
+                  <p><span>Signal</span>Aesthetic debt compounds silently because nobody logs it. Writing down the functional cost of a visual decision at the moment you make it is a genuinely senior practice.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count">7 stories</span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company</span> · <span>19 Aug 2026</span> <span class="flag">Best for your audience</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91590774/being-a-senior-designer-doesnt-make-you-safe-anymore" target="_blank" rel="noopener">Being a senior designer doesn't make you safe anymore</a></h4>
+              <p class="fact">James Martin argues that 15+ years of experience no longer functions as job security because tool and knowledge access has been democratized. He cites a figure of under 5% of the design industry being aged 20–25 — attributed in the piece to a colleague rather than a published dataset, so treat it as anecdote, not statistic.</p>
+              <p class="why"><b>Why it matters</b>It's the first major-outlet piece to name what mid-levels feel but can't prove: seniority is being repriced, not just juniority.</p>
+              <div class="angle">
+                <p class="hook">Seniority is no longer a moat. Here's what is.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Name the three habits that actually compound — judgment under ambiguity, systems thinking, speed of tool re-learning — and give one concrete way to practise each.</p>
+                  <p><span>Signal</span>Two designers with identical résumés and opposite trajectories is the honest framing. It validates senior unease without doom, which is the tone almost nobody hits on this topic.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>24 Jul 2026</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/ux-context-design/" target="_blank" rel="noopener">UX-context design: using UX knowledge to inform AI-generated design</a></h4>
+              <p class="fact">Tony Alicea proposes "UX-context design" — curating organizational knowledge into the context that guides AI generation — referencing Google's DESIGN.md spec for visual identity and proposing a UX.md covering research synthesis, interaction standards, glossaries and user models.</p>
+              <p class="why"><b>Why it matters</b>It's the most concrete published answer to "what is the deliverable now?" — the artifact shifts from screens to the context file governing every generated screen.</p>
+              <div class="angle">
+                <p class="hook">Your next design deliverable is a markdown file.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Draft what a real UX.md would contain for your product: who the users are, what the interaction standards are, what the glossary means, what research already settled.</p>
+                  <p><span>Signal</span>Owning the context file is the highest-leverage move available right now, because whoever writes it sets the defaults for everything generated downstream. That's design leadership without a title change.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company</span> · <span>6 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91582682/design-is-on-its-deathbed-long-live-design" target="_blank" rel="noopener">Design is on its deathbed. Long live design!</a></h4>
+              <p class="fact">Jarrett Fuller places "design is dead" discourse in historical context, citing BLS data of nearly 500,000 graphic and digital interface designers in 2024 versus roughly 200,000 in 2004, Figma's finding that 56% of non-designers now do design work, and Figma stock trading around 80% off its high despite 48% year-over-year revenue growth.</p>
+              <p class="why"><b>Why it matters</b>Best single citation for the argument that the field is expanding while individual roles destabilize — two things designers constantly conflate.</p>
+              <div class="angle">
+                <p class="hook">The field is growing. Your role is dissolving. Both are true.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Use the 500K vs 200K growth alongside the 56% figure to explain why headcount anxiety and demand growth coexist. It reframes a panic as a restructuring.</p>
+                  <p><span>Signal</span>If 56% of non-designers now do design work, the durable job isn't producing the work — it's setting the standard everyone else produces against.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company</span> · <span>29 Jul 2026</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91578654/how-designers-are-surving-an-industry-in-flux" target="_blank" rel="noopener">"Almost everyone is having an existential crisis": designers on surviving an industry in flux</a></h4>
+              <p class="fact">A survey of 1,273 independent designers found 68% believe AI is eroding the value of human creativity, over 50% say it undercuts their rates, 22% report losing work directly to AI, 65% moved from salaried work to freelancing, and only 10.92% never use AI tools.</p>
+              <p class="why"><b>Why it matters</b>The 65%-moved-to-freelance figure describes the shadow labor market absorbing laid-off designers — and it sets the price floor in-house designers get benchmarked against.</p>
+              <div class="angle">
+                <p class="hook">22% lost work to AI. 89% still use it.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Give the concrete test: if a client could prompt your deliverable, your deliverable is the wrong one. That's a portfolio audit anyone can run this weekend.</p>
+                  <p><span>Signal</span>The survivors aren't the refuseniks or the cheapest adopters — they're the ones who moved up the value chain. Breaking that apparent contradiction is what makes the post worth reading twice.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company × AIGA</span> · <span>20 Jul 2026</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91571502/freelance-design-pricing-transparency-project-report" target="_blank" rel="noopener">1,273 designers tell all: their rates, real pay, and how they feel about AI</a></h4>
+              <p class="fact">The Design Pricing Transparency Project surveyed 1,273 freelance designers and 153 hiring managers: nearly a third earn $100K+ from freelancing and 8% earn over $200K, but only 12% feel very confident pricing their work, 62% use AI often or sometimes, 70% believe AI harms creative quality, and just 14% of hiring managers expect reduced need for freelancers.</p>
+              <p class="why"><b>Why it matters</b>The only credible, named-methodology compensation dataset in this cycle — and the 12% pricing-confidence figure is the real story.</p>
+              <div class="angle">
+                <p class="hook">Only 12% of designers are confident in their pricing. That's a bigger threat than AI.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Teach one pricing move: value-based anchoring, scope-defense language, or why the rate card is the mistake. Use the AIGA numbers as the setup rather than the point.</p>
+                  <p><span>Signal</span>Designers are underpaid because they're under-informed, not because demand collapsed — and only 14% of hiring managers expect less freelance need. Talking about money with real numbers attached is itself the credibility move.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company</span> · <span>17 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91584397/ai-fears-are-fueling-the-handmade-branding-trend-technology-ai-fear-handmade-design" target="_blank" rel="noopener">AI fears are fueling the "handmade" branding trend</a></h4>
+              <p class="fact">John Pobojewski argues the hand-drawn, deliberately imperfect branding surge is a reflexive anti-AI overcorrection that has itself become homogenous, citing brand examples including Panera Bread and St. Regis.</p>
+              <p class="why"><b>Why it matters</b>Designers are getting briefs asking for "more human" with no definition attached, and this gives you language to push back.</p>
+              <div class="angle">
+                <p class="hook">"Make it feel human" is not a design direction.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Show how to interrogate that brief into something testable: human to whom, in what context, evidenced by what? Three questions turn a vibe into a decision.</p>
+                  <p><span>Signal</span>Converting vague executive anxiety into decisions is precisely the mid-to-senior gap. Demonstrating it publicly is more persuasive than claiming it on a résumé.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Fast Company</span> · <span>7 Jul 2026</span></div>
+              <h4 class="hed"><a href="https://www.fastcompany.com/91570208/5-trends-in-design-right-now" target="_blank" rel="noopener">5 trends in design right now</a></h4>
+              <p class="fact">Lisa Gralnek identifies five shifts: differentiation as the new premium, designers as "curators of friction," authenticity as method rather than message, brands as cultural participants, and design expanding from objects to relationships.</p>
+              <p class="why"><b>Why it matters</b>"Curators of friction" directly inverts the frictionless orthodoxy most mid-level portfolios are built on.</p>
+              <div class="angle">
+                <p class="hook">We spent a decade removing friction. That was the easy half.</p>
+                <div class="split">
+                  <p class="teach"><span>Teach</span>Give two or three examples of productive friction — confirmation before irreversible action, a deliberate pause before a costly commit — and a way to reframe existing portfolio work through that lens.</p>
+                  <p><span>Signal</span>When AI makes any frictionless flow cheap to produce, the judgment call about where to slow a user down becomes the defensible skill.</p>
+                </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+      <!-- ############ /EDITION ############ -->
+
+    </div>
+
+    <div class="colophon">
+      <div>
+        <h5 class="eyebrow">Cadence</h5>
+        <p>A new edition is filed every weekday at <b>7:00 PT</b>. Nothing is overwritten — each morning adds an entry to the archive on the left.</p>
+      </div>
+      <div>
+        <h5 class="eyebrow">Sources</h5>
+        <p>TechCrunch, Nielsen Norman Group, Smashing Magazine, Fast Company / Co.Design, The Verge, Wired, Bloomberg, Reuters, W3C/WAI, UX Collective editorial, and first-party product blogs. <b>Independent newsletters and Medium writers are excluded by design.</b></p>
+      </div>
+      <div>
+        <h5 class="eyebrow">The two lanes</h5>
+        <p><b>Teach</b> is the actionable move for a mid-level designer. <b>Signal</b> is the observation that shows a senior reader you understand the second-order problem.</p>
+      </div>
+      <div>
+        <h5 class="eyebrow">On claims</h5>
+        <p>Every figure is transcribed from the linked article. Anything unconfirmed is flagged on the card — check the source before quoting a number in public.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+  var editions = Array.prototype.slice.call(document.querySelectorAll('.edition'));
+  var railBtns = Array.prototype.slice.call(document.querySelectorAll('.ed-link'));
+  var chips    = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var q        = document.getElementById('q');
+  var empty    = document.getElementById('empty');
+  var issueDate  = document.getElementById('issue-date');
+  var issueCount = document.getElementById('issue-count');
+
+  var activeEd   = editions.length ? editions[0].dataset.ed : null;
+  var activeBeat = 'all';
+
+  function currentEdition(){
+    for (var i = 0; i < editions.length; i++){
+      if (editions[i].dataset.ed === activeEd) return editions[i];
+    }
+    return editions[0] || null;
+  }
+
+  /* chip + section counts are derived from the DOM, so adding an
+     edition never means hand-updating a number anywhere. */
+  function refreshCounts(ed){
+    if (!ed) return;
+    var total = ed.querySelectorAll('.story').length;
+    chips.forEach(function(chip){
+      var f = chip.dataset.filter;
+      var n = (f === 'all')
+        ? total
+        : ed.querySelectorAll('.beat[data-beat="' + f + '"] .story').length;
+      var slot = chip.querySelector('.n');
+      if (slot) slot.textContent = n;
+      chip.hidden = (f !== 'all' && n === 0);
+    });
+    Array.prototype.slice.call(ed.querySelectorAll('.beat')).forEach(function(beat){
+      var c = beat.querySelector('.count');
+      var n = beat.querySelectorAll('.story').length;
+      if (c) c.textContent = n + (n === 1 ? ' story' : ' stories');
+    });
+    if (issueCount) issueCount.textContent = total;
+    if (issueDate)  issueDate.textContent  = ed.dataset.label || '';
+  }
+
+  function apply(){
+    var ed = currentEdition();
+    editions.forEach(function(e){ e.hidden = (e !== ed); });
+    railBtns.forEach(function(b){
+      b.setAttribute('aria-current', String(b.dataset.ed === activeEd));
+    });
+    refreshCounts(ed);
+    if (!ed){ empty.hidden = false; return; }
+
+    var term = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    Array.prototype.slice.call(ed.querySelectorAll('.beat')).forEach(function(beat){
+      var beatOn = (activeBeat === 'all' || beat.dataset.beat === activeBeat);
+      var visible = 0;
+      Array.prototype.slice.call(beat.querySelectorAll('.story')).forEach(function(s){
+        var match = beatOn && (!term || s.textContent.toLowerCase().indexOf(term) !== -1);
+        s.hidden = !match;
+        if (match) visible++;
+      });
+      beat.hidden = (visible === 0);
+      shown += visible;
+    });
+    empty.hidden = (shown !== 0);
+  }
+
+  railBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      activeEd = btn.dataset.ed;
+      apply();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      activeBeat = chip.dataset.filter;
+      chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c === chip)); });
+      apply();
+    });
+  });
+
+  q.addEventListener('input', apply);
+
+  function copyText(text, btn){
+    var done = function(){
+      btn.textContent = 'Copied';
+      btn.setAttribute('data-done','1');
+      setTimeout(function(){
+        btn.textContent = 'Copy angle';
+        btn.removeAttribute('data-done');
+      }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(text, done); });
+    } else {
+      fallback(text, done);
+    }
+  }
+
+  function fallback(text, done){
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly','');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      done();
+    } catch (e){ /* clipboard unavailable in this context */ }
+  }
+
+  document.addEventListener('click', function(evt){
+    var btn = evt.target.closest ? evt.target.closest('.copy') : null;
+    if (!btn) return;
+    var story = btn.closest('.story');
+    if (!story) return;
+    var hed  = story.querySelector('.hed');
+    var link = story.querySelector('.hed a');
+    var hook = story.querySelector('.hook');
+    var lines = Array.prototype.slice.call(story.querySelectorAll('.split p')).map(function(p){
+      return p.textContent.trim();
+    });
+    copyText([
+      hook ? hook.textContent.trim() : '',
+      '',
+      lines.join('\n\n'),
+      '',
+      'Source: ' + (hed ? hed.textContent.trim() : '') + (link ? ' — ' + link.href : '')
+    ].join('\n'), btn);
+  });
+
+  apply();
+})();
+</script>
+
+<script>
+/* ============================================================
+   "Create draft" — files a story into Notion › Master Content
+   Planner › Content Ideas, tagged "Design Content", via the
+   viewer's own Notion connector.
+
+   The page can file the brief; it cannot write in Melissa's
+   voice (that needs the my-writing-style skill, which lives
+   with Claude, not in the browser). So the row lands as
+   Status "In Queue" carrying the source, the Teach line and
+   the Signal line, and the scheduled drafting task turns it
+   into a full post and flips it to "Scripting".
+   ============================================================ */
+(function(){
+  var NOTION      = "Notion";
+  var TOOL        = "notion-create-pages";
+  var DATA_SOURCE = "659f652f-98cc-4b8d-a5a7-fd74d689bc89";
+
+  if (typeof window.claude === "undefined" || !window.claude.use) return;
+
+  window.claude.use("mcp").then(function(mcp){
+    if (!mcp) return;                    // no MCP in this view — no buttons
+    return mcp.listTools().then(function(res){
+      var names = (res && res.servers ? res.servers : []).map(function(s){ return s.server; });
+      if (names.indexOf(NOTION) === -1) return;   // viewer has no Notion connector
+      install(mcp);
+    }, function(){
+      install(mcp);                      // listTools unavailable — let call-time errors speak
+    });
+  }).catch(function(){ /* capability absent — page stays static */ });
+
+  function text(el){ return el ? el.textContent.trim() : ""; }
+
+  /* strip the uppercase label span out of a labelled line */
+  function body(el){
+    if (!el) return "";
+    var clone = el.cloneNode(true);
+    var label = clone.querySelector("span, b");
+    if (label) label.remove();
+    return clone.textContent.trim();
+  }
+
+  function read(story){
+    var src   = story.querySelector(".src");
+    var spans = src ? src.querySelectorAll("span") : [];
+    var split = story.querySelectorAll(".split p");
+    var ed    = story.closest(".edition");
+    return {
+      headline: text(story.querySelector(".hed")),
+      url:      (story.querySelector(".hed a") || {}).href || "",
+      pub:      text(story.querySelector(".src .pub")),
+      date:     spans.length > 1 ? text(spans[1]) : "",
+      fact:     text(story.querySelector(".fact")),
+      why:      body(story.querySelector(".why")),
+      hook:     text(story.querySelector(".hook")),
+      teach:    body(split[0]),
+      signal:   body(split[1]),
+      edition:  ed ? (ed.dataset.label || ed.dataset.ed) : ""
+    };
+  }
+
+  function markdown(d){
+    return [
+      "> Filed from **The Design Wire** — " + d.edition + " edition. Awaiting draft.",
+      "",
+      "## Source",
+      "",
+      "[" + d.headline + "](" + d.url + ") — " + d.pub + ", " + d.date,
+      "",
+      d.fact,
+      "",
+      "**Why it matters:** " + d.why,
+      "",
+      "## The two lanes",
+      "",
+      "- **Teach (mid-level):** " + d.teach,
+      "- **Signal (senior):** " + d.signal,
+      "",
+      "## Angle",
+      "",
+      d.hook,
+      "",
+      "## Draft",
+      "",
+      "_Not written yet. The scheduled drafting task picks this up and writes the post in Melissa's voice, then moves this to Scripting._"
+    ].join("\n");
+  }
+
+  /* Each code has a different correct fix — never one generic banner. */
+  function explain(err){
+    var code = (err && err.code) || "upstream_error";
+    switch (code){
+      case "needs_reauth":
+        return { note: "Reconnect Notion in claude.ai → Settings → Connectors, then try again.", label: "Reconnect Notion" };
+      case "server_not_connected":
+        return { note: "Add the Notion connector in claude.ai → Settings → Connectors.", label: "Notion not connected" };
+      case "selection_required":
+        return { note: "You have more than one Notion connector. Pick one when claude.ai prompts, then try again.", label: "Choose a connector" };
+      case "blocked_by_policy":
+        return { note: "Your workspace policy blocks writing to Notion from an artifact.", label: "Blocked by policy" };
+      case "approval_required":
+        return { note: "This connector needs per-call approval, which artifacts can't request yet.", label: "Needs approval" };
+      case "not_in_manifest":
+        return { note: "This page isn't cleared to write to Notion. Ask Claude to republish it with the connector declared.", label: "Not permitted" };
+      case "tool_error":
+        return { note: "Notion rejected it: " + ((err && err.message) || "no detail given") + ". The database schema may have changed.", label: "Notion refused" };
+      case "server_unavailable":
+      case "upstream_error":
+      case "cancelled":
+        /* a write that fails this way may still have landed — never auto-retry */
+        return { note: "Notion didn't answer, so this may or may not have filed. Check Content Ideas before trying again.", label: "Unclear — check Notion" };
+      case "rate_limited":
+        return { note: "Too many requests just now. Wait a moment and try again.", label: "Slow down" };
+      default:
+        return { note: "Couldn't file this one (" + code + ").", label: "Didn't file" };
+    }
+  }
+
+  function install(mcp){
+    document.querySelectorAll(".story .angle").forEach(function(angle){
+      var copy = angle.querySelector(".copy");
+      if (!copy || angle.querySelector(".filebtn")) return;
+
+      var row = document.createElement("div");
+      row.className = "actions";
+      copy.parentNode.insertBefore(row, copy);
+      row.appendChild(copy);
+
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filebtn";
+      btn.textContent = "Create draft";
+      row.appendChild(btn);
+
+      var note = document.createElement("p");
+      note.className = "filenote";
+      note.hidden = true;
+      row.appendChild(note);
+
+      btn.addEventListener("click", function(){
+        if (btn.disabled) return;
+        var d = read(btn.closest(".story"));
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spin" aria-hidden="true"></span>Filing…';
+        note.hidden = true;
+
+        mcp.callTool(NOTION, TOOL, {
+          parent: { type: "data_source_id", data_source_id: DATA_SOURCE },
+          pages: [{
+            icon: "📡",
+            properties: {
+              "Idea ":            d.hook.slice(0, 110),
+              "Tags":             "Design Content",
+              "Status":           "In Queue",
+              "Format":           "Post",
+              "Platform":         ["LinkedIn"],
+              "Content Category": "Tactical",
+              "Excerpt":          d.hook
+            },
+            content: markdown(d)
+          }]
+        }).then(function(result){
+          var payload = result && result.payload;
+          var page    = payload && payload.pages && payload.pages[0];
+          btn.dataset.state = "filed";
+          btn.textContent = "Filed to Notion";
+          if (page && page.url){
+            note.innerHTML = 'Queued in Content Ideas · <a href="' +
+              page.url + '" target="_blank" rel="noopener">Open in Notion</a>';
+          } else {
+            note.textContent = "Queued in Content Ideas.";
+          }
+          note.hidden = false;
+        }, function(err){
+          var e = explain(err);
+          btn.dataset.state = "failed";
+          btn.textContent = e.label;
+          note.textContent = e.note;
+          note.hidden = false;
+          /* writes are never auto-retried — re-enable only for the
+             cases a fresh gesture can actually fix */
+          var code = (err && err.code) || "";
+          if (code !== "not_in_manifest" && code !== "blocked_by_policy") {
+            setTimeout(function(){
+              btn.disabled = false;
+              btn.textContent = "Try again";
+            }, 1200);
+          }
+        });
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
