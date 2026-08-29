@@ -116,10 +116,7 @@ img{max-width:100%}
     padding-top:34px;
   }
   .rail h2{
-    margin:0 0 4px; color:var(--faint);
-  }
-  .rail .sub{
-    margin:0 0 18px; font-size:12.5px; color:var(--faint); line-height:1.45;
+    margin:0 0 18px; color:var(--faint);
   }
   .archive{list-style:none; margin:0; padding:0;
     display:flex; flex-direction:column;}
@@ -145,9 +142,6 @@ img{max-width:100%}
     width:3px; background:var(--rust);
   }
   .ed-link[aria-current="true"] .m{color:var(--rust);}
-  .rail-note{
-    margin:20px 0 0; font-size:12px; line-height:1.5; color:var(--faint);
-  }
 
   /* ---------------- toolbar ---------------- */
   .toolbar{
@@ -302,15 +296,6 @@ img{max-width:100%}
   .empty{padding:44px 0; color:var(--faint); font-size:15px;}
   .empty[hidden]{display:none;}
 
-  /* ---------------- colophon ---------------- */
-  .colophon{
-    border-top:1px solid var(--hair); margin-top:14px; padding-top:26px;
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(224px,1fr)); gap:26px;
-  }
-  .colophon h5{margin:0 0 7px; color:var(--faint);}
-  .colophon p{margin:0; font-size:13.5px; line-height:1.55; color:var(--muted);}
-  .colophon p b{color:var(--ink); font-weight:600;}
-
   @media (max-width:960px){
     .shell{grid-template-columns:1fr; gap:0; padding:0 22px 70px;}
     .masthead-inner{padding:20px 22px 18px;}
@@ -328,7 +313,6 @@ img{max-width:100%}
     .ed-link .m{display:inline; margin-left:8px;}
     .ed-link[aria-current="true"]::before{display:none;}
     .ed-link[aria-current="true"]{border-color:var(--rust);}
-    .rail-note{display:none;}
     .issue{text-align:left;}
     .grid{grid-template-columns:1fr;}
     .search{margin-left:0; width:100%;}
@@ -344,7 +328,7 @@ img{max-width:100%}
     <h1 class="wordmark"><span class="mark" aria-hidden="true"></span>The Design Wire</h1>
     <div class="issue">
       <div>Edition <b id="issue-date">Saturday, 22 August 2026</b> · <b id="issue-count">26</b> stories</div>
-      <div class="cadence">A new edition every weekday at 7:00 PT · nothing is deleted, every edition stays below</div>
+      <div class="cadence">A new edition is published every weekday at 8:00 AM PT.</div>
     </div>
   </div>
 </header>
@@ -354,7 +338,6 @@ img{max-width:100%}
   <!-- ================= ARCHIVE RAIL ================= -->
   <nav class="rail" aria-label="Editions">
     <h2 class="eyebrow">Editions</h2>
-    <p class="sub">Every board filed to date.</p>
     <ul class="archive" id="archive">
       <li>
         <button class="ed-link" type="button" data-ed="2026-08-29" aria-current="true">
@@ -375,7 +358,6 @@ img{max-width:100%}
         </button>
       </li>
     </ul>
-    <p class="rail-note">Older editions stay live so you can go back for a story you skipped, or trace how a thread developed over a week.</p>
   </nav>
 
   <!-- ================= MAIN ================= -->
@@ -1607,24 +1589,6 @@ img{max-width:100%}
 
     </div>
 
-    <div class="colophon">
-      <div>
-        <h5 class="eyebrow">Cadence</h5>
-        <p>A new edition is filed every weekday at <b>7:00 PT</b>. Nothing is overwritten — each morning adds an entry to the archive on the left.</p>
-      </div>
-      <div>
-        <h5 class="eyebrow">Sources</h5>
-        <p>TechCrunch, Nielsen Norman Group, Smashing Magazine, Fast Company / Co.Design, The Verge, Wired, Bloomberg, Reuters, W3C/WAI, UX Collective editorial, and first-party product blogs. <b>Independent newsletters and Medium writers are excluded by design.</b></p>
-      </div>
-      <div>
-        <h5 class="eyebrow">The two lanes</h5>
-        <p><b>Teach</b> is the actionable move for a mid-level designer. <b>Signal</b> is the observation that shows a senior reader you understand the second-order problem.</p>
-      </div>
-      <div>
-        <h5 class="eyebrow">On claims</h5>
-        <p>Every figure is transcribed from the linked article. Anything unconfirmed is flagged on the card — check the source before quoting a number in public.</p>
-      </div>
-    </div>
   </main>
 </div>
 
