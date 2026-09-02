@@ -1,6 +1,6 @@
 {
   "name": "The Design Wire",
-  "install": "python3 --version",
+  "install": "python3 --version\npython3 -c \"import ast, pathlib; ast.parse(pathlib.Path('add_edition.py').read_text()); print('add_edition.py: syntax ok')\"",
   "terminals": [
     {
       "name": "web",
