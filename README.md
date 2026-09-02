@@ -68,9 +68,16 @@ Palette and type from melissajade.design.
 
 Display face is Hedvig Letters Serif, UI and body is Archivo, both from Google Fonts.
 
-## Note on "Create draft"
+## Note on writing angles
 
-The **Create draft** buttons file a story into Notion through the Claude artifact
-runtime (`window.claude`). That runtime only exists inside a published Claude
-artifact, so on this static site the buttons stay inert by design. The board is
-also published as an artifact, which is where that workflow lives.
+Each story’s hook, Teach and Signal sit behind a **Write about this?** text
+link. Public readers see the reported story; the editorial angle opens in a
+centered modal so sibling cards keep their height. **Copy angle** still
+copies the brief to the clipboard.
+
+A public GitHub Pages site cannot call the Notion API safely — a write token
+in the browser would be writable by anyone. Create draft used to file a row
+through the Claude artifact runtime (`window.claude`), which this static
+hosting does not have, so that button is gone. If a private Notion draft
+path is needed later, it has to live behind an authenticated backend, not
+in `index.html`.
