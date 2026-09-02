@@ -116,7 +116,7 @@ img{max-width:100%}
     padding-top:34px;
   }
   .rail h2{
-    margin:0 0 18px; color:var(--faint);
+    margin:0 0 10px; color:var(--faint);
   }
   .archive{list-style:none; margin:0; padding:0;
     display:flex; flex-direction:column;}
@@ -166,10 +166,11 @@ img{max-width:100%}
   .chip[aria-pressed="true"]{color:#FFFCFB;}
   .chip .n{opacity:.65; margin-left:5px; font-variant-numeric:tabular-nums;}
   .search{
-    margin-left:auto; font-family:inherit; font-size:13px;
+    display:block; width:100%; box-sizing:border-box;
+    font-family:inherit; font-size:13px;
     background:var(--surface); color:var(--ink);
     border:1px solid var(--hair); border-radius:999px;
-    padding:8px 15px; min-width:210px;
+    padding:8px 15px; margin:0 0 18px;
   }
   .search::placeholder{color:var(--faint);}
 
@@ -315,7 +316,6 @@ img{max-width:100%}
     .ed-link[aria-current="true"]{border-color:var(--rust);}
     .cadence{white-space:normal; text-align:right;}
     .grid{grid-template-columns:1fr;}
-    .search{margin-left:0; width:100%;}
   }
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important; animation:none !important;}
@@ -335,6 +335,7 @@ img{max-width:100%}
   <!-- ================= ARCHIVE RAIL ================= -->
   <nav class="rail" aria-label="Editions">
     <h2 class="eyebrow">Editions</h2>
+    <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
         <button class="ed-link" type="button" data-ed="2026-09-01" aria-current="true">
@@ -371,7 +372,6 @@ img{max-width:100%}
       <button class="chip" data-filter="ux" aria-pressed="false">UX craft <span class="n">7</span></button>
       <button class="chip" data-filter="product" aria-pressed="false">Product &amp; startups <span class="n">6</span></button>
       <button class="chip" data-filter="industry" aria-pressed="false">Industry &amp; careers <span class="n">7</span></button>
-      <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     </div>
 
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
