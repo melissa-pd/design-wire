@@ -31,14 +31,15 @@ def card(s):
               <h4 class="hed"><a href="{html.escape(s["url"], quote=True)}" target="_blank" rel="noopener">{esc(s["hed"])}</a></h4>
               <p class="fact">{esc(s["fact"])}</p>
               <p class="why"><b>Why it matters</b>{esc(s["why"])}</p>
-              <div class="angle">
+              <details class="angle">
+              <summary>Write about this?</summary>
                 <p class="hook">{esc(s["hook"])}</p>
                 <div class="split">
                   <p class="teach"><span>Teach</span>{esc(s["teach"])}</p>
                   <p><span>Signal</span>{esc(s["signal"])}</p>
                 </div>
-                <div class="actions"><button class="copy" type="button">Copy angle</button><button type="button" class="filebtn">Create draft</button><p class="filenote" hidden=""></p></div>
-              </div>
+                <div class="actions"><button class="copy" type="button">Copy angle</button></div>
+              </details>
             </article>'''
 
 def render(ed):
