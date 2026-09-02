@@ -80,28 +80,28 @@ img{max-width:100%}
     background:var(--paper);
   }
   .masthead-inner{
-    max-width:1400px; margin:0 auto; padding:26px 40px 22px;
-    display:flex; align-items:flex-end; justify-content:space-between;
-    gap:24px; flex-wrap:wrap;
+    margin:0 auto; padding:12px 72px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px;
   }
   .wordmark{
-    font-family:"Hedvig Letters Serif",Georgia,serif;
-    font-weight:400;
-    font-size:clamp(30px,4vw,46px);
-    line-height:1;
-    letter-spacing:-.01em;
     margin:0;
+    width:39px;
+    height:40px;
+    overflow:hidden;
   }
-  .wordmark .mark{
-    display:inline-block; width:9px; height:9px; border-radius:50%;
-    background:var(--rust); margin-right:12px; vertical-align:middle;
-    position:relative; top:-4px;
+  .wordmark img{
+    display:block;
+    width:100%;
+    height:100%;
   }
-  .issue{
-    text-align:right; color:var(--muted); font-size:13px; line-height:1.5;
+  .cadence{
+    margin:0;
+    color:var(--faint);
+    font-size:12px;
+    line-height:18px;
+    white-space:nowrap;
   }
-  .issue b{color:var(--ink); font-weight:600;}
-  .issue .cadence{color:var(--faint); font-size:12px;}
 
   /* ---------------- shell ---------------- */
   .shell{
@@ -298,7 +298,7 @@ img{max-width:100%}
 
   @media (max-width:960px){
     .shell{grid-template-columns:1fr; gap:0; padding:0 22px 70px;}
-    .masthead-inner{padding:20px 22px 18px;}
+    .masthead-inner{padding:12px 22px;}
     .rail{position:static; padding-top:26px;}
     .archive{
       flex-direction:row; overflow-x:auto; gap:8px; padding-bottom:6px;
@@ -313,7 +313,7 @@ img{max-width:100%}
     .ed-link .m{display:inline; margin-left:8px;}
     .ed-link[aria-current="true"]::before{display:none;}
     .ed-link[aria-current="true"]{border-color:var(--rust);}
-    .issue{text-align:left;}
+    .cadence{white-space:normal; text-align:right;}
     .grid{grid-template-columns:1fr;}
     .search{margin-left:0; width:100%;}
   }
@@ -325,10 +325,8 @@ img{max-width:100%}
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <h1 class="wordmark"><span class="mark" aria-hidden="true"></span>The Design Wire</h1>
-    <div class="issue">
-      <div class="cadence">A new edition is published every weekday.</div>
-    </div>
+    <h1 class="wordmark"><img src="assets/logomark.svg" alt="The Design Wire" width="39" height="40"></h1>
+    <p class="cadence">A new edition is published every weekday.</p>
   </div>
 </header>
 
