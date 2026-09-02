@@ -70,9 +70,10 @@ Display face is Hedvig Letters Serif, UI and body is Archivo, both from Google F
 
 ## Note on writing angles
 
-Each story’s hook, Teach and Signal sit inside a closed **Write about this?**
-accordion. Public readers see the reported story; the editorial angle is there
-if they want it, and **Copy angle** still copies the brief to the clipboard.
+Each story’s hook, Teach and Signal sit behind a **Write about this?** text
+link. Public readers see the reported story; the editorial angle opens in a
+centered modal so sibling cards keep their height. **Copy angle** still
+copies the brief to the clipboard.
 
 A public GitHub Pages site cannot call the Notion API safely — a write token
 in the browser would be writable by anyone. Create draft used to file a row

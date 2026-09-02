@@ -31,15 +31,16 @@ def card(s):
               <h4 class="hed"><a href="{html.escape(s["url"], quote=True)}" target="_blank" rel="noopener">{esc(s["hed"])}</a></h4>
               <p class="fact">{esc(s["fact"])}</p>
               <p class="why"><b>Why it matters</b>{esc(s["why"])}</p>
-              <details class="angle">
-              <summary>Write about this?</summary>
-                <p class="hook">{esc(s["hook"])}</p>
-                <div class="split">
-                  <p class="teach"><span>Teach</span>{esc(s["teach"])}</p>
-                  <p><span>Signal</span>{esc(s["signal"])}</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">{esc(s["hook"])}</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>{esc(s["teach"])}</p>
+                    <p><span>Signal</span>{esc(s["signal"])}</p>
+                  </div>
                 </div>
-                <div class="actions"><button class="copy" type="button">Copy angle</button></div>
-              </details>
+              </div>
             </article>'''
 
 def render(ed):
