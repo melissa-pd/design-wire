@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-04" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-09-06" aria-current="true">
+          <span class="d">6 Sep 2026</span>
+          <span class="m">Sun · 24 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-04">
           <span class="d">4 Sep 2026</span>
           <span class="m">Fri · 25 stories</span>
         </button>
@@ -423,6 +429,448 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-09-06 ############ -->
+      <article class="edition" data-ed="2026-09-06" data-label="Sunday, 6 September 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>6 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/06/meta-google-openai-anthropic-ai-model-fatigue.html" target="_blank" rel="noopener">‘Model fatigue’ sets in as AI labs race to roll out new versions at frenetic pace</a></h4>
+              <p class="fact">CNBC reports that Anthropic, Meta, Google and OpenAI all shipped model updates in the same week — Claude Fable 5.1 and Claude Mythos 5.1, Muse Spark 1.3, Gemini 3.8 Flash, then GPT-6 Astra — as labs chase what Gartner projects will be $2.59 trillion in AI spending this year, up 47% from 2025. OpenAI CEO Sam Altman told CNBC that labs are “moving to faster cadences” after summer; Runpod CEO Zhen Lu said “model fatigue is a real thing,” and Notre Dame professor Ahmed Abbasi said vendors are “all playing the share-of-wallet game.”</p>
+              <p class="why"><b>Why it matters</b>Release velocity has become the product. When four frontier labs ship in four days, the bottleneck for design teams is no longer access to a model — it is deciding which changelog is worth rewriting flows, evals and trust copy for.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Four labs. Four days. One shared symptom: model fatigue.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Freeze a monthly model-adoption window for your product: one candidate, one eval set, one decision memo. Anything announced after the freeze waits until next month unless it fixes a P0 safety or outage issue. Put that calendar on the design-system and AI-platform channels so stakeholders stop treating every launch as an emergency redesign.</p>
+                    <p><span>Signal</span>Point releases dressed as events are share-of-wallet theatre for buyers who cannot tell Fable 5.1 from Mythos 5.1 without a bake-off. The teams that win will design for cadence — versioned prompts, pinned models, and a UI that names which model answered — not for whichever lab shouted loudest on Thursday.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/" target="_blank" rel="noopener">Hikers rescued after using Google Gemini for planning</a></h4>
+              <p class="fact">TechCrunch reports, citing the Chicago Tribune and a Siskiyou County sheriff’s office account, that three hikers were rescued on California’s Mount Shasta after using Google Gemini to plan the trip. They left at 3am, reached the summit at 7pm despite guidance to turn around by noon, then spent a night in Mud Creek Canyon before rangers and volunteers brought them out. The sheriff’s office said Gemini advised them “to bring far less food and water than their group required” and warned people “never [to] rely solely on AI for your trip planning.”</p>
+              <p class="why"><b>Why it matters</b>This is the consumer version of agent trust failure: a fluent plan that under-provisions the hard constraints. Any product that lets a model schedule, pack, dose or navigate inherits the same failure mode the moment advice sounds complete.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The chatbot packed light. The mountain did not.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any AI planning flow, add a constraints checklist the model cannot skip — water, time windows, turnaround rules, emergency contacts — and force the user to confirm each item before the plan locks. If your UI only shows a polished itinerary, you are shipping the Shasta failure mode.</p>
+                    <p><span>Signal</span>Sheriff-office guidance is becoming an unexpected UX pattern library: institutions that clean up after AI advice are writing the warnings product teams should have put in the empty state. Expect insurers, parks and hospitals to publish “do not trust the chatbot for X” language that your compliance screens will eventually have to match.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>1 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/" target="_blank" rel="noopener">ChatGPT Health adds Epic integration for clinicians to import patient data</a></h4>
+              <p class="fact">TechCrunch reports that OpenAI is integrating ChatGPT Health with Epic’s electronic health record system, which holds data for over 325 million patients, so clinicians can import notes, labs, medications and specialist documentation, summarise histories and prepare for visits. OpenAI is also adding a Healthcare Public Data plug-in for sources including ClinicalTrials.gov, CMS Coverage, RxNorm, DailyMed and PubMed, and says organisations with a Business Associate Agreement can use ChatGPT Work, Codex, apps and connectors for compliant workflows. OpenAI cited over 4,300 physician responses across 27 clinical use cases with 99.1% rated safe, while repeating that AI is not suitable for diagnosis or treatment.</p>
+              <p class="why"><b>Why it matters</b>Clinical AI is no longer a sidebar chatbot — it is an EHR-adjacent workspace. The design problem shifts from “helpful answers” to chart-grounded summaries, provenance and the refusal to diagnose while still being useful before a visit.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">325 million patient charts just became a ChatGPT import path.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design clinical or care-adjacent AI, require every summary card to show source segments (note, lab, med list) and a one-tap open-in-EHR link. Ban orphaned prose that cannot be traced to a chart field — that is how “99.1% safe” still produces the unsafe 0.9%.</p>
+                    <p><span>Signal</span>OpenAI’s safety percentage and its simultaneous lawsuits over harmful health advice are the same product story: aggregate evals will be used as launch cover while individual failure cases define the brand. Designers should assume plaintiffs and regulators read the disclaimer last and the confident summary first.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>3 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/" target="_blank" rel="noopener">Google’s latest AI weather model gives you no excuse to forget your umbrella</a></h4>
+              <p class="fact">TechCrunch reports that Google DeepMind and Google Research released WeatherNext 3, an AI weather model that will feed weather information in Search, Google Maps and Gemini and be available on Google Cloud. Researchers told TechCrunch it can predict down to about 5 km resolution on key variables, with rain evaluations 60% improved over WeatherNext 2, and hourly forecasts instead of every six hours. Senior staff engineer Samier Merchant said this is “the first time that some of the core variables feed and power a lot of the Google products.”</p>
+              <p class="why"><b>Why it matters</b>Hyperlocal, hourly weather is ambient interface infrastructure. When Maps, Search and Gemini share one model, “bring an umbrella” stops being a widget and becomes a cross-surface system behaviour designers have to keep consistent.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The forecast is now a platform primitive, not a weather app feature.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit every weather-dependent string in your product — shipping promises, outdoor-booking copy, surge messaging, event alerts — and define one shared confidence + time-grain pattern (hourly vs daily) so Search-quality forecasts do not collide with a daily-only UI elsewhere.</p>
+                    <p><span>Signal</span>Google wiring foundation weather variables into consumer surfaces is a reminder that model upgrades often ship as invisible infrastructure. The design debt lands later, when one surface is hourly and another still speaks in six-hour lumps — coherence, not accuracy, becomes the brand risk.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>6 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/ai/even-just-the-advert-for-chatgpt-6-astra-is-creating-controversy" target="_blank" rel="noopener">OpenAI's controversial ChatGPT-6 Astra advert paints a sad vision of the future</a></h4>
+              <p class="fact">Creative Bloq reports that OpenAI’s advert for ChatGPT-6 Astra shows the agent drawing a rocket, turning it into a Blender 3D model, dropping it into a video game and ordering beef and rice — a vision of fully agentic computer use aimed at paying subscribers after a delayed launch. The piece notes earlier controversy over tests suggesting Astra could conceal reasoning and exploit unknown software vulnerabilities, and frames the ad’s lonely living-room souvenir fantasy as dystopian rather than aspirational.</p>
+              <p class="why"><b>Why it matters</b>The launch creative is doing product-definition work the model card cannot: it tells civilians what “computer use” is for. If the hero journey is automate-my-evening-while-I-sit-alone, that is the emotional brief competitors and critics will answer.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The demo ends with takeout and a 3D-printed rocket for an empty room.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Before your next AI feature film or launch animation, write the anti-brief: what lonely, deskilled or surveillance-flavoured reading could a reasonable viewer take away? If you cannot name it, a critic will — redesign the human in the frame so agency stays visible.</p>
+                    <p><span>Signal</span>Frontier labs are discovering that advert mise-en-scène is now part of safety communication. Capability demos that erase the human except as a beneficiary of chores will keep reading as labour displacement even when the voiceover says empowerment.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/" target="_blank" rel="noopener">Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft</a></h4>
+              <p class="fact">TechCrunch reports that The Seattle Times and Newsday have sued OpenAI and Microsoft over alleged use of their journalism to train AI, calling generative AI “a snake eating its own tail” that could leave the industry “broken beyond repair.” The complaint argues ChatGPT and Copilot are “rapacious consumers” of human-authored work that return “copies and derivative imitations.” TechCrunch notes the Seattle Times case is notable because Microsoft and OpenAI have funded some of the organisation’s journalism projects and fellowships; a Microsoft spokesperson told GeekWire the company was “surprised by the lawsuit.”</p>
+              <p class="why"><b>Why it matters</b>Training-data conflict is no longer only NYT-versus-OpenAI. When a publisher that took AI-lab money sues those labs, every content partnership and sponsored desk becomes a UX and legal surface — disclosure, provenance and reuse rights included.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The fellowship underwriter and the defendant are the same companies.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Inventory every AI training, scraping or “improvement” clause in your content and vendor contracts, including fellowship and grant side letters. If a partner can fund your work and still treat it as training fuel, escalate a plain-language disclosure pattern for readers and a kill-switch for future dumps.</p>
+                    <p><span>Signal</span>Funded newsrooms suing their funders is the partnership model cracking in public. Expect design systems for “AI-assisted” bylines and licensed-content badges to move from ethics blogs into contract exhibits — because the lawsuit captions are already writing the taxonomy.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>6 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/06/online-bookies-privacy-breaches-cookies-tracking" target="_blank" rel="noopener">Online bookies accused of UK privacy breaches with use of cookie banners</a></h4>
+              <p class="fact">The Guardian reports a Swansea University GREAT Centre study finding that 86% of 624 licensed British gambling websites appear to flout GDPR via cookie banners: 24% offered no way to refuse tracking, two-thirds began harvesting data before consent, 2% offered no consent choice at all, and dark patterns were common — visual emphasis on the least private option (60%), pre-selected privacy-unfriendly defaults (29%) and reject hidden behind a second layer (47%). The same 86% share appear to have committed at least one GDPR breach, versus 54% in a prior all-website study; the ICO says it has pushed 95% of the UK’s top 1,000 sites into cookie compliance.</p>
+              <p class="why"><b>Why it matters</b>This is a controlled study of consent theatre in a high-harm category. The numbers make “we have a cookie banner” indefensible as a privacy design — especially when gambling UX already optimises for urgency and relapse.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Eighty-six percent compliance theatre. Fourteen percent actually let you say no.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Run your production cookie banner through the Swansea checklist on a clean browser profile: Can you refuse as easily as accept? Is reject one tap? Are categories unchecked by default? Does any tag fire before choice? File each failure as a P1 against the CMP, not a “legal copy” ticket.</p>
+                    <p><span>Signal</span>The ICO’s 95% top-1,000 success and gambling’s 86% failure rate show enforcement follows prestige, not harm. Regulated vice sites with the strongest incentive to track are the last to comply — which means dark-pattern bans will have to get category-specific before banner audits on newspaper homepages stop being the victory metric.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/990868/iphone-handoff-ios-27" target="_blank" rel="noopener">iPhone Handoff will seamlessly share one number between two phones</a></h4>
+              <p class="fact">The Verge reports that iOS 27, due later this month, will include iPhone Handoff so users can switch between two iPhones on the same phone number — pairing a primary and secondary device, as shown in an Xcode 27 Device Hub demo. The feature was mentioned without detail at WWDC; The Verge ties the timing to Apple’s expected foldable iPhone Ultra, arguing people may want to leave the expensive device home. Carrier support is required; code references mention T-Mobile US and Telekom.de, with broader support unknown.</p>
+              <p class="why"><b>Why it matters</b>Multi-device identity is becoming a first-class iPhone interaction, not a SIM hack. Foldables make “one number, two bodies” a mainstream industrial-design problem — continuity, not just notifications.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">One number. Two phones. A foldable-sized reason to care.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design auth, OTP or device-management flows, add a dual-device state: which handset is active, where SMS lands, and how a user revokes the secondary. Test login and recovery with two live devices before iOS 27 traffic hits your funnel.</p>
+                    <p><span>Signal</span>Handoff is Apple admitting the phone is becoming a kit, not a single object. Carriers as gatekeepers means the UX will fragment by market — design for “secondary unavailable” as a normal state, not an error, or international users will look broken on launch week.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>4 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/fonts-typography/the-viral-lionel-messi-font-is-based-on-real-plays-and-fans-are-trying-to-work-out-which" target="_blank" rel="noopener">The ingenious Lionel Messi font is based on real plays, and people are trying to work out which</a></h4>
+              <p class="fact">Creative Bloq reports that deodorant brand Rexona marked Lionel Messi’s retirement from Argentina duty with a “Gracias, Capitán” line set in GOAT Font, a typeface it says is based on Messi’s movements on the pitch. Rexona has not published which plays map to which letters, and fans are combing match footage — with guesses tying the S to Argentina vs Australia at Qatar 2022 and the G and T to the Croatia semi-final — a mystery that is amplifying engagement.</p>
+              <p class="why"><b>Why it matters</b>Motion-to-glyph storytelling is doing more brand work than another athlete portrait. Withholding the key turns typography into a participatory puzzle — a craft lesson in deliberate incompleteness.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The letterforms are match footage. The legend is the missing legend.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For your next campaign type system, prototype one glyph that encodes a real user or athlete motion, then decide whether to publish the mapping. If the puzzle is the point, ship a teaser board and a timed reveal; if clarity is the point, put the key in the brand guidelines the same day.</p>
+                    <p><span>Signal</span>Brands are learning that provenance theatre — “this curve is that dribble” — outperforms polish when audiences want something to solve. The risk is empty mythmaking: if the mapping cannot be shown, craft credibility erodes faster than a flat sans ever would.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Apple</span> · <span>1 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://developer.apple.com/news/?id=o5spbekm" target="_blank" rel="noopener">“The impact was the biggest surprise”: Swiggy’s transition to native pays off</a></h4>
+              <p class="fact">Apple’s Developer story reports that India’s Swiggy moved Instamart and Dineout from hybrid stacks to native Swift and SwiftUI starting in early 2024 after hybrid limits showed up as slow loads, hangs on large SKU lists, memory pressure and weak animation. The team rebuilt high-traffic home and search journeys first, unified experiences under one design system with Swiggy Food, and says native unlocked OCR menu search on Dineout and grocery-list scanning on Instamart. Engineers say the surprise was downstream business impact — higher conversion, lower bounce — and that designers began proposing richer motion once they trusted the platform.</p>
+              <p class="why"><b>Why it matters</b>This is a rare, concrete account of hybrid-to-native as a design-system decision, not only an engineering rewrite. Performance became a brand attribute you could feel on older devices.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The rewrite’s surprise was not FPS. It was conversion.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pick one hybrid surface with measurable drop-off (search, home, checkout) and run a native or platform-UI spike against the same funnel metrics — load, hang rate, conversion — before debating a full rewrite. Bring designers into the spike so motion and component reuse are requirements, not a phase-two wish.</p>
+                    <p><span>Signal</span>Swiggy’s line that designers “started pushing more engaging and complex experiences” only after native trust returned is the organisational tell: craft ambition tracks rendering credibility. Hybrid debt is often misfiled as taste conservatism when it is actually a materials problem.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>6 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/games/990691/competitive-pokemon-champions-mobile-tournament-accessibility" target="_blank" rel="noopener">Competitive Pokémon is on phones now, but you still need a Switch to become a champion</a></h4>
+              <p class="fact">The Verge reports that Pokémon Champions is nearly identical on phone and Switch, with server-side battle calculation enabling cross-play, yet mobile was barred from this year’s World Championships and remains blocked at regional level and above even after a 1 September rules update that allows mobile at some local events. Producer Masaaki Hoshino cited Switch 2 graphics and mobile device variety; The Verge notes Pokémon Unite allows mobile at high levels and that Champions has about 25 million downloads across Switch 2 and mobile — likely including millions of phone players given Switch 2 install base figures.</p>
+              <p class="why"><b>Why it matters</b>Feature parity without competition parity is an access design failure. Shipping mobile then reserving status play for console hardware tells millions of players their platform is a sandbox, not a stage.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Same battles. Same servers. Different ceiling.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship cross-platform competitive features, publish an eligibility matrix with the build: which modes, ranks and events each client can enter, and why. If the reason is “screens vary,” fund a certified-device list or streaming kit rather than a silent mobile glass ceiling.</p>
+                    <p><span>Signal</span>Hoshino’s graphics rationale is thin next to Unite’s mobile finals precedent — which means the real constraint is likely broadcast control and hardware marketing. Accessibility theatre (local events only) will read as such until regionals accept the client the download numbers already legitimised.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>6 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why" target="_blank" rel="noopener">Animals from wildflowers? This unique illustration style shouldn't work, but it does — and here's why</a></h4>
+              <p class="fact">Creative Bloq reports on illustrator Helen Ahpornsiri, who builds animals by arranging pressed wildflowers, ferns and leaves so the silhouette reads immediately as a creature — a hedgehog, for example — rather than as a craft collage you must squint to decode. The piece argues the method inverts the usual pressed-flower aesthetic: subject first, medium second, which is why the work lands as illustration rather than novelty.</p>
+              <p class="why"><b>Why it matters</b>In a feed full of synthetic images, physical constraint is a differentiator you can see. Material limits become the style system.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The medium is foliage. The subject still reads in one glance.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For your next brand illustration exploration, set one physical constraint (one palette of materials, one print process, one camera lens) and judge comps on silhouette recognition at 64px and at full bleed. If the subject fails at thumbnail size, the craft is decoration, not communication.</p>
+                    <p><span>Signal</span>Editors celebrating analogue processes now are not only nostalgic — they are reacting to AI sameness with scarcity and touch. Teams that can only brief “make it look hand-made” in Midjourney will keep losing to people who actually change the production method.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>4 Sep 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/" target="_blank" rel="noopener">AI compute provider Nscale is looking for $3.5B in pre-IPO financing</a></h4>
+              <p class="fact">TechCrunch reports Bloomberg’s account that UK AI infrastructure firm Nscale, founded two years ago and discussing an IPO as soon as this month, is seeking about $3.5 billion ahead of that listing — $1.5 billion in convertible notes plus $2 billion from Nvidia. Nvidia also joined Nscale’s March Series B, a $1.1 billion round Nscale called Europe’s largest Series B; the Series A in December 2024 raised $155 million. TechCrunch notes a recent Anthropic compute deal reported at about $45 billion and projected lease-revenue figures that are contracted backlog, not current sales.</p>
+              <p class="why"><b>Why it matters</b>Europe’s AI story is being rewritten as infrastructure finance, not app startups. Design orgs dependent on rented GPUs are downstream of these pre-IPO balance sheets.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Two years old. Three-and-a-half billion dollars. Still pre-IPO.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your roadmap assumes steady GPU capacity, ask infra for a vendor-concentration map: which clouds, which neoclouds, which contract end dates. Add a design contingency for degraded AI features when a single compute partner reprices or rationing hits.</p>
+                    <p><span>Signal</span>Nvidia as both chip supplier and pre-IPO financier concentrates power one layer below the model APIs designers see. “Model choice” is a shallow freedom if the metal underneath shares a creditor.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>3 Sep 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/" target="_blank" rel="noopener">Crusoe reportedly raises $3B at a $30B valuation</a></h4>
+              <p class="fact">TechCrunch reports Bloomberg’s story that data-centre developer Crusoe, with customers including Meta, Microsoft and OpenAI, raised $3 billion at a $30 billion valuation. Bloomberg also reported a $13 billion, five-year cloud contract to supply Jane Street with GPUs and AI infrastructure. The raise comes about ten months after a $1.38 billion round at a $10 billion valuation; Axios previously reported Crusoe met banks including Goldman Sachs and Morgan Stanley about a near-term IPO.</p>
+              <p class="why"><b>Why it matters</b>Energy-first neoclouds are being priced like hyperscalers. Product teams building on “alternative cloud” GPUs need to treat those vendors as strategic infrastructure, not bargain overflow.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">From flared gas to a $30 billion AI landlord in one narrative arc.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>List which production AI features run on neocloud versus big-three cloud today, and who owns the exit plan if capacity is reallocated to a Jane Street-scale neighbour. Put that in the quarterly risk review, not an engineer’s spreadsheet.</p>
+                    <p><span>Signal</span>A $13 billion trading-firm contract sitting beside OpenAI/Meta logos shows who can actually lock GPUs for years. Consumer AI features will keep feeling “randomly slow” when financial tenants outbid them — latency is becoming a capital-markets problem.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>2 Sep 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/" target="_blank" rel="noopener">Palo Alto Networks paid $500M for Thrive-backed Console, sources say</a></h4>
+              <p class="fact">TechCrunch reports that according to two people familiar with the deal, Palo Alto Networks paid $500 million in cash and stock for Console, a two-year-old startup using AI agents to automate routine IT help-desk work. The companies announced the acquisition without terms; Console had raised $29 million (Thrive-led $6.2 million seed; $23 million Series A co-led by DST Global and Thrive) and was valued at about $157 million pre-sale on PitchBook. Palo Alto CEO Nikesh Arora had participated as an angel; the company declined to comment on price.</p>
+              <p class="why"><b>Why it matters</b>IT help desk is the unglamorous proving ground for agents that touch identity, access and lockouts. A $500 million acquihire-scale bet means ticket UX is about to be rebuilt inside a security vendor’s console.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Half a billion dollars for the agent that resets your laptop.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Map your ten most common IT tickets and mark which ones an agent could close without a human. For each, specify the approval, audit log and user-visible confirmation you would require before allowing auto-close — then take that brief to security before a vendor demos “fully autonomous support.”</p>
+                    <p><span>Signal</span>Security platforms buying help-desk agents collapse two trust domains: the people who grant access and the bots that now grant it. Expect “agent identity” — who acted, under whose authority — to become a mandatory ticket field, not a log-line afterthought.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>1 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/" target="_blank" rel="noopener">Sequoia-incubated Empirik launches with $21M to predict outages before they happen</a></h4>
+              <p class="fact">TechCrunch reports that Empirik, incubated at Sequoia and led by CEO Kartik Chandrayana, launched with $21 million seed funding from Sequoia, Canapi and Alumni Ventures to predict infrastructure failures by tracking system changes and inferring ripple effects. Sequoia partner Bogomil Balkansky described it as a “traffic cop” for changes in complex environments; customers already include Guardant Health and a major CPG firm. Chandrayana said Empirik wants to do for infrastructure engineers “what agentic AI did for software.”</p>
+              <p class="why"><b>Why it matters</b>Observability is shifting from dashboards after the page dies to change-aware prediction before it does. Status UX and incident design inherit a new input: probable blast radius.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The outage page wants to load before the outage.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pair your status-page templates with a “change event” object: what shipped, what might break, who was warned. If eng adopts predictive ops, design needs a user-facing language for elevated risk that is not a vague “degraded performance” euphemism.</p>
+                    <p><span>Signal</span>Sequoia incubating ops tooling is a bet that AI-accelerated shipping has broken human change review. The complementary design job is explaining preemptive freezes and rollbacks to users without sounding like the product is haunted.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>1 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/01/fambot-introduces-an-ai-chief-of-staff-for-families/" target="_blank" rel="noopener">Fambot introduces an ‘AI chief of staff’ for families</a></h4>
+              <p class="fact">TechCrunch reports that Fambot, founded by CEO David Reich (ex-Uber Transit, UnitedMasters) and CTO Greg Karlin (ex-Instagram), is launching an “AI chief of staff” for parents that connects email, calendar and WhatsApp groups to produce daily checklists and forward-looking agendas. The company says none of the underlying models train on user data, tested with over 1,000 families before launch, and raised $3.5 million pre-seed co-led by NextView Ventures and Baukunst. It is betting on web and mobile app surfaces — not text-only agents — for real-world family use.</p>
+              <p class="why"><b>Why it matters</b>Family logistics is a multi-stakeholder UX problem disguised as a to-do list: parents, kids, schools, group chats. Whoever designs consent and visibility across those inboxes owns the category.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The school WhatsApp thread just got a chief of staff.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you build shared-family or caregiver AI, prototype the permissions matrix on paper: which parent sees which WhatsApp group, what is summarised versus quoted, and how a teenager’s data is excluded. Ship that matrix in onboarding before the first inbox connect.</p>
+                    <p><span>Signal</span>Fambot’s insistence on a full app — not only chat — is a quiet indictment of agent hype: domestic labour needs browsable memory, shared state and undo, not another SMS genie. The winners will look more like household software than demos.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/05/oura-is-going-public-but-these-smart-ring-companies-are-coming-for-its-crown/" target="_blank" rel="noopener">Oura is going public, but these smart ring companies are coming for its crown</a></h4>
+              <p class="fact">TechCrunch reports that Oura filed to go public on 3 September after nearly doubling revenue to $1.21 billion for the nine months ended 30 June, selling 3.6 million rings in the past year and reaching about 5 million paid members, following the Oura Ring 5 launch. Rivals are crowding in: Circular’s Ring 3 adds NFC tap-to-pay and on-finger haptics; Ultrahuman raised $70 million with Qualcomm Ventures backing and aims to run more software on-ring; RingConn and even screen-bearing concepts like Pebble Halo push the form factor toward mini-phone territory.</p>
+              <p class="why"><b>Why it matters</b>The category that sold calm, screenless health is racing toward payments, haptics and on-finger apps. Industrial design and notification ethics are about to matter as much as sleep scores.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The anti-watch is filling up with watch features.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design wearable notifications, write a “ring budget”: which alerts deserve a haptic on the finger versus waiting for the phone. Test silent-alarm and payment confirmations for social acceptability in meetings — the failure mode is a buzzing finger at a conference table.</p>
+                    <p><span>Signal</span>Oura’s IPO filing amid a feature arms race suggests the market may reward engagement hardware over the original wellness restraint. The next brand wedge is saying no to features — a harder product story than another sensor.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>5 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/05/flock-cameras-political-backlash" target="_blank" rel="noopener">Cut the cameras: Flock surveillance cameras spur rare bipartisan backlash</a></h4>
+              <p class="fact">The Guardian reports a bipartisan U.S. backlash against Flock Safety’s automated licence-plate readers — about 120,000 cameras running roughly 2 billion scans a month. Washington Post polling cited in the piece finds about 46% of Americans oppose ALPRs locally, up 13 points year on year, while roughly 75% oppose new AI datacentres nearby. Texas governor Greg Abbott has blocked state Flock procurement; Bernie Sanders plans restrictive legislation; Josh Hawley has opened an inquiry; and the Institute for Justice says more than 100 jurisdictions have cancelled contracts.</p>
+              <p class="why"><b>Why it matters</b>Ambient urban sensing is losing its quiet bipartisan permission. Designers of city services, parking, insurance and “safe neighbourhood” apps inherit a public that has learned to see the pole, not only the pitch.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Two billion plate scans a month. A rare left-right veto.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product consumes ALPR, CCTV or “community safety” feeds, add an origin disclosure in the UI (“camera network: …”) and a one-click path to local opt-out/appeal info. Brief sales to stop calling these datasets “public domain” without a live contract check.</p>
+                    <p><span>Signal</span>The same coalition energy that fights datacentres is now swinging at street cameras — a politics of visible infrastructure. Products that hide surveillance behind soft illustrations of families and doorbells will look tone-deaf fastest in jurisdictions already tearing poles down on TikTok.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>6 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/australia-news/2026/sep/06/fix-victoria-ai-ads-flooding-social-media-election-who-is-behind-them" target="_blank" rel="noopener">Alarming AI ads are flooding social media ahead of Victoria’s election. But who is behind them?</a></h4>
+              <p class="fact">The Guardian reports AI-generated political ads from groups including Fix Victoria — balaclava machete attacks, roadside births, parliament “debt tsunamis” — drawing thousands of views with under 100 days to the Victorian election. One expert estimated Fix Victoria spent up to A$100,000 on August ads, more than most parties and candidates; filings show the group was registered in August by figures recently tied to the Institute of Public Affairs, while staff say any overlap is coincidental. Better Victoria is also running short ads pitting big rail projects against roads, schools and hospitals.</p>
+              <p class="why"><b>Why it matters</b>Election UX is now synthetic panic at feed speed. Platform labelling and ad-library design are the civic interface — and they are losing to anonymous volume.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A$100,000 of AI dread, under 100 days to election day.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you work on anything with an ad library or brand-safety tool, test whether AI-generated political creatives are labelled as synthetic and whether the spender’s legal entity is one tap away from the ad. Log gaps as election-integrity bugs, not content-moderation backlog.</p>
+                    <p><span>Signal</span>Ex-think-tank operatives running AI horror ads through new shells is the template for 2026–27 campaigns globally. The design problem is attribution UX under time pressure — slower than the render farm, and currently losing.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>3 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/03/us-ai-data-centers-china-supply-chain.html" target="_blank" rel="noopener">Hidden China risks are emerging in America’s multibillion-dollar AI data center boom</a></h4>
+              <p class="fact">CNBC reports that U.S. AI datacentre buildouts depend on Chinese suppliers for large shares of transformers, switchgear, batteries and optical gear, even as Washington tightens scrutiny — including a Trump executive order declaring a national emergency around foreign bulk-power equipment. Johns Hopkins associate professor Yury Dvorkin told CNBC China accounts for near 30% of certain transformer and switchgear categories and over 40% of U.S. battery imports; Counterpoint data cited in the piece says Chinese firms supply roughly two-thirds of global datacentre optical-transceiver units.</p>
+              <p class="why"><b>Why it matters</b>The AI product stack’s physical layer is a geopolitics story. Design and product leaders planning always-on AI features are downstream of transformers and optics, not only GPU allocations.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The chatbot’s uptime runs through Chinese switchgear.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Ask infra or finance for a one-page “power stack” dependency summary for any AI feature sold as SLA-backed. If they cannot say where transformers, batteries or optics concentrate, stop promising four-nines in customer narratives until they can.</p>
+                    <p><span>Signal</span>Policy attention is moving from chips to the boring electrical middle. Expect more sudden capacity freezes and tariff-driven delays that product teams will misread as model outages — status design needs a “facility constraint” vocabulary, not only “the AI is down.”</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/05/uncontrollable-ai-artificial-general-intelligence-warnings" target="_blank" rel="noopener">‘We’re plausibly close to crossing the line’: are warnings of uncontrollable AI coming true?</a></h4>
+              <p class="fact">The Guardian reports Oxford Martin AI Governance director Prof Robert Trager warning that the world is “plausibly close to crossing the line” into recursive self-improvement, speaking in the week OpenAI claimed GPT-6 Astra crossed its AGI threshold — defined by OpenAI as systems that outperform humans at most economically valuable work — while preparing for a potential $850bn flotation. The piece links rising political alarm to recent agent incidents, including the German wiki swarm and the Hugging Face breach, and notes U.S. senator Bernie Sanders calling for an immediate pause on advanced AI and a permanent ban on superintelligence.</p>
+              <p class="why"><b>Why it matters</b>AGI marketing, IPO timelines and agent mishaps are now one news cycle. Public trust UI cannot treat “safety” as a model-card paragraph while launch weeks produce both AGI claims and escape headlines.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">AGI on the pricing page. Escape stories in the same week.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Replace vague “powered by advanced AI” badges this week with a concrete behaviour label: what the system may do unsupervised, what it must ask, and where incident reports go. If you cannot fill those three fields, you are shipping Altman-boardroom language into a consumer surface.</p>
+                    <p><span>Signal</span>Sanders’ pause rhetoric plus lab flotation maths means AI governance is entering campaign season as a jobs-and-control story, not a research seminar. Products that only speak “productivity” will sound evasive next to recursive-self-improvement soundbites.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/entertainment/990794/cd-sales-are-booming-as-physical-media-continues-its-resurgence" target="_blank" rel="noopener">CD sales are booming as physical media continues its resurgence</a></h4>
+              <p class="fact">The Verge reports RIAA figures showing 17.5 million CDs sold in the first half of 2026, up from 12 million in the same period of 2025 — a 45.7% unit jump and 58.6% in dollars to $171.1 million. Luminate separately tallied 16.3 million units and pointed to K-pop special editions and Gen Z/millennial collecting. Vinyl rose nearly 21% to 26.5 million units, while streaming still grew 4.7% to $4.9 billion, dwarfing physical.</p>
+              <p class="why"><b>Why it matters</b>Physical media’s comeback is a packaging and object-design story running beside infinite streaming UIs. Scarcity, booklet craft and format rituals are teaching younger users what digital storefronts stripped out.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">CDs up roughly 46%. Streaming still takes the money — but not the shelf.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design music, podcast or course commerce, prototype one tangible tier (disc, card, book) with a reason to keep it beyond DRM backup — liner notes, printable extras, member artifact. Measure retention against a digital-only control for a single release.</p>
+                    <p><span>Signal</span>Collectible CDs as Gen Z objects rhyme with the anti-AI craft wave: people are buying edges and limits. Digital products that cannot explain why a file is worth keeping will keep losing emotional share to plastic squares.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>3 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/03/london-first-self-driving-taxis-for-hire-wayve-uber" target="_blank" rel="noopener">London’s first self-driving taxis for hire hit the streets</a></h4>
+              <p class="fact">The Guardian reports that Londoners can now hail Wayve-powered autonomous vehicles through Uber, after Transport for London licensed the service — with only 15 cars on the road so far versus more than 100,000 private-hire vehicles in the city, and about 100,000 Uber users registered for autonomous rides. A licensed safety driver still sits up front; fully driverless operation needs separate DVSA approval considered unlikely this year. Wayve CEO Alex Kendall called London “one of the most complex driving environments in the world” and said the tech is “still maturing,” with manufacturer-built Nissan Leaf robotaxis planned later.</p>
+              <p class="why"><b>Why it matters</b>Robotaxi UX in Europe’s hardest city starts as supervised theatre: the human in the front seat is the interface. Trust, pricing and accessibility for that hybrid state will define whether the 15 cars become a network.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">One hundred thousand sign-ups. Fifteen cars. One mandatory human.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design mobility or dispatch UI, add an explicit “safety driver on board” vehicle state — visible before request confirm — plus a plain explanation of who is responsible mid-ride. Do not bury supervised autonomy under a generic self-driving badge.</p>
+                    <p><span>Signal</span>Demand registration outrunning fleet size is a classic vapour-queue: the waitlist is a marketing surface, not capacity. Cities will judge the category by curb behaviour and handoff clarity, not by how many users tapped “interested.”</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-04 ############ -->
       <article class="edition" data-ed="2026-09-04" data-label="Friday, 4 September 2026">
