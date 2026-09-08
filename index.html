@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-06" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+          <span class="d">7 Sep 2026</span>
+          <span class="m">Mon · 24 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-06">
           <span class="d">6 Sep 2026</span>
           <span class="m">Sun · 24 stories</span>
         </button>
@@ -435,6 +441,448 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-09-07 ############ -->
+      <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>7 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/ai/i-saw-nvidias-new-ai-video-tool-why-rtx-sparks-half-frame-trick-might-actually-matter-and-why-creatives-are-right-to-be-wary" target="_blank" rel="noopener">I saw NVIDIA's new AI video tool: why RTX Spark’s half‑frame trick might actually matter... and why creatives are right to be wary</a></h4>
+              <p class="fact">Creative Bloq reports from IFA that NVIDIA’s Lars Weinand demoed an RTX Spark pipeline that generates video at 30 FPS (and lower resolution) using NVFP4 precision on a Blackwell unified-memory chip, then uses an RTX video node for AI upscaling and AI frame generation to reach a 60 FPS clip. Weinand claimed no visible difference versus a fully generated 60 FPS clip; the piece notes the GitHub release includes AI super resolution now, with AI frame generation coming shortly and an HDR module in development. Creative Bloq’s own analysis, not an independent lab benchmark.</p>
+              <p class="why"><b>Why it matters</b>Offline half-frame generation is the first AI-video optimisation that maps cleanly onto how motion designers already think about base rate versus delivery rate. When local hardware can cut iteration time without a cloud farm, the bottleneck moves from render budget to critique cadence — which is a design-ops problem.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Generate half the frames. Ship 60 FPS. Argue about the deadline.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pick one short motion sequence you currently generate frame-for-frame and run a side-by-side: full 60 FPS versus 30 FPS base with AI frame fill. Log artefacts on hair, fabric and fast motion, then write the base-FPS floor into your motion QA checklist before anyone treats the demo preset as a production default.</p>
+                    <p><span>Signal</span>Speed tools do not just accelerate craft — they rewrite staffing maths. The piece’s labour warning is the real story: once half-frame is “good enough,” producers will budget for fewer passes and fewer humans in the loop. Design leaders who adopt the pipeline without rewriting review gates will discover the quality cliff only after the calendar has already compressed.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement" target="_blank" rel="noopener">Authors push back as publishers and agents make claims on Anthropic settlement</a></h4>
+              <p class="fact">TechCrunch reports that authors expecting payouts from Anthropic’s $1.5 billion copyright settlement — finally approved in July — are receiving notices that publishers or others are claiming their payments. Under the deal, authors of nearly 500,000 titles are to be paid $3,000 per pirated work, with in-print traditionally published books split 50-50 between author and publisher. Writers Beware’s Victoria Strauss says complaints cluster around publishers claiming reverted rights or full payouts, and agents making claims despite not being rightsholders; Authors Guild CEO Mary Rasenberger told the New York Times she sees record-keeping failure more than a deliberate grab.</p>
+              <p class="why"><b>Why it matters</b>The largest creative-AI settlement to date is becoming a UX problem of rights metadata: who owns the claim, who can dispute it, and how legible the allocation UI is. Designers who ship AI features that ingest third-party content will inherit the same allocation-and-dispute pattern.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The settlement cheque has three names on it. Only one wrote the book.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product generates or remediates licensed content payouts, map the dispute path this week: who can contest an allocation, what evidence is required, and how long funds are held. Borrow the Authors Guild’s reversion-date clarity — a hard cutoff date beats a vague “rights holder” field.</p>
+                    <p><span>Signal</span>When agents claim a cut of a piracy settlement they did not litigate, the industry is treating AI damages as just another royalty waterfall. That normalises intermediaries inserting themselves into every future model-training payout — which means the schema for “who gets paid when a model scrapes culture” is being designed now, in claims emails, not in product briefs.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/whispering-complaints-into-your-phone-may-be-the-future-of-customer-feedback" target="_blank" rel="noopener">Whispering Complaints Into Your Phone May Be the Future of Customer Feedback</a></h4>
+              <p class="fact">Wired reports that Voicebox, a startup collecting customer feedback via voice, lets shoppers scan a QR code or tap an NFC chip in-store, speak for roughly 20 seconds, and have the audio transcribed into a company dashboard with sentiment analysis. CEO Karan Gupta says voice accuracy and speed hit a tipping point in the last two years. Voicebox has also launched a public “directory” so feedback can be sent from anywhere, with plans for users to discover what others are saying about a business. Company-reported product description relayed by Wired.</p>
+              <p class="why"><b>Why it matters</b>Feedback design has been stuck on star ratings and typed forms that select for the angry and the bored. Ambient voice drops the activation energy — and that changes the sample you research against, for better and worse.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The NPS survey just became a whisper into a QR code.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Prototype one post-purchase or in-store feedback moment as a 20-second voice capture instead of a five-question form. Define upfront how transcripts are stored, who hears them, and whether speakers can review before submit — then test completion rate against your current form.</p>
+                    <p><span>Signal</span>A public voice directory turns private complaint UX into something closer to spoken Google Maps reviews. Once feedback is ambient and searchable, the design problem stops being “how do we collect input” and becomes “how do we prevent the loudest 20-second takes from rewriting the product roadmap.”</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>6 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/06/daniel-susskind-father-studies-ai-artificial-intelligence-what-parents-need-know" target="_blank" rel="noopener">I’m a father of three who studies the impact of artificial intelligence: this is what parents need to know</a></h4>
+              <p class="fact">Economist Daniel Susskind writes in the Guardian that turning a vague family story idea into a Dr Seuss-style tale via ChatGPT in seconds clarified both the power and peril of generative AI for his children (aged eight, five and two). The essay argues parents must help children embrace the technology without abandoning core skills — a first-person account from a researcher who studies AI’s impact, not a controlled study.</p>
+              <p class="why"><b>Why it matters</b>Most “AI literacy” guidance still targets workers and students. Parenting is where defaults get set for the next cohort of users — including the children of the designers building the tools.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">ChatGPT finished the bedtime story. Now explain what skill just left the room.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design any family, education or youth-facing AI feature, write a one-screen “skill still yours” prompt that names what the child should still do by hand after the model helps — drafting, recounting, sketching — and playtest it with one parent who is not on your product team.</p>
+                    <p><span>Signal</span>Susskind’s Disneyland story is a perfect product metaphor: AI collapses the gap between idea and artefact so fast that the shared labour (the thing that taught the skill) disappears. Products that celebrate instant completion without preserving a joint-making moment are training a generation to consume outputs, not to author them.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>1 Sep 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b" target="_blank" rel="noopener">AfterQuery reportedly becomes Y Combinator’s fastest-ever unicorn, now valued at $3.2B</a></h4>
+              <p class="fact">TechCrunch reports that AI training-data startup AfterQuery has raised a round valuing it at $3.2 billion, five months after a $30 million Series A at a $300 million valuation in April — more than a 10x jump. Y Combinator partner Gustaf Alströmer called it the fastest launch-to-unicorn in YC history. In April the company said it had a $100 million annualised revenue run rate and named customers including Nvidia, Legora and Motif Technologies. Valuation and “fastest” claim are reported characterisations, not independently audited figures.</p>
+              <p class="why"><b>Why it matters</b>Training-data infrastructure is being capitalised like a foundation model lab. That tells you where the scarce resource actually sits: not another chatbot skin, but the labelled human work underneath.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The unicorn is the spreadsheet of human answers, not the model.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit where your AI features depend on third-party labelled data or eval sets. For each dependency, note whether you could switch vendors in 30 days and what quality regressions you would measure — then put that switching cost in the next roadmap review.</p>
+                    <p><span>Signal</span>A 10x valuation climb in five months on training data means investors believe human-in-the-loop pipelines are the bottleneck that compounds. Mid-level designers still argue about prompt chrome; the money is buying the people who grade the outputs those prompts produce.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>30 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/aug/30/ai-small-business" target="_blank" rel="noopener">Big business has shown small firms what to do – and what not to do – with AI</a></h4>
+              <p class="fact">In a Guardian column, Gene Marks argues small and mid-sized businesses are learning from large firms’ AI wins and failures: useful applications include software development, customer service, security and voice, while large-scale projects have burned billions on token costs with little to show. Marks writes that developers laid off by big tech are using AI tools to serve smaller companies at scale, and that SMBs should pick “low-hanging fruit” rather than copy enterprise moonshots. Opinion column based on the author’s small-business observation, not a survey dataset.</p>
+              <p class="why"><b>Why it matters</b>Enterprise AI theatre is leaking a practical playbook downward: ship narrow assistants with clear cost caps, not transformation programmes. Design teams at smaller orgs finally have cover to say no to the big demo.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Steal the use cases. Skip the billion-dollar pilot.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>List every AI experiment on your team that lacks a per-query cost ceiling and a single owner. Kill or cap any that cannot name both by Friday — Marks’s token-bill warning is the Monday-morning filter.</p>
+                    <p><span>Signal</span>The column’s quiet thesis is that AI product-market fit for most companies is a staffing arbitrage story (fewer senior people, more tool-amplified juniors and freelancers) dressed up as innovation. If that is true, the interface that matters is the one that makes a three-person team look like twelve — not the one that demos AGI to the board.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>7 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/lifeandstyle/2026/sep/07/death-of-hello-gen-z-and-scammers" target="_blank" rel="noopener">The death of ‘hello’: how gen Z – and scammers – put paid to the greeting</a></h4>
+              <p class="fact">The Guardian notes a New York Times report that younger people increasingly answer calls with “Hi,” “What’s up?” or “Yeah?,” and cites a survey from last year finding 40% of 18–24-year-olds find it acceptable to answer with no greeting at all. Separately, the piece relays consumer-watchdog guidance — covered by Which?, the BBC and the Guardian — that AI voice-cloning scams can harvest a telephone greeting, so advice for unidentified numbers is to stay silent until you know a human is on the line.</p>
+              <p class="why"><b>Why it matters</b>A century-old telephony convention is collapsing under caller ID and fraud UX at the same time. The greeting is no longer politeness — it is a biometric sample.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your hello is training data for the scam that calls your mum.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product uses outbound voice, voicemail drops or phone verification, replace open-ended “say hello to continue” prompts with a random phrase challenge or keypad confirm. Add a help article that tells users not to answer unknown numbers with a greeting.</p>
+                    <p><span>Signal</span>Silence-as-security is a brutal interaction design: the socially fluent behaviour becomes the vulnerability. Expect more products to train users into cold opens and passphrase answers — a courtesy recession driven by cloneable voice, not manners.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/990958/huawei-mate-xt-2-trifold-launch-china-privacy-display" target="_blank" rel="noopener">Huawei copies Samsung’s privacy display in its latest trifold</a></h4>
+              <p class="fact">The Verge reports Huawei launched the Mate XT 2 trifold in China, adopting an inward-folding form factor similar to Samsung’s Galaxy Z TriFold and adding a privacy OLED that, when activated, emits light at narrower angles so the screen looks nearly black from the side. The phone starts at ¥19,999 (about $3,000); it also adds a Kirin 9050 Pro chipset, IP59 water resistance and a triple rear camera. International release plans are unknown.</p>
+              <p class="why"><b>Why it matters</b>Privacy is moving from a software toggle into the pixel physics of the display. That is a hardware design decision product teams will start requesting as a checkbox once two vendors ship it.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Shoulder-surfing defence is now a display mode, not a privacy film.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any flow that shows salaries, health data, messages or 2FA codes on mobile, add a “narrow viewing angle” requirement to the hardware wishlist and, until then, design a one-tap hide/blur that is reachable one-handed without opening settings.</p>
+                    <p><span>Signal</span>When privacy LEDs become a premium trifold feature, the absence of a privacy mode on mid-range devices becomes a class signal. Expect “can strangers read this screen on the train” to join battery and camera as a first-class comparison row — which reframes privacy as industrial design, not only policy.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/art/digital-art/huions-new-kamvas-pad-12-could-fix-the-biggest-problem-with-android-tablets-for-art" target="_blank" rel="noopener">Huion's new Kamvas Pad 12 could fix the biggest problem with Android tablets for art</a></h4>
+              <p class="fact">Creative Bloq reports Huion announced the Kamvas Pad 12, a 12.2-inch 2K+ 90Hz Android drawing tablet (99% sRGB) priced at $499 / £449, running Android 16 with pre-installed drawing apps and PenTech 4.0 / PW600C battery-free EMR pen claiming 5080 LPI resolution, 260 PPS and ±0.3mm centre accuracy. The piece frames it as addressing frustration with prior standalone Android drawing tablets where hardware looked right but the drawing experience lagged. Specs and pricing as announced; hands-on verdict pending.</p>
+              <p class="why"><b>Why it matters</b>The tablet market keeps shipping “pro creatives” hardware with consumer-pen software stacks. Spec sheets that finally name latency, LPI and colour gamut give designers language to reject devices that only look like tools.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A $499 Android slate that leads with pen accuracy, not AI stickers.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Before the next hardware recommendation for illustrators on your team, require three numbers in the brief — report rate, stated accuracy, and colour gamut — and reject any vendor page that only markets resolution and “AI features.”</p>
+                    <p><span>Signal</span>Huion’s pitch implicitly admits the category’s real failure mode: Android art tablets failed on input fidelity, not on model count. The competitive surface for creative devices is shifting back to pens and panels while AI branding distracts elsewhere — watch which vendors still bury those metrics.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/logos-icons/maryland-university-tangled-in-unlikely-logo-dispute" target="_blank" rel="noopener">Maryland University tangled in unlikely logo dispute</a></h4>
+              <p class="fact">Creative Bloq reports the University of Maryland is in a dispute with cannabis dispensary brand Terps USA over allegedly similar logos: both use bold red cursive with similar flourishes on the ‘r’ and ‘s’. The university’s “Terps” mark is heritage shorthand for its Terrapins teams; the dispensary’s name references terpenes. In an email to Terps USA owner Ken Fry, the university claimed the company had “stolen the name and trademarked image.” Single-source reporting of the dispute as characterised by the parties.</p>
+              <p class="why"><b>Why it matters</b>Heritage wordmarks collide with category slang they never anticipated. Brand systems that treat a nickname as untouchable IP discover the culture keeps inventing homonyms.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Same red cursive. Very different product aisle.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Run a quick brand-risk scan on any nickname, shortcode or mascot word in your system: search app stores, USPTO-style databases you have access to, and the adjacent categories your legal team worries about. If a homonym already owns shelf space, document coexistence risk before the next merch drop.</p>
+                    <p><span>Signal</span>Cease-and-desist energy over cursive flourishes shows how much brand value now lives in lettering personality rather than pictorial marks. As AI logo mills flood the same script styles, expect more collisions that are “alike in vibe” rather than identical paths — a messier standard for designers to defend.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/logos-icons/how-two-tweets-cost-elon-musk-the-twitter-logo" target="_blank" rel="noopener">How two tweets cost Elon Musk the Twitter logo</a></h4>
+              <p class="fact">Creative Bloq reports that in a ruling this month, a judge allowed X to keep the Twitter name but not the bird logo or the word “Tweet,” citing two July 2023 posts from Elon Musk — one saying X would “bid adieu to the twitter brand and, gradually, all the birds,” and another about taking blow torches to the building logo — as evidence helping Operation Bluebird’s case. Operation Bluebird said in a statement quoted via TechCrunch that X “kept the word” but “let go of the bird” and “the tweet.”</p>
+              <p class="why"><b>Why it matters</b>Brand abandonment is being litigated from the CEO’s own posts. The rebrand performance became exhibit A against reclaiming the mark — a cautionary tale for every founder who livestreams the logo funeral.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">He blow-torched the bird. The court believed him.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your company is retiring a mark, write a brand-sunsetting memo that separates what you are abandoning from what you intend to keep, and keep executives off casual posts that contradict it. Treat public “goodbye” copy as legal speech.</p>
+                    <p><span>Signal</span>The bird was always the stronger asset than the corporate name — and the court effectively agreed. In platform wars, vernacular (“Tweet”) and mascot outlive the holding company. Design systems that over-index on renaming while discarding distinctive pictorial language are giving rivals the emotional equity for free.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>4 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/04/no-little-kids-allowed-and-other-new-info-about-teslas-cybercab" target="_blank" rel="noopener">No little kids allowed, and other new info about Tesla’s Cybercab</a></h4>
+              <p class="fact">TechCrunch reports Tesla’s Cybercab terms currently bar riders under 13, while ages 8–17 may ride in Tesla’s Robotaxi Model Y SUVs; all under-18s need an accompanying adult in both. The Cybercab lacks standard LATCH anchors, so child seats attach only via seat belt. Other details: windows “cannot be fully opened at this time,” electronic door latches with a manual release on each armrest, brake-by-wire, and USB-C outlets reported at 90W. NHTSA has opened an investigation into the rollout.</p>
+              <p class="why"><b>Why it matters</b>Autonomous vehicle UX is being specified in exclusion lists and missing hardware. Who can ride, how a child seat attaches, and where the manual door release lives are the real interface — not the butterfly doors.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The robotaxi ships without LATCH and without under-thirteens.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design any shared autonomous or driver-optional experience, draft the passenger-eligibility matrix (age, child seats, assistance animals, luggage) as a first-class screen, not a PDF appendix. Pressure-test emergency exit findability in a darkened prototype.</p>
+                    <p><span>Signal</span>Cost-cutting that removes LATCH while marketing family-adjacent mobility tells you whose body the vehicle was optimised for. Accessibility and child safety are being treated as later firmware — which is how “the future of transport” quietly becomes adults-only infrastructure.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/06/phil-schillers-app-store-exit-reportedly-driven-by-wariness-over-future-plans" target="_blank" rel="noopener">Phil Schiller’s App Store exit reportedly driven by wariness over future plans</a></h4>
+              <p class="fact">TechCrunch, citing Bloomberg’s Mark Gurman, reports Phil Schiller’s step-down as App Store head — he remains an Apple Fellow — was partly about family and philanthropy, and partly about discomfort with new CEO John Ternus and services chief Eddy Cue seeking higher App Store margins and more recurring revenue. In Gurman’s account there was no big fight, but Schiller preferred to leave rather than squeeze the business further amid developer and government conflict. Reported characterisation of internal motives, not an on-record Apple statement.</p>
+              <p class="why"><b>Why it matters</b>The App Store’s product posture may be shifting from gated taste-making toward harder monetisation under a new CEO. Every designer shipping on iOS feels that shift in review mood, fee pressure and subscription nudges.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The App Store’s longtime steward left before the margin push.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Revisit your iOS monetisation roadmap assuming firmer platform take rates and more recurring-revenue pressure from Apple: which features should be one-time unlocks versus subscriptions, and what happens to conversion if a platform fee rises. Put the sensitivity analysis in this month’s product review.</p>
+                    <p><span>Signal</span>Schiller’s exit as a refusal to own the next squeeze is a governance tell: the people who built the store’s legitimacy are peeling off as the store becomes a pure P&amp;L lever. Expect design quality of discovery and review to matter less in Cupertino’s internal scorecard than ARPU — unless regulators force the opposite.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>3 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/03/circular-unveils-ring-3-series-with-contactless-payments-and-on-finger-vibration-alerts" target="_blank" rel="noopener">Circular unveils Ring 3 series with contactless payments and on-finger vibration alerts</a></h4>
+              <p class="fact">TechCrunch reports Circular unveiled Ring 3 Pro and Slim, both with NFC contactless payments and on-finger vibration for alarms, reminders and health alerts. The Pro adds FDA-cleared ECG for AFib detection, blood-pressure and glucose trend tracking, and up to 12 days of battery (up from seven); the Slim offers core wellness metrics and up to 10 days. Titanium steel, 50-metre water resistance, sizes 6–14; pricing later, availability expected early 2027. Specs from the company announcement.</p>
+              <p class="why"><b>Why it matters</b>Smart rings are converging on payments plus haptics — a finger that charges, pays and taps you awake. The interaction model is watch-class notifications without a screen, which forces colder, better-prioritised alerts.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your next alarm clock is a buzz on your finger at the till.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design wearable notifications, draft a ring-sized priority list: which three alert types deserve haptics with no glanceable UI, and what the fail-safe is when the user cannot see why they were buzzed. Cut everything else.</p>
+                    <p><span>Signal</span>Splitting Pro clinical sensors from Slim “fashion + pay” admits the category’s real split: medical theatre versus jewellery that also pays. The winners may be the Slims — payments and silent haptics are daily rituals; ECG is an occasional anxiety feature.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>2 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs" target="_blank" rel="noopener">India’s richest man now wants to turn aging computers into AI-ready PCs</a></h4>
+              <p class="fact">TechCrunch reports Reliance Jio opened JioPC — a cloud PC service first launched in July 2025 — to any internet user in India, not only Jio broadband subscribers. Jio says machines as old as eight years can run modern AI applications without local hardware upgrades. Plans start at ₹1,000 (about $11) for two months; a 12-month plan is ₹4,000 (about $42) for 8GB RAM and 500GB storage. IDC estimates India had more than 65 million PCs in use in 2025. Capability claims are Jio’s, relayed by TechCrunch.</p>
+              <p class="why"><b>Why it matters</b>“AI-ready PC” as a subscription rather than a silicon upgrade reframes device strategy for billions of aging machines. The product is latency, identity and offline failure modes — classic UX problems wearing an AI marketing hat.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your eight-year-old laptop just rented a GPU in the cloud.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design for emerging-market or low-spec users, storyboard JioPC-class cloud desktops: what breaks when the network drops mid-task, how auth works on a shared family PC, and which features must remain local. Add those states to your next accessibility/ perf review.</p>
+                    <p><span>Signal</span>Ambani selling AI capability as bandwidth-adjacent SaaS is a bet that model access follows telecom distribution, not App Store distribution. Design systems that assume a fat local client will miss the next billion users who experience “the computer” as a stream.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Sep 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business" target="_blank" rel="noopener">Travis Kalanick’s Atoms might be getting into the robotaxi business</a></h4>
+              <p class="fact">TechCrunch relays a Financial Times report that Atoms — which announced a $1.7 billion Andreessen Horowitz-led round earlier this summer — is preparing hiring and acquisitions aimed at autonomous vehicles, and has talked with Uber about using its robotaxi technology. The FT also noted Uber has invested $100 million in Atoms, per TechCrunch’s summary. Second-hand reporting of private plans.</p>
+              <p class="why"><b>Why it matters</b>Another well-funded autonomy stack circling Uber’s marketplace continues the pattern: ride-hail wants multiple robotaxi suppliers, and founders who lost one transport war are buying chips for the next.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Uber’s founder may sell Uber a robotaxi stack.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you work on mobility or marketplace trust-and-safety, update your competitor map to include “Atoms-class” AV suppliers as potential white-label partners, not only consumer brands — partnership UX (handoffs, support, incident copy) will matter as much as the vehicle UI.</p>
+                    <p><span>Signal</span>Mega-rounds without a crisp public product are back, and AV is the excuse. The design risk for cities and riders is a fleet of subtly different autonomy behaviours under one familiar app chrome — consistency of the booking UI masking inconsistency of the car.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/05/cluckys-new-alarm-app-wakes-you-up-with-a-crowing-rooster" target="_blank" rel="noopener">Clucky’s new alarm app wakes you up with a crowing rooster</a></h4>
+              <p class="fact">TechCrunch’s Sarah Perez tried Clucky, a new iPhone alarm app for habitual snoozers that can wake you with a rooster crow and requires completing a mission before the alarm turns off. It joins apps such as Alarmy and Awake that use challenges to block instant dismiss. First-person product trial, not market-share data.</p>
+              <p class="why"><b>Why it matters</b>Alarm apps are a rare consumer category still competing on behaviour design rather than AI features: friction as the product. The rooster is branding; the mission gate is the craft.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Snooze lost. The rooster brought a quest.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any habit or health reminder you ship, prototype a dismiss path that requires a 3-second intentional action (scan, type, move) and measure whether completion rises without angering users in a five-person test.</p>
+                    <p><span>Signal</span>The category’s persistence proves that notification design’s hardest problem is still the user’s future self negotiating with their present self. AI personalisation has not solved that — physical or cognitive friction still wins at 6:30 a.m.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>6 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/990895/boox-picco-tiny-e-reader-november-ifa" target="_blank" rel="noopener">Boox’s tiny Picco e-reader should land in November</a></h4>
+              <p class="fact">The Verge reports from IFA that Boox’s Picco, a tiny e-reader response to the Xteink X4, will lack a touchscreen, store books on microSD only (no onboard storage), transfer via USB-C or Wi‑Fi companion app, and run a stripped-down Linux OS rather than Android, with extras like a timer, todo list and reading stats. Price, battery life and Bluetooth remain undisclosed; launch expected in November.</p>
+              <p class="why"><b>Why it matters</b>A deliberately limited reading slab is a product opinion: remove touch, remove Android, keep the book. Constraint-led hardware is having a moment while phones chase AI features.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">No touchscreen. No onboard storage. Just enough reader.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When scoping a companion reading or reference mode in your app, try a “Picco constraint” pass: what remains if you ban gestures beyond page-turn and ban accounts beyond local files? Use that to find the true core loop.</p>
+                    <p><span>Signal</span>Boox choosing Linux over Android for a mini-reader is a rejection of ecosystem lock-in as much as a BOM choice. The next wave of “calm tech” products may compete by subtracting OS surface area — a useful counterweight to agentic everything.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>7 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/uk-news/2026/sep/07/designers-should-not-fear-being-replaced-by-ai-industry-leaders-say" target="_blank" rel="noopener">Designers should not fear being replaced by AI, industry leaders say</a></h4>
+              <p class="fact">The Guardian reports Design Council CEO Mat Hunter and Design Business Association CEO Deborah Dawton arguing generative AI should enhance rather than replace professional designers, with Dawton likening some use to “the intern in the office” via landscape designers’ Andrew Duff. Design Economy 2026 analysis cited by the Council says design-related employment across construction, services and manufacturing supports 2.27 million jobs, up 15% between 2020 and 2025, while the sector grew 40% from 2019 to end-2023 versus 23% economy-wide; Hunter also flagged a 68% drop in design and technology GCSE entries in the decade to 2024. Industry leaders’ claims plus Council-funded figures.</p>
+              <p class="why"><b>Why it matters</b>The official UK design lobby is publishing growth numbers as a counter-narrative to replacement panic — while freelancers told the Guardian last week they are stuck fixing “soulless” AI work. Both can be true, and that tension is the labour story.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">2.27 million design jobs. A 68% GCSE collapse. Pick your worry.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Bring the Design Economy employment and GCSE figures to your next team planning conversation: if junior pipelines are shrinking while AI “intern” work rises, schedule one concrete apprentice or internship action your studio can fund this quarter.</p>
+                    <p><span>Signal</span>Leaders saying “don’t fear AI” while schools haemorrhage design students is a workforce contradiction. The profession may grow in headcount on paper and still hollow out at the entry level — leaving seniors supervising AI output with nobody trained to replace them.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/business/2026/sep/07/grindr-settle-uk-lawsuit-dating-app-ad" target="_blank" rel="noopener">Grindr pays £26m to settle UK lawsuit over allegedly sharing users’ HIV status</a></h4>
+              <p class="fact">The Guardian reports Grindr will pay £26 million to settle a UK high-court claim by about 12,000 users who allege the dating app shared sensitive personal information — including, in some cases, HIV status — with advertising companies, covering a period up to early 2020. Average compensation would be about £2,167 per person if split equally. Allegations in a settled claim; Grindr’s payment ends the litigation without the piece detailing an admission of liability.</p>
+              <p class="why"><b>Why it matters</b>Sensitive-attribute leakage into adtech remains the nuclear privacy failure mode. Dating and health-adjacent products are on notice that “we shared with partners” can become a nine-figure design and governance problem years later.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">HIV status in the ad auction — settled for £26 million.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Inventory every event or field your product can send to ad or analytics partners and mark health, sexuality, precise location and government-ID-adjacent data as never-share without a legal sign-off checklist. If engineering cannot prove a field is blocked, treat it as shipping open.</p>
+                    <p><span>Signal</span>The lag is the lesson: conduct through early 2020, payout in 2026. Privacy design debt compounds on a litigation clock, not a sprint clock — boards will keep discovering that “growth stack” decisions from a prior regime are still live ammunition.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/ai/2026/09/the-ai-data-center-boom-is-causing-new-accountability-problems" target="_blank" rel="noopener">The complex corporate web behind a $3.2 billion AI data center</a></h4>
+              <p class="fact">Ars Technica reports that after a June fire at the unfinished Lake Mariner AI data center in Somerset, New York — a $3.2 billion campus — local firefighters found no working alarm, no suppression system and three dead hydrants, with safety sheets burned. The site involves TeraWulf operating on land leased from a company owned by its CEO, Fluidstack running AI compute, and Microsoft and Anthropic among the demand side; a 2024 planning figure projected 35–40 permanent jobs for up to 500 megawatts. Anthropic has a ratepayer commitment covering the site, but Ars notes verification gaps in leased arrangements.</p>
+              <p class="why"><b>Why it matters</b>AI infrastructure is being built as a stack of leases and logos that diffuse who answers the fire department. Community UX for data centers is becoming a first-order product-adjacent design problem for the labs whose names appear on the lease.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Half a gigawatt. Forty jobs. Three dry hydrants.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your company buys or markets cloud/AI capacity, ask vendors for a one-pager naming the on-site safety owner, local emergency contact path, and job commitments versus megawatts — and keep it next to the sustainability slide in any internal review.</p>
+                    <p><span>Signal</span>Diffuse corporate webs are a feature, not a bug: they let brand-safe AI labs inherit capacity without inheriting the town-hall. Designers working on “responsible AI” narratives should treat emergency-response clarity and local accountability as part of the trust surface, not a facilities footnote.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>31 Aug 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/08/31/a-group-funded-by-andreessen-horowitz-and-brockman-plan-data-center-ads-to-sway-midterms" target="_blank" rel="noopener">A group funded by Andreessen, Horowitz, and Brockman plans data center ads to sway midterms</a></h4>
+              <p class="fact">TechCrunch reports that Build American AI, affiliated with the Leading the Future super PAC backed by Marc Andreessen, Ben Horowitz and OpenAI president Greg Brockman, plans millions of dollars in ads promoting data centers in Kansas, Ohio and Wisconsin. LTF launched with over $50 million; OpenAI publicly distanced itself from LTF in June and criticised astroturfing tactics. Reporting synthesises Bloomberg and Politico accounts.</p>
+              <p class="why"><b>Why it matters</b>The midterm battlefield includes billboards about server farms. Public acceptance of AI infrastructure is now a paid media problem, which means the industry expects persuasion — not just permitting — to unlock capacity.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The data center next door is getting a PAC.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you work on climate, energy or civic-tech products, screenshot how Build American AI and opposing local campaigns frame “jobs,” “power bills” and “AI future” — then rewrite your own product’s infrastructure claims so they survive the same scrutiny.</p>
+                    <p><span>Signal</span>OpenAI condemning astroturfing while its president’s PAC ecosystem funds pro-data-center ads is the split-screen of AI politics: brand safety upstairs, land-use persuasion downstairs. Designers crafting corporate responsibility pages should assume activists will put those pages next to the ad buys.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>5 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/cars/2026/09/teslas-cybercab-has-been-deployed-and-its-already-under-investigation" target="_blank" rel="noopener">Tesla’s Cybercab has been deployed, and it’s already under investigation</a></h4>
+              <p class="fact">Ars Technica reports Tesla’s two-seat, no-steering-wheel Cybercab is moving toward public Robotaxi rides while NHTSA investigates whether it meets vehicle safety standards — hours after invitees rode Cybercabs in Austin. NHTSA is also rewriting rules that assume pedals and wheels; Zoox previously won an exemption for vehicles without manual controls. Parallel CNBC coverage noted Tesla shares fell 6% after an underwhelming update.</p>
+              <p class="why"><b>Why it matters</b>Driverless product design is colliding with a regulatory stack written for human drivers. Exemptions and investigations are now part of the launch checklist, not an afterthought.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Riders boarded. Regulators opened a file the same day.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any hardware-adjacent launch, add a “regulatory narrative” row to the launch brief: what rule you may not meet, what exemption you need, and what customer-facing copy you use if an investigation hits on day one.</p>
+                    <p><span>Signal</span>Shipping into an open safety probe normalises “move fast while NHTSA types” as a go-to-market strategy. That trains the public to treat autonomy launches as provisional — which raises the bar for trust UI everywhere else in the stack.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>7 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/988225/ram-shortage-supply-chain-micron-apple-iphone" target="_blank" rel="noopener">The real reason your phone is getting more expensive</a></h4>
+              <p class="fact">The Verge reports a memory shortage — “chipflation” / “RAMageddon” — with “memory prices” and “memory shortage” appearing in 473 company transcripts last quarter. Three manufacturers hold about 90% of the market per Counterpoint; HBM for AI consumes far more wafer capacity than conventional DRAM (Micron estimates roughly three times), and SK Hynix posted a 76% operating margin last quarter while Micron’s adjusted gross margin hit 85%. Apple’s next iPhones are expected to reflect higher memory costs.</p>
+              <p class="why"><b>Why it matters</b>AI’s appetite for HBM is repricing every device that still needs ordinary RAM. Consumer product roadmaps now inherit data-center economics whether they ship a model or not.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your phone costs more because the data center bought the wafers.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>In any 2026–27 hardware or performance budget, scenario-plan a memory price-up: what features get cut first if BOM rises, and how you explain “same storage, higher price” in release notes without blaming users.</p>
+                    <p><span>Signal</span>When memory makers can lock multiyear AI demand instead of guessing phone sell-through, consumer electronics lose the decades-long bargain of more performance for less money. Designers should expect “AI tax” to show up as uglier storage skus, not only as chatbot upsells.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-06 ############ -->
       <article class="edition" data-ed="2026-09-06" data-label="Sunday, 6 September 2026">
