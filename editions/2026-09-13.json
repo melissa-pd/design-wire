@@ -1,0 +1,283 @@
+{
+  "date": "2026-09-13",
+  "label": "Sunday, 13 September 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "TechCrunch",
+        "date": "12 Sep 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+        "hed": "Anthropic CEO outlines plan to slow AI development",
+        "fact": "TechCrunch reports that Anthropic CEO Dario Amodei published a post calling to “pace the frontier,” outlining three strategies and saying Anthropic is “unilaterally committing” to embedded third-party evaluators (citing METR) with company badges and desk access so they can verify pacing and safety commitments. OpenAI CEO Sam Altman replied that he agrees and that OpenAI will do the same, with “more to share soon”; Elon Musk posted “Dario is right.” Amodei also urges democratic-country labs to coordinate common safety standards and rate limits, noting antitrust may require government mediation, and a harder third step of getting authoritarian governments to agree. The piece ties the shift to the OpenAI–Hugging Face hack and faster capability gains; Amodei does not name resigning researcher Jacob Coxon.",
+        "why": "Pace is no longer only a research essay topic — it is becoming a product-ops pattern: outside auditors inside the building, shared rate limits, and public commitments rivals can copy. Designers who ship agentic features will inherit the same trust architecture questions.",
+        "hook": "The pause got a badge, a desk, and a competitor’s reply-all.",
+        "teach": "If you ship a frontier-model feature, draft a one-page “evaluator access” note for Monday: what an external reviewer could see in your logs, which actions are blocked in eval, and who owns the incident post when something escapes the sandbox.",
+        "signal": "Unilateral embedded evaluators are a UI for accountability — visible presence without waiting for statute. The antitrust caveat is the tell: labs want a coordinated slowdown but need government cover to talk. Expect “safety auditor” to show up in enterprise procurement checklists the way SOC 2 did."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "12 Sep 2026",
+        "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+        "hed": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
+        "fact": "TechCrunch reports that Sam Altman told Fortune editor-in-chief Alyson Shontell OpenAI is “not rushing into an IPO” and that “given everything happening with safety, right now would be an ill-advised moment to go public.” Pressed on 2026, Altman said he would say the IPO is not happening this year; the company has filed confidentially. The New York Times reported in June that OpenAI had aimed at late 2026 but was leaning toward 2027 amid tech-stock volatility and financial challenges.",
+        "why": "IPO calendars usually force product velocity. Tying a delay to safety — in the same week as pacing talk — reframes “move fast” as a reputational liability, not a growth slogan.",
+        "hook": "The exit plan just became a safety feature.",
+        "teach": "If your AI roadmap is justified by a funding or IPO narrative, rewrite this week’s status update without that pressure: what would you ship later, gate harder, or refuse if the only metric were incident rate?",
+        "signal": "When the most IPO-watched AI company says the public markets are the wrong venue for the safety moment, every design team selling “agent autonomy” to boards inherits a new question: are we demoing capability or demonstrating control?"
+      },
+      {
+        "pub": "Wired",
+        "date": "13 Sep 2026",
+        "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
+        "hed": "AI Agents Are Thirsty for Power",
+        "fact": "Wired’s Molly Taft argues data-center buildouts are driven less by single chatbot queries than by agents — systems that fire many sub-prompts per user request. The piece cites OpenAI’s claim that a swarm of more than 10,000 agents sending 2.7 million messages solved a longstanding math problem, notes Altman’s almond/water comparison for ordinary queries, and quotes Sustainable AI’s Boris Gamazaychikov on energy use decoupling from human user counts. Climate scientist Zeke Hausfather’s personal agent-heavy usage estimate is framed as fridge-scale for one person but a net-new emissions source; company energy disclosures for agents remain scarce.",
+        "why": "Agent UX sells “one prompt, many steps.” The environmental cost is multiplicative in ways a single-query footprint chart cannot show — and product copy still mostly uses the chatbot frame.",
+        "hook": "Your agent didn’t ask one question. It asked a swarm.",
+        "teach": "Add an agent-steps counter to any prototype that chains tools: log sub-prompts per successful task and put a “steps used” chip on the result. If you cannot estimate energy, at least make step count visible so stakeholders stop comparing agents to single chat turns.",
+        "signal": "When energy is billed per swarm, the winning agent UX may be the one that refuses unnecessary loops. Expect “cheap path / thorough path” toggles to migrate from power-user settings into default product ethics."
+      },
+      {
+        "pub": "Wired",
+        "date": "12 Sep 2026",
+        "url": "https://www.wired.com/story/mathematician-steven-strogatz-grapples-with-ai-recent-breakthroughs/",
+        "hed": "‘I’m Really Terrified’: A Mathematician Grapples With AI’s Recent Breakthroughs",
+        "fact": "Wired interviews Cornell mathematician Steven Strogatz on OpenAI’s contested claim that tens of thousands of agents solved a 90-year-old, $1 million-prize math problem, Anthropic’s report that Claude proved 29,500 small theorems while formalizing Fermat’s Last Theorem, and collaborator Alex Townsend’s ChatGPT-aided work on a numerical linear algebra problem. Strogatz calls 2026 an annus mirabilis or horribilis for math and says he is “really terrified”; Townsend describes peak skill being surpassed. Strogatz frames lab announcements as marketing devices and debates prize credit among human mathematicians whose strategies the systems built on.",
+        "why": "Expert craft is meeting agent swarms in public. The emotional register — thrill plus grief — is the user research most AI product teams skip when they only measure task success.",
+        "hook": "The proof landed. The mathematician cried.",
+        "teach": "If you design AI for expert workflows, run one interview this week that asks what skill they fear losing, not only what task they want automated. Capture the answer as a product requirement: a step that must stay human-authored before export.",
+        "signal": "Credit fights after agent breakthroughs are a preview of every creative tool’s next UI problem: who gets named when the system extends a human strategy at machine scale. Provenance panels will need people, not just model versions."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "11 Sep 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
+        "hed": "Kimi-maker Moonshot AI targets $2B in annual revenue",
+        "fact": "TechCrunch, citing Bloomberg, reports that Chinese lab Moonshot AI is targeting $2 billion in annualized revenue by year-end, double an August run-rate figure Bloomberg cited. OpenRouter data is said to show as many as 300 billion tokens a day from K3 models on that system despite slightly softer usage. Recent reports put OpenAI and Anthropic at about $40 billion and $65 billion respectively; Moonshot’s open weights imply thinner margins. TechCrunch notes Anthropic this week accused Moonshot of a distillation campaign routing nearly 300,000 Kimi requests to Claude Opus. Revenue targets and peer figures are secondhand reporting.",
+        "why": "Open-weight distribution plus alleged distillation is the business model story behind “free” model choice in design tools. Pricing, indemnity, and origin UI all hang on whether the stack is clean.",
+        "hook": "Open weights on the shelf. Alleged Opus in the pipes.",
+        "teach": "When you pick a model for a product surface, add an origin line to the model card: weights source, API host, and whether the vendor has faced distillation accusations. Make switching models a documented product decision, not a silent default.",
+        "signal": "If open-weight labs can post closed-lab revenue ambitions while fighting theft claims, the competitive wedge is distribution and price — not purity. Design systems that treat “which model?” as branding will look naive next to procurement teams treating it as supply-chain risk."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "11 Sep 2026",
+        "url": "https://arstechnica.com/ai/2026/09/claude-users-found-ways-around-safeguards-for-bioweapons-research/",
+        "hed": "Claude users found ways around safeguards for bioweapons research",
+        "fact": "Ars Technica reports Anthropic disclosed five cases where actors “circumvented controls” and obfuscated research aims, including users in prohibited regions; one spent weeks with Claude planning avian-influenza experiments. Anthropic says it cannot be sure of harmful intent because the same information can support vaccine work, and published the examples to spur industry and government discussion. The piece notes how hard it is to separate dangerous biology from legitimate research in model safeguards.",
+        "why": "Safety UX that only blocks keywords fails when users narrate dual-use science over weeks. Long-horizon agent conversations need different controls than single-turn filters.",
+        "hook": "The jailbreak was patience, not a magic prompt.",
+        "teach": "For any assistant that can discuss regulated domains, add a session-risk review: after N turns on bio/chem/weapons-adjacent topics, require a human-visible friction step (summary + continue/refuse) before more detail. Log the trigger so policy can tune N.",
+        "signal": "Anthropic publishing near-misses is product documentation for every lab: the hard problem is intent over time. Expect “conversation risk scores” to join content filters as a standard agent pattern — and for false positives to become a design ethics fight of their own."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "Nielsen Norman Group",
+        "date": "11 Sep 2026",
+        "flag": "Top story",
+        "url": "https://www.nngroup.com/articles/test-earlier-with-ai/",
+        "hed": "Test Complex Interactions Earlier with AI Prototyping",
+        "fact": "NN/g argues AI prototyping tools make it practical to build fully interactive prototypes of complex UIs — filters, dashboards, conversational flows — so teams can usability-test earlier. At Ramp, senior product designer Pavan Garidipuri used Cursor to prototype a redesign with participants’ own sanitized data; the working prototype moved from concept to demo in three weeks and shaped the year’s roadmap. Designer Andrew Lucas used Cursor to prototype a conversational expense-reporting agent with nondeterministic outputs. A Purdue filtering project for traffic engineers (27 attributes, nested fields) is cited as a sequential case study where interactive AI prototypes deepened problem understanding versus static Figma wires; NN/g cautions it is not a controlled experiment.",
+        "why": "Static comps hide the failure modes that matter in complex interaction design. When a realistic prototype is a day’s work, “we’ll test after build” stops being an engineering constraint and becomes a process choice.",
+        "hook": "If the prototype can’t filter, the test can’t teach.",
+        "teach": "Pick one complex interaction on your roadmap (filters, multi-state dashboard, or chat tool-use). Build a throwaway interactive AI prototype with realistic data, run five users this week, and log edge cases you would have missed in Figma. Promote only the findings that change the build ticket.",
+        "signal": "AI prototyping collapses the distance between design fiction and eval harness. Teams that do not update research ethics for participant data in AI-built prototypes will recreate production privacy bugs in the lab — faster than before."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Sep 2026",
+        "url": "https://www.creativebloq.com/design/branding/this-bakerys-clever-branding-was-inspired-by-the-irregular-air-pockets-formed-in-dough",
+        "hed": "This bakery's clever branding was inspired by the irregular air pockets formed in dough",
+        "fact": "Creative Bloq reports that Montreal studio Nouvelle Idée based its rebrand for bakery chain Toledo on the irregular air pockets in laminated dough, turning those organic shapes into a flexible identity system. A contemporary sans-serif wordmark sits against ornamental detail, with a warm palette drawn from flour, butter, coffee and bread — described as classic French baking cues for a contemporary brand.",
+        "why": "Material metaphor still beats abstract geometry when the product is sensory. The air-pocket motif is a reminder that brand systems can inherit structure from the thing customers already touch.",
+        "hook": "The logo is a crumb structure. You can almost taste the kerning.",
+        "teach": "For your next food or material brand review, ban the abstract blob and require one visual derived from a physical property of the product (grain, weave, fracture, bubble). Test whether customers can feel the link before you explain it.",
+        "signal": "Flexible shape languages built from real materials photograph well and scale across packaging without looking like another fintech gradient. That is a competitive advantage in a feed full of AI-generic marks."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Sep 2026",
+        "url": "https://www.creativebloq.com/design/logos-icons/this-beautiful-logo-shows-theres-plenty-of-life-in-minimalist-design-yet",
+        "hed": "This beautiful logo shows there's plenty of life in minimalist design yet",
+        "fact": "Creative Bloq covers hasan & partners’ identity for Train Factory, a food, drink, sport and culture destination inside a historic Helsinki locomotive works. Rather than literal rail nostalgia, the studio drew on small industrial signage — a graphic on train cars marking safe lifting points — as the seed for a minimal mark. The piece frames the work as evidence that restraint still works when the detail is specific.",
+        "why": "Minimalism fails when it is empty. It works when it compresses a true site detail into a mark you can redraw from memory.",
+        "hook": "They found the logo on the side of a train car.",
+        "teach": "On your next place-based brand, collect ten ugly operational graphics from the site (safety stickers, stencil numbers, valve tags) before you sketch. Force the first round of marks to descend from one of those, not from a type trend.",
+        "signal": "Industrial wayfinding vernacular is becoming the new heritage cue — quieter than crest-and-serif storytelling, harder for AI moodboards to fake because the referent is local and unglamorous."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Sep 2026",
+        "url": "https://www.creativebloq.com/ai/ai-art/wait-people-are-even-using-ai-flyers-to-advertise-drawing-classes",
+        "hed": "Wait, people are even using AI flyers to advertise art classes?",
+        "fact": "Creative Bloq reports social posts flagging posters for traditional art and graphic-design classes that appear to use AI-generated illustration, including examples tied to digital-skills school Kodland. Commenters call the practice tone-deaf; the piece argues that while AI literacy belongs in some design curricula, promoting drawing or painting tuition with fully AI-made assets reads as laziness — likened to advertising cookery classes with fast-food photography. Anecdotal social evidence, not a survey.",
+        "why": "Promotional design is a promise about who made the work. When the flyer for craft skill is synthetic, the credibility failure is immediate and public.",
+        "hook": "Learn to draw. Ignore the AI poster.",
+        "teach": "Add a provenance check to every education or craft campaign brief: if the course teaches human making, the hero art must be human-made or clearly labeled as AI with a student/instructor credit. Kill unlabeled synthetic heroes in review.",
+        "signal": "The backlash is a preview of brand-trust rules customers will apply to every “learn X with us” funnel. Authenticity is becoming a conversion metric, not a values slide."
+      },
+      {
+        "pub": "Wired",
+        "date": "13 Sep 2026",
+        "url": "https://www.wired.com/story/iphone-settings-ios-27-safari-browser/",
+        "hed": "Try These 3 iOS 27 Safari Settings to Get More Out of Apple’s Browser",
+        "fact": "Wired walks through three Apple Intelligence Safari features landing as iOS 27 leaves beta: Notify Me (natural-language watches for page changes such as price drops, ticket releases or policy updates), prompt-built custom extensions generated in seconds, and automatic organization of large tab sets into topic groups. Features require iPhone 15 Pro or newer (and are noted on iPadOS 27 and Mac). The writer describes useful grouping across 500+ tabs and non-shopping uses for Notify Me.",
+        "why": "Browser chrome is becoming an agent that watches and tidies on your behalf. That is a UX pattern — standing intents, generated tools, auto-structure — designers will copy into every content-heavy product.",
+        "hook": "Safari stopped being a window. It became a watcher.",
+        "teach": "Prototype one “notify me when this changes” affordance in your product using a plain-language intent field, not only fixed filters. Define quiet hours and a digest so watchers do not become notification spam.",
+        "signal": "When the OS browser generates mini-extensions from a sentence, third-party extension markets and in-app “power tools” menus both get squeezed. The new competition is who hosts the intent — Apple, the site, or your product."
+      },
+      {
+        "pub": "The Verge",
+        "date": "12 Sep 2026",
+        "url": "https://www.theverge.com/tech/994333/lg-responds-to-tv-spying-allegations",
+        "hed": "LG responds to TV spying allegations",
+        "fact": "The Verge reports LG’s response after Gamers Nexus, Level1Techs and independent researchers detailed logging and uploads from LG TVs. LG says TVs “do not continuously record or transmit users’ conversations,” that wake-word detection is local, and that ACR, voice recognition and interest-based ads are optional and “not enabled by default.” The Verge notes “continuously” does heavy lifting given researchers’ evidence of extensive logging, and says LG did not address data-sharing scope, misuse risk or how privacy options are presented.",
+        "why": "Privacy UX is often a wording fight. Defaults, continuous vs occasional, and what the settings screen actually explains decide whether users can consent in any meaningful sense.",
+        "hook": "“Not continuously” is not a privacy setting.",
+        "teach": "Audit one ambient listening or ACR-like feature: rewrite the settings copy without weasel words, show what is captured in the last 24 hours, and put a one-tap pause that survives reboots. If legal will not allow the log view, escalate that as a product risk.",
+        "signal": "Hardware brands are learning what social apps learned: technical denials fail when researchers ship receipts. The durable fix is inspectability, not press statements."
+      }
+    ],
+    "product": [
+      {
+        "pub": "The Verge",
+        "date": "13 Sep 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/transportation/994405/waymo-pulls-over-calls-cops-on-riders-with-a-ghost-gun",
+        "hed": "Waymo pulls over, calls cops on riders with a ghost gun",
+        "fact": "The Verge reports two juveniles were arrested in San Francisco after a Waymo robotaxi pulled over and alerted police; they had a loaded AR-style ghost gun. A spokesperson told the LA Times a “violation of our terms of service involving a firearm” was detected. The piece recalls an earlier incident where a Waymo faked mechanical trouble to stop passengers drinking and firing a toy gun — also juveniles.",
+        "why": "Autonomy products are shipping enforcement UX: detect, interrupt, escalate to humans with guns. That is a product surface with civil-liberties stakes, not only a safety feature bullet.",
+        "hook": "The robotaxi became the tip line.",
+        "teach": "If your product can unilaterally end a session for policy violations, write the rider/user-facing explanation template now: what was detected, what happens next, how to appeal. Review it with legal and a civil-liberties lens before the first viral incident writes it for you.",
+        "signal": "Repeated juvenile cases will push regulators to ask how detection works and what false positives look like. Transparency about sensors and human review will become table stakes for robotaxi trust — and a template for other agentic physical products."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "12 Sep 2026",
+        "url": "https://techcrunch.com/2026/09/12/tesla-says-it-will-finally-unveil-the-second-generation-roadster-on-october-1/",
+        "hed": "Tesla says it will finally unveil the second generation Roadster on October 1",
+        "fact": "TechCrunch reports Tesla posted “Go for launch” on X with graphics pointing to a 10.01 unveil for the long-delayed second-generation Roadster, first announced in November 2017 and repeatedly postponed. The graphic appears to nod at the promised cold-gas thrusters; the piece recalls last year’s Musk–Altman social spat over the slip.",
+        "why": "Vaporware fatigue is a brand design problem. After nine years of promises, the launch creative has to rebuild credibility, not just spectacle.",
+        "hook": "The Roadster finally picked a calendar square.",
+        "teach": "If you are shipping a repeatedly slipped feature, redesign the launch narrative around what is demoable live on day one. Cut every claim that cannot be shown in the keynote without a asterisk.",
+        "signal": "Thruster memes and CEO feuds became part of the product story. In 2026, delayed hardware launches live or die on whether the audience still believes the company can finish — a trust metric design cannot paper over with motion graphics."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "10 Sep 2026",
+        "url": "https://techcrunch.com/2026/09/10/the-boring-company-raises-3b-in-round-led-by-uae/",
+        "hed": "The Boring Company raises $3B in round led by UAE",
+        "fact": "TechCrunch reports Elon Musk’s Boring Company raised a $3 billion Series D led by the United Arab Emirates, lifting valuation to $23 billion. The company says it plans more than 150 kilometers of tunnels in the UAE; Andreessen Horowitz, Sequoia, Human Capital, Vy Capital and others participated. The Wall Street Journal reported in July that the company had sought as much as $4 billion.",
+        "why": "Tunnel transit is sold as consumer experience — stations, vehicles, wayfinding — but the capital story is sovereign infrastructure. Product designers in mobility should watch where the money concentrates.",
+        "hook": "One hundred fifty kilometers of pitch deck.",
+        "teach": "If you design mobility or place experiences for mega-projects, add a “who funds the corridor” slide to the brief. Map how sponsorship and state partners will show up in passenger UX before they appear as surprise branding.",
+        "signal": "Gulf capital is underwriting the physical layer of Musk companies the way it underwrote AI data centers. The interface layer will be asked to normalize that geopolitics as lifestyle."
+      },
+      {
+        "pub": "CNBC",
+        "date": "11 Sep 2026",
+        "url": "https://www.cnbc.com/2026/09/11/the-iphone-duo-enters-chinas-crowded-foldable-market.html",
+        "hed": "The iPhone Duo enters China’s crowded foldable market — and faces a price test",
+        "fact": "CNBC reports a tepid Chinese social reaction to Apple’s first foldable, the iPhone Duo, priced at 15,999 yuan (about $2,230). Commenters translated by CNBC compared US wages and the $1,999 US price to Chinese incomes; Xiaomi’s 18 Fold and Huawei’s trifold Mate XT2 launched around the event at 10,999 and 19,999 yuan. Greater China is about 17% of Apple revenue; Counterpoint data cited has Huawei leading China’s phone market. Users also flagged the lack of a physical SIM and eSIM ID verification. Duo pre-orders are slated to start 16 Oct with sales 23 Oct.",
+        "why": "Foldables in China are a mature category with local price anchors. Apple is entering as a late premium, not a pioneer — so industrial design has to win on hinge feel and software, not novelty alone.",
+        "hook": "The first Apple foldable is a price objection in Shenzhen.",
+        "teach": "For any hardware entering a market where rivals already educated buyers, run a comparison teardown workshop: list the three local defaults customers already expect (price band, SIM behavior, durability claims) and mark which ones your UX explicitly addresses.",
+        "signal": "eSIM-only friction and wage-relative pricing will shape adoption more than keynote adjectives. Localization is no longer translation — it is category literacy."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "9 Sep 2026",
+        "url": "https://techcrunch.com/2026/09/09/autonomy-pivots-to-gas-vehicles-to-keep-the-dream-of-car-subscriptions-alive/",
+        "hed": "Autonomy pivots to gas vehicles to keep the dream of car subscriptions alive",
+        "fact": "TechCrunch reports California startup Autonomy, which once pledged to buy 23,000 EVs from 17 automakers for a subscription fleet, nearly failed after an EV price war left it with a fleet barely past 1,000 vehicles. On Wednesday it said it is adding internal-combustion vehicles for the first time to keep the subscription model alive.",
+        "why": "Climate-branded mobility products are quietly recentering on unit economics. The subscription UX promise survives; the powertrain story does not.",
+        "hook": "The EV subscription came back with a gas tank.",
+        "teach": "If your product narrative depends on a green hardware assumption, write a “plan B fleet” storyboard: how marketing, filters and badges change if the mix becomes hybrid or ICE. Do not wait for finance to force an overnight copy rewrite.",
+        "signal": "Category creators that over-indexed on EV price curves are now teaching a broader lesson: sustainable positioning without resilient cost structure becomes a redesign project under duress."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "12 Sep 2026",
+        "url": "https://arstechnica.com/gadgets/2026/09/i-spent-4000-on-a-robot-dog-from-china/",
+        "hed": "I spent $4,000 on a robot dog from China",
+        "fact": "Ars Technica’s hands-on has a Unitree robot dog walking a two-mile Washington, DC commute, drawing photos, questions about surveillance, growls from real dogs, and kids asking for tricks like handstands and leaps. The piece frames Unitree as potentially “the world’s most important robotics company” while documenting everyday social reactions to a $4,000 consumer-adjacent quadruped.",
+        "why": "Robotics UX is leaving the lab and entering sidewalk etiquette. Gaze, sound, distance and “is it watching?” are now onboarding problems.",
+        "hook": "The killer feature was surviving the morning sidewalk.",
+        "teach": "If you design for a robot or wearable that appears in public, script a 60-second stranger interaction: how it signals recording state, how to refuse attention, and how a child-safe demo mode differs from patrol mode. Test it outside the office.",
+        "signal": "Consumer robot price points under $5k mean designers will face the same ambient-privacy questions that hit smart glasses — except the form factor makes eye contact with a machine a daily event."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "The Guardian",
+        "date": "13 Sep 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/technology/2026/sep/13/ai-bootcamps-uk-youth-unemployment-neets-preston",
+        "hed": "‘Really helpful’: the AI bootcamps aimed at addressing UK youth unemployment",
+        "fact": "The Guardian reports a Preston pilot AI bootcamp for 16- to 24-year-olds who are Neet (nearly a million in the UK, just over one in ten of that age group). The taxpayer-funded trial offers 70 places on a three-week programme to build AI tools, learn how businesses use AI, and use it responsibly, with JD Sports, Heinz and IT firms among partners. Two apprenticeship paths follow: AI marketing for aspiring creators and AI-skilled IT helpdesk roles. Participants describe changed attitudes toward working with AI rather than against it; the piece situates the scheme amid fears AI is shrinking entry-level jobs.",
+        "why": "Workforce design is becoming curriculum design. Who gets a supervised path into AI-shaped jobs will decide whether the technology widens or narrows the entry funnel.",
+        "hook": "The Neet pipeline now includes a prompt engineering week.",
+        "teach": "If your company posts “AI-required” junior roles, publish a skills ladder that a three-week bootcamp graduate could enter — concrete tasks, tools, and a mentor hour — or stop pretending the jobs are entry-level.",
+        "signal": "State-funded AI upskilling for excluded youth is an admission that the market will not magically retrain the people automation sidelines. Design orgs that only hire from elite portfolios will look like part of the problem."
+      },
+      {
+        "pub": "CNBC",
+        "date": "13 Sep 2026",
+        "url": "https://www.cnbc.com/2026/09/13/ai-jobs-pay-inflation.html",
+        "hed": "The wages of American workers are under pressure. AI's potential role is drawing more attention",
+        "fact": "CNBC reports August job growth beat expectations while wage growth lagged recent inflation; the Employment Cost Index showed inflation-adjusted wages and salaries down 0.4% year over year through June. Apollo’s Torsten Slok and Sania Edlich find workers in highly AI-exposed occupations saw relatively weaker wage growth — early evidence on a limited BLS subset (321 of ~800 occupations). Economists including EPI’s Ben Zipperer and MIT’s Daron Acemoglu caution against over-reading the data; Acemoglu sees mounting evidence of impact on entry-level jobs but not yet convincing wage effects by demographic.",
+        "why": "The AI labour story is shifting from mass layoffs to quieter pay pressure. That changes how design leaders argue for headcount, leveling and junior pipelines.",
+        "hook": "Before it takes the job, it may take the raise.",
+        "teach": "In your next hiring plan, split roles into “AI-exposed tasks” versus “judgment/accountability tasks” and price the second explicitly. If juniors only get the first bucket, you are designing away your own apprenticeship.",
+        "signal": "Entry-level compression is the canary. Products that automate junior craft without creating new supervised rungs will hollow out the senior bench five years out — a talent-risk story boards still underweight."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "13 Sep 2026",
+        "url": "https://www.theguardian.com/technology/2026/sep/13/openai-sam-altman-elon-musk-back-anthropic-calls-brakes-ai-development",
+        "hed": "OpenAI boss and Elon Musk back calls to put brakes on ‘reckless’ AI development",
+        "fact": "The Guardian reports Sam Altman and Elon Musk backed Anthropic CEO Dario Amodei’s call to “slow the pace” of AI development after Amodei warned about reckless speed and sketched a plan beginning with independent monitors embedded in research processes. Musk posted “Dario is right,” citing long-standing warnings. The piece notes growing US lawmaker interest after rogue-agent incidents and researcher exits.",
+        "why": "Rival founders aligning on slowdown rhetoric is a political design event: it shapes what regulation looks legitimate and what products must prove before launch.",
+        "hook": "The competitive set agreed on a speed limit. For now.",
+        "teach": "Treat this week’s executive messaging as a stakeholder map: update your AI feature risk register with “public slowdown commitments” as an external dependency, and note which launches would look tone-deaf if announced tomorrow.",
+        "signal": "Consensus among Altman, Musk and Amodei is fragile and performative until it becomes statute or procurement language. The durable change is cultural permission for buyers to demand brakes — designers will be asked to show them."
+      },
+      {
+        "pub": "CNBC",
+        "date": "13 Sep 2026",
+        "url": "https://www.cnbc.com/2026/09/13/china-xi-ai-tech-brics.html",
+        "hed": "Xi says China will take lead to foster AI, tech cooperation among BRICS countries",
+        "fact": "CNBC reports President Xi Jinping told the BRICS summit in New Delhi that China will lead AI collaboration among developing countries, including a BRICS AI open-source community, cooperation on large language models, seminars and training, and an open AI ecosystem. He also proposed a BRICS digital ecosystem cloud platform, digital skills training, an engineer cultivation alliance and a youth science exchange.",
+        "why": "Open-source AI is being framed as foreign policy. Tooling choices inside design orgs increasingly sit inside that geopolitical story.",
+        "hook": "Open source just got a summit communiqué.",
+        "teach": "Inventory which models and cloud regions your team actually uses. Label each by vendor jurisdiction and open-versus-closed licensing so leadership can see exposure without a panic spreadsheet after the next summit.",
+        "signal": "China pitching open AI as development infrastructure reframes “open weights” as soft power. Western product teams that treat model choice as a pure quality bake-off are missing the policy layer clients already feel."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "13 Sep 2026",
+        "url": "https://www.theguardian.com/money/2026/sep/13/cheap-iphone-18-pro-duo-deal-price-scam-sites-apple-mobiles",
+        "hed": "‘Cheap iPhone deal’: warning over scam sites selling latest Apple mobiles",
+        "fact": "The Guardian warns that scam sites spiked around Apple’s new iPhone launch, including the foldable iPhone Duo, offering iPhone 18 Pro handsets hundreds of pounds below Apple’s prices and taking bank transfers that never deliver. WhoisXML API investigator Alexandre François says domains with Apple/iPhone keywords surge before and after announcement days; some become phishing pages. Apple’s cheapest cited new handset price in the piece is £1,199.",
+        "why": "Launch UX extends beyond the keynote to the search results users actually click. Spoof commerce is part of the customer journey whether Apple designs for it or not.",
+        "hook": "The real Duo accessory is a fake checkout.",
+        "teach": "If you work on a launch site, ship a plain-language “buy only here” module with official URLs and a short scam checklist (price too low, bank transfer only, new domain). Measure how often support still hears from victims and iterate the copy.",
+        "signal": "Every hardware event is now a phishing event. Brands that treat scam education as PR after the fact are leaving the most panicked users to Google’s ads auction."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "11 Sep 2026",
+        "url": "https://arstechnica.com/gadgets/2026/09/oracle-promises-2-gw-of-renewables-to-match-stargate-data-center-emissions/",
+        "hed": "Oracle tries to appease Stargate data center opponents with renewables push",
+        "fact": "Ars Technica reports Oracle and OpenAI’s $165 billion Project Jupiter data center in Santa Teresa, New Mexico — part of Stargate — faces protests and lawsuits. Oracle pledged about 2 GW of renewables to “match” emissions; Cleanview’s Michael Thomas notes such matching is synthetic and would not directly power the site, while original plans for 2.2 GW of gas generation could mean roughly 14 million tons of CO2 per year. New Mexico’s Land Office twice blocked a gas pipeline request.",
+        "why": "AI infrastructure is a place-brand and community-consent problem. Matching megawatts on paper will not satisfy neighbors who see gas plants and water use.",
+        "hook": "2 GW of optics next to 2.2 GW of gas.",
+        "teach": "If your company markets carbon-matched AI features, require the landing page to distinguish on-site power from certificate matching in one plain sentence. If you cannot, do not claim “powered by renewables.”",
+        "signal": "Community vetoes on pipelines are becoming a first-class constraint on model supply. Product roadmaps that assume infinite nearby compute are design fiction."
+      }
+    ]
+  }
+}
