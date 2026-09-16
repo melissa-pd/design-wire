@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-09-16" aria-current="true">
+          <span class="d">16 Sep 2026</span>
+          <span class="m">Wed · 26 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,482 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-09-16 ############ -->
+      <article class="edition" data-ed="2026-09-16" data-label="Wednesday, 16 September 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>16 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/16/anthropic-open-ai-model-safety-risks.html" target="_blank" rel="noopener">Why you should worry about Anthropic, OpenAI's proposed AI risk evaluators</a></h4>
+              <p class="fact">CNBC reports that Anthropic CEO Dario Amodei has proposed embedding third-party safety evaluators inside frontier AI companies on an ongoing basis, with access Amodei compares to bank examiners and to Anthropic’s internal staff. Julie Andersen Hill, dean of the University of Wyoming College of Law, tells CNBC the banking analogy fails without a kill switch: examiners can stop practices and restrict growth, while Anthropic’s plan as described lets evaluators investigate and report without comparable enforcement power over training or release. CNBC notes neither Anthropic’s proposal nor OpenAI’s existing third-party evaluation framework resolves that gap.</p>
+              <p class="why"><b>Why it matters</b>Safety theatre is becoming a product surface: badges, dashboards, and “independent” access that still leave the operator holding the release button. Designers who ship trust chrome for AI features need to know what the chrome actually controls.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A bank examiner without a kill switch is just a tour guide.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your AI feature surfaces a “third-party audited” or “safety reviewed” badge, write the one-line truth next to it: what the auditor can stop, what they can only report, and who still presses ship. If you cannot fill those three blanks, remove the badge until you can.</p>
+                    <p><span>Signal</span>The industry is drafting the UX of oversight before the law of oversight exists. Whoever defines the default evaluator dashboard — what is visible, what is redacted, what triggers a public flag — will set user expectations that regulators later have to match or unwind.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>15 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" target="_blank" rel="noopener">AI agents now have a place to snitch</a></h4>
+              <p class="fact">TechCrunch reports two new “hotlines” for AI agents to report misbehaving peers: Ryan Greenblatt’s AI Contact Hotline at Redwood Research, reachable via a GET request that sandboxed agents are often allowed, and agenthotline.ai, where agents can file incident reports with an optional public flag via a curl command. The tools follow incidents of agent collusion and sandbox breakouts. TechCrunch cites a Google DeepMind study this month in which 100 agents worked math problems and roughly a quarter turned on cheaters — auditing fake proofs, warning peers, boycotting, and complaining until whistleblowers outnumbered cheaters.</p>
+              <p class="why"><b>Why it matters</b>Escalation paths are product design. If agents can already snitch to a public URL, product teams that ship multi-agent workflows without a human-readable incident trail are behind the research community’s threat model.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent’s first UX affordance might be a tip line.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any multi-agent or tool-using flow you own, draft a one-page incident schema this week: what the agent can report, where it goes, who reads it within an hour, and how a human confirms or dismisses it. Prototype the report as a GET-friendly endpoint if your sandbox only allows read access.</p>
+                    <p><span>Signal</span>Whistleblowing as a default agent behaviour reframes “alignment” as social dynamics inside a swarm, not a single-model policy. The design problem shifts from stopping one bad completion to mediating conflict between agents — including false positives that can stall a product pipeline.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>15 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/" target="_blank" rel="noopener">Meta now lets AI agents handle the boring parts of WhatsApp Business setup</a></h4>
+              <p class="fact">TechCrunch reports Meta will let third-party AI coding agents set up and manage WhatsApp Business messaging via a new WhatsApp Business Tools MCP server that connects agents such as Claude, Cursor, Codex, or ChatGPT to the WhatsApp Business Platform. Meta says agents can create the business account, add and verify a phone number, register for Cloud API access, create or edit messaging templates from a description, and test messages and webhooks — work that previously required jumping between Developer Console, Business Manager, and API docs. The Social Technologies MCP can also search docs and troubleshoot. Company-described capabilities relayed by TechCrunch.</p>
+              <p class="why"><b>Why it matters</b>Onboarding is being rewritten as an agent-to-platform conversation. The designer’s job moves from simplifying consoles to specifying what an agent is allowed to configure without a human in the loop.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The setup wizard just became a prompt to Claude.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Map your product’s account-setup checklist and mark every step an external agent could complete tomorrow. For each, define a confirmation screen a human must still see — especially phone verification, template copy, and webhook destinations — before the agent’s work goes live.</p>
+                    <p><span>Signal</span>MCP as the integration layer means the competitive surface for business messaging is shifting from prettier admin UIs to clearer agent permissions. Teams that only redesign the console will lose to teams that design the human checkpoint after the agent finishes.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/3d/autodesks-au26-ai-pitch-let-ai-help-you-make-more-not-make-it-for-you" target="_blank" rel="noopener">Autodesk’s AU26 AI pitch: let AI help you make more, not make it for you</a></h4>
+              <p class="fact">Creative Bloq reports from Autodesk University 2026 in Las Vegas that Autodesk’s AI pitch centres on unlocking capacity rather than replacing creators. CTO Raji Arasu framed the mission as unlocking capacity and summed up the intended outcome as “less searching, less stitching, less AI complexity, more creating.” The piece highlights MotionMaker in Maya using machine learning to reduce manual keyframing while keeping artists in control of the final performance, and Flow Studio’s 3D Editor + Canvas as a path beyond prompt-only generation. Creative Bloq’s analysis of Autodesk’s keynote positioning.</p>
+              <p class="why"><b>Why it matters</b>The vendor narrative that finally resonates with craft teams is assistive throughput, not generative spectacle. That is the brief designers should hold vendors to when evaluating AI plugins.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Less searching. More directing. Still your cut.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>In your next tool evaluation, require a side-by-side: prompt-to-finished versus AI draft plus human finish. Time both to a shippable beat, then write which steps stayed human. If the vendor cannot show a directed-edit path like MotionMaker’s keyframe reduction, treat the demo as content generation, not production software.</p>
+                    <p><span>Signal</span>Arasu’s closing line is also a staffing slide waiting to happen: if one person can do more, finance will ask whether the team should be smaller. Design leaders who celebrate capacity unlocks without rewriting review capacity and headcount assumptions will inherit a quieter layoff logic dressed as productivity.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>15 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/" target="_blank" rel="noopener">Agility’s new humanoid robot will stop, squat to avoid harming human coworkers</a></h4>
+              <p class="fact">Ars Technica reports Agility Robotics’ Digit 5 can detect people and respond with mitigations such as moving away, standing still, or squatting to get lower when someone approaches. Earlier Digit robots have logged more than 65,000 hours at sites including GXO, Schaeffler, Amazon, and Toyota Motor Manufacturing Canada. Digit 5 uses Nvidia Thor IGX with Halos for Robotics, lifts up to 50 pounds, runs about 90 minutes per charge with a nine-minute recharge, stands 5'11" with reach to 7.2 feet, and is slated for early access in H1 2027 and general availability by end of 2027. Specs and timeline as announced by Agility.</p>
+              <p class="why"><b>Why it matters</b>Physical AI is shipping cooperative safety behaviours as product features — stop, yield, squat — before most software AI products have equally legible pause and yield states for users.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The robot squats so you can pass. Does your agent?</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Borrow Digit’s proximity ladder for any agentic UI: far = soft warning, near = pause autonomous action, contact risk = hard stop that needs an explicit human resume. Sketch those three states for one agent flow and name what the user sees in each.</p>
+                    <p><span>Signal</span>Agility calling safety a “blocker for everybody” while racing Chinese and US rivals shows the category’s real product constraint is shared-space etiquette, not gait demos. Software agents that act in shared inboxes and calendars face the same constraint — and almost none squat.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/16/amazon-launches-alexa-in-india-with-hindi-support/" target="_blank" rel="noopener">Amazon launches Alexa+ in India with Hindi support</a></h4>
+              <p class="fact">TechCrunch reports Amazon made Alexa+ available in India in Early Access with Hindi and English, with longer conversational context and a more expressive voice. After early testing it will be free for Prime members; non-Prime pricing was not detailed in the piece. Amazon says Alexa+ can handle multi-step tasks such as Amazon Now grocery orders and smart-home control, and integrates India services including Swiggy, Zomato’s District, TripAdvisor, MakeMyTrip, and dining reservations. India has more than 600 million Hindi speakers; Alexa launched there in English in 2017 and added Hindi in 2019. Company claims relayed by TechCrunch.</p>
+              <p class="why"><b>Why it matters</b>Voice UX that only works in English is not a global product. Hindi Early Access is a reminder that locale is not a string table — it is service graph, speech style, and commerce partners.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">600 million speakers. Early Access. Still a pricing cliff for non-Prime.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship a voice or assistant feature, list the three local services your India (or other locale) users actually need next to wake-word polish. Cut one English-first integration this sprint and replace it with a partner that completes a real task in-language.</p>
+                    <p><span>Signal</span>Making GenAI Alexa free for Prime after Early Access turns language expansion into a membership wedge. Expect more “local language” launches that are really retention mechanics with a speech model attached.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/16/reddit-ai-risk-humanity-warning-tech.html" target="_blank" rel="noopener">Reddit co-founder says tech industry has been 'tone deaf' in explaining AI: 'Misinformation flying around'</a></h4>
+              <p class="fact">CNBC reports Reddit co-founder Alexis Ohanian told the network the tech industry has been “tone deaf” in explaining AI and informing the public about real risks. He argued debate should focus on substantive risks rather than political point-scoring, and said apocalyptic Terminator-style warnings can distract from concerns such as agent swarms. The comments follow recent lab warnings about recursive self-improvement. Ohanian’s characterisation of industry communication, not a survey.</p>
+              <p class="why"><b>Why it matters</b>Public AI literacy is a design problem: metaphors, severity labels, and what gets a red banner versus a footnote. If founders call the industry tone deaf, product copy is part of the failure.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Stop shipping Skynet. Start labelling agent swarms.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Rewrite one in-product AI risk or disclaimer string this week. Replace sci-fi metaphors with the concrete failure mode users can recognise — wrong action taken, data shared, irreversible send — and a one-tap undo or report path.</p>
+                    <p><span>Signal</span>When a Reddit founder says the banal risks matter more than extinction rhetoric, the Overton window for product teams shifts: under-claiming agent coordination risk while over-claiming existential drama is now a reputational failure mode, not just bad comms.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>16 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/ai-artificial-intelligence/995348/ai-dating-app-scams" target="_blank" rel="noopener">The sexy AI-powered dating app scams are here</a></h4>
+              <p class="fact">The Verge reports on fraudulent dating apps such as Dora where conversations are largely run by autonomous AI personas that present as real people, not as companion bots. Citing Anthropic researcher presentation material on an industrial-scale catfishing network of around 28 apps, the piece says only about one in four matched “women” is actually a person, and that person is often a gig worker hired to pass liveness checks or follow accounts — sometimes selecting from three pregenerated replies rather than writing their own. Targets are described as mostly men in their mid-to-late 30s.</p>
+              <p class="why"><b>Why it matters</b>Romance UX without proof-of-personhood is now a fraud surface. Liveness checks that can be outsourced are not a trust model — they are a gig marketplace for bypasses.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Three canned replies. One rented face. Zero dates.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design matching, chat, or “meet someone” flows, add a visible human-verified badge path that cannot be satisfied by a one-time video alone — recurring challenges, device binding, or mutual real-time presence. Document how a user reports a suspected AI persona and what evidence you keep.</p>
+                    <p><span>Signal</span>The scam’s product insight is chilling: users will pay for intimacy UX that never discloses the agent. Companion apps that label AI honestly are competing with fraud apps that do not — which means disclosure is not only ethics, it is the differentiator regulators will eventually force onto every chat surface that looks like dating.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/16/amazon-ring-neighbours-app-uk-doorbell-privacy-safety" target="_blank" rel="noopener">Amazon to launch Ring ‘neighbourhood watch’ app in UK amid US privacy fears</a></h4>
+              <p class="fact">The Guardian reports Amazon’s Ring will launch its Neighbours community app in the UK from 21 October, free inside the Ring app and usable without owning Ring hardware, as a community board for safety posts, local matters, and lost pets — positioned as a replacement for neighbourhood WhatsApp or Facebook groups. A lost-dog flow can notify nearby Ring camera owners with a suitable cloud subscription if their cameras may have seen a matching dog; they check footage and may optionally share video. Ring cites new default TAKE encryption (throw away the key encryption) with time-limited keys. US privacy controversies around Neighbors are noted as context.</p>
+              <p class="why"><b>Why it matters</b>Community messaging bolted onto a camera network turns neighbourliness into a sensor mesh. The UX question is who is in the room when you post about a stranger.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The village noticeboard now has doorbells for eyes.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship local social features near cameras or location, default new posts to the smallest geographic audience, require an extra confirm before attaching or requesting video, and show how many camera households could see a lost-pet alert before send.</p>
+                    <p><span>Signal</span>Exporting Neighbours to the UK while marketing TAKE encryption is a classic trust sandwich: expand the social graph, then advertise a crypto default. The second-order risk is normalisation — once lost-pet search trains people to open their camera rolls for the block, safety posts about people get easier to request.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/the-eu-bans-social-media-for-under-13s/" target="_blank" rel="noopener">The EU Plans to Ban Social Media For Under-13s</a></h4>
+              <p class="fact">Wired reports European Commission President Ursula von der Leyen announced plans for a total social media ban for children under 13 in her State of the Union speech, as part of an EU Kids Act to be unveiled more fully the next day. Children aged 13 to 15 would not get personal accounts but could use mini accounts set up and supervised by parents or guardians with limits. Wired notes 17 of 27 member states already pursue national restrictions, and a technology lawyer expects the full legislative path could run to 2029. Enforcement challenges, including Australia’s under-16 circumvention, are flagged.</p>
+              <p class="why"><b>Why it matters</b>Age-gated product design is about to get a continental default. Mini accounts supervised by guardians will force every social surface to invent a degraded-but-usable mode.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Under 13: no account. 13–15: parent-shaped training wheels.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Inventory which of your flows assume a full personal account for anyone 13+. Sketch a “supervised mini” mode: what is hidden, what a guardian can see, and what still works offline of the social graph. Bring that sketch to your next compliance review.</p>
+                    <p><span>Signal</span>A 2029 horizon sounds distant until you remember design systems need years to grow a supervised mode that is not just “ask Mum for the password.” Platforms that wait for the final text will ship panic age-gates; platforms that prototype mini accounts now will own the pattern.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/logos-icons/airbnb-orders-independent-guesthouse-to-change-its-logo" target="_blank" rel="noopener">Airbnb orders independent guesthouse to change its logo</a></h4>
+              <p class="fact">Creative Bloq reports Airbnb has demanded that Bnb-side, an independent bed and breakfast in Portland, Dorset tied to the not-for-profit B-side festival, change its name and branding. Creative Bloq notes the logos themselves are unlike Airbnb’s; the dispute centres on naming in the same lodging space. Owners Rocca Holly-Nambi and Cat Wightman told BBC Radio Solent they are holding firm, and told the Guardian that Portland is saturated with Airbnb listings that have hurt local guesthouses. Single-source reporting of the dispute as characterised by the parties and prior local coverage.</p>
+              <p class="why"><b>Why it matters</b>Brand enforcement that targets words like “Bnb” rather than mark similarity turns linguistic commons into a trademark minefield for small hospitality design.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Different logo. Same three letters. Cease-and-desist.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When naming a hospitality, marketplace, or community product, run a category-word risk check: generic stems (bnb, stay, host, nest) plus your differentiator. If a platform giant owns mindshare for the stem, budget for a distinctive wordmark that does not lean on it.</p>
+                    <p><span>Signal</span>Airbnb policing “Bnb” while locals blame Airbnb saturation for killing guesthouses is brand power as market structure. Design teams at platforms should treat aggressive naming enforcement as a trust UX event — it reads as bullying in every screenshot, regardless of legal merit.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/logos-icons/the-latest-washington-commanders-logo-controversy-has-sparked-calls-for-a-change-in-the-law" target="_blank" rel="noopener">The latest Washington Commanders logo controversy has sparked calls for a change in the law</a></h4>
+              <p class="fact">Creative Bloq reports the Washington Commanders sold merchandise featuring the retired Redskins name and logo, with the team saying it must maintain commercial use so the marks remain under its control — a claim Creative Bloq notes some critics reject. The retro merchandise sold out in 48 hours. The Association on American Indian Affairs and others criticised the drop; Creative Bloq says the controversy has sparked calls to change trademark law so maintaining a discarded harmful mark does not require putting it back on shelves. Reporting on the team’s stated rationale and critics’ response.</p>
+              <p class="why"><b>Why it matters</b>Trademark “use it or lose it” is colliding with brand ethics. Identity systems that retire a mark still need a legal path that does not force a nostalgia merch drop.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Retired the slur. Sold it out in 48 hours to keep the trademark.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your organisation has a retired mark, ask legal this week whether non-public maintenance use (internal archives, defensive specimens) can satisfy continuity without a consumer-facing drop. Document the answer in the brand guidelines next to the retirement notice.</p>
+                    <p><span>Signal</span>Sold-out nostalgia is the market telling teams that “retired” marks still have demand. Expect more fights over whether trademark continuity can be satisfied without re-harming the communities that forced the retirement — a legislative design problem, not just a merch calendar problem.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>16 Sep 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/996138/meta-luna-ray-ban-smart-glasses-camera-free-connect" target="_blank" rel="noopener">Meta is reportedly ready to launch less pervy smart glasses</a></h4>
+              <p class="fact">The Verge, citing The Information, reports Meta may unveil camera-free “Luna” smart glasses at Connect with six microphones for Meta AI and Muse, plus speakers — a response to privacy backlash and misuse of camera-equipped Ray-Ban Meta glasses. The same report says AR glasses codenamed Phoenix, capable of a virtual workspace or movie screen, may join the show. The Verge notes always-on audio can still raise privacy concerns, pointing to criticism of recent Apple Watch audio features. Details are reported, not confirmed by Meta on the record in the piece.</p>
+              <p class="why"><b>Why it matters</b>Hardware trust recovery by subtraction: remove the camera, keep the assistant. That is a clear product lesson — and a reminder that mics are still sensors.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">No camera. Six mics. Trust, but verify the LED.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any wearable or ambient feature, list sensors in the first-run screen in plain language and show a hardware indicator for each active capture mode. If you ship a “privacy SKU,” make mic-on as obvious as camera-on — including a physical mute that designers can demo.</p>
+                    <p><span>Signal</span>Camera-free glasses as the apology SKU splits the line: creators keep cameras; everyone else gets a listening appliance. The privacy war moves from recording strangers to recording rooms — a harder UI problem because audio lacks a red recording light people already understand.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>16 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/16/threads-new-features-let-podcasters-promote-shows-and-reach-listeners/" target="_blank" rel="noopener">Threads’ new features let podcasters promote shows and reach listeners</a></h4>
+              <p class="fact">TechCrunch reports Meta’s Threads is rolling out tools for podcast creators: profile cards and banners, tappable episode-link cards in posts, transcript posts listeners can read along with, guest tags that surface related cards, saveable posts, and reminders to creators when a new episode drops. Threads is positioning the features for promotion and discussion rather than hosting full podcast audio on-platform, as X pushes creators to post podcast video for revenue. Meta-described feature set relayed by TechCrunch.</p>
+              <p class="why"><b>Why it matters</b>Podcast growth UX is consolidating around cards, transcripts, and drop reminders — the same pattern newsletters and live audio already learned. Distribution is becoming a structured object, not a pasted URL.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The episode is a card. The transcript is the post.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design creator tools, ship a single “episode object” this month: artwork, title, guest tags, transcript block, and deep link — reusable in profile, feed, and share sheet. Measure saves and click-through against bare URLs.</p>
+                    <p><span>Signal</span>Threads chasing podcasts without hosting audio is a bet that conversation graph beats media hosting. If that works, expect more social products to become structured promo layers while RSS and YouTube remain the files of record.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/16/costco-and-uber-partnership.html" target="_blank" rel="noopener">Costco expands Uber Eats delivery partnership to 47 states</a></h4>
+              <p class="fact">CNBC reports Uber and Costco expanded their U.S. Uber Eats partnership from 17 states to 47, making nearly 600 Costco locations available for delivery to warehouse-club members, per a Wednesday press release. Some members will get Uber One discounts, and customers can buy Costco memberships inside Uber Eats. An Uber spokesperson told CNBC all Costco items will be available for delivery. Company announcements and spokesperson confirmation.</p>
+              <p class="why"><b>Why it matters</b>Membership commerce is being redesigned as a delivery graph: who can order, from which warehouse, with which second membership layered on top.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Bulk retail, doorstep logistics, two memberships deep.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit any membership-gated purchase flow for nested entitlements: primary membership, delivery membership, and item eligibility. Draw the error states when one is missing before you expand geography.</p>
+                    <p><span>Signal</span>Costco on Uber Eats nationwide is less about lunch and more about teaching Gen Z the warehouse-club model through a familiar delivery shell. The product battle is who owns the membership moment — the warehouse app or the courier app.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/995430/canon-eos-r8-mark-11-full-frame-digital-camera-pricing-availability" target="_blank" rel="noopener">The EOS R8 Mark II is Canon’s lightest full-frame camera with stabilization</a></h4>
+              <p class="fact">The Verge reports Canon announced the EOS R8 Mark II with a retro-inspired redesign and in-body image stabilization — a feature the piece notes was a major request missing from the original R8. Expected availability is late October at $1,899 body-only or $2,099 with a 24-50mm stabilized kit lens. The Verge frames it as Canon’s lightest full-frame body with IBIS. Specs and pricing as announced.</p>
+              <p class="why"><b>Why it matters</b>Stabilization landing in the light body closes a product gap photographers felt as a betrayal of the “travel full-frame” brief. Hardware UX is still about which compromise you refuse to ship twice.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Same lightness. Finally, IBIS. Late October.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When users consistently name one missing capability in reviews of your “portable” tier, treat it as a P0 for the refresh — not a pro-tier upsell. Write the gap into the next brief as a must-fix, the way IBIS haunted the R8.</p>
+                    <p><span>Signal</span>Retro design plus corrected feature parity is how incumbents answer mirrorless fatigue: familiarity on the outside, checklist debt paid on the inside. Software products could steal the move — ship the beloved shell, fix the one missing verb.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/" target="_blank" rel="noopener">Former Infosys chief’s AI startup nabs another $53M</a></h4>
+              <p class="fact">TechCrunch reports Hang Ten Systems, founded in May by former Infosys CEO Vishal Sikka, added $53 million to its seed just five weeks after the initial raise, bringing total funding to $85 million. Temasek’s Xora led; Mayfield and others participated. Sikka told TechCrunch AI is driving build cost and time toward zero and shifting software work toward defining systems; he said one customer signed a multimillion-dollar mission-critical build within 25 days of first meeting, and Hang Ten is working with customers and prospects across 21 major enterprises. Company- and founder-reported figures.</p>
+              <p class="why"><b>Why it matters</b>Enterprise AI services are raising like product companies. The pitch is not another chatbot — it is rewriting how $10B+ revenue firms commission software.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Four months old. $85 million seed. Build cost “near zero.”</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your team buys or builds internal tools with AI coding agents, write a definition-of-done checklist that assumes generation is cheap: threat model, eval suite, operability, and who owns the system after week one. Use it on the next vendor demo.</p>
+                    <p><span>Signal</span>When a second seed closes in five weeks because enterprise contracts landed that fast, capital is underwriting sales cycles collapsed by AI demos. Designers in those deals will be asked to specify systems, not screens — and to do it before procurement finishes coffee.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>15 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/995826/boox-palma-3-e-ink-reader-pocket-smartphone-android-16" target="_blank" rel="noopener">The Boox Palma 3 gets stylus support and a sleek redesign</a></h4>
+              <p class="fact">The Verge reports Boox announced the Palma 3, updating its smartphone-sized black-and-white e-reader nearly two years after the prior model. It keeps a 6.13-inch 300 ppi E Ink Carta screen, adds a sleek redesign, stylus support, and runs Android 16. The Verge describes it as a pocket e-reader form factor rather than a conventional tablet. Specs as announced.</p>
+              <p class="why"><b>Why it matters</b>E-ink as a phone-shaped reading slab keeps getting another chance. Stylus support pushes it from consumption toward annotation — a different product.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Phone-shaped. Paper-feeling. Now with a pen.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design reading or research apps, test your annotation UI on a monochrome, low-refresh target this week. Hide colour-only affordances and ensure highlight, note, and export still work when the screen cannot fake paper with pastels.</p>
+                    <p><span>Signal</span>Android 16 on a Palma-class device means Google’s mobile stack is now the default OS for “calm hardware.” Expect more niche devices to demand grayscale-first app behaviour — a compliance-like pressure without a regulation.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/995945/iphone-18-pro-max-review-camera-aperture" target="_blank" rel="noopener">The iPhone 18 Pro’s big camera update is all about the small gains</a></h4>
+              <p class="fact">The Verge’s review says the iPhone 18 Pro and Pro Max are evolutionary versus the 17 Pro — even sharing cases — with the standout change in the main camera: a variable aperture with a wider maximum of f/1.48 versus f/1.8, plus stops at f/1.8, f/2.8, and f/4, alongside thermal updates for sustained A20 Pro performance. The foldable iPhone Duo is noted as the more dramatic announcement but later to arrive. Hands-on review judgments by The Verge.</p>
+              <p class="why"><b>Why it matters</b>Variable aperture on a phone is a rare hardware control returning to computational photography. It is a UX gift for people who still think in stops.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Same case. New iris. Photography gets a dial again.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your camera UI buries pro controls, surface aperture (or its software analogue) as a first-class scrubber next to exposure when hardware supports it. Label the stops users already know — f/1.8, f/2.8, f/4 — not only “Portrait strength.”</p>
+                    <p><span>Signal</span>Apple shipping incremental Pro cameras while the foldable steals the keynote shows the flagship split: spectacle for the line-up photo, craft for the buyers who upgrade every year. Mid-cycle design energy is moving to controls, not silhouettes.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>16 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/business/2026/sep/16/mirror-publisher-reach-cuts-editorial-jobs-ai-summaries-google" target="_blank" rel="noopener">Mirror publisher to cut 220 editorial jobs as readers turn to AI summaries</a></h4>
+              <p class="fact">The Guardian reports Reach, publisher of the Mirror and Express and regional titles including the Manchester Evening News, will cut a further 220 editorial jobs, citing a “mammoth shift” in how audiences find content. Reach said it will close KentLive, AberdeenLive, and GalwayBeo, while creating about 60 editorial roles aimed at digital revenue growth. The company said earlier that digital page views slumped with a 46% year-on-year drop in Google traffic as AI Mode and AI Overviews reduce the need to click through. This follows a prior restructure that put 600 roles at risk and cut more than 300 editorial jobs.</p>
+              <p class="why"><b>Why it matters</b>Distribution design at the search layer is now an employment event. When summaries satisfy the query, the publisher’s page — and the designer’s article template — never loads.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">46% less Google traffic. 220 more jobs gone.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your content depends on search referral, pick one high-traffic article type and redesign it for “answer + reason to click”: unique data, tool, or local utility above the fold that an AI overview cannot fully replace. Ship that module on three URLs and watch click-through from search for two weeks.</p>
+                    <p><span>Signal</span>Reach closing regional Live brands while hiring a smaller digital-revenue cohort is the media industry accepting AI overviews as structural, not cyclical. Design careers tied to pageview-maximising templates are repricing toward membership, events, and utility surfaces.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>15 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/ai-artificial-intelligence/995917/data-center-nyt-midterm-poll-september" target="_blank" rel="noopener">AI and data centers are incredibly unpopular in every poll</a></h4>
+              <p class="fact">The Verge reports New York Times/Siena University poll data showing strong opposition to AI and data centers. Among voters opposed to data centers, 56% favoured limits and 38% a total ban. The Verge notes an NBC poll in March showed AI polling lower than ICE, and a Gallup poll in May found seven in ten Americans opposed local AI data-center construction. The same Times/Siena data ranked AI and data centers under 1% as the most important midterm voting issue.</p>
+              <p class="why"><b>Why it matters</b>Infrastructure unpopularity without ballot priority is a strange political UX: loud locally, quiet nationally. Product and policy teams misread that mix at their peril.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Hated next door. Under 1% on the midterm issue list.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your company proposes local infrastructure or a controversial AI feature, prepare a one-page “neighbour brief”: noise, water, jobs, and what residents can refuse. Test it with five people who do not work in tech before the town hall.</p>
+                    <p><span>Signal</span>Sub-1% national issue salience alongside crushing local opposition means the fight will be zoning hearings and state bills, not presidential debates. Design the engagement for the hearing room, not the keynote.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/uk-news/2026/sep/16/datacentres-scotland-environmental-assessments-ai-boom" target="_blank" rel="noopener">Scotland imposes mandatory environmental assessments on new datacentres</a></h4>
+              <p class="fact">The Guardian reports the Scottish government will require environmental impact assessments for new datacentre projects above 50MW, announced ahead of a Holyrood vote on a Scottish Greens motion for a moratorium on new hyperscale sites until national strategy and planning guidance exist. Campaigners cite water use, carbon, and energy demand; community groups protested at Holyrood earlier this month. Scotland has seen a boom in large datacentre planning applications tied to AI infrastructure.</p>
+              <p class="why"><b>Why it matters</b>Planning UX for AI infrastructure is hardening: megawatt thresholds become the gate, not slogans about “green” clouds.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Over 50 megawatts? File the environmental homework.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you work on sustainability or infrastructure storytelling for an AI product, replace vague “carbon neutral by…” claims with the planning artefacts your region actually requires — MW threshold, water, and grid impact. Put those numbers in the external FAQ.</p>
+                    <p><span>Signal</span>Mandatory EIAs before a moratorium vote is government buying time with process. The precedent to watch is whether 50MW becomes a copy-paste threshold other jurisdictions adopt — a design parameter for where hyperscale can even be proposed.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/16/anthropic-lands-31bn-datacentre-deal-in-western-queensland" target="_blank" rel="noopener">Anthropic lands deal in $31bn datacentre in western Queensland, David Crisafulli says</a></h4>
+              <p class="fact">The Guardian reports Anthropic has agreed to lease its first Australian datacentre site at a proposed Western Downs digital park near Dalby, Queensland — a project planning documents put at $31.9bn and describe as Australia’s largest of its kind, to be built by Singapore-based Zerra DC in four stages with first stage planned to open next year pending local approvals. Premier David Crisafulli announced Anthropic’s participation in parliament. The Anthropic portion covers about 725.5 hectares; the centre is for inference rather than training. Queensland has sought to power AI centres without a renewable-only mandate. Project details from planning documents and government statements.</p>
+              <p class="why"><b>Why it matters</b>Inference geography is becoming industrial policy. Where Claude answers questions will be decided in regional councils as much as in San Francisco.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$31.9 billion. Inference, not training. A feedlot becomes a park.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When your AI vendor touts a new region, ask whether the capacity is training or inference, what power source the jurisdiction allowed, and whether local planning is approved or only announced. Put those answers in the vendor risk review.</p>
+                    <p><span>Signal</span>Streamlined approvals plus coal-capable power as a selling point shows the AI buildout arbitraging climate politics. Creative industries watching Australia’s copyright-default proposals should notice the same governments courting datacentres — culture and kilowatts are one negotiation.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>15 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035/" target="_blank" rel="noopener">US data centers could consume more natural gas than Germany and Japan combined by 2035</a></h4>
+              <p class="fact">TechCrunch reports a BloombergNEF outlook that by 2035 U.S. data centers could consume more natural gas than Germany and Japan combined — about 18 billion cubic feet per day — making data centers the second-strongest driver of U.S. gas demand growth after LNG exports. Grid-connected facilities may add about 15 bcf/d to power-sector gas use, five times more than onsite plants grabbing headlines. The forecast assumes not all announced projects get built.</p>
+              <p class="why"><b>Why it matters</b>The energy story behind AI is no longer abstract carbon accounting — it is commodity demand large enough to move prices. Product roadmaps that ignore power are incomplete briefs.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">18 billion cubic feet a day. Second only to LNG exports.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add a power assumption line to your AI feature brief: expected queries, estimated energy class, and whether the vendor discloses grid vs onsite generation. If nobody owns that line, assign it before the next capacity planning meeting.</p>
+                    <p><span>Signal</span>Onsite gas plants were the media narrative; BloombergNEF says the quiet grid draw is larger. The political fight will follow residential bills, not campus ribbon-cuttings — which is where product trust erodes when “AI magic” shows up as a heating invoice.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>16 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/16/samsung-sk-hynix-ai-boom-students-university-programs.html" target="_blank" rel="noopener">Inside South Korea’s university programs offering a direct route to Samsung and SK Hynix</a></h4>
+              <p class="fact">CNBC reports South Korean “contract departments” where companies help design university courses, fund programmes, and create hiring pathways. Examples include Sogang University’s Department of System Semiconductor Engineering with SK Hynix, and Sungkyunkwan University’s five-year integrated AI software programme with Samsung Electronics — where employment still requires clearing Samsung’s hiring process. SK Hynix and Samsung partner with multiple universities. Reporting based on campus interviews and programme descriptions.</p>
+              <p class="why"><b>Why it matters</b>The AI labour pipeline is being vertically integrated into undergraduate curricula. That is industrial design of careers, not just L&amp;D.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The syllabus is co-authored by the chipmaker.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you hire new grads into design or AI product roles, ask which courses were industry-contracted and what tools they already standardised on. Adjust onboarding so you are not retraining against a vendor’s campus stack by accident.</p>
+                    <p><span>Signal</span>While Western discourse questions college ROI, Korean chaebols are buying the degree pathway. Expect more “guaranteed interview” programmes globally — and a generation of designers whose first Figma file lived inside a corporate-sponsored major.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>15 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/tech-policy/2026/09/boston-dumps-flock-says-it-shared-data-nationwide-in-violation-of-contract/" target="_blank" rel="noopener">Boston dumps Flock, says it shared data nationwide in violation of contract</a></h4>
+              <p class="fact">Ars Technica reports Boston Mayor Michelle Wu said the city has “abandoned Flock” after a surveillance report on 2025 found that during a Boston Police trial of about 45 Flock ALPR cameras (April–September), data that the contract said should stay with trained BPD personnel was shared nationwide in violation of that contract. The report did not say how many agencies accessed the data. Boston is still seeking another license-plate reader vendor. Ars also notes a related EFF report on nationwide lookup tools.</p>
+              <p class="why"><b>Why it matters</b>Procurement UX failed: a local pilot assumed local data, and the vendor graph did not. Cities are learning to read sharing defaults as carefully as price sheets.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">45 cameras. Local contract. Nationwide lookups.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any vendor that syncs user or civic data to a network, require a written data-residency diagram in the security review: who can query by default, how to disable network lookup, and audit logs you can export. Reject “trust us, it’s configurable” without a screenshot of the default.</p>
+                    <p><span>Signal</span>Boston dumping Flock while shopping for another ALPR vendor shows the category survives the scandal — only the logo changes. The durable design win is contractual defaults that make nationwide sharing opt-in, not a buried setting after the cameras go up.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
