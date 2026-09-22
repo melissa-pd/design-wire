@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-09-22" aria-current="true">
+          <span class="d">22 Sep 2026</span>
+          <span class="m">Tue · 26 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,482 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-09-22 ############ -->
+      <article class="edition" data-ed="2026-09-22" data-label="Tuesday, 22 September 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/" target="_blank" rel="noopener">Meta’s Muse is outpacing ChatGPT’s early mobile launch</a></h4>
+              <p class="fact">TechCrunch reports Apptopia estimates that Muse’s iOS downloads in the U.S. and Canada hit 1.8 million in its first 12 days, against ChatGPT’s 1.3 million in the same window and markets, with Muse at about 642,000 U.S. daily active users versus ChatGPT’s 231,000 at the equivalent point. Apptopia is a third-party estimator and Meta has not published its own figures.</p>
+              <p class="why"><b>Why it matters</b>The agent race just got a consumer-distribution scoreboard, and Meta’s distribution moat is showing up as early habit rather than model novelty. For product designers, the comparison that matters is not who ships first, but who can attach an agent to an existing daily graph.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Muse is beating ChatGPT’s early mobile curve — with Instagram already installed.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are shipping an agent, map the three surfaces that will cross-promote it on day one and design the handoff as a product flow, not a press release. Write the first-session task that uses an existing account graph so the agent inherits trust instead of earning it from zero.</p>
+                    <p><span>Signal</span>Apptopia notes that over 95% of Muse users are also Facebook users and 63% are Instagram users. That is not organic discovery; it is graph-seeded onboarding. Teams celebrating download velocity without a comparable distribution pipe are measuring a different product category.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/" target="_blank" rel="noopener">Meta’s AI agent has been blocked from using Amazon.com</a></h4>
+              <p class="fact">TechCrunch reports that Muse users attempting to buy on Amazon began seeing an error stating that continued access by an unauthorized AI agent violates Amazon’s Conditions of Use, effectively blocking Muse-mediated shopping on the site. The block was first spotted by GeekWire.</p>
+              <p class="why"><b>Why it matters</b>Agentic commerce just hit its first hard platform veto. The shopping journey is no longer only a UX problem between user and agent; it is a permissions negotiation between agent and merchant of record.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent can want to buy. Amazon can refuse the customer.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any agentic purchase flow, design an explicit merchant-refusal state: what the user sees, how they complete the buy themselves, and whether the agent logs the block as a recoverable failure. Do not treat checkout success as the only happy path.</p>
+                    <p><span>Signal</span>Amazon’s stated reason is contractual, but the deeper design issue is liability for hallucinated orders. Merchants will open agent APIs only when refund, dispute, and attribution surfaces exist. Those surfaces are product work, not legal footnotes.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/" target="_blank" rel="noopener">Muse, Meta’s extraordinarily privileged AI assistant, has a serious 0-day</a></h4>
+              <p class="fact">Ars Technica reports that macOS security researcher Patrick Wardle found a zero-day allowing any local app or terminal command to access Muse’s authentication token and change undocumented settings, including the transcription endpoint, enabling hijacks that can write files or snap pictures with little user indication. Meta has marketed Muse as built for privacy and security.</p>
+              <p class="why"><b>Why it matters</b>An agent with calendar, mic, camera, and purchase access is a privilege concentrator. If local processes can steer it, the permission dialog the user approved becomes a malware accelerator rather than a trust boundary.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The agent’s privileges are the new malware payload.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit every OS permission your agent requests and pair each with a visible activity indicator that fires on use, not only on grant. If the agent can write files or open the camera, the UI must show when that is happening without requiring the user to dig into settings.</p>
+                    <p><span>Signal</span>Wardle’s line that attackers can skip writing a stealer and just leverage the assistant is the senior read. Agent products that market “one app that can do everything” are concentrating blast radius. Expect enterprise buyers to demand privilege partitioning before consumer download charts matter.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/" target="_blank" rel="noopener">OpenAI forms math advisory group as its AI resolves more than 100 open problems</a></h4>
+              <p class="fact">TechCrunch reports that OpenAI announced an independent Advisory Group on Mathematics and Artificial Intelligence hosted at the Institute for Advanced Study, and that OpenAI claims the same internal model behind a Navier-Stokes solution has resolved more than 100 additional open math problems. Earlier this month, 25 Fields Medal winners signed an open letter criticizing labs’ race to publish famous solutions; OpenAI’s problem-count claim is company-reported.</p>
+              <p class="why"><b>Why it matters</b>Capability theater is colliding with scholarly process design. The advisory group is an interface between a lab’s publish cadence and a field’s verification norms — a governance surface, not a press kit.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">100 open problems solved. The peer-review UI still missing.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product surfaces AI-generated expert claims, ship a verification state in the UI: claimed, under review, confirmed by named experts. Do not collapse those into a single “AI found” badge.</p>
+                    <p><span>Signal</span>The Fields Medal letter is the real product constraint. Labs that optimize for announcement velocity without a visible review pipeline will keep buying temporary prestige and permanent distrust from the communities they need as validators.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/21/open-ai-alignment-rsi.html" target="_blank" rel="noopener">OpenAI proposes development of global AI standards to guide alignment, RSI</a></h4>
+              <p class="fact">CNBC reports that OpenAI posted proposals for frontier AI safety focused on alignment research and recursive self-improvement, calling for international cooperation to build standards on frontier models and benefit-risk management for automated AI researchers. The proposals are OpenAI’s own policy framing, not adopted regulation.</p>
+              <p class="why"><b>Why it matters</b>When a frontier lab writes the standards agenda around RSI, it is trying to define the vocabulary regulators will inherit. Designers working on agent autonomy controls should assume “human control” will become a required affordance category, not a slogan.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">OpenAI wants global standards for machines that improve themselves.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add an autonomy ceiling to your agent settings: a user-visible maximum for unattended actions per session, with a hard stop and review queue when the ceiling is hit. Treat that ceiling as a product requirement, not an engineering backstop.</p>
+                    <p><span>Signal</span>Standards talk centered on RSI is also a competitive move. Whoever drafts the evaluation checklist shapes which products look “aligned” in enterprise procurement. Watch for RSI language migrating into RFPs before it migrates into law.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/adobe-premiere-now-on-android/" target="_blank" rel="noopener">Adobe Premiere, one of the iPhone’s best video-editing apps, is now on Android</a></h4>
+              <p class="fact">Wired reports that Adobe’s redesigned Premiere app is now on Android as the successor to Premiere Rush, which Adobe will stop supporting on 30 September, with a minimum of 5 GB RAM and Android 13, foldable split layouts for footage and timeline, and Adobe stating Acrobat, Photoshop, Lightroom, and Premiere are optimized for Googlebook laptops without claiming desktop-grade parity. Eric Snowden, Adobe’s SVP of design, is quoted on the native-Android and broad-device goals.</p>
+              <p class="why"><b>Why it matters</b>Cross-platform creative tools are no longer a porting exercise; foldables and Googlebook force layout systems that treat screen geometry as a first-class input. Designers shipping multi-device editors should steal the foldable split as a reference pattern.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Premiere on Android is a foldable layout brief, not a store listing.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you maintain a mobile creative tool, prototype one fold-open layout this week: media on one pane, timeline or inspector on the other. Write the breakpoint rule in the design system so Duo and Android foldables share one pattern.</p>
+                    <p><span>Signal</span>Snowden’s note that Android foldable work helps the iPhone Duo app is the strategic tell. Platform-specific craft is becoming rehearsal for Apple’s foldable, not a side quest. Teams still designing only for candy-bar phones are behind the device roadmap.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" target="_blank" rel="noopener">AstroForge is putting AI in command of its next spacecraft</a></h4>
+              <p class="fact">TechCrunch reports that asteroid-mining startup AstroForge built an in-house transformer-based autonomous control stack called Solo for its spacecraft, planning a first autonomous flight in 2027 on Stock Space’s first rocket on a NASA-backed solar science mission. The company contrasts that approach with NASA missions such as Osiris-Rex, which TechCrunch says staffed about 100 operators per eight-hour shift.</p>
+              <p class="why"><b>Why it matters</b>Autonomy is moving from chat agents to systems where human oversight cannot be continuous. The design problem becomes exception UX for operators who are not always on the loop, not prompt UX for users who are.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The ops center is shrinking. The exception UI has to grow.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any supervised-autonomy product, define the three exception classes that force a human takeover and design the alert payload for each: what happened, what the system already tried, and the one action the operator must take next.</p>
+                    <p><span>Signal</span>Solo is a transformer sold as a staffing substitute. The second-order risk is silent competence: systems that handle the routine so well that operators lose the practice needed for the failure mode. Training and simulation surfaces become part of the product, not HR.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>21 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/21/stop-relying-on-chatbots-for-customer-care-uk-service-providers-urged" target="_blank" rel="noopener">Stop relying on AI chatbots for customer care, UK banks and energy firms told</a></h4>
+              <p class="fact">The Guardian reports that Citizens Advice urged essential providers in energy, banking, phone and internet to guarantee a “right to talk to a human,” after research found chatbots wasted time, caused stress and delayed problem-solving for more than half of users, nearly half found them unhelpful, and only 20% of UK adults polled in July preferred chatbots. The charity estimates digital exclusion affects at least 14 million UK citizens.</p>
+              <p class="why"><b>Why it matters</b>This is the clearest UK public-interest brief yet against chatbot-first support in essential services. The design failure mode is not rudeness; it is blockade — bills, debt, and homelessness help that never resolve.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Almost half found the chatbot unhelpful. Only 20% wanted it.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add a persistent, one-tap “talk to a person” control on every chatbot turn in essential flows, and log how many turns precede escape. If the median escape turn is above three, redesign the triage before adding more model capacity.</p>
+                    <p><span>Signal</span>Citizens Advice’s offline meter-reading example — under an hour online versus up to six weeks offline — is the metric executives miss. Chatbot ROI that ignores channel time-to-resolution for digitally excluded users is measuring the easy cohort and calling it product-market fit.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/logos-icons/the-bold-new-apple-music-logo-signals-the-end-of-minimalism" target="_blank" rel="noopener">The bold new Apple Music logo signals the end of minimalism</a></h4>
+              <p class="fact">Creative Bloq reports that Apple quietly introduced a new Apple Music wordmark with the launch of Apple Music Hall, a 600-capacity venue in London’s Battersea Power Station, replacing the clean San Francisco treatment with a bold lowercase mark that observers likened to Y2K magazine and cassette typography.</p>
+              <p class="why"><b>Why it matters</b>When Apple moves a flagship wordmark toward maximal type, it licenses the rest of the industry to stop treating thin sans as the default seriousness signal. Brand systems built only on quiet minimalism just lost their safest reference.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Apple Music just traded San Francisco for cassette energy.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pull your product wordmark into a three-weight exploration this week: current, one step bolder, and one deliberately retro display cut. Test at app-icon and lockup sizes before anyone debates “brand strategy.”</p>
+                    <p><span>Signal</span>Creative Bloq connects the shift to Apple’s broader rediscovery of colour and Gen Z marketing after Liquid Glass. The logo is not an isolated flourish; it is a system hint that Apple’s next few years of UI may keep getting louder.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/logos-icons/mclarens-new-logo-looks-like-a-luxury-fashion-brand" target="_blank" rel="noopener">McLaren’s new logo looks like a luxury fashion brand</a></h4>
+              <p class="fact">Creative Bloq reports that McLaren unveiled an evolved brand identity centred on a lighter modern sans wordmark inspired by the 1920s McLaren family service-station sign in Remuera, Auckland, with a subtle underscore under the lowercase c, while the older speedmark returns for golf and racing sub-brands. Chief creative officer David Woodhouse is quoted on the change as marking a new chapter.</p>
+              <p class="why"><b>Why it matters</b>Automotive identity is under public scrutiny after rival missteps, and McLaren’s answer is heritage compression rather than novelty. The fashion-adjacent polish shows performance brands competing on lifestyle typography as much as on form language.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">McLaren’s new wordmark wants the wardrobe, not just the garage.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When evolving a heritage mark, write the continuity rule before the redraw: which element must survive at 16px, which may become a sub-brand only, and which is retired. McLaren’s speedmark split is a usable pattern for product versus motorsport lines.</p>
+                    <p><span>Signal</span>Keeping the speedmark for racing and golf while fashioning the master wordmark is a portfolio move. Master brands are getting quieter and more fashion; passion sub-brands keep the kinetic cues fans police. Expect more houses to bifurcate identity this way.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/branding/this-out-there-branding-is-the-bravest-design-ive-seen-all-year" target="_blank" rel="noopener">This out-there branding is the bravest design I’ve seen all year</a></h4>
+              <p class="fact">Creative Bloq’s Tom May praises the new visual identity for the 2027 World Design Congress in Seoul (22–25 September 2027), created by Seoul studio Everyday Practice for the World Design Organization, citing clashing colours, scattered shapes, a seesaw-like logo, motion graphics, and a seven-colour palette tied to Seoul’s contrasts, with generative scattering logic across applications.</p>
+              <p class="why"><b>Why it matters</b>Conference identities are peer-facing design theatre, and this one refuses the safe international-modern default. It is a usable reminder that institutional clients can still buy systems with generative motion and local specificity.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A world design congress just rejected the beige template.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are briefing an event identity, require one city-specific constraint in the creative brief — a contrast, material, or street rhythm — and reject concepts that could be swapped to another city without rewriting the rationale.</p>
+                    <p><span>Signal</span>May’s point that bold need not mean reckless is the senior craft lesson. Everyday Practice’s generative scattering with colour logic is structured play. The market still rewards systems that look wild and hold up in greyscale and orange poster variants.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/product-design/the-tesla-cybercab-has-a-pretty-silly-design-fail" target="_blank" rel="noopener">The Tesla Cybercab has a pretty silly design fail</a></h4>
+              <p class="fact">Creative Bloq reports that a viral video of Tesla’s Cybercab shows its automatic butterfly doors continuing to open into a person standing in a blind spot, described by the poster as a “love tap,” with the writer noting the doors appear not designed to stop when someone is in the way and that practicality concerns already existed for tight urban pickup zones.</p>
+              <p class="why"><b>Why it matters</b>Autonomous vehicle UX is not only driving policy; it is door choreography in crowded curb space. A dramatic hinge line that cannot yield is a product defect dressed as a concept flourish.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The Cybercab’s doors look like a concept. They act like one too.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any automatic door, lid, or panel, add an obstruction test to the QA script: person in the swing path, bag in the path, and wheelchair clearance. If the mechanism only soft-bumps, document the force and the warning UI before launch copy celebrates the motion.</p>
+                    <p><span>Signal</span>Robotaxi interiors will be judged in pickup zones, not showrooms. Door kinematics that ignore sidewalk density will become the meme that defines the vehicle, the same way Cybertruck panel gaps did.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/21/x-will-now-tell-users-when-governments-have-forced-it-to-limit-their-posts/" target="_blank" rel="noopener">X will now tell users when governments have forced it to limit their posts</a></h4>
+              <p class="fact">TechCrunch reports that X will expand its “Under the Hood” transparency tool so users can see when posts have been shadowbanned or downranked because of compliance with local laws or government-required content filtering — detail previously unavailable at account or post level, while most companies share government-request data only in aggregate transparency reports.</p>
+              <p class="why"><b>Why it matters</b>Visibility enforcement is finally getting a user-facing explanation channel. That shifts shadowbanning from a conspiracy narrative to a labelled system state designers can learn from.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Shadowban just got a status page.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product downranks or geo-limits content, add a per-item “why this has limited reach” reveal with the legal or policy reason category. Do not leave users to reverse-engineer silence.</p>
+                    <p><span>Signal</span>Post-level government filtering disclosure is a competitive transparency move and a liability map. Once users can see jurisdiction labels on their own posts, journalists and regulators can assemble enforcement patterns without waiting for annual PDFs.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/21/ouras-2-2b-ipo-is-mostly-a-payday-for-existing-shareholders/" target="_blank" rel="noopener">Oura’s $2.2B IPO is mostly a payday for existing shareholders</a></h4>
+              <p class="fact">TechCrunch reports that Oura’s updated IPO filing offers 50 million shares at $40–$44, with existing shareholders selling 36.5 million of them; at a $42 midpoint that would mean about $1.53 billion to shareholders and $567 million to the company before fees, including Forerunner Ventures selling its entire roughly 9.3% stake of about 28.7 million shares for around $1.20 billion.</p>
+              <p class="why"><b>Why it matters</b>Wearable wellness just priced a liquidity event that transfers value out more than it funds the next hardware cycle. Product teams reading IPO filings should watch secondary-heavy deals as a signal that the growth story is being cashed, not reinvested.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$2.2B headline. Most of it leaves with the VCs.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When a competitor IPOs, read the primary versus secondary split before you rewrite your roadmap panic. If most shares are secondary, the market is rewarding past distribution, not necessarily funding a feature arms race you must match next quarter.</p>
+                    <p><span>Signal</span>Forerunner exiting the entire stake in the offering is the tell. Smart-ring category heat is being harvested by early capital while the company takes a minority of proceeds — a pattern that often precedes slower hardware iteration funded by operating cash, not IPO dry powder.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/21/morphotonics-raises-e40m-as-it-tk-tk-tk-t/" target="_blank" rel="noopener">Morphotonics raises €40M to expand its display tech into data centers</a></h4>
+              <p class="fact">TechCrunch reports that Dutch nanoimprint lithography firm Morphotonics raised €40 million, backed by 3M Ventures, Innovation Industries, BOM, Invest-NL, the EIC Fund, Ernij Next and the EIB, to scale waveguide production for AR glasses and expand into co-packaged optics for data centers. CEO Hugo da Silva says the next machine is expected to produce more than 6 million waveguides a year and start shipping early next year; headcount has more than doubled to 60.</p>
+              <p class="why"><b>Why it matters</b>The AR glasses boom is pulling specialty display tooling into the same capital story as AI infrastructure. Designers working on glasses UIs should assume waveguide supply — and therefore industrial design constraints — will keep tightening.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The stamp that makes AR lenses is now a data-center bet too.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are designing for display glasses, add a manufacturing constraint check to the sprint: brightness, field of view, and eye-box assumptions against current waveguide yields, not against concept videos.</p>
+                    <p><span>Signal</span>Morphotonics naming Meta Ray-Ban Display among waveguide applications while pivoting machines toward photonic interconnects shows the glasses stack and the AI factory stack converging on the same optical supply chain. Optical scarcity will price both consumer AR and cluster networking.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/22/meta-deal-will-help-plastics-recycling-startup-macrocycle-build-its-first-factory/" target="_blank" rel="noopener">Meta deal will help plastics recycling startup MacroCycle build its first factory</a></h4>
+              <p class="fact">TechCrunch reports that MacroCycle struck a deal in which Meta pays for environmental attribute credits from the startup’s avoided emissions — Meta’s first such deal, per a Meta spokesperson — to help fund a U.S. demonstration plant rated for 5,000 metric tons of recycled PET a year, with MacroCycle claiming 80% fewer carbon emissions than virgin PET. Future plants are planned at 50,000 metric tons.</p>
+              <p class="why"><b>Why it matters</b>AI’s carbon story is spawning a new B2B product: sell avoided emissions to the company whose compute footprint is exploding. Climate startups are designing credit instruments as carefully as reactors.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Meta is buying plastic credits to underwrite a recycling plant.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your company sells sustainability claims, specify whether the user-facing badge is tied to a credit purchase, a material swap, or a measured reduction — and make that distinction visible in the UI copy, not only in the ESG PDF.</p>
+                    <p><span>Signal</span>Meta confirming this as its first EAC deal for avoided plastic emissions is a market-making act. Expect more hyperscalers to fund circular-materials plants as offtakers of attributes rather than of atoms, which changes who the real customer of the factory is.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/transportation/998184/waymo-public-transportation-discount-subway-bus-visa" target="_blank" rel="noopener">Waymo is offering transit discounts again, this time with Visa</a></h4>
+              <p class="fact">The Verge reports that Waymo and Visa are rolling out a Bay Area incentive that automatically credits $2.85 toward future Waymo rides when a Visa card pays for a Waymo trip and public transit within two hours of each other, using Visa to verify proximity of the two payments after earlier Waymo-only tests in San Francisco and Los Angeles.</p>
+              <p class="why"><b>Why it matters</b>Robotaxi growth is being designed as multimodal glue, not a transit replacement. The product insight is payment-graph verification: Visa becomes the sensor that proves a trip chain without a new Waymo transit card.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$2.85 for chaining a robotaxi to a bus — verified by Visa.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design mobility products, prototype a trip-chain reward that triggers on two completed legs rather than a single mode. Make the credit automatic and visible on the next receipt so users learn the behaviour without a coupon code.</p>
+                    <p><span>Signal</span>Earlier Waymo transit discounts needed self-reporting or weaker verification. Bringing Visa in is an admission that multimodal products live or die on payment infrastructure. Operators without card-network partnerships will keep guessing at first/last-mile behaviour.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/998272/peloton-tread-flex-fitness-treadmills" target="_blank" rel="noopener">Peloton is back with a ‘cheaper’ folding treadmill</a></h4>
+              <p class="fact">The Verge reports that Peloton launched the $2,195 Tread Flex, which folds upright to save about 50% more floor space, and rebranded existing models as the $3,495 Tread Vision and $6,695 Tread Plus Vision, with the mid tier up $200, continuing last year’s hardware refresh that added cameras, fans, and AI-powered Peloton IQ.</p>
+              <p class="why"><b>Why it matters</b>Peloton is pricing apartment reality into the stack: fold, store, subscribe. “Cheaper” at $2,195 only makes sense against a $6,695 halo SKU — a classic good-better-best redesign of a category that overshot home footprints.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$2,195 is “cheaper” when the top tread is $6,695.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your hardware lineup has a storage or footprint complaint in research, make the compact SKU’s folded state the hero image and the primary dimension callout — not an accessory bullet under the fold.</p>
+                    <p><span>Signal</span>Rebranding the line as Vision while attaching IQ cameras and AI coaching shows Peloton selling software supervision as the upgrade path. The foldable SKU widens the funnel; the camera stack monetizes the cohort that stays.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/998243/essilorluxottica-nuance-audio-plus-otc-hearing-aid-glasses" target="_blank" rel="noopener">These discreet hearing aid glasses now have better voice boosting and battery life</a></h4>
+              <p class="fact">The Verge reports that EssilorLuxottica launched Nuance Audio Plus OTC hearing-aid glasses in the U.S. from $829, with improved speech clarity, on-device controls, up to 10 hours of battery, three frame styles and five colours, while the standard Nuance Audio remains from $699. The company is Meta’s partner on Ray-Ban smart glasses.</p>
+              <p class="why"><b>Why it matters</b>Assistive audio is being packaged as eyewear fashion rather than medical stigma hardware. The Plus refresh is a UX bet that controls and battery life, not just FDA clearance, determine whether people wear the thing all day.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Hearing aids that look like glasses — now with a 10-hour day.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any wearable assistive product, put battery-to-full-waking-day and one-handed on-device controls in the acceptance criteria beside clinical metrics. If users must open an app to adjust clarity in a noisy room, the product fails the moment of need.</p>
+                    <p><span>Signal</span>EssilorLuxottica spanning Ray-Ban Meta cameras and Nuance hearing frames is consolidating the face as a platform. Expect more “glasses” SKUs that compete on which sense they augment, not on lens coatings alone.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>21 Sep 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/21/texas-governor-abbott-ai-data-center-permits.html" target="_blank" rel="noopener">Texas Gov. Abbott orders data center permit halt weeks after issuing moratorium</a></h4>
+              <p class="fact">CNBC reports that Texas Governor Greg Abbott ordered the state environmental regulator to halt data-center-related permits until ERCOT audits the grid waitlist, expanding an August moratorium on new grid approvals. BloombergNEF analysts cited by CNBC found almost 20% of the U.S. 253-GW data-center pipeline — nearly 50 GW — at risk from Texas’s pause, with potential losses above $8 billion in data-center revenue by Q1 2027.</p>
+              <p class="why"><b>Why it matters</b>The friendliest U.S. growth state just turned AI infrastructure into a grid-governance problem. Design and product orgs planning on infinite cloud capacity should treat power permitting as a roadmap dependency.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Texas paused the permits. Nearly 50 GW of pipeline is on the line.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your team’s AI features assume always-on large-model inference, add a capacity-risk note to the quarterly plan: what degrades first if latency rises or quotas tighten, and which flows can fall back to smaller local models.</p>
+                    <p><span>Signal</span>Anthropic reportedly preparing to list public opinion toward AI and data centers as an IPO risk factor, per CNBC. Political permitting risk is migrating from activist blogs into securities disclosures — the language finance teams will force product leads to answer.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure" target="_blank" rel="noopener">Microsoft is laying off 268 Xbox staffers and Ninja Theory may close</a></h4>
+              <p class="fact">The Verge reports that Microsoft is cutting 268 Xbox roles across Halo Studios, other first-party studios, and central functions, part of 3,200 roles previously flagged for fiscal 2027 after 1,600 Xbox cuts in July. Deals to sell Ninja Theory fell through, and Microsoft is likely closing the studio; a parallel Verge report says Activision will develop the next flagship Halo while a small Halo Studios team supports live titles.</p>
+              <p class="why"><b>Why it matters</b>Xbox’s “reset” is reallocating franchise stewardship as much as headcount. Creative careers inside platform companies are increasingly contingent on which parent brand owns the IP next, not only on shipping quality.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">268 more Xbox cuts — and Halo’s next game leaves for Activision.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you work on a franchise team inside a conglomerate, document your transferable craft portfolio around systems and player experience, not only title credits. Ownership shifts can move the next installment overnight.</p>
+                    <p><span>Signal</span>Activision taking Halo while Call of Duty remains separate is Microsoft treating IP as modular manufacturing lines. The career implication: studio identity is weaker than franchise assignment, and assignment can change in a memo.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/politics/2026/sep/22/george-osborne-ai-datacentre-nimbys-holding-back-britain" target="_blank" rel="noopener">OpenAI’s George Osborne says datacentre nimbys holding back Britain</a></h4>
+              <p class="fact">The Guardian reports that George Osborne, OpenAI’s head of AI for countries, told the Big Brue festival that datacentre opposition is holding Britain back and that failing to build would mean losing tech “sovereignty” to U.S. sites in Ohio, Georgia and Michigan. UK protests have targeted projects over landscape, jobs, housing land, water and energy use.</p>
+              <p class="why"><b>Why it matters</b>A former chancellor now employed to help OpenAI build infrastructure is framing local resistance as a sovereignty crisis. The politics of AI siting are becoming a formal lobbying beat, not a planning footnote.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">OpenAI’s man in government politics called the neighbours nimbys.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your company communicates about AI infrastructure, replace inevitability language with local impact tables: water, power, jobs during build, jobs after build. Residents are already fluent in that ledger.</p>
+                    <p><span>Signal</span>Osborne’s sovereignty argument relocates the debate from amenity to national power. That may unlock central-government overrides — and deepen local distrust. Product brands attached to those builds inherit the politics whether they want them or not.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/sep/22/ai-could-be-a-bubble-and-is-not-yet-making-australia-more-productive-michele-bullock-says" target="_blank" rel="noopener">AI could be a bubble and is not yet making Australia more productive, Michele Bullock says</a></h4>
+              <p class="fact">The Guardian reports that RBA governor Michele Bullock said AI could be a bubble and that she has seen little evidence it is yet making the economy more efficient, with rapid adoption and datacentre investment adding to inflation instead. She cited South Korean research that AI-adopting employees produced the same output while working 1.5 hours less per week, and noted central banks are watching a messy tech slump as a risk.</p>
+              <p class="why"><b>Why it matters</b>A G20 central banker just separated AI narrative from measured productivity. That gap is the uncomfortable brief for every design org selling efficiency gains without time-motion evidence.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Same output, 1.5 fewer hours — productivity can fall while people “adopt AI.”</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Stop reporting AI success as seats enabled. Instrument one workflow for output per hour before and after the tool, including the fiddling time Bullock flags, and share the delta even if it is flat.</p>
+                    <p><span>Signal</span>Bullock’s sequence — productivity dip during reimagining, then possible takeoff — is the macro version of the learning-curve excuse. Boards will increasingly ask which phase your deployment is in, and “rolled out” will not be an acceptable answer.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/money/2026/sep/21/ramageddon-apple-iphone-price-increase-chip-shortage" target="_blank" rel="noopener">‘RAMageddon’: tech crunch hikes the price of your next iPhone by £100</a></h4>
+              <p class="fact">The Guardian reports that Apple raised iPhone prices by £100 across models, including older ones, amid a memory-chip shortage driven by AI datacentre demand — “RAMageddon” — with IDC’s Francisco Jeronimo saying memory costs are up more than 300% year on year and some chips five times dearer, reversing a long trend of electronics getting cheaper.</p>
+              <p class="why"><b>Why it matters</b>Consumers are now paying an AI infrastructure tax on phones that did not get £100 more product. The shortage couples hyperscale buildout to everyday device pricing.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your next iPhone costs £100 more because datacentres ate the RAM.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design hardware purchase flows, surface the configuration memory tier earlier and explain scarcity-driven price deltas in plain language. Users already know the AI story; hiding the reason reads as gouging.</p>
+                    <p><span>Signal</span>Pricing older iPhones as current because they share expensive memory is a quiet end to the “last year’s flagship is the value buy” pattern. Refurb and mid-tier markets will feel RAMageddon as inventory strategy, not only as MSRP.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>22 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/22/everyone-can-find-a-reason-to-dislike-data-center-construction/" target="_blank" rel="noopener">Everyone can find a reason to dislike data center construction</a></h4>
+              <p class="fact">TechCrunch reports a Data &amp; Society ethnographic study based on 18 months of fieldwork and interviews with 44 Pennsylvanians, against a backdrop of surveys showing more than 60% of Americans favour limiting new data centers and Data Center Watch tracking $68 billion in projects disrupted by local opposition in Q2 2026. Residents cited power bills, property values, and NDAs for local officials; authors describe opposition as post-partisan.</p>
+              <p class="why"><b>Why it matters</b>This is the qualitative layer beneath the permit fights: people are reading AI’s “inevitable revolution” pitch through prior industrial trauma. The industry’s messaging problem is empirical, not merely PR tone.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">60% want limits. $68B stalled. Pennsylvania remembers the last boom.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you write AI product marketing, cut inevitability phrasing and replace it with reversible commitments: what gets measured locally, who can pause a project, and how residents see bill impacts. Test that copy with people outside the industry bubble.</p>
+                    <p><span>Signal</span>Researchers calling the opposition post-partisan is the political forecast. Coalitions that ignore left–right scripts are harder to lobby past with standard economic-development decks — and they are learning from coal, steel and fracking histories the industry keeps underestimating.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>21 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/09/21/amd-stock-1-trillion-value.html" target="_blank" rel="noopener">AMD hits $1 trillion market cap for the first time as stock rides 5-day rally</a></h4>
+              <p class="fact">CNBC reports that AMD shares surged 10% Monday to an intraday high of $615.52, pushing market value just above $1 trillion after a five-day run of about 25%, with Q2 revenue of $11.54 billion up 50% year on year and Data Center sales of $6.7 billion up 107%. Nvidia remains near a $5.4 trillion market cap.</p>
+              <p class="why"><b>Why it matters</b>A second AI-chip trillion-dollar company confirms the buildout trade is still the market’s centre of gravity even as local politics turn against the buildings those chips fill.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">AMD joins the trillion club. Nvidia is still $5.4T.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When briefing executives on AI investment, pair the chip-vendor market caps with the permitting and power stories from the same week. The capital markets and the zoning board are not looking at the same dashboard.</p>
+                    <p><span>Signal</span>AMD’s data-center growth rate outpacing the company overall shows where the margin story lives. Consumer and PC design orgs will keep competing with cluster demand for components — RAMageddon is the retail face of the same allocation fight.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
