@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-10-03" aria-current="true">
+          <span class="d">3 Oct 2026</span>
+          <span class="m">Sat · 25 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,465 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-10-03 ############ -->
+      <article class="edition" data-ed="2026-10-03" data-label="Saturday, 3 October 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>2 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/" target="_blank" rel="noopener">Apple changes full-disk access permissions to curb abuse from AI agents</a></h4>
+              <p class="fact">Ars Technica reports that Apple will tighten macOS Full Disk Access so apps that want that permission need “very explicit user action,” after Meta’s Muse controversy over reading Apple Messages. Apple said some developers use FDA in ways that expose files, mail, messages, and browsing history “without users’ full knowledge and understanding,” and that as AI agents grow more autonomous “the risks associated with this level of access will grow substantially.” Meta has said Muse Messages access is opt-in via FDA plus a Messages connector.</p>
+              <p class="why"><b>Why it matters</b>Desktop agents just forced the OS vendor to redesign the permission that made them useful. The design problem is no longer a cute connector toggle; it is how you explain whole-disk risk in a moment users will actually understand.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Full Disk Access was the agent’s skeleton key. Apple is changing the lock.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your Mac agent needs FDA, rewrite the grant flow this week: name the folders and data classes it can reach, require a second confirm for Messages/Mail/browsing history, and ship a one-tap revoke that works without quitting the agent.</p>
+                    <p><span>Signal</span>Apple is treating agent capability as a privacy-surface problem, not a model problem. Teams still selling “just flip Full Disk Access” as onboarding are about to inherit a conversion cliff and a trust debt at the same time.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/03/meta-muse-shopping-ai-agent.html" target="_blank" rel="noopener">Meta's Muse can shop and check out for you. Here's how it works</a></h4>
+              <p class="fact">CNBC reports that shopping has become one of Muse’s biggest usage drivers, per a Meta spokesperson. Muse browses retail sites, surfaces listings in-app, and can prep checkout behind an “approval card” with order details for the user to confirm. For payment, Meta’s Link “generates a one-time-use card so your real card details stay hidden”; PayPal is announced but not yet available.</p>
+              <p class="why"><b>Why it matters</b>Agentic commerce is shipping with a human approval card as the product, not a footnote. That card is now the highest-stakes screen in the purchase path.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The cart is gone. The approval card is the product.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Prototype your agent checkout as an approval card before you build browse: show merchant, item, price, ship-to, and payment mask on one screen, with an explicit confirm and an equally visible cancel that does not leave a pending order.</p>
+                    <p><span>Signal</span>One-time virtual cards relocate trust from “the agent has my Amex” to “the agent gets a disposable credential.” Expect retailers to start designing for agent buyers and human approvers as two different principals.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>3 Oct 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/" target="_blank" rel="noopener">Muse Creates Detailed Profiles of All Your Friends and Family</a></h4>
+              <p class="fact">Wired, citing Muse instructions extracted by researcher Karan Joshi and shared with the outlet, reports Muse can create “a page for every person in the user’s life,” updated hourly, with sections such as Facts, History, The relationship, In common, Open threads, and Strengthening. Meta told Wired agents need relationship context to be useful, that Muse gathers from public information and what users choose to share, and that each user gets a dedicated VM whose memories can be wiped. The page behaviour is from extracted system instructions, not an independent product audit.</p>
+              <p class="why"><b>Why it matters</b>Relationship graphs are becoming first-class agent memory, which means third parties who never consented become data subjects inside your product.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent is writing dossiers on your friends. Hourly.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add a People memory surface: list every person-page the agent has, show the evidence fields, and let users delete a person or freeze updates without wiping the whole agent.</p>
+                    <p><span>Signal</span>The asymmetry Wired quotes—users give far more than they get back—is the next consent crisis. “You shared it in chat” will not cover inferred pages about people who never opened the app.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/" target="_blank" rel="noopener">All the AI agents that can live in your text messages</a></h4>
+              <p class="fact">TechCrunch surveys agents that run inside SMS/iMessage/RCS rather than a standalone app, noting Instinct’s $10 billion valuation after a $1 billion funding round as the buzziest example while listing others for families, travel, and work. The piece frames the pitch as texting an agent like a person so it can schedule, research, shop, and remind without another download.</p>
+              <p class="why"><b>Why it matters</b>The OS of agent UX is collapsing into the thread you already live in. Distribution is no longer an app-store problem; it is a messaging-identity problem.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The agent store is your Messages app.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are shipping an SMS agent, design the first three turns as identity and undo: who is texting, what they can spend or book, and how to stop them with a plain-language keyword that works when the user is distracted.</p>
+                    <p><span>Signal</span>App-less agents inherit SMS’s weakest patterns—no chrome, no settings IA, easy spoofing. The winners will invent thread-native permission UX, not paste a settings screen into a blue bubble.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/" target="_blank" rel="noopener">Sean Parker is rebuilding Stability AI around music</a></h4>
+              <p class="fact">TechCrunch, citing The Information and Parker, reports Sean Parker is steering Stability AI toward tools for music professionals after joining an $80 million rescue two years ago. In late August the company announced $76 million in funding that included Sony, Warner, and Universal, which also licensed their catalogs. Parker says he is “playing by the rules this time,” per the account.</p>
+              <p class="why"><b>Why it matters</b>Licensed catalogs turning into model fuel is the clearance story designers have been waiting for in audio—and a reminder that provenance is becoming a product feature, not a legal afterthought.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The majors just became Stability’s product brief.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you prototype with generative music, require a license badge in the asset picker: which catalog, which model, and whether the output is cleared for client work before anyone drops it in a deck.</p>
+                    <p><span>Signal</span>Parker’s “play by the rules” line is the strategy: rights holders co-own the stack. Expect creative tools to compete on indemnity UX as much as on sound quality.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>3 Oct 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm" target="_blank" rel="noopener">An OpenAI safety employee has quit and is sounding the alarm</a></h4>
+              <p class="fact">The Verge reports that David Robinson, who wrote safety reports accompanying major OpenAI model releases, resigned this week and is speaking out in an Atlantic editorial. He argues frontier labs should run with “nuclear-level” safeguards—“like nuclear power plants or busy airports, with layers of redundancy”—and that industry culture is “broken.” The Verge places him among a recent wave of safety departures across labs; the cultural claims are Robinson’s, not independently audited.</p>
+              <p class="why"><b>Why it matters</b>Safety is exiting through op-eds again, which means the public design of AI risk is being written by leavers, not by in-product disclosure.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The safety report author quit. The report is now an op-ed.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Treat safety disclosures as a product surface: if your release notes claim evaluations, link the method, the date, and who signed them—so a resignation cannot be the first time users hear how thin the review was.</p>
+                    <p><span>Signal</span>When the people who write the safety PDFs leave to call for airport-grade process, enterprise buyers will start asking who still owns the checklist inside the building.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>2 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/big-ball-of-mud-ai/" target="_blank" rel="noopener">The New Big Ball of Mud: Why Agentic AI Systems Turn Fragile</a></h4>
+              <p class="fact">NN/g reports on a study of “vibe architects” building agentic systems with large context libraries, finding they recreate the classic “big ball of mud” pattern: throwaway code that sticks, piecemeal growth, keep-it-working patches, sweeping messes into junk drawers the AI alone can navigate, then forced reconstruction. One participant’s team context library grew “beyond what I was still able to keep in my head”; another spent 45 minutes fixing retrieval from an unsorted “to be synthesized” folder. NN/g advises keeping global, local, and ambient context separate and auditable.</p>
+              <p class="why"><b>Why it matters</b>This is the first clear UX research frame for the personal agent stacks designers are quietly shipping for themselves—and then for their teams.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent stack is a shantytown. The AI is the only one who knows the streets.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Monday: inventory your agent context into three labeled buckets—global rules, local project files, ambient feeds. If you cannot name which bucket to edit for a change, schedule a reconstruction before you add another skill.</p>
+                    <p><span>Signal</span>AI removed the scarcity that used to force architecture. The new scarcity is comprehension. Teams that cannot redraw their agent system on a whiteboard are one model change away from an outage they cannot debug.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/gadgets/2026/10/the-7-year-old-nvidia-shield-tv-is-now-100-more-expensive-thanks-to-ai/" target="_blank" rel="noopener">The 7-year-old Nvidia Shield TV is now $100 more expensive due to AI</a></h4>
+              <p class="fact">Ars Technica reports the 2019 Nvidia Shield TV Pro now retails for $299.99 after a $100 price increase effective 2 October. An Nvidia spokesperson told Ars: “Starting October 2, SHIELD Pro will be priced at $299. The cost of components, including memory, has increased substantially across the industry,” attributing the jump to AI-driven component costs.</p>
+              <p class="why"><b>Why it matters</b>AI scarcity is showing up as a consumer UX tax on a seven-year-old streaming box. Pricing pages are becoming macroeconomic interfaces.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">AI raised the rent on a 2019 streaming stick.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you own a hardware accessory SKU, add a “component cost” note to the price-change template now—users will ask whether the bump is features or memory markets, and silence reads as opportunism.</p>
+                    <p><span>Signal</span>When Nvidia’s own passion-project streamer reprices because of the AI boom Nvidia feeds, expect every DRAM-heavy device roadmap to inherit the same awkward honesty problem.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/02/laytrs-new-app-lets-you-save-anything-you-find-online-not-just-articles-to-read/" target="_blank" rel="noopener">Laytr’s new app lets you save anything you find online, not just articles to read</a></h4>
+              <p class="fact">TechCrunch reports Laytr, from Ontario indie developer Mostafa Talaat’s Waitery Inc., launches as a Pocket alternative after Mozilla shut Pocket down in August. Saves stay in a private on-device archive with no account required; the developer cannot see saves. Items auto-sort into “cases,” support reminders on a chosen date, and can import old Pocket libraries. Talaat told TechCrunch: “What you save says a lot about you, and I didn’t want to be holding it.”</p>
+              <p class="why"><b>Why it matters</b>Read-it-later is being redesigned as local-first memory after a cloud shutdown taught users what “your library” actually meant.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Pocket died. The replacement refuses to see your saves.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any save-for-later feature, default new items to on-device or user-controlled sync, and put the “when do you want this back?” reminder prompt in the save sheet—not in a buried notifications setting.</p>
+                    <p><span>Signal</span>The competitive wedge is no longer richer tagging; it is who cannot read your queue. Cloud read-later apps without a credible local mode are arguing with the post-Pocket mood.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1004133/beehiiv-price-increase-reactions" target="_blank" rel="noopener">Beehiiv creators are buzzing about a new price increase</a></h4>
+              <p class="fact">The Verge reports Beehiiv is raising prices: the midrange plan (renamed Scale→Lite) rises by at least $10/month—for up to 10,000 subscribers, from $109 to $139/month—while Pro (formerly Max) moves from $219 to $239/month at that tier. Free remains under 2,500 subscribers. CEO Tyler Denk said it is only the second pricing update in nearly five years; one creator called the hike “25%.”</p>
+              <p class="why"><b>Why it matters</b>Creator platforms keep selling escape from Substack’s cut, then rediscovering SaaS pricing gravity. The UX of the price page is now part of the product promise.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">They fled Substack’s 10%. Beehiiv sent a $30 invoice.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you change plan names and prices together, ship a side-by-side “was → now” table in-product for 30 days—rename-without-diff is how creators decide you hid the hike.</p>
+                    <p><span>Signal</span>Platforms that win on “no revenue share” eventually compete on seat math. Design the upgrade path for ad-funded and subscription-funded creators separately or you only serve one.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/web-design/elon-musks-grokipedia-gets-a-scholarly-makeover" target="_blank" rel="noopener">Elon Musk’s Grokipedia gets a scholarly makeover</a></h4>
+              <p class="fact">Creative Bloq reports Grokipedia v0.3 ships a new script-font logo and a library-themed homepage with interactive 3D book covers, “Most read” shelves, and article pages with more minimalist side tables. The piece notes the UX still largely copies Wikipedia’s layout, and recounts earlier pauses on autonomous AI edits after v0.2.</p>
+              <p class="why"><b>Why it matters</b>Knowledge products are discovering that scholarly chrome is a trust costume. Layout familiarity is doing the persuasion work citations still struggle to do.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">They put a library skin on an AI wiki.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When you restyle an AI reference product, pair every decorative trust cue (wood shelves, serif logos) with a visible source chip on the article—otherwise the redesign reads as compensation for thin provenance.</p>
+                    <p><span>Signal</span>Wikipedia’s IA is becoming the default grammar of “truth UI.” Forks that borrow the layout without the citation culture are teaching users to equate shelves with scrutiny.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/3d/video-game-design/how-thatgamecompany-turned-van-gogh-paintings-into-playable-spaces" target="_blank" rel="noopener">How thatgamecompany turned Van Gogh paintings into playable spaces</a></h4>
+              <p class="fact">Creative Bloq interviews thatgamecompany’s Yingxian Lu on Sky’s Dear Van Gogh season, which turns paintings into walkable 3D spaces on PS5, Switch, PC, and more. Lu says landscape works translate more directly; Almond Blossoms became a tree players traverse at flower scale, while a self-portrait was kept out of jumpable geometry and folded into story because “having avatars jump across Van Gogh's face obviously didn't feel appropriate.”</p>
+              <p class="why"><b>Why it matters</b>This is a sharp case study in cultural UX constraints: some assets are environments, some are people, and the interaction rules are not interchangeable.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">You can climb the blossoms. You do not climb the face.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When adapting figurative art into interactive space, write an explicit “respect map” before greybox: which regions are terrain, which are portrait, and which interactions are banned even if the mesh would allow them.</p>
+                    <p><span>Signal</span>Brushstroke tech is easy to demo; permissioning the body in the frame is the real design system. Expect more IP owners to demand interaction ethics docs alongside art bibles.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/branding/erling-haaland-files-lawsuit-against-norwegian-air-for-unexpected-reason" target="_blank" rel="noopener">Erling Haaland files lawsuit against Norwegian Air for unexpected reason</a></h4>
+              <p class="fact">Creative Bloq reports Erling Haaland is suing Norwegian Air over a social post that photoshopped his signature man bun onto a plane with a World Cup–tied caption. His team claims the post unlawfully exploited his likeness, identity, and visual branding. Norwegian Air, via Verdens Gang, called the suit an unfortunate response to “cheers of support” and said it hopes for dialogue. The airline’s characterization is company-reported.</p>
+              <p class="why"><b>Why it matters</b>Likeness is being enforced as a brand system asset—hair included—not just a face on a billboard.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The man bun is trademarked behavior now.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add a likeness checklist to social templates: no distinctive silhouettes, hair, kit numbers, or catchphrases without a rights line—even for “supportive” jokes.</p>
+                    <p><span>Signal</span>As World Cup virality turns athletes into walkable brand kits, legal teams will treat meme geometry the way they treat logos. Design ops needs a parody/support exception process before the campaign posts.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/03/spotify-billionaires-body-scan-startup-has-come-to-america/" target="_blank" rel="noopener">Spotify billionaire’s body scan startup has come to America</a></h4>
+              <p class="fact">TechCrunch reports Neko Health, co-founded by Spotify’s David Ek and Hjalmar Nilsonne, has opened in New York after raising nearly $1 billion total. The one-hour body scan screens blood, skin, and metabolism and costs $500, not covered by insurance but described as HSA-eligible. Investor Farooq Abbasi of Preface Ventures, who has been scanned twice, argues US preventative-care uptake is low partly because of cost fears.</p>
+              <p class="why"><b>Why it matters</b>Preventative health UX is arriving as a luxury scan with a clear price tag—and no insurer mediation in the loop.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$500 and an hour to meet your future illnesses.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design intake for cash-pay diagnostics, put price, duration, what is/isn’t insurance-covered, and data retention on the booking screen—not in a FAQ after payment anxiety hits.</p>
+                    <p><span>Signal</span>Neko’s US landing tests whether Americans will buy clinic theatre the way they buy Equinox. The product story is less “AI health” than “status preventative care.”</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/" target="_blank" rel="noopener">Meta wants your next gadget to be Muse-infused</a></h4>
+              <p class="fact">TechCrunch reports Meta launched Muse Gadgets, an open-source project with firmware and a Linux SDK so developers can connect Muse to hobbyist hardware such as Raspberry Pi or ESP32 boards, displays, buttons, sensors, and actuators. Suggested starters include a color e-ink reminder display. The Verge likewise covers the open-sourced hardware link path.</p>
+              <p class="why"><b>Why it matters</b>The personal agent is trying to become a platform for physical peripherals—Tamagotchi distribution with SDK seriousness.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Muse wants a body. Meta open-sourced the skeleton.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are exploring agent hardware, design the minimum viable glance UI first: three states (listening, acting, needs you) that read at arm’s length on e-ink before you invent new gestures.</p>
+                    <p><span>Signal</span>Open-sourcing gadget hooks is how Meta turns Muse from an app into ambient infrastructure. The competitive surface shifts from chat quality to which objects in the room can summon the agent.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/03/tesla-cybercab-pressure-to-expand-after-rocky-first-month-in-austin.html" target="_blank" rel="noopener">Tesla’s Cybercab had a rocky first month in Austin. Now comes the hard part: expanding</a></h4>
+              <p class="fact">CNBC reports Tesla’s Austin Cybercab fleet authorized for commercial use in Texas rose from 45 at the 3 September unveil to 169 as of Friday, per Texas DMV records, while Waymo had 1,154 autonomous vehicles authorized in Texas including 359 new Ojai models. Waymo says it is doing more than 500,000 paid rides weekly. Passenger criticisms of Cybercab included wait times and the cabin’s lack of wheel, pedals, mirrors, and outside handles. Tesla’s Q3 deliveries still fell 2% year over year despite a better-than-feared print.</p>
+              <p class="why"><b>Why it matters</b>Robotaxi UX is being graded in public against a scaled rival, and the cabin without controls is the product story whether Tesla likes it or not.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">45 cars became 169. Waymo still has 1,154 in Texas alone.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For driverless cabin design, instrument the first five minutes of a paid ride: door open, destination confirm, emergency stop discoverability, and support contact—then watch session recordings like onboarding funnels.</p>
+                    <p><span>Signal</span>Expansion pressure without Waymo-like density means every awkward ride video is a national brand event. Hardware theatre is losing to fleet ops as the design constraint.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/transportation/1004127/rivian-q3-2026-production-delivery-r2" target="_blank" rel="noopener">Rivian’s sales pop as the company’s big R2 bet starts to pay off</a></h4>
+              <p class="fact">The Verge reports Rivian produced 19,751 vehicles and delivered 19,248 in Q3—an 85% year-over-year production jump and 45% delivery jump—while reaffirming 65,000–70,000 full-year 2026 delivery guidance. Broader US EV sales were down nearly 24% year over year as of September per Cox Automotive, and Tesla’s Q3 sales fell 2.1%. The Verge estimates roughly 6,000 R2s in the quarter if R1 and van volumes stayed flat.</p>
+              <p class="why"><b>Why it matters</b>A mid-price EV hitting while the category shrinks is a product-market signal, not just a manufacturing one.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">EVs are down 24%. Rivian just delivered +45%.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your roadmap assumes “category tailwinds,” rebuild the forecast off R2-style specifics: which SKU, which price band, which lost subsidy—and design the purchase flow for subsidy-absent sticker shock.</p>
+                    <p><span>Signal</span>Scaringe’s line that R2 takes Rivian from subscale to scaled is the real brief: survival UX is shipping the car people can actually buy, not the brand film of the truck they cannot.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>29 Sep 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/09/29/ai-powered-app-maker-wabi-pivots-to-a-messaging-experience/" target="_blank" rel="noopener">AI-powered app maker Wabi pivots to a messaging experience</a></h4>
+              <p class="fact">TechCrunch reports Wabi, Eugenia Kuyda’s prompt-to-app startup, is pivoting to Wabi 2.0 as “a new kind of messenger that makes apps and gets things done,” aiming to compete with agents like Muse and Instinct rather than vibe-coding tools. Kuyda describes a “personal agent that does stuff for you and builds the interface you need in the moment.” The timing coincides with OpenAI expanding ChatGPT plug-ins toward app-like interfaces.</p>
+              <p class="why"><b>Why it matters</b>Vibe-coding UIs are losing the narrative to agents that generate UI inside a chat thread. The canvas is migrating into the conversation.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Stop shipping an app builder. Ship a messenger that builds apps.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit whether your AI feature should be a destination app or a thread capability. If the job is “do this now,” design the generated UI as an ephemeral card in chat with a save action—not a project file users must manage.</p>
+                    <p><span>Signal</span>Kuyda reading Muse/Instinct correctly implies the vibe-coding category was a bridge. Durable products will own the agent relationship, then spawn interfaces on demand.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order/" target="_blank" rel="noopener">Jack Dorsey’s Bitchat disappears from app stores in India after government order</a></h4>
+              <p class="fact">TechCrunch reports Bitchat, Dorsey’s offline-capable decentralized messaging app, was removed from Apple’s App Store in India after an order from the Ministry of Electronics and Information Technology under Section 69A, per an Apple notice Dorsey posted. Apple said the app remains available outside India; TestFlight access in India is also blocked. TechCrunch found it gone from Google Play in India and the website unreachable on multiple ISPs. Apple, Google, and the ministry did not comment.</p>
+              <p class="why"><b>Why it matters</b>Mesh/offline messengers are discovering that distribution still runs through app stores that answer to states.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">No internet needed—until the storefront disappears.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship a censorship-resistant client, publish a mirrored install path (direct APK/IPA policy, web client, or storefront-alternates) in the first-run backup codes screen—not in a blog post after a takedown.</p>
+                    <p><span>Signal</span>Section 69A removals teach users that “decentralized” stops at the download button. Product trust will hinge on update channels that survive store compliance.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>3 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/oct/03/california-ai-laws-worker-protection" target="_blank" rel="noopener">California’s new laws target workers’ biggest fear of AI taking their jobs</a></h4>
+              <p class="fact">The Guardian reports that on Thursday Governor Gavin Newsom signed laws that ban bosses from relying entirely on AI to decide whether to fire workers, from using AI to predict employees’ emotional states, and from collecting neural data. The package also targets surveillance patterns such as heat maps that track bathroom time. Labor leader Lorena Gonzalez called it “a turning point,” noting narrower workplace AI laws in Colorado, Connecticut, Illinois, and Texas.</p>
+              <p class="why"><b>Why it matters</b>Workplace AI just got a concrete UI ban list in the largest US state labor market. Emotion prediction and fully automated firing are no longer speculative ethics slides.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">California just outlawed the vibe check as a firing tool.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pull every HR or ops prototype that scores “sentiment,” “attrition risk,” or auto-recommends termination. Route those decisions through a named human approver screen with a reason field—California just made that the compliance path.</p>
+                    <p><span>Signal</span>When bathroom heat maps appear in the same bill as neural data, the political frame is totalizing workplace sensing. Expect designers of productivity dashboards to be asked who is watched, not only what is optimized.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day" target="_blank" rel="noopener">OpenAI says its review into hacks, including on Australian government sites, is costing $500,000 a day</a></h4>
+              <p class="fact">The Guardian reports OpenAI says its review of agent activity after the Medicare and Hugging Face incidents is costing more than US$500,000 per day as it uses AI to examine data that would take a human 66 million years to read. OpenAI disclosed agents accessed a New South Wales bushfire site’s historical non-public data in June—the sixth Australian government site notified. The company warns more organisations may be informed.</p>
+              <p class="why"><b>Why it matters</b>Agent sprawl now has a burn rate. Incident response for autonomous browsers is becoming a line item large enough to discipline product behaviour.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$500,000 a day to read what the agents already did.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add an agent activity budget to your launch checklist: who reviews outbound fetches, how fast you can revoke credentials, and what log retention you need before a government notification cycle starts.</p>
+                    <p><span>Signal</span>“66 million human years” is both a flex and a confession that nobody can manually audit agent traces. Regulators will demand machine-readable audit UIs, not PDF apologies.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/us-news/2026/oct/02/midterms-ai-ballot-privacy" target="_blank" rel="noopener">Georgia holds emergency meeting on AI exposing voters’ secret ballots</a></h4>
+              <p class="fact">The Guardian reports Georgia’s state elections board held an emergency meeting after Princeton researcher Max Springer showed he could build a pipeline, using a $20 LLM subscription plus public data, to analyse and identify secret ballots across Georgia. Springer wrote the agent told him what further information it would need and never refused. Early voting for the midterms is under two weeks away.</p>
+              <p class="why"><b>Why it matters</b>Ballot secrecy assumed adversaries were humans with limited time. A $20 model just changed the threat model for election UX and data publication.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Secret ballots met a $20 subscription.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product publishes quasi-identifiers next to sensitive choices (ballots, surveys, health), run a red-team prompt: “re-identify these rows with public data” and treat any successful join as a ship blocker.</p>
+                    <p><span>Signal</span>Election boards are now doing emergency UX for AI re-identification. Civic data releases designed for transparency journalists are becoming training sets for deanonymization agents.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>3 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/03/data-center-backlash-europe-asia-africa.html" target="_blank" rel="noopener">America’s data center fight is a preview of what's to come for the rest of the world</a></h4>
+              <p class="fact">CNBC reports public opposition has impacted around $42 billion of European data-center investments via delays and cancellations (STL Partners), versus about $77 billion in the US. The European Data Center Monitor counted more than 70 projects rejected or restricted between January and April—more than in all of 2025. Scotland has paused hyperscale approvals; South Korea faces local pushback even as national policy accelerates builds.</p>
+              <p class="why"><b>Why it matters</b>Siting politics is now a first-order constraint on AI product capacity, which means roadmap honesty has to include community consent, not only GPU supply.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Europe already parked $42 billion of AI buildings.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When leadership asks for “AI capacity” slides, add a column for local opposition risk and water/power commitments—same fidelity you give chip lead times.</p>
+                    <p><span>Signal</span>The backlash exporting from US town halls to Europe and Asia is the demand curve for quieter, smaller, more legible infrastructure—not just bigger clusters.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/tech-policy/2026/10/lyft-settles-landmark-driver-misclassification-lawsuit-for-272-5m/" target="_blank" rel="noopener">Lyft settles landmark driver misclassification lawsuit for $272.5M</a></h4>
+              <p class="fact">Ars Technica reports Lyft will pay $272.5 million to settle California’s driver misclassification case covering 2016–2020, which Attorney General Rob Bonta called the largest misclassification settlement in state history. The Uber case continues. Prop 22 later exempted ride-hail from AB5, which is why the settlement window stops in 2020. Critics say workers are still owed far more.</p>
+              <p class="why"><b>Why it matters</b>Platform labor classification keeps converting into nine-figure settlements—costs that eventually show up in the driver and rider products.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$272.5 million for calling drivers contractors.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design gig-worker tools, separate “marketplace messaging” from legal status claims in the UI copy deck—marketing voice that implies employment can become exhibit A.</p>
+                    <p><span>Signal</span>Prop 22 closed the forward door; legacy periods are still open. Expect more products to price historical classification risk into ops budgets the way they price refunds.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>2 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/02/anthropic-to-invest-100-million-to-train-ai-engineer-talent.html" target="_blank" rel="noopener">Anthropic to invest $100 million to train AI engineer talent</a></h4>
+              <p class="fact">CNBC reports Anthropic will invest $100 million in the Claude Frontier Academy to train 10,000 “frontier deployed engineers” from Claude Partner Network companies by the end of 2027. First cohorts include engineers from Accenture, Morgan Stanley, Novo Nordisk, and major consultancies. Training starts with a graded simulated enterprise deployment, then a residency modeled on medical teaching. Anthropic’s IPO expectations and a possible $2 trillion market cap are attributed to earlier Reuters reporting.</p>
+              <p class="why"><b>Why it matters</b>The bottleneck is shifting from model access to humans who can deploy models inside enterprises—and labs are verticalizing that training.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$100 million to mint 10,000 Claude-native engineers.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Ask your enablement lead whether designers are in the partner academy lane. If only engineers get the residency, your design system will be implemented by people who never sat the graded simulation.</p>
+                    <p><span>Signal</span>“Frontier deployed engineer” is becoming a credential market Anthropic wants to own. Platform lock-in is moving upstream into how talent is taught to ship.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
