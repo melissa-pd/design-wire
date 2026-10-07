@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-10-07" aria-current="true">
+          <span class="d">7 Oct 2026</span>
+          <span class="m">Wed · 26 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,482 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-10-07 ############ -->
+      <article class="edition" data-ed="2026-10-07" data-label="Wednesday, 7 October 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>7 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/ai/2026/10/google-rolls-out-improved-synthid-ai-content-detector-now-available-globally/" target="_blank" rel="noopener">Google rolls out improved SynthID AI content detector, now available globally</a></h4>
+              <p class="fact">Ars Technica reports that Google opened SynthID.com so anyone can check images, video, and audio for SynthID watermarks, expanding beyond Google-only detection to partners including OpenAI, Nvidia, Kakao, and soon Apple. Gemini alone has integrated SynthID with over 180 billion images and videos plus 240,000 years of audio; logged-in users get roughly 10 checks per day, a quota Google engineers told Ars exists to hinder removal-tool development.</p>
+              <p class="why"><b>Why it matters</b>Provenance tooling is graduating from a trusted-tester perk to a public destination — and the daily quota is the product. Detection is being rationed so the watermark stays hard to reverse-engineer.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">180 billion Gemini watermarks. About 10 checks a day for you.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your team ships AI media, stop treating “we watermark” as sufficient disclosure. Design a visible provenance path that works when SynthID.com returns nothing — open-weight and Meta-style unmarked outputs still will — and write the empty-state copy before launch day.</p>
+                    <p><span>Signal</span>The interesting constraint is not accuracy; it is anti-adversarial UX. Google is choosing friction that protects the mark over convenience that would train removers, which means industry “AI detectors” will keep feeling half-broken on purpose.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/" target="_blank" rel="noopener">The next hurdle for AI agents: getting websites to let them in</a></h4>
+              <p class="fact">TechCrunch reports that Amazon has blocked Meta’s Muse agent from browsing or buying on its retail site, while Walmart — a Muse partner — told TechCrunch that failed Muse purchases were unintentional: human-verification buttons interrupt the agent and boot it out. Airlines including Delta say they lack third-party agent integrations and are evaluating security and experience first; Meta, Walmart, Stripe, Sierra and others are drafting an open standard for agent-to-business communication.</p>
+              <p class="why"><b>Why it matters</b>The agent era is colliding with CAPTCHA-era infrastructure. Users cannot tell intentional blocks from accidental ones, so blame lands on both the retailer and the agent.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent got blocked. Was it policy — or a “I’m not a robot” button?</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Map every critical path an agent might hit — checkout, booking, account recovery — and decide now whether agents are allowed, blocked, or redirected to a human handoff. If the answer is “CAPTCHA should sort it out,” that is a product failure waiting for a viral complaint.</p>
+                    <p><span>Signal</span>Partner logos no longer mean the funnel works. Walmart’s accidental blocks show that “agent-ready” is an integration and anti-bot redesign, not a press-release checkbox.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/" target="_blank" rel="noopener">LibreOffice says ‘no AI’ is now a software feature</a></h4>
+              <p class="fact">TechCrunch reports that The Document Foundation said it “will not add” AI to LibreOffice for the foreseeable future, reiterating after its late-August release that the suite “contains no generative AI features” so documents are not uploaded to a server and no network connection is required. Local AI remains available only via optional extensions; the foundation said no integration yet meets its on-device and multi-provider criteria.</p>
+              <p class="why"><b>Why it matters</b>In a market where every productivity suite is stuffing chatbots into toolbars, “no AI in the default install” is being positioned as an audit-surviving product promise.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">LibreOffice’s new feature is the absence of generative AI.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design enterprise productivity tools, draft a one-page “data leaves the machine?” contract for every AI affordance. If legal cannot answer yes/no in a sentence, ship the feature as an explicit extension — not a silent default.</p>
+                    <p><span>Signal</span>Negative capability is becoming a brand. Teams that cannot offer a credible off-switch will lose regulated and confidential-document workflows to tools that treat air-gapped as a first-class mode.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/07/tony-fadell-on-why-the-first-wave-of-ai-gadgets-failed-and-what-comes-next/" target="_blank" rel="noopener">Tony Fadell on why the first wave of AI gadgets failed — and what comes next</a></h4>
+              <p class="fact">TechCrunch reports that iPod/Nest veteran Tony Fadell said he declined to advise first-wave AI gadget makers because the devices “didn’t meet any kind of need” and were “interesting technology for geeks.” He argued that less than 0.01% of the world has ever had a human assistant, so pitching “an assistant” is a founder fantasy; he expects winning agents to run on-device for trust and battery, and sees Apple as unusually positioned on hardware trust despite lagging proprietary AI.</p>
+              <p class="why"><b>Why it matters</b>The sharpest critique of agent gadgets is not model quality — it is that the metaphor assumes a lifestyle almost nobody has lived.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Less than 0.01% of humans have had an assistant. The rest are your users.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Rewrite your agent onboarding without the word “assistant.” Name three concrete jobs the product finishes in week one — bookings, renewals, refunds — and gate bank-level permissions behind a staged trust ladder, not day-one blanket access.</p>
+                    <p><span>Signal</span>Fadell’s on-device prediction reframes the data-center arms race as a transitional phase. The sticky consumer agent may look more like Face ID than like a cloud chatbot with a camera.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/06/meta-joins-companies-to-tame-chaos-of-doing-business-with-ai-bots.html" target="_blank" rel="noopener">Meta joins with group of companies to tame ‘chaos’ of doing business with AI bots</a></h4>
+              <p class="fact">CNBC reports that Meta, Walmart, Stripe, Sierra and others are publishing a “personal agent protocol,” an open standard for how AI agents authenticate to businesses. OpenAI chairman Bret Taylor, leading the effort via Sierra, told CNBC it is “kind of chaos until such a standard exists,” comparing it to social login; Meta’s David Singleton said Muse already has millions of U.S. users. OpenAI and Anthropic are not aboard yet; Taylor said he would be “really disappointed” if rivals do not use it.</p>
+              <p class="why"><b>Why it matters</b>Agent commerce is hitting the same interoperability wall social login once did — without a shared handshake, every merchant reinvents allow/deny.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Muse has millions of users. Merchants still can’t tell agent from bot.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product will ever talk to agents, design an explicit agent identity state — authenticated-on-behalf-of-user vs anonymous crawler — and decide what each may see before a standards body finishes the paperwork.</p>
+                    <p><span>Signal</span>Whoever owns the handshake owns the fee rails. Stripe and Meta co-authoring the protocol is a hint that authentication for agents will arrive bundled with payments and identity, not as a neutral IETF hobby.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/07/google-experiments-with-an-ai-powered-gaming-platform/" target="_blank" rel="noopener">Google experiments with an AI-powered gaming platform</a></h4>
+              <p class="fact">TechCrunch reports that Google’s Area 120 incubator launched Playground, an AI game-creation platform where users build browser games from text prompts, choosing genre, 2D/3D, and single- or multiplayer before describing mechanics and style. Games can stay private, share via link, or publish to an Explore gallery with leaderboards; generation uses a weekly token system with a free tier and more tokens for Google One AI subscribers. It is initially for users 18+ in the U.S., with planned Unity Spark integration later.</p>
+              <p class="why"><b>Why it matters</b>Google is back in consumer game creation after Stadia — this time as a prompt-to-play loop rather than a cloud console.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Google’s new game studio is a text box and a weekly token meter.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design creation tools for non-experts, budget the post-publish surface — gallery, leaderboards, continued edit — as carefully as the prompt. The generative moment is cheap; the social loop is the product.</p>
+                    <p><span>Signal</span>Playground’s age gate and token meter admit what Roblox-style AI build tools often hide: unconstrained kid-facing generation plus infinite iteration is a moderation and cost problem dressed as creativity.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>7 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1006712/amazon-about-you-shopping-data" target="_blank" rel="noopener">Amazon uses its tracking data to guess whether shoppers have a flat butt and no friends</a></h4>
+              <p class="fact">The Verge reports that Amazon’s “About You” shopping-preferences page is going viral after a Threads user found the retailer inferred she “has flat buttocks” from purchase history; other users spotted labels such as “cannot keep real plants alive” and treating cats “as biological children.” The Verge’s Emma Roth notes the page sits under Account → Your Shopping preferences → About You, where shoppers can edit or delete the inferred details used for personalization.</p>
+              <p class="why"><b>Why it matters</b>Personalization usually hides in a black box. Amazon accidentally shipped the roast reel — a readable model of how it sees you.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Amazon’s preference UI just became a personality roast.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Ship an “About You” export for any profiling system you run — traits, confidence, and delete. If the labels would embarrass your brand on Threads, rewrite the taxonomy before users do it for you.</p>
+                    <p><span>Signal</span>Transparency features are becoming content. The teams that treat inferred-profile screens as marketing surfaces — not buried compliance pages — will set the expectation that every recommender owes users a legible self-portrait.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/product-design/jaguars-dramatic-type-01-finally-makes-sense-of-the-controversial-rebrand" target="_blank" rel="noopener">Jaguar's controversial rebrand finally makes sense with the unveiling of the bold Type 01</a></h4>
+              <p class="fact">Creative Bloq reports that Jaguar unveiled the Type 01, an electric grand tourer JLR calls its most advanced and aerodynamic Jaguar yet, with 1,015 horsepower, a targeted 400+ mile range, and 23-inch wheels; preorders are open with deliveries expected from mid-2027. Managing Director Rawdon Glover said Jaguar interviewed 2,500 people globally who graded the design out of 10 — yielding many 1s and 2s but more 9s and 10s than any previous Jaguar. Colours shift from the Miami-pink Type 00 concept to soberer silvers, whites, blacks, blues, and greys.</p>
+              <p class="why"><b>Why it matters</b>The rebrand’s polarizing campaign finally has a car attached — and Jaguar is treating love/hate score distributions as a feature, not a bug.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">2,500 people scored it. The middle of the scale was not the point.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When testing a polarizing visual system, stop optimizing for average liking. Track the share of 9–10s versus 1–2s, and decide in advance whether your brand needs a thinner, louder audience.</p>
+                    <p><span>Signal</span>Jaguar is using research theatre to license alienation. Expect more luxury brands to publish bimodal test results as proof they “copied nothing,” turning disagreement into brand equity.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/print-design-publishing/weve-never-seen-a-disney-billboard-like-this-before" target="_blank" rel="noopener">We've never seen a Disney billboard like this before</a></h4>
+              <p class="fact">Creative Bloq reports that agency Courage’s Disney+/Hulu outdoor campaign slices the Hulu and Disney wordmarks into “Hu Dis?” — text-message slang highlighting that Hulu titles such as The Kardashians and Scrubs are available inside Disney+. The ads pair the halved logos with show stills, including a tight crop on Kim Kardashian’s eyes that makes the question land harder.</p>
+              <p class="why"><b>Why it matters</b>A mega-brand that rarely mutilates its mark just proved half a wordmark can still carry recognition — and that the joke is the product message.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Disney cut its logo in half and the question still answered itself.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Before your next partnership lockup, try a two-second billboard test: if a stranger cannot parse the offer from the wordplay alone, you are decorating, not communicating. Design the crop and the punchline as one unit.</p>
+                    <p><span>Signal</span>Logo demolition is becoming mainstream brand craft again. The constraint is recognizability under damage — a better brief than “make the lockup bigger.”</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1005916/amazon-ring-smart-home-lock-dial-recharge-camera-security-pricing-availability" target="_blank" rel="noopener">Ring’s first smart lock can be charged by turning a dial when the battery unexpectedly dies</a></h4>
+              <p class="fact">The Verge reports that Amazon’s first Ring Smart Lock builds a hand-crank charger into its thumb-turn dial so a dead battery can be revived without a physical backup key or a 9-volt jumper, priced at $249 in black, silver, and brass for an early-2027 U.S. launch pending FCC approval. Unlock options include fingerprint and a backlit keypad with scheduled and expiring guest codes; it uses Ring’s Quick Release Ultra Battery Pack and Amazon’s Sidewalk network instead of home Wi-Fi.</p>
+              <p class="why"><b>Why it matters</b>Smart locks usually fail at the dead-battery moment. Ring turned the failure mode into a physical interaction people already understand — twist.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Dead battery? Crank the dial. No spare key required.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any battery-backed physical product, storyboard the zero-power failure: how does the user regain agency without a cable, a key, or a support call? If the answer needs a hidden port, you have not finished the design.</p>
+                    <p><span>Signal</span>Sidewalk-backed locks trade Wi-Fi dependency for mesh dependency. The UX win is local crank rescue; the systems bet is that Amazon’s neighborhood radio stays up when your router does not.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/media/2026/oct/07/mumsnet-denies-using-ai-for-content-message-board-prompt" target="_blank" rel="noopener">Mumsnet denies using AI for content after prompt appears on message board</a></h4>
+              <p class="fact">The Guardian reports that Mumsnet users saw an “AIBU Response Schema v.1.0” prompt appear in reply to an advice thread, instructing a model how to write a forum-style ruling with Mumsnet abbreviations. After shifting explanations, founder Justine Roberts said the prompt came from a system that sends drafts to OpenAI for title suggestions and that “it looks like an error on their side,” while insisting Mumsnet does not use AI to write threads. The site’s annual report said it was “embedding AI tools”; monthly unique users fell 19% in 2025 to 6.1 million.</p>
+              <p class="why"><b>Why it matters</b>Community products live on the feeling that peers, not pipelines, are talking. A leaked system prompt turns every reply into a trust audition.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The forum replied with its own AI prompt. Users noticed.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you pipe user drafts to a model for “title suggestions,” treat prompt-leak as a P0 UX bug: red-team the failure, write the incident copy in advance, and never ship a second conflicting explanation after the first.</p>
+                    <p><span>Signal</span>Declining community platforms will reach for AI assist just as members’ tolerance for synthetic peers hits zero. Growth tooling and trust are now inverse products.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/organic-literature-books-by-people-stamp-ai/" target="_blank" rel="noopener">Your Next Great Read Might Be Certified ‘Organic’</a></h4>
+              <p class="fact">Wired reports that Books by People received UK Intellectual Property Office approval for a thumbprint-style cover mark certifying human authorship, going beyond honesty-system labels by requiring a declaration, proprietary software checks, and manual review of drafting evidence. Five publishers have signed up; the first marked book is expected by year-end, with membership plus per-book fees. Insiders cite AI scandals — including a reported $2 million deal cancellation — while warning false positives could become a “witch hunt.”</p>
+              <p class="why"><b>Why it matters</b>Publishing is borrowing food-label logic: when trust thins, certification becomes packaging.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Books are getting an organic stamp — for humans.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product claims “human-made,” specify the evidence standard — declaration, process audit, or detector — and design the false-positive appeal path before the badge ships.</p>
+                    <p><span>Signal</span>Human-authorship marks will migrate from covers into UX chrome everywhere generative text appears. The competitive fight will be who owns the trusted verifier, not who writes the nicest disclaimer.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/design/poster-design/the-new-hunger-games-sunrise-on-the-reaping-poster-feels-like-beautiful-propaganda" target="_blank" rel="noopener">The new Hunger Games: Sunrise on the Reaping poster feels like beautiful propaganda</a></h4>
+              <p class="fact">Creative Bloq reports that Lionsgate’s Sunrise on the Reaping poster stacks cast faces under Ralph Fiennes’s President Snow in heavy purple florals that look serene until axes and other threats resolve in the detail — a composition fans on X called “beautiful and unsettling” and “beautiful piece of Panem propaganda.”</p>
+              <p class="why"><b>Why it matters</b>Franchise marketing is leaning into diegetic propaganda as the art direction, not just the plot device.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The poster works because it looks like the Capitol made it.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For world-building launches, design one artifact that could exist inside the fiction — poster, UI, packaging — and stress-test whether beauty and threat read in the same glance.</p>
+                    <p><span>Signal</span>Propaganda-as-aesthetic is the new prestige-IP default. Audiences reward posters that feel authored by the villain’s design system.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/07/another-personal-ai-assistant-has-launched-meet-tab-which-emerged-from-stealth-with-a-300m-valuation/" target="_blank" rel="noopener">Another personal AI assistant has launched — Meet Tab, which emerged from stealth with a $300M valuation</a></h4>
+              <p class="fact">TechCrunch reports that Tab emerged from stealth at a $300 million valuation — declining to share exact funding amounts — with investors including SV Angel, Valar Ventures, and American Spirit. Founders say users text Tab on iMessage or WhatsApp to get bills, bookings, and calls handled; the agent has its own phone number, computer, and wallet. Amdani’s pitch: data is not used for training, the card sits in a vault Tab never sees, and “nothing that can be undone happens without your ‘yes.’”</p>
+              <p class="why"><b>Why it matters</b>The personal-agent category is consolidating around messaging-as-UI and trust choreography rather than a new chat window.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Another agent. Same inbox. $300M says trust is the demo.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Design irreversible actions behind an explicit yes — payments, messages, cancellations — and show what will happen in plain language before the agent executes. If your undo story needs a support ticket, you are not ready to hold a wallet.</p>
+                    <p><span>Signal</span>Valuations are accruing to “we won’t train on you” packaging while capability stays table stakes. Expect a wave of lookalike messaging agents that compete on permission UX, not model brand.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/06/silicon-valleys-ai-wunderkind-launches-underdog-the-most-private-instinct-muse-competitor-yet/" target="_blank" rel="noopener">Silicon Valley’s AI wunderkind launches Underdog, the most private Instinct/Muse competitor yet</a></h4>
+              <p class="fact">TechCrunch reports that Thiel Fellow Andrew Wen launched an invite-only beta of Underdog, an on-device personal AI assistant powered by his Husky inference engine and a 27-billion-parameter reasoning model fine-tuned from Qwen3.8-27B. The app will be free and not ad-supported; with Stripe co-founder Patrick Collison as an angel, monetization is planned as a tiny cut of agent-initiated payments rather than data mining.</p>
+              <p class="why"><b>Why it matters</b>Underdog is betting that everyday agent tasks do not need frontier cloud models — and that privacy can be a business model, not a settings page.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A 27B on-device agent that wants interchange fees, not your data.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are designing a “private” agent, publish the cost story: who pays for inference, and what happens when the model needs cloud fallback. Users now treat mystery GPUs as a trust smell.</p>
+                    <p><span>Signal</span>Interchange-funded agents invert the ad-model assistant. The second-order fight is whether Stripe-like rails become the default settlement layer for machine shoppers.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/" target="_blank" rel="noopener">Hark releases an AI personal assistant with a focus on privacy</a></h4>
+              <p class="fact">TechCrunch reports that Brett Adcock’s Hark widely released Hark Pro — free with a paid tier for heavy use — framed as a UI/OS for computer-using AI rather than an AGI lab. Design lead Abidur Chowdhury (ex-Apple) demoed a full-screen home with proactive task prompts and “panels,” plus a small window that shows the agent navigating the web so users can watch it work.</p>
+              <p class="why"><b>Why it matters</b>Most agents hide their browser. Hark is making the work visible as a trust surface.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The agent opens a tiny browser so you can watch it shop.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add a live “agent camera” to any autonomous flow — scroll, click, form fill — and pair it with a pause/stop control. Opacity is cheaper than a post-hoc audit log nobody reads.</p>
+                    <p><span>Signal</span>Computer-use products are converging on OS metaphors. The winners will own the home screen of intention — proactive cards — not the chat transcript.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/06/bluesky-wants-to-give-you-your-own-domain-on-the-open-web/" target="_blank" rel="noopener">Bluesky wants to give you your own domain on the open web</a></h4>
+              <p class="fact">TechCrunch reports that Bluesky applied for a .bsky top-level domain so handles like @sarahp.bsky.social could become sarahp.bsky; ICANN is due to publish applications on 7 October 2026, with an 18–24 month process. COO Rose Wang said Bluesky has no plans to sell or monetize the domains, framing ownership of online presence as core to an open web.</p>
+              <p class="why"><b>Why it matters</b>A social network is trying to turn identity into real DNS — and explicitly refusing the registrar revenue model.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Bluesky wants .bsky — and says it won’t sell the names.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product issues handles, plan the portable identity story now: what happens when users leave, and can their name resolve off-platform? Design profile URLs as if they might become real domains.</p>
+                    <p><span>Signal</span>Leaving registrar money on the table is a strategic tell. Bluesky is buying ideological consistency — and a future where profiles are websites — over an easy ARPU line.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/news/1006207/google-xreal-aura-glasses-price-release-date-preorder" target="_blank" rel="noopener">At $1,279, Google’s Xreal Aura will go head-to-head with Meta’s VR Glasses</a></h4>
+              <p class="fact">The Verge reports that Xreal opened Aura preorders starting at $1,279 for a 12GB/256GB Android XR configuration — $20 under Meta’s VR Glasses — with a 16GB/512GB option at $1,499. Both use a corded compute puck; Aura ships first to reservation holders in the US, Canada, Japan, and South Korea, with general orders “in the coming weeks.”</p>
+              <p class="why"><b>Why it matters</b>Transparent Android XR and Meta’s glasses are launching into the same price band within weeks — a shelf war for face computers.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$1,279 for Google/Xreal Aura — $20 less than Meta’s pair.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For XR hardware UX, price-parity means differentiation must live in input: Aura’s puck touchpad and hand lasers versus Meta’s eye-tracking pinch. Prototype tasks that fail when the wrong modality is primary.</p>
+                    <p><span>Signal</span>The $20 gap is positioning, not economics. Google needs a beachhead price against Meta’s brand gravity while Android XR still feels like a reservation club.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/" target="_blank" rel="noopener">Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product</a></h4>
+              <p class="fact">TechCrunch reports that Melius, an AI platform for generating ad campaigns, images, and videos built by ex-Ramp engineers, raised $25 million total — a $20 million Series A led by CRV plus a $5 million seed — after scrapping its first performance-marketing codebase. The company says it topped $1 million in annualized revenue within two months of a July stealth exit and now pitches an “agents lab for creative work,” competing with Higgsfield (valued at $5.4 billion in August).</p>
+              <p class="why"><b>Why it matters</b>Creative-agent startups are raising on the premise that generating the assets is a bigger market than optimizing the spend.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">They burned the first product. Investors still wrote a $20M Series A.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are building generative creative tools, instrument which agent outputs actually ship — not which ones get generated. Your Monday metric is “used in a live campaign,” not prompt volume.</p>
+                    <p><span>Signal</span>The Higgsfield comparison tells VCs the category is winner-take-most but not winner-take-all. Expect a flock of “agents labs” that look identical until distribution into agencies decides survival.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/07/spotify-expands-audiobooks-to-over-180-markets/" target="_blank" rel="noopener">Spotify expands audiobooks to over 180 markets</a></h4>
+              <p class="fact">TechCrunch reports that Spotify expanded audiobooks beyond its prior English-speaking and German markets to over 180 markets, with more than 350,000 titles for the new markets and over 120 languages; Spain alone gets 45,000+ Spanish titles via 300+ publishers. Premium users in eligible countries get 12 listening hours; Audiobook+ offers 15 hours. Spotify says monthly audiobook listeners grew 40% and hours 30% year over year, with Page Match used by 1 million people monthly since February.</p>
+              <p class="why"><b>Why it matters</b>Spotify is treating audiobooks as a global format business — hours allowances, charts, and even AI narration tools — not a US/UK side feature.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">180 markets. 12 hours on Premium. Audiobooks are a metering problem now.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design media entitlements, make the hour meter legible at the moment of play — remaining balance, what counts against it, and the upgrade path — before users feel cheated mid-chapter.</p>
+                    <p><span>Signal</span>Page Match’s 1M monthly users hint that physical–digital bridges beat pure discovery UI. Expect more scan-to-continue patterns as streamers fight for habit, not just catalog size.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>6 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment" target="_blank" rel="noopener">Google told to halt work on datacentres in Finland over environmental concerns</a></h4>
+              <p class="fact">The Guardian reports that Finland’s Licensing and Supervision Authority ordered Google’s Tuike Finland Oy to suspend preparatory work at Muhos and Kajaani datacentre sites by 23 October until environmental impact assessments finish, after 330 hectares of forest were felled at Muhos and nearly 200 hectares logged at Kajaani without completed EIAs. The sites are part of a €13bn (£11bn) northern Finland project; Google said it had “fallen short” of its standards and would follow guidance, citing plans to plant trees across 130 hectares at Muhos.</p>
+              <p class="why"><b>Why it matters</b>AI infrastructure is now regulated like heavy industry — and clearing land before the EIA is finished is becoming a systemic flashpoint, not a paperwork slip.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">€13bn of datacentres. 330 hectares already sand. Work must stop.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your company depends on new compute capacity, add environmental-permit risk to roadmap reviews the same way you track GPU supply. A paused site is a product delay.</p>
+                    <p><span>Signal</span>Northern Europe’s “easy” power-and-cool narrative is cracking. Expect more abrupt halts that reprice AI timelines around local licensing, not model release calendars.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/business/2026/oct/07/mcdonalds-ai-prices-lawsuit" target="_blank" rel="noopener">McDonald’s sued for allegedly using AI tool to determine pricing for franchises</a></h4>
+              <p class="fact">The Guardian reports a 2 October federal Chicago lawsuit alleging McDonald’s AI pricing platform lets independently owned franchises exchange nonpublic price and sales data in ways that amount to algorithmic price-fixing. McDonald’s said the complaint is inaccurate, that “AI does not set menu prices,” and that optional tools do not “automate, coordinate or fix pricing”; it has also contested Reuters reporting that franchisees were pressured to follow recommendations.</p>
+              <p class="why"><b>Why it matters</b>Franchise independence is the legal fiction that makes national chains work. An AI that “recommends” prices across that network is now antitrust bait.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Same Quarter Pounder, different neighborhood price — meet the AI lawsuit.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship pricing intelligence to a multi-party network, document what data is pooled, who can see whom, and whether deviations are monitored. That memo is your discovery exhibit.</p>
+                    <p><span>Signal</span>“Optional” AI pricing will not stay a soft power tool. Courts are being asked to treat recommendation+surveillance as coordination — a template that will travel beyond burgers.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/oct/07/privacy-regulator-probe-kmart-anko-meta-smartglasses-australia" target="_blank" rel="noopener">Privacy watchdog launches investigation into China-based company behind Kmart ‘pervert glasses’ app</a></h4>
+              <p class="fact">The Guardian reports that Australian Privacy Commissioner Carly Kind opened an investigation into Shenzhen Qingcheng, maker of the HeyCyan app in Kmart’s $89 Anko smartglasses, after the company failed to respond to inquiries; a GetUp petition topped 55,000 signatures. Kind wrote to retailers and to Meta and Google but said only Qingcheng is under investigation in this process, stressing that Privacy Act duties often attach to the software entity, not the shelf retailer — and that individuals using the devices largely fall outside the Act.</p>
+              <p class="why"><b>Why it matters</b>Cheap camera glasses exposed a gap: retail can sell the hardware while privacy law struggles to reach the wearer or even the seller.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$89 glasses. 55,000 petition signatures. The app maker gets investigated.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design or sell always-on capture wearables, publish a wearer-visible recording indicator and a retailer-facing privacy packet that names the data controller before the first viral incident.</p>
+                    <p><span>Signal</span>Regulators are pivoting from celebrity Ray-Bans panic to software-entity enforcement on discount clones. The policy fight will be rewriting privacy acts so hardware sellers cannot shrug.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>6 Oct 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/" target="_blank" rel="noopener">AI computing startup Lambda to raise $4B ahead of planned IPO</a></h4>
+              <p class="fact">TechCrunch, citing the Wall Street Journal, reports Nvidia-backed Lambda is raising up to $4 billion at a $14.5 billion pre-money valuation ahead of a planned 2027 IPO, led by Coatue and Blackstone. A letter to investors reviewed by the Journal showed backlog rising from $15 billion in June to $50 billion in September, largely on a $35 billion Anthropic commitment; Lambda also raised $1 billion in debt last week. Lambda, Coatue, and Blackstone did not immediately comment.</p>
+              <p class="why"><b>Why it matters</b>Neocloud valuations are being underwritten by a handful of lab mega-contracts — concentration risk dressed as backlog growth.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$50B backlog. $35B of it is one customer: Anthropic.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When your roadmap assumes “GPU cloud will be there,” ask which single tenant funds that cloud’s backlog. Dual-source inference the way you dual-source fonts — boring, necessary.</p>
+                    <p><span>Signal</span>IPO delays plus debt raises plus one-customer backlog spikes are the tell that public markets will price AI infra as counterparty risk, not as infinite demand.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/07/economy-inflation-ai-trade-imf-iran-hormuz-trump-.html" target="_blank" rel="noopener">Why AI is both the hope and the hazard for world leaders, according to IMF chief Georgieva</a></h4>
+              <p class="fact">CNBC reports IMF Managing Director Kristalina Georgieva told a Singapore audience that AI is “rapidly becoming a key driver of countries’ relative fortunes,” with AI hardware already more than a tenth of world goods trade and investment likely to rival historic railroad and electricity builds. The IMF estimates AI could add up to half a percentage point to annual world growth if done right — “like adding an economy the size of ASEAN” over a decade — while warning the boom is inflationary and uneven, widening inequality for countries outside the supply chain.</p>
+              <p class="why"><b>Why it matters</b>The world’s lender of last resort is framing AI as both a demand shock and an inequality machine — not a soft productivity story.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">AI could add ASEAN-sized growth — and leave half the world outside the boom.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When executives ask designers to “show AI ROI,” translate Georgieva’s split: who captures the surplus in your product ecosystem, and who only pays the energy and price inflation? Put that map in the strategy deck.</p>
+                    <p><span>Signal</span>Macro policy is absorbing AI into the same sentence as Gulf war energy shocks and wartime debt. Design orgs that still pitch AI as a feature toggle are speaking a dead dialect to finance and government partners.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>7 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/startup-atoco-makes-water-from-air-using-data-centers/" target="_blank" rel="noopener">A Startup Has a Plan to Make Water From Air Using Data Centers’ Waste Heat</a></h4>
+              <p class="fact">Wired reports that Irvine startup Atoco, founded by 2025 chemistry Nobel laureate Omar Yaghi, is developing metal-organic framework machines that harvest water from air using low-level industrial heat rather than grid electricity — a fit, CEO Samer Taha says, for AI datacenters that dump waste heat while consuming huge water volumes. Prototypes already produce gallons per day; Yaghi notes a gram of MOF can present surface area “two football fields” wide.</p>
+              <p class="why"><b>Why it matters</b>Datacenter opposition is increasingly about water. A Nobel-backed startup is pitching waste heat as the missing input for atmospheric water generation.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Waste heat in, drinking water out — if the MOF sponge scales.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design facilities or sustainability narratives for AI products, track water intensity beside power. Community consent briefings now ask about gallons, not just megawatts.</p>
+                    <p><span>Signal</span>The next wave of “green AI” claims will be closed-loop resource stories. Whether Atoco ships at datacenter scale matters less than the fact that water-from-heat is becoming an investable category.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
