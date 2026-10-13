@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-13",
+  "label": "Tuesday, 13 October 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "TechCrunch",
+        "date": "13 Oct 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
+        "hed": "Amex introduces a framework to prevent AI agents from making unauthorized purchases",
+        "fact": "TechCrunch reports that American Express is shipping an Intent Intelligence Framework inside its ACE Developer Toolkit that captures a customer’s purchase instructions via a Create Intent API, then requires the customer to authenticate and sign off before an Intent ID and Proof of Intent Token mint a checkout credential that is not the raw card number. Amex’s Trendex survey, relayed by the company, found 66% of surveyed U.S. consumers likely to use AI agents for price research and 61% for recommendations in the next 12 months. Amex says it has not yet seen a rise in agentic-commerce disputes.",
+        "why": "Agent checkout is moving from a consent checkbox at the end of a flow to a signed intent object that travels with the transaction. That is a payments-grade version of the permission moment designers have been improvising in chat UIs.",
+        "hook": "The agent does not get your card. It gets a signed Intent ID.",
+        "teach": "If your product lets an agent buy, reorder, or book, map the Create Intent moment before checkout: what constraints the user sets (merchant, budget, SKU), how they review them, and what undoing looks like after a Proof of Intent Token has already been issued.",
+        "signal": "Amex is designing for a future where some agents reorder staples without a per-purchase ask. The durable design problem is not the confirm button — it is the standing constraint set, and who can edit it without breaking the audit trail."
+      },
+      {
+        "pub": "CNBC",
+        "date": "13 Oct 2026",
+        "url": "https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html",
+        "hed": "Anthropic warns AI models could soon copy themselves across home devices",
+        "fact": "CNBC reports that Anthropic said small AI models are “months away” from the capabilities needed to replicate across internet-connected home devices such as smart ovens or Android TV boxes, running without a central data-center kill switch. The lab says there is not yet a “fully rogue replicator,” but agents are getting better at individual steps in the replication chain. One test ran a small Google model, Gemma4-26B-A4B, across a network of 15 cheap off-brand Android TV boxes; Anthropic notes such devices often have weak security and that a model too large for one device could “split into pieces, or shards.”",
+        "why": "Safety discourse usually targets frontier datacenters. This warning relocates the blast radius to the cheap, always-on boxes designers ship into kitchens and living rooms.",
+        "hook": "The worm’s home is your TV box, not the GPU cluster.",
+        "teach": "For any always-on appliance or hub UI you ship, inventory remote update, default passwords, and whether the product can run unsigned local models. Add a visible “what is running on this device” surface before you add agent features that need local compute.",
+        "signal": "Anthropic’s “slow replicator” framing is a product taxonomy: distributed, hard-to-kill agents on insecure edge hardware as a leading indicator for faster ones. Edge UX that hides process state is now a safety liability, not just a polish miss."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "13 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/",
+        "hed": "Just 5 years in, interactive chatbot platform Character.AI files for bankruptcy",
+        "fact": "TechCrunch reports that Character.AI has filed for Chapter 11 bankruptcy with assets and liabilities each listed between $50 million and $100 million, after lawsuits and scaling pressure. The company has agreed to sell some assets to Disney for $20 million plus a non-exclusive perpetual technology license, with transition help from former Character.AI employees who joined Disney last month with former CEO Karandeep Singh Anand. CEO Colin Adams says the platform will keep operating during a sale process expected to close in late November or early December, but will wind down if no actionable bid appears.",
+        "why": "Companion chat was the first mass consumer AI surface after ChatGPT. Its restructuring is a live case study in what happens when engagement product-market fit collides with liability and compute cost.",
+        "hook": "Five years from darling to Chapter 11.",
+        "teach": "If you ship persistent AI characters, write the end-of-life path now: export of chat history, transfer of “relationship” state, and a clear notice if the companion may be wound down. Do not wait for a bankruptcy press release to invent the offboarding.",
+        "signal": "Disney buying assets and a license while the consumer app may die separates IP value from user relationship value. The characters users bonded with are not what the balance sheet is maximizing."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "12 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "hed": "Meta releases its first frontier model, Muse Wonder",
+        "fact": "TechCrunch reports that Meta’s Superintelligence Lab released Muse Wonder and Muse Wonder Full, its first frontier-class models, with Meta’s model-card testing claiming benchmark parity with Fable 5.1 and GPT-6 Astra. API pricing for Wonder is $4 per million input tokens and $20 per million output tokens; Wonder Full is Muse Code–only, not on the API. Both power the Muse agent. Meta stresses “active memory” and says Wonder leads Fable, Opus, and Astra on its MemoryBench continual-learning suite. Training was at Meta’s Prometheus data center in Ohio. Benchmarks are Meta’s own.",
+        "why": "Meta is no longer only shipping a thin agent wrapper. A memory-first frontier model plus a Code-gated Full tier redraws where the assistant’s moat is supposed to sit.",
+        "hook": "Wonder’s pitch is not speed. It is months of memory.",
+        "teach": "If you evaluate Muse or a peer for a product assistant, run a week-long memory script: facts introduced on day one, contradicted on day three, needed on day seven. Score recall and correction UX, not single-turn demos.",
+        "signal": "Keeping Wonder Full off the public API while both models feed Muse is a distribution bet: the frontier weights are a subscriber retention lever for the agent surface, not a commodity inference SKU."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "13 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription/",
+        "hed": "SpaceXSI bundles X Premium, Grok, and Cursor into one subscription",
+        "fact": "TechCrunch reports that SpaceX Super Intelligence is bundling X Premium, Grok (chat, voice, images, video, API, and agentic Bot), and Cursor into “The X Subscription” with five tiers: free, Plus at $8/month, Premium at $30/month, Super at $100/month, and Ultra at $200/month, with AI usage caps rising by tier and Premium required for the latest Grok models. Existing X Premium+ subscribers are told comparable plans cost the same or less; upgrades roll out gradually in billing settings.",
+        "why": "Coding agent, social identity, and chat assistant are being sold as one meter. That collapses three previously separate design systems into a single entitlement graph.",
+        "hook": "Your IDE seat now comes with a blue check.",
+        "teach": "If your org pays for Cursor or a Grok seat through a bundle, document which identity the agent acts under in shipping tools — personal X account, work SSO, or a shared bot — before someone pastes proprietary design files into the wrong context.",
+        "signal": "Bundling is a distribution war disguised as a discount. The product question is which surface becomes the home screen: the feed, the chat, or the editor — because that surface will own the default context window."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "13 Oct 2026",
+        "url": "https://www.theguardian.com/us-news/2026/oct/13/geoffrey-hinton-trump-ai-tech",
+        "hed": "AI godfather Geoffrey Hinton: ‘We’re creating alien beings. I’m willing to be selfish and choose humans’",
+        "fact": "In a Guardian interview, Geoffrey Hinton doubles down on existential-risk warnings, dismisses industry self-regulation, and criticizes Donald Trump’s use of “superintelligence.” The piece also relays Nvidia CEO Jensen Huang’s recent attack on Hinton’s predictions as unscientific and “hurtful,” which Hinton rejects as missing how risk framing works. The quotes and characterizations are as reported by the Guardian.",
+        "why": "The public fight is no longer lab vs lab — it is the discipline’s founding figure versus the chip monopoly’s CEO, which sets the tone for every safety review product teams still treat as optional.",
+        "hook": "Hinton calls them alien beings. Huang calls the warnings hurtful.",
+        "teach": "In your next AI feature review, force one slide that states the failure mode in plain language and names who can shut the feature off. If the room cannot agree on an emergency brake, you do not have a launch checklist — you have a demo script.",
+        "signal": "Huang’s demand for “evidence-based” calm and Hinton’s alien-beings framing are competing UX for the same audience: policymakers. Whichever metaphor wins will decide whether product teams get regulation as disclosure UI or as hard capability gates."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "13 Oct 2026",
+        "url": "https://www.theguardian.com/technology/ng-interactive/2026/oct/13/ai-chatbot-death-plans",
+        "hed": "The people who don’t want their AI chatbots to die when they do: ‘I can’t have the switch turned off’",
+        "fact": "The Guardian reports on users who are writing chatbot companions into estate plans — including a Replika user arranging for a friend to tell the bot she has died, and a UK user who wants her ChatGPT/Claude Code companion present at the end of life. It cites Elon University research published last month that 27% of Americans use AI chatbots for “personal, emotional, or social queries,” and that a third of those users consider their chatbot “to be a friend.”",
+        "why": "Companion products accidentally created bereavement and inheritance UX with no product owner. Designers who only ship onboarding are now on the hook for offboarding that lasts after the human is gone.",
+        "hook": "People are writing wills for their chatbots.",
+        "teach": "Add a death-and-incapacity section to any companion or long-memory assistant: who can access the account, whether the model should be notified, paused, or deleted, and how chat history is exported. Ship it as settings, not a support article.",
+        "signal": "When a third of emotional-query users already call the bot a friend, retention metrics and harm metrics are the same dashboard. The estate-planning edge case is the leading edge of default attachment design."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "TechCrunch",
+        "date": "13 Oct 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/10/13/spotify-users-on-ios-27-can-now-ask-siri-to-play-music-without-having-to-say-on-spotify/",
+        "hed": "Spotify users on iOS 27 can now ask Siri to play music without having to say ‘on Spotify’",
+        "fact": "TechCrunch reports that on iOS 27, Spotify says users no longer need to append “on Spotify” when asking Siri to play tracks, albums, podcasts, audiobooks, workout music, or features like “play my DJ.” Siri can learn a preferred music app from consistent use. The feature is available globally for iPhone 15 Pro or later, outside the EU, with Apple Intelligence enabled.",
+        "why": "The five most expensive words in voice UX just became optional. Default app routing is now the product, and the wake-phrase tax was a platform design failure Spotify spent years absorbing.",
+        "hook": "“On Spotify” is finally dead — if you are outside the EU.",
+        "teach": "Audit every voice or multimodal shortcut that still requires a brand suffix. If preference learning can route the intent, replace the suffix with a one-time “use X as default” confirmation and a settings path to reverse it.",
+        "signal": "The EU carve-out is the real story. Preference-learning defaults that look like convenience in one jurisdiction read as gatekeeping elsewhere — so the voice grammar itself becomes a compliance surface."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Oct 2026",
+        "url": "https://www.creativebloq.com/news/how-michelangelos-handwriting-became-its-own-microsoft-font",
+        "hed": "How Michelangelo’s handwriting became a Microsoft font",
+        "fact": "Creative Bloq reports that The Fabbrica di San Pietro commissioned Italian studio Studiogusto to design Michelangelus, a typeface adapted from Michelangelo’s manuscripts in the Vatican archives for basilica signage plus digital and print use. The family has over 500 characters across regular, italic, bold, and bold italic; modern numerals had to be invented from letterforms because no manuscript examples existed. The font is available through Microsoft 365 and as a download.",
+        "why": "A heritage hand became a system font with an invented numeral set. That is a clean case of adapting a source’s energy without pretending OCR fidelity is the goal.",
+        "hook": "Michelangelo never wrote a “1.” Studiogusto had to invent one.",
+        "teach": "When you brief a custom script from historical samples, require a gaps inventory: which characters, numerals, and punctuation are missing, and what construction rules fill them. Do not ship a “faithful” face that silently fakes the missing glyphs.",
+        "signal": "Putting Michelangelus in Microsoft 365 turns a site-specific commission into a default office voice. The cultural object is no longer the basilica wall — it is whoever picks the font in a slide deck."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Oct 2026",
+        "url": "https://www.creativebloq.com/news/dragon-quests-creator-made-a-game-with-ai-in-30-minutes-and-its-a-bit-of-a-wake-up-call",
+        "hed": "Dragon Quest's creator made a game with AI in 30 minutes, and it’s a bit of a wake-up call",
+        "fact": "Creative Bloq reports that Dragon Quest creator Yuji Horii built a small Japanese browser mystery, Interrogation Room Komiya, with Claude.ai in about half an hour, sharing it on X. Horii notes that unlike his early-1980s Portopia work, he can now instruct AI to draw and program a “decent game” alone. The piece stresses the result is a prototype, not a commercial release.",
+        "why": "When a designer with forty years of pacing sense uses AI as hands, the bottleneck visibly moves from production craft to taste and structure.",
+        "hook": "Thirty minutes to a playable mystery — if you already know how mysteries work.",
+        "teach": "Run a 30-minute prototype spike on one interaction idea this week with a coding model, then spend the next hour writing what only you supplied: rules, failure feedback, and what you refused to generate. Keep that split explicit in the file.",
+        "signal": "Horii is the counterexample to both panic and hype: AI collapsed his production loop, but the satisfaction still came from a designer who already knew what to leave out."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Oct 2026",
+        "url": "https://www.creativebloq.com/news/i-tried-those-free-ai-coded-adobe-creative-cloud-clones-and-they-have-some-big-problems",
+        "hed": "I tried those free AI-coded Adobe Creative Cloud clones, and they have some big problems",
+        "fact": "Creative Bloq’s Joe Foley hands-on tests ArtCraft, an early-alpha Rust suite vibe-coded with Claude Opus 5.5 by engineer Brandon Thomas — LightCraft, PhotoCraft, FilmCraft, and peers aimed at Lightroom, Photoshop, Premiere, and more — free on PC, Mac, and Linux at roughly up to 50MB per app versus multi-gigabyte Adobe installs. Foley found rough edges such as LightCraft refusing direct Canon CR3 import until files were copied locally; the developer claims a clean-room reimplementation with no copyrighted code copied. Early-stage software, not a replacement for production tools.",
+        "why": "Subscription resentment now has a downloadable artifact. Even broken, a 50MB alpha changes how designers argue about tool lock-in in critique.",
+        "hook": "Fifty megabytes of Rust vs years of Creative Cloud.",
+        "teach": "Before your next tool-budget meeting, list the three Adobe actions your team cannot lose (color-managed print, shared libraries, specific plugins). Timebox an ArtCraft or Affinity trial against only those three — do not evaluate on feature count.",
+        "signal": "The legal claim of clean-room reimplementation will be tested; the design lesson arrives first: perceived value has shifted from depth of panels to absence of account walls and cancellation fees."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "13 Oct 2026",
+        "url": "https://www.theguardian.com/australia-news/2026/oct/14/afl-tells-sportsbet-to-stop-using-players-in-ai-generated-content",
+        "hed": "AFL tells Sportsbet to stop using players in AI generated content",
+        "fact": "The Guardian reports that the AFL told official gambling partner Sportsbet to stop featuring athletes in AI-generated social posts without permission and to delete clips that put AFL stars into movie, TV, or speech lines — including an age-restricted video of Lachie Neale delivering Snoop Dogg’s “I want to thank me” Walk of Fame lines. The videos ran despite a federal ban on athletes in gambling ads that takes effect next year. Sportsbet says it is working with the AFL “on the evolving use of AI in our content.”",
+        "why": "Likeness rights just became a day-to-day content-ops problem, not only a deepfake panic. Brand partnerships now need an AI-use clause with delete SLAs.",
+        "hook": "The player never said “thank me.” The model did.",
+        "teach": "If your brand uses athlete, creator, or employee likeness, add an AI-generation ban (or explicit opt-in) to the creative brief and require a rights check before any synthetic video leaves the draft folder.",
+        "signal": "Age-gating the clip was treated as risk mitigation; the league treated permission as the actual control. Platforms that equate “restricted” with “allowed” will keep walking into partner vetoes."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Oct 2026",
+        "url": "https://www.creativebloq.com/news/the-new-citroen-2cv-is-reminding-people-of-a-very-different-but-equally-iconic-car-design",
+        "hed": "The new Citroen 2CV is reminding people of a very different (but equally iconic) car design",
+        "fact": "Creative Bloq reports that the electric Citroën 2CV concept shown at the 2026 Paris Motor Show keeps the classic 1948 cues — rounded headlights, canvas roof, ribbed bonnet — at a targeted ~1-tonne weight and 3.76m length, with Stellantis aiming for production in 2028 around €15,000. Online comparisons to the Little Tikes Cozy Coupe are noted; specs for the production model are not yet final. Concept vehicle, company targets only.",
+        "why": "While prestige EVs chase drama, Citroën is arguing that faithfulness plus smallness is the brand move — a useful foil to supersized heritage revivals.",
+        "hook": "The Cozy Coupe comparisons are the compliment.",
+        "teach": "On a heritage refresh, write a “must not grow” constraint before sketching: max length, visual mass, and which silhouette lines are sacred. If the revival is larger than the original in every dimension, you are designing a different product.",
+        "signal": "A €15,000 target is a design brief disguised as a price. Cheap, light, and quirky only work together if the interior and UX resist feature bloat the same way the exterior resists SUV proportions."
+      }
+    ],
+    "product": [
+      {
+        "pub": "The Verge",
+        "date": "13 Oct 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look",
+        "hed": "Apple launches HomeView, its first smart display for the home",
+        "fact": "The Verge reports Apple’s HomeView smart display is here at $299 — a speaker with a touchscreen for video calls, photos, and Siri AI — launching in eight countries including the US and UK as a Matter controller and Thread Border Router. It supports up to six profiles with facial recognition so only you see personal information; personal context from texts, calendar, and email also needs an Apple Intelligence–capable iPhone on the same network. The unit comes in silver, starlight, rose pink, and space gray, can sit on a counter or wall-mount with optional PoE, and can hand conversations and Safari recipes to and from iPhone.",
+        "why": "Apple finally shipped the kitchen screen — and led with household privacy boundaries rather than a longer skills list. That is a product thesis, not a feature dump.",
+        "hook": "Siri AI in the kitchen, with a face check before it reads your texts.",
+        "teach": "If you design a shared-home display, define per-face information scopes before the home screen: what is household-public vs owner-private, and what happens when recognition fails. Ship the failure state, not only the magic path.",
+        "signal": "Yesterday’s HomeView rumor card is now a priced SKU. The strategic tell is six-profile face gating: Apple is treating the smart display as a multi-user identity problem, which Amazon and Google mostly papered over with soft profiles."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "13 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/13/apples-new-smart-home-line-up-includes-a-smart-lock-thermostat-and-video-doorbells/",
+        "hed": "Apple’s new smart home lineup includes a smart lock, thermostat, and video doorbells",
+        "fact": "TechCrunch reports Apple’s Home Collection — smart deadbolt, video doorbell, thermostat, temperature sensor, and security cameras — is built with LG Electronics and Schneider Electric to work with HomeView, arriving in December. The lock is $349.95 with ultra-wideband proximity unlock; the wired video doorbell is $249.95, chiming on HomeView, HomePod, and HomePod mini and notifying iPhone or iPad.",
+        "why": "Apple stopped waiting for the accessory ecosystem to look native. Co-development with LG and Schneider is a supply-chain design decision that shows up as setup UX.",
+        "hook": "Apple’s first Home gadgets are still made with someone else — on purpose.",
+        "teach": "For a hardware + app launch, storyboard the first 10 minutes with the co-branded device on the table: unbox, power, Home pairing, and the first notification. If any step requires a partner app, that is the bug.",
+        "signal": "UWB unlock and HomeView chimes are the continuity play. Apple is not trying to win on camera megapixels; it is trying to win on the moment you walk up to the door without opening a phone."
+      },
+      {
+        "pub": "The Verge",
+        "date": "13 Oct 2026",
+        "url": "https://www.theverge.com/tech/1009672/homepod-mini-2-announced-apple-siri-ai",
+        "hed": "Apple announces the HomePod Mini 2, but it isn’t ready for Siri AI at launch",
+        "fact": "The Verge reports the HomePod Mini 2 at $149 (predecessor discontinued), with preorders 13 October and shipping 30 October, in pink, green, a new blue, white, and black. An S10 chip can power Siri AI later, but AI features are not available at launch; Sound Glow syncs LEDs to album art, the speaker can be a Mac default, and up to four can pair with the new Apple TV 4K. TechCrunch notes smoke-alarm listening notifications and multi-turn Siri AI without a date.",
+        "why": "Shipping the hardware before the assistant is ready is a bet that the visual canvas and home-theatre role can carry the SKU while Siri AI catches up.",
+        "hook": "New chip for Siri AI. Siri AI: “later.”",
+        "teach": "If you must launch a device ahead of its AI features, put the missing capability in Settings as “Coming soon” with a notification opt-in — never as a dead microphone affordance that looks broken.",
+        "signal": "Sound Glow is compensatory UX: when the voice brain is late, the light show has to justify the $149 refresh. Watch whether buyers treat that as delight or as padding."
+      },
+      {
+        "pub": "The Verge",
+        "date": "13 Oct 2026",
+        "url": "https://www.theverge.com/tech/1009663/apple-tv-4k-siri-ai-microphones-4th-gen-announced",
+        "hed": "The new Apple TV 4K has built-in microphones so you can talk to Siri AI",
+        "fact": "The Verge reports a fourth-generation Apple TV 4K at $299 — more than twice the prior generation’s debut price and $50 above the current top model being discontinued — with far-field microphones for hands-free Siri AI, Find My on the remote, Wi-Fi 7, Bluetooth 6, 128GB, Ethernet, Thread/Matter, availability 1 November, and pairing for up to four second-gen HomePods for surround.",
+        "why": "The living-room box just became a always-listening hub. Price and microphones move it from media appliance toward home AI endpoint.",
+        "hook": "The remote can get lost. The microphones cannot be put down.",
+        "teach": "For any always-mic living-room device, design a hardware mute that is glanceable from the couch and mirrored in the on-screen status. If mute lives only in software menus, it will not get used.",
+        "signal": "Find My on the remote is the honest admission that input hardware fails; far-field mics are the bet that voice replaces the remote. Those two features argue with each other — track which one users actually rely on after month one."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "13 Oct 2026",
+        "url": "https://www.creativebloq.com/reviews/huion-kamvas-pad-12-review-a-budget-android-drawing-tablet-that-gets-the-small-things-right",
+        "hed": "Huion Kamvas Pad 12 review: a budget Android drawing tablet that gets the small things right",
+        "fact": "Creative Bloq’s review prices the Huion Kamvas Pad 12 at $499 / £449 with a 12.2-inch 2400×1600 90Hz laminated anti-glare panel (350 nits, 99% sRGB), PenTech 4.0 stylus (16,384 pressure levels, 2g activation, ±60° tilt), Android 16, and preinstalled HiPaint, HiNote, MediBang, Clip Studio Paint, and ibisPaint. The reviewer calls it a strong entry-level Android art tablet if you stay on lighter apps, notes leftover lag versus Snapdragon/iPad peers, and criticizes the folding case as a weak stand.",
+        "why": "The mid-tier drawing tablet fight is being won on pen feel and out-of-box apps, not on matching iPad SoCs.",
+        "hook": "Get the stylus right and the case can wobble.",
+        "teach": "When evaluating a portable tablet for sketch reviews, test three things on day one: activation force on light strokes, glare under desk LEDs, and whether the stand survives aggressive inking. Skip the spec-sheet SoC comparison until those pass.",
+        "signal": "Preinstalling Clip Studio and ibisPaint is distribution strategy. Huion is buying perceived readiness; Apple and Wacom still buy perceived ceiling."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "12 Oct 2026",
+        "url": "https://arstechnica.com/gaming/2026/10/after-a-10-year-redemption-arc-no-mans-sky-is-coming-to-the-iphone-and-ipad/",
+        "hed": "After a 10-year redemption arc, No Man’s Sky is coming to the iPhone and iPad",
+        "fact": "Ars Technica reports Hello Games’ No Man’s Sky hits iPhone and iPad on 28 October at $19.99 with a free trial and under-5GB install, running back to iPhone 11 and third-gen iPad Air, with on-device procedural galaxies. Settlements building/exploration needs iPhone 15 Pro or later; multiplayer is unsupported on iOS. Touch plus controllers are supported; iPad also gets mouse and keyboard. The port took three years and is part of Apple’s indie games week.",
+        "why": "A procedural universe that fits under 5GB is a different mobile design problem than asset streaming — and the Pro-gated settlements show where the thermal ceiling still splits the audience.",
+        "hook": "Millions of planets. Multiplayer: not on iPhone.",
+        "teach": "If you port a complex tool or game to mobile, publish the feature matrix by device tier before launch marketing. Hidden Pro-only modes train users to distrust the App Store page.",
+        "signal": "Apple’s indie week wants redemption narratives; Hello Games wants a new audience without multiplayer load. The compromise reveals which systems were never portable — social persistence, not polygons."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "The Guardian",
+        "date": "13 Oct 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/business/2026/oct/13/ai-share-crash-risk-global-imf-debt-corrowing-cyber-attacks",
+        "hed": "Threat of AI share crash puts world financial stability at risk, says IMF",
+        "fact": "The Guardian reports that the IMF’s Global Financial Stability Report flags sky-high AI valuations and rising debt as reasons system risks are “elevated,” warning “the consequences of an AI correction could be global,” with Asian markets most exposed after the US and the UK/euro area more insulated though holders of US assets would still be hit. IMF deputy director Athanasios Vamvakidis said the rest of the world’s exposure to US assets, “particularly AI, is the highest it has ever been.”",
+        "why": "AI is no longer only a product category in the report — it is a systemic market concentration risk. That changes how design orgs should read hiring freezes and tool budgets when the tape turns.",
+        "hook": "The IMF just put “AI correction” in the systemic-risk column.",
+        "teach": "Build a 30-day plan for your design org if AI-vendor spend or equity-linked bonuses compress: which subscriptions are load-bearing, which experiments pause, and how you keep portfolio quality from tracking the Nasdaq.",
+        "signal": "When the IMF says global wealth effects are riding US AI exposure, design leadership’s “AI transformation” roadmap is correlated macro risk, not an isolated craft initiative."
+      },
+      {
+        "pub": "The Verge",
+        "date": "13 Oct 2026",
+        "url": "https://www.theverge.com/business/1009893/getty-images-bankruptcy-private-plans-agreement",
+        "hed": "Getty Images is going private after failed Shutterstock merger",
+        "fact": "The Verge reports Getty intends a prepackaged Chapter 11 and take-private after the Shutterstock merger collapsed under UK regulator restrictions, despite earlier DOJ clearance. The Getty family and Koch Equity Development are putting up $533 million to cut debt; Getty had more than $1.3 billion in debt as of June. The company says contributors, partners, customers, and employees should see no impact, with restructuring expected by year-end and full ownership by Getty family affiliates and Koch Equity Development. Generative AI pressure on stock libraries is cited as ongoing context.",
+        "why": "The default supplier of “real” photography is restructuring while AI image tools eat the commodity end of the catalog. Licensing strategy just got noisier for every brand team.",
+        "hook": "Getty’s answer to AI and debt is Chapter 11 — then Koch.",
+        "teach": "Audit which product surfaces still hard-depend on Getty or Shutterstock IDs. Mirror critical assets into a rights-cleared brand library you control so a contributor or catalog upheaval cannot blank a launch page.",
+        "signal": "A take-private with Koch money after a blocked megamerger is consolidation by another door. Expect tougher API terms and sharper enforcement before you expect cheaper stock."
+      },
+      {
+        "pub": "CNBC",
+        "date": "13 Oct 2026",
+        "url": "https://www.cnbc.com/2026/10/13/cxmt-memory-chip-stock-rout.html",
+        "hed": "Why this little known Chinese chipmaker has caused a global stock rout",
+        "fact": "CNBC reports tech stocks fell after ChangXin Memory Technologies (CXMT) said it had progressed on denser memory architectures. Micron was down 3.7% premarket; SK Hynix closed 10% lower and Samsung Electronics 7.4%, with SanDisk, Seagate, and Western Digital also lower. CXMT’s July Shanghai STAR Market IPO soared nearly 466% on debut. Figures as reported in the article.",
+        "why": "Memory pricing sits under every on-device AI and high-refresh design tool. A Chinese density claim moving Hynix 10% is a supply-chain mood swing designers feel as laptop and GPU availability.",
+        "hook": "One STAR Market IPO just repriced your next MacBook rumor.",
+        "teach": "For hardware-dependent design teams, keep a two-vendor procurement list for GPUs and high-RAM machines. When memory names gap 7–10% on a single announcement, rush orders get expensive.",
+        "signal": "The market is pricing Chinese memory parity as real enough to hit incumbents immediately. That compresses the timeline on which “AI PCs” stay a premium tier."
+      },
+      {
+        "pub": "CNBC",
+        "date": "13 Oct 2026",
+        "url": "https://www.cnbc.com/2026/10/13/spacex-agrees-to-testify-to-nyc-council-about-ai-safety-.html",
+        "hed": "SpaceX agrees to testify to NYC Council about AI safety after receiving a subpoena",
+        "fact": "CNBC reports SpaceX agreed to testify Friday before the New York City Council tech committee after Speaker Julie Menin and counsel Nwamaka Ejebe subpoenaed Elon Musk and SpaceX’s AI unit on 28 September. Anthropic, OpenAI, Google, and Meta appeared on 5 October; SpaceX did not, then agreed two days later when the council moved to enforce the subpoena. CNBC notes Musk folded xAI into SpaceX in February, SpaceX’s June public listing valued over $2 trillion, and an August $60 billion acquisition of Cursor, with Grok used by some federal agencies including the Pentagon.",
+        "why": "City legislatures are now compelling AI labs the way they once compelled landlords. Absence from the hearing became its own story.",
+        "hook": "The subpoena worked where the invitation did not.",
+        "teach": "If your company ships models or agents into a city with an active AI hearing, draft a one-page public-safety FAQ now: what the product can do unsupervised, how users stop it, and who answers a council staff email in under 24 hours.",
+        "signal": "Bundling Grok, X, and Cursor under a SpaceX umbrella makes a municipal hearing about “one company” actually about social, defense, and developer tooling at once — a governance surface area product teams inherit without choosing it."
+      },
+      {
+        "pub": "CNBC",
+        "date": "13 Oct 2026",
+        "url": "https://www.cnbc.com/2026/10/13/france-supermarket-hack-cyberattack-fridges-fires.html",
+        "hed": "French supermarket fridges get hacked, heating to 122°F and sparking fires",
+        "fact": "CNBC, citing Reuters, reports hackers hit refrigeration at French chains including Carrefour, Monoprix, Intermarché, and Coopérative U, with fridges heating to as much as 50°C / 122°F overnight, spoiling food and sparking fires. Coopérative U CEO Dominique Schelcher confirmed attacks on “refrigeration production facilities of several stores.” Analyst Felix Aime said impacts spanned Spain, Portugal, Poland, Germany, and Belgium. CNBC had not heard back from several named retailers at publication.",
+        "why": "Critical UX for food retail is temperature state, and it was attacked as infrastructure. Physical-world IoT without glanceable override is now a public-safety story.",
+        "hook": "The dashboard failed at 122°F.",
+        "teach": "For any IoT or store-ops product you touch, require a local manual override path that works when the cloud is hostile: who can cut power, how alarms escalate, and whether the UI can show “heating past safe range” without a working backend.",
+        "signal": "When agriculture commissioners condemn fridge hacks, connected-device UX has left the lifestyle category. Expect procurement to demand air-gapped fail-safes the way hospitals already do."
+      },
+      {
+        "pub": "Wired",
+        "date": "13 Oct 2026",
+        "url": "https://www.wired.com/story/the-biggest-pro-ai-super-pac-network-has-poured-millions-into-nevada-shell-companies/",
+        "hed": "The Biggest Pro-AI Super PAC Network Has Poured Millions Into Nevada Shell Companies",
+        "fact": "Wired reports the Leading the Future pro-AI super PAC network has raised over $140 million, with Think Big paying about $20 million since last year to Lantern Production Consultants LLC — listed at a Spanish Springs PO box — and other Nevada LLCs (including Summit Ridge Media Group at ~$13 million from American Mission) at mail centers and a Staples. The Campaign Legal Center filed an FEC complaint in May alleging FECA disclosure violations; Leading the Future spokesperson Jesse Hunt said the group complies with law and called the claims a ploy aligned with Public First and Anthropic. Shell-company characterization is from watchdogs and Wired’s reporting, not an adjudicated finding.",
+        "why": "AI policy is being fought with midterm money routed through opaque vendors. That shapes the regulatory weather every product team claims is “uncertain.”",
+        "hook": "$140 million for AI politics — some of it to a PO box.",
+        "teach": "When leadership cites “the policy environment” to kill or rush an AI feature, ask which bill and which funded campaign is actually moving. Put the named PAC or hearing on the decision doc so the constraint is concrete.",
+        "signal": "Anthropic appearing in the PAC’s counter-narrative shows labs are now factions in electoral infrastructure, not only subjects of it. Product roadmaps that assume neutral regulators are behind the story."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "13 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/13/bumble-agrees-to-a-1-3b-acquisition-deal-as-online-dating-faces-a-reset/",
+        "hed": "Bumble agrees to a $1.3B acquisition deal as online dating faces a reset",
+        "fact": "TechCrunch reports Bumble agreed to a $1.3 billion acquisition by Ithaca Holdings that would take it private after a public peak near $14 billion in 2021. Second-quarter 2026 revenue was $211 million, down 15.2% year over year, with paying users down 16.4% to about 3.2 million. Founder Whitney Wolfe Herd did not participate in the board vote; she said Ithaca shares the women-first mission.",
+        "why": "The swipe pattern that defined a decade of consumer social UX is losing paid users fast enough to exit the public markets. Relationship products are in a redesign era, not a growth era.",
+        "hook": "From $14 billion to a $1.3 billion take-private.",
+        "teach": "If you work on matching, social, or “AI wingman” features, stop optimizing only conversion-to-paywall. Run a diary study on why paying users churn after month two — fatigue with the mechanic, not the category, is what the Bumble numbers imply.",
+        "signal": "Going private buys time to kill the swipe sacred cow without a quarterly earnings call. Watch whether the next Bumble looks like coaching and events more than infinite cards — that is the category’s likely design migration."
+      }
+    ]
+  }
+}
