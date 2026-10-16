@@ -1,0 +1,305 @@
+{
+  "date": "2026-10-16",
+  "label": "Friday, 16 October 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "TechCrunch",
+        "date": "15 Oct 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "hed": "Meta launches an open-weight AI model that runs on Macs",
+        "fact": "TechCrunch reports that Meta released Muse Spark Open, which it calls the most capable US open-weight model: 816 billion parameters, a 1 million-token context window, natively multimodal, and aimed at coding and agentic work. Local Mac runs need at least 1 terabyte of RAM, per Engadget as cited by TechCrunch; Meta says it paired the model with Muse Code on workflows including Mastodon client fixes and DaVinci Resolve footage review and crop. Benchmark claims are Meta’s own.",
+        "why": "Open-weight agentic models on the desktop move the design problem from chat prompts to long-running local workflows with files, editors and media tools in the loop. The 1TB RAM floor also tells you who this is really for right now.",
+        "hook": "Open weights on a Mac. Bring a terabyte of RAM.",
+        "teach": "Pick one creative tool your team already uses (Resolve, Figma export, a codebase) and write the agent brief as a checklist of reversible steps with a human approval gate between plan and act. If the brief only works as a single megaprompt, it is not ready for local agents.",
+        "signal": "Meta is competing with Chinese open-weight leaders on the same pitch: agentic coding at home. The product surface that wins will be the one that makes a million-token context inspectable, not the one that merely ships weights."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "15 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "hed": "Anthropic is letting METR researchers look under the hood with employee-level access",
+        "fact": "TechCrunch reports Anthropic is giving six METR researchers employee-level access—company laptops, office space and internal tools on par with its own risk teams—to assess models, safety practices and risk management. Anthropic says it cannot veto METR’s publications, only require redactions in narrow categories such as customer data, attorney-client material or model architecture; METR may publicly characterise those redactions. METR sits alone at the top of a three-tier evaluator system Anthropic is building.",
+        "why": "Independent evaluation is becoming a designed access pattern, not a PDF exchange. The no-veto-plus-redaction model is a governance UI other labs will be measured against.",
+        "hook": "Outside evaluators just got employee badges.",
+        "teach": "If you ship an agent, invent a redaction-and-publish template for incident write-ups now: what can leave the building, what must be redacted, and who signs. Borrow Anthropic’s split—publish by default, redact by category—not the reverse.",
+        "signal": "Bank-style resident examiners inside AI labs turn safety into a continuous product surface. The competitive advantage shifts from “we have a safety board” to “outsiders can see what we see, and say so.”"
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "14 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+        "hed": "YouTube Music launches new labels as AI-generated music floods streaming platforms",
+        "fact": "TechCrunch reports YouTube Music is rolling out generative-AI labels on the player page, with a tap for more detail on AI’s role in composition and vocals, and that the labels will also extend to the main YouTube app. Partners can declare Fully Gen AI, Partly Gen AI or No Gen AI; Auto-Tune-style pitch correction falls under No Gen AI. YouTube is prioritising disclosure over bans; AI involvement alone does not block monetisation.",
+        "why": "This is a live three-tier disclosure taxonomy for synthetic media, shipping in a consumer player millions already understand. Design systems that still use a single sparkle chip are behind the market.",
+        "hook": "Fully, partly, or not at all. Pick a tier.",
+        "teach": "Replace binary “AI-generated” badges with a three-state control: full, partial, none. Document what counts as none in your product (e.g. grammar tools vs generative composition) and put the definition one tap from the badge.",
+        "signal": "YouTube is choosing legibility over exclusion while Deezer and Bandcamp harden filters. Disclosure and filter-out are diverging product strategies; your roadmap needs an explicit pick, not both half-built."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "14 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+        "hed": "Deezer will soon let you filter out AI-generated music",
+        "fact": "TechCrunch reports Deezer is building a toggle, expected before year-end, that removes AI-generated tracks, albums and related artists from search. A company survey last year found about 45% of customers wanted that option. Deezer says AI tracks were 10% of daily uploads when it added detection last year, and more than 50% by July—about 90,000 fully AI-generated tracks a day. Figures are Deezer-reported.",
+        "why": "When half of daily uploads are synthetic, the default feed is no longer a neutral catalogue. User-controlled exclusion becomes a core information-architecture decision, not a preference buried in settings.",
+        "hook": "Half the uploads are AI. Users want a kill switch.",
+        "teach": "Add an opt-in “human-only” content filter to any feed that mixes generative and human work. Make it work in search, recommendations and related items—not just the home rail—or the toggle is theatre.",
+        "signal": "The 10%→50% upload climb is the real story. Labelling alone will not hold trust once synthetic inventory becomes the majority; filter UX is the next compliance layer platforms will copy."
+      },
+      {
+        "pub": "Smashing Magazine",
+        "date": "16 Oct 2026",
+        "url": "https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "hed": "Is Your Organization Messing Up AI Adoption?",
+        "fact": "Paul Boag argues organisations are repeating digital-transformation mistakes with AI: treating rollout as a technology problem, buying Copilot-style licences company-wide, under-investing in role-specific training, and creating fear through KPIs and token reprimands. He recommends starting with enthusiasts, poster-length principles rather than thick rulebooks, and learning from shadow AI instead of only clamping down. Opinion and advisory; not a survey study.",
+        "why": "Most AI failures inside design orgs are change-management failures wearing a model badge. This is a usable critique of the licence-and-lunch-and-learn pattern still dominating roadmaps.",
+        "hook": "You did not fail at AI. You failed at change.",
+        "teach": "This Monday: cancel one generic AI training slot and replace it with a 45-minute show-and-tell where two people demo a workflow they already run. Capture the tools they used outside the official stack—that list is your real adoption backlog.",
+        "signal": "Shadow AI is a requirements document written in risk. Organisations that only respond with blocks will train staff to hide the only evidence of where official tools fail."
+      },
+      {
+        "pub": "The Verge",
+        "date": "16 Oct 2026",
+        "url": "https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers",
+        "hed": "Meta’s new terms may allow it to train AI on news sites for free",
+        "fact": "The Verge, citing Nieman Lab, reports Meta’s commercial terms effective 30 October authorise scraping domains and URLs associated with business accounts to develop, improve, research and train Meta AI products. Legal experts told Nieman Lab Meta could argue those terms supersede robots.txt; Meta spokesperson Daniel Roberts said there is no change to how Meta uses crawlers and that robots.txt preferences still apply. Businesses that refuse may lose commercial access to Meta products.",
+        "why": "Consent for training data is migrating from robots.txt and licensing deals into click-through commercial terms. That is a design and policy surface publishers and brand teams share whether they like it or not.",
+        "hook": "Your robots.txt may not be the contract.",
+        "teach": "If your brand runs Meta ads or business accounts, schedule a legal-and-design review before 30 October: which public URLs are “associated,” what you will delist or noindex, and how you will message a forced choose-or-leave.",
+        "signal": "Charging creators for outbound links while claiming freer crawl rights for training is a power inversion. Expect more platforms to bury training consent inside commercial terms rather than model-card footnotes."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "16 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/",
+        "hed": "Replit’s CEO says the future of work is the ‘self-driving company’",
+        "fact": "At TechCrunch Disrupt, Replit CEO Amjad Masad described a “self-driving company” where agents do much of the grunt work while humans supply judgment and taste. He said Replit support tickets are first triaged by an agent that checks GitHub issues, the codebase and Linear, then a human decides, then another agent can deploy a patch—human judgment in the middle of an otherwise agentic loop. Company-reported practice, not an independent study.",
+        "why": "This is a concrete interaction model for agentic ops: agent gathers, human decides, agent acts. Designers of internal tools will be asked to draw that loop whether they like the metaphor or not.",
+        "hook": "Agents triage. Humans taste. Agents ship.",
+        "teach": "Map one support or bug-fix flow into three panes: what the agent gathers, what the human must decide, what the agent may execute after approval. If your UI collapses those into one chat transcript, rebuild the decision step as a first-class control.",
+        "signal": "Masad’s claim that teams spend more time whiteboarding what to build is the adoption metric to watch. If AI only increases ticket throughput without increasing time on problem framing, you automated the wrong layer."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "Ars Technica",
+        "date": "16 Oct 2026",
+        "flag": "Top story",
+        "url": "https://arstechnica.com/reviews/2026/10/googlebook-review-android-on-a-laptop-is-still-android/",
+        "hed": "Googlebook review: Android on a laptop is still Android",
+        "fact": "Ars Technica’s hands-on finds Googlebooks swing at premium hardware—touch OLED options, metal bodies, biometrics, big trackpads—but says the OS still feels like a Chromebook or giant phone more than a laptop. The Acer Googlebook 14 starts at $899 on a limited deal; more capable OLED haptic models run about $1,100 and up, with ~$1,300 machines compared unfavourably to a MacBook Air. The Glowbar mostly lights for Gemini and boot; “quick insert” replaces caps lock for emoji, screenshots and clipboard.",
+        "why": "Stretching a phone OS across a clamshell is the decade’s recurring UX bet. The review’s verdict is that premium materials cannot paper over interaction grammar borrowed from a different form factor.",
+        "hook": "A thousand-dollar phone that folds flat.",
+        "teach": "If you are adapting a mobile pattern to desktop, write a parity table: windowing, keyboard shortcuts, file management, multi-window drag. Any row that still says “phone behaviour” needs a desktop-native redesign before launch, not a Glowbar.",
+        "signal": "Google is pricing Googlebooks against MacBooks while shipping Android muscle memory. That mismatch is how platforms lose the “premium” argument even when the chassis is excellent."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "2 Oct 2026",
+        "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+        "hed": "Apple changes full-disk access permissions to curb abuse from AI agents",
+        "fact": "Ars Technica reports Apple is changing macOS Full Disk Access behaviour after Meta’s Muse agent was accused of referencing Apple Messages content; Meta said access required FDA plus an in-app Messages connector. Apple said some developers use FDA in ways that expose files, mail, messages and browsing history without users’ full understanding, and that AI agents raise those risks substantially. Apple did not name Meta in the statement.",
+        "why": "Agent UX collapses when a decades-old “allow all files” permission becomes a silent inbox reader. OS vendors are rewriting consent copy because product teams treated FDA as a checkbox, not a threat model.",
+        "hook": "Full Disk Access was never a Messages toggle.",
+        "teach": "Audit every agent permission screen: if a grant unlocks mail, messages or browser history, say those nouns in the dialog, require a second confirmation, and show a one-tap revoke. Never hide high-blast-radius access behind a single system toggle name.",
+        "signal": "As agents get more autonomous, OS permission models become the real product design. Teams that depend on coarse FDA-style grants will keep losing features to platform lockdowns."
+      },
+      {
+        "pub": "Wired",
+        "date": "16 Oct 2026",
+        "url": "https://www.wired.com/story/ai-generated-hot-girls-are-ripping-off-comedians-to-boost-their-horny-content/",
+        "hed": "AI-Generated Hot Girls Are Ripping Off Comedians to Boost Their Horny Content",
+        "fact": "Wired reports AI-generated influencer personas are restaging stand-up bits on Instagram to funnel viewers to NSFW AI monetisation platforms. One account Wired describes, “Aylen Skye,” had about 250,000 Instagram followers; Wired identified eight comics whose material was replicated by similar AI-generated accounts. Comedian Julia Jasunas reported a video using her joke almost verbatim; Meta’s enforcement response is described anecdotally by the subjects.",
+        "why": "Content provenance UX is no longer only about watermarks on images. Likeness, joke ownership and platform reporting flows are failing in public, with synthetic performers optimised for engagement.",
+        "hook": "The opener was hers. The body was synthetic.",
+        "teach": "If you build reporting or rights tools, add a “stolen performance / AI reenactment” category with fields for original clip URL, timestamps and the synthetic account. A generic “impersonation” bucket buries this pattern.",
+        "signal": "Positive comment sections became a tell for fakeness. Engagement quality metrics may become as important as deepfake detectors for trust and safety triage."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "16 Oct 2026",
+        "url": "https://www.creativebloq.com/news/apple-musics-miserable-new-logo-is-giving-mixed-messages",
+        "hed": "Apple Music’s ‘miserable’ new logo is giving mixed messages",
+        "fact": "Creative Bloq reports Apple shipped a new Apple Music icon with iOS 27.2: a flat black-and-white music note that users on X called “miserable” for stripping colour after a stretch of quirkier Apple hardware branding. The piece is reception-led; Apple’s strategic intent is inferred by commentators, not confirmed by Apple.",
+        "why": "Icon changes are product strategy in 48×48. Pulling colour from a music brand while the rest of the hardware line goes playful creates a coherence debt users feel immediately.",
+        "hook": "They drained the note of every colour.",
+        "teach": "Before shipping a monochrome system icon, place it next to your last three brand moves and ask whether the set still reads as one company. If hardware is loud and the app glyph is austere, write the rationale in the release notes or users will write it for you.",
+        "signal": "When a logo change trends as emotional whiplash, the brand system is outrunning the product narrative. Coherence is now a launch requirement, not a brand-book nice-to-have."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "16 Oct 2026",
+        "url": "https://www.creativebloq.com/news/are-you-triggered-by-the-design-problem-with-gta-6s-giant-paris-advert",
+        "hed": "Are you triggered by GTA 6's giant Paris advert?",
+        "fact": "Creative Bloq reports a Grand Theft Auto VI building wrap on Paris’s Les Mercuriales towers recreates Rockstar’s cover art with Lucia’s pistol and another weapon removed—leaving a character with no hand and another with an arm thrust into empty space, patched by a zoom crop. The piece frames the edit as a local advertising constraint colliding with character-first key art.",
+        "why": "Localisation and compliance edits are design problems, not production footnotes. When weapons define silhouette and attitude, deleting them without redrawing the pose breaks the composition in public at building scale.",
+        "hook": "They deleted the guns. They forgot the hands.",
+        "teach": "For any campaign key art that may be censored by market, commission a weapons-free master with rebuilt hands and props—not a clone-stamp job. Put “compliance redraw” on the shot list before the media buy.",
+        "signal": "Building wraps are unforgiving QA. The same crop that survives a social thumbnail fails at architectural scale; treat OOH as its own art direction pass."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "15 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+        "hed": "Bluesky expands its AI-powered Attie app to let anyone build websites, games, and more",
+        "fact": "TechCrunch reports Bluesky is expanding Attie beyond AI custom feeds so creators can build websites, quizzes, games, polls and other interactive experiences on AT Protocol. CEO Toni Schneider called it “social vibe coding” for a group; COO Rose Wang said Attie brings Bluesky distribution to what people build. Bluesky has 47 million registered users, with engagement declines noted. Product claims are company-stated.",
+        "why": "Vibe coding is leaving the solo IDE and entering social distribution. The hard UX problem shifts from generation quality to group authorship, identity and what “publish” means on a protocol.",
+        "hook": "Vibe coding, but with an audience attached.",
+        "teach": "If you are building AI creation tools, design the share step before the generate step: who can edit, whose identity the artifact wears, and how the audience finds it. Distribution is the feature, not a footer link.",
+        "signal": "Schneider’s contrast—solo vibe coding versus building for a group—is the next platform war. Networks that solve multiplayer creation will matter more than another chat box that emits HTML."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "15 Oct 2026",
+        "url": "https://www.creativebloq.com/news/cinema-4d-finally-gets-one-of-the-most-requested-features-in-new-2027-release",
+        "hed": "Cinema 4D finally gets one of the most-requested features in new 2027 release",
+        "fact": "Creative Bloq reports Maxon’s 2027.0 Cinema 4D release adds a Scatter System—Scatter Generator and Scatter Tag with distribution, filtering, clustering and transform controls—integrated with MoGraph Fields and Effectors so artists can procedurally populate vegetation, rocks, debris and crowds. The piece notes scattering had been a long-standing gap versus ecosystem tools and competing DCCs. Vendor feature claims via Creative Bloq.",
+        "why": "Procedural environment tools are how worldbuilding scales without hand-placing every prop. Shipping scatter inside the host DCC changes who can art-direct large scenes without a specialist pipeline.",
+        "hook": "Forests finally stopped being a plugin chase.",
+        "teach": "If your 3D pipeline still depends on a third-party scatter plugin, spike 2027.0’s native tools on one real environment brief this week. Document what MoGraph Fields buy you versus your current stack before renewing licences.",
+        "signal": "After chatbot hooks, Maxon shipped the boring infrastructure artists actually requested. The vendors winning creative suites will alternate AI headlines with unsexy capability gaps."
+      }
+    ],
+    "product": [
+      {
+        "pub": "The Verge",
+        "date": "16 Oct 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/tech/1012628/microsoft-surface-laptop-ultra-review",
+        "hed": "Surface Laptop Ultra review: a different kind of MacBook Pro",
+        "fact": "The Verge’s Tom Warren reviews Microsoft’s Nvidia RTX Spark Surface Laptop Ultra: base $2,599, as-tested top config $5,899 with 128GB unified memory; 15-inch Mini LED up to 2,000 nits at 3270×2180; Magnetic Connect USB-C charging. Out of the box users pick Hermes, OpenClaw or Perplexity agents; Warren found local AI messy—simple photo convert took minutes on a large model, a smart-home dashboard attempt failed after ~30 minutes—and calls local AI the selling point and the question mark.",
+        "why": "The AI PC category is shipping aluminium and nits faster than it ships a usable agent UI. Hardware that requires developer patience will not convert MacBook buyers on finish alone.",
+        "hook": "$5,900 of laptop. The agent still feels like beta.",
+        "teach": "If you design on-device agent setup, ship a model-to-task picker with defaults (resize photos → small model; overnight build → large), a fan/thermal warning, and a cancel that leaves partial work inspectable. “Pick an agent” is not onboarding.",
+        "signal": "Microsoft finally has MacBook-competitive chassis language and CUDA gaming on Arm—and still loses the review on software readiness. The bottleneck moved from silicon to agent product design."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "15 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/15/ramp-reaches-60b-valuation-as-it-pushes-deeper-into-ai/",
+        "hed": "Ramp reaches $60B valuation as it pushes deeper into AI",
+        "fact": "TechCrunch reports Ramp raised $1.85 billion at a $60 billion valuation, four months after a $750 million round at $44 billion. Ramp says annualised revenue crossed $2 billion (from $1.5 billion in June), purchase volume exceeds $275 billion (+175% year-on-year), and customers number 85,000. The company embeds AI agents across finance workflows, launched a credit card for AI agents, and shipped Glass, a workspace that remembers org automations and prompts. Company-reported metrics.",
+        "why": "Finance ops is becoming an agent runtime with memory of how the company works. The product battleground is less “another expense UI” and more who owns the organisation’s automation library.",
+        "hook": "$60B to remember how your company spends.",
+        "teach": "Inventory the prompts and automations your design or research ops already reuse. Put them in a shared, named library with owners and last-verified dates—Glass’s idea—before a vendor does it for finance-only workflows.",
+        "signal": "Agent-native cards plus org-level skill memory is a vertical OS forming under the CFO. Design tools that ignore shared automation memory will look like personal notes apps next to it."
+      },
+      {
+        "pub": "The Verge",
+        "date": "16 Oct 2026",
+        "url": "https://www.theverge.com/tech/1012805/apple-iphone-duo-preorder-delay",
+        "hed": "iPhone Duo orders are already delayed into 2027",
+        "fact": "The Verge reports Apple opened iPhone Duo preorders at 8AM ET Friday and within an hour delivery estimates on Apple’s site slipped to late January 2027 for every configuration, despite a 23 October in-store launch. The foldable starts at $1,999 for the 256GB model in “star white” and “night sky.” The Verge notes Apple typically reserves some units for stores, so in-person pickup may still be earlier than ship dates.",
+        "why": "Launch UX includes scarcity messaging. When every config jumps months in minutes, the preorder flow becomes a waitlist product whether Apple labels it that or not.",
+        "hook": "Preorder opened. 2027 answered.",
+        "teach": "If you run a constrained launch, show a live inventory state and a clear in-store versus ship path before checkout—not a silent ETA jump after payment intent. Users should know they are joining a queue.",
+        "signal": "Passport-style foldables at $1,999 with instant multi-month slips say demand outran supply planning. The design lesson is honesty in the buy path; the business lesson is Apple still treats scarcity as a feature."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "15 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/",
+        "hed": "When it came to Cal AI’s viral success, a small army of influencers paid off",
+        "fact": "TechCrunch reports Cal AI founder Zach Yadegari, 19, said at Disrupt that influencer seeding drove the calorie-tracking app’s rise: over $30 million revenue in two years before a March MyFitnessPal acquisition. An early post drove about a thousand users in two days; the team then paid many creators with reach-tied payouts, preferring tight communities over broad fame. Company- and founder-reported figures.",
+        "why": "Consumer AI distribution is still a creator-ops problem dressed as a model problem. The growth loop here is media design and incentive design, not model quality.",
+        "hook": "The model was fine. The army was the product.",
+        "teach": "For a consumer AI launch, write a creator brief with one measurable action (install, first successful scan) and a tight-community target list before you touch model marketing. Treat influencer ops as a designed funnel, not PR frosting.",
+        "signal": "MyFitnessPal buying a two-year-old influencer machine shows incumbents will purchase distribution that looks like AI magic. Builders who only polish onboarding screens will keep losing to teams who industrialise seeding."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "16 Oct 2026",
+        "url": "https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods/",
+        "hed": "Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles",
+        "fact": "TechCrunch reports Veritas, founded by former Tesla PM Luci Holland, ships an authentication chip with per-tap secure responses and a tamper-detection wire, plus a consumer certificate-of-ownership app. Version two works on metal and through glass for jewelry, trophies and fragrance bottles; ATHLOS will chip all 18 championship crowns. The startup has raised $1.75 million pre-seed led by Seven Seven Six. Company claims via TechCrunch.",
+        "why": "Provenance is becoming a hardware interaction—tap, prove, own—not a QR that superfakes can clone. Luxury and sports brands are buying physical roots of trust as packaging design.",
+        "hook": "A tap that superfakes cannot photocopy.",
+        "teach": "If you design packaging or collectibles, prototype an ownership moment after purchase: what the tap reveals, what is public versus private, and how resale transfers the certificate. Treat provenance UX as part of unboxing.",
+        "signal": "As generative fakes improve, authentication moves into the object. Brands that still rely on lookbook photography and hologram stickers are bringing receipts to a cryptography fight."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "15 Oct 2026",
+        "url": "https://arstechnica.com/gadgets/2026/10/plex-now-helps-sell-movie-theater-tickets/",
+        "hed": "Plex now helps sell movie theater tickets",
+        "fact": "Ars Technica reports Plex partnered with Fandango so US users see theatre ticketing on title pages for movies now in theatres, with attribution via Kochava. Fandango sells tickets for 31,000 US screens; Plex claims users make more than 100 million streaming decisions each month. Plex frames itself as a discovery layer across where content lives.",
+        "why": "Watching and going-out are collapsing into one discovery surface. That is a journey-design problem: intent shifts from “stream tonight” to “buy seats” without a context switch.",
+        "hook": "Same title page. Now it sells popcorn nights.",
+        "teach": "On any media detail page, separate watch-now actions from go-out actions visually, and state theatre availability as a dated status, not a generic outbound link. Ambiguous CTAs will tank conversion on both paths.",
+        "signal": "Plex is monetising discovery intent the same way retail wants product-detail pages to own the cart. Expect more “where to experience this” modules across entertainment apps."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "The Guardian",
+        "date": "14 Oct 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/technology/2026/oct/14/openai-london-staff-earnings-2million-per-person",
+        "hed": "OpenAI’s London staff receive average of £2.3m per person annually",
+        "fact": "The Guardian reports OpenAI UK Ltd accounts show 110 staff shared £87m in salaries and £168m in shares—about £2,318,181 average per person for 2025—as the company aims at a roughly $1tn listing. That is 58 times median UK full-time earnings per ONS, or about £1,000 an hour before tax on the average package. The paper notes a wide gap between top researchers and lower earners.",
+        "why": "Compensation geometry is talent geography. London’s AI hub status is being priced like elite sport, which reshapes who can afford to build elsewhere and what “competitive offer” means for design and research leads.",
+        "hook": "Premier League wages for model researchers.",
+        "teach": "When you hire against frontier labs, stop comparing base salary alone. Build a total-comp narrative (equity liquidity, visa, research time, shipping cadence) you can explain in one page—candidates already see £2m averages in the press.",
+        "signal": "£2.3m averages in a 110-person UK entity are a concentration risk story as much as a recruitment story. Cap tables and local labour politics will follow these filings into public debate."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "15 Oct 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://arstechnica.com/tech-policy/2026/10/ftc-probes-if-openai-anthropic-security-incidents-harmed-americans-report-says/",
+        "hed": "Report: FTC probes Anthropic, OpenAI after Trump dismissed AI fears as “hoax”",
+        "fact": "Ars Technica, citing Axios, reports the FTC issued civil investigative demands to OpenAI and Anthropic spanning more than 50 pages on recent safety incidents, internal security measures and marketing that may have misled consumers. Third parties hit by the firms’ agents may also be subpoenaed. OpenAI and Anthropic did not comment to Ars; the FTC did not share the demands. Treat as reported, not officially confirmed detail.",
+        "why": "Agent harm is moving from blog postmortems to consumer-protection discovery. Marketing claims about control and safety are about to be read next to incident logs.",
+        "hook": "Fifty pages asking what the agents did.",
+        "teach": "Export a single incident packet template now: timeline, user-visible claim at time of ship, actual tool permissions, and remediation. If legal asks next month, you should not be reconstructing from Slack.",
+        "signal": "FTC Chair Ferguson’s line that tools carry out instructions they were given reframes “rogue agent” narratives as product liability. Expect design docs and release notes to become exhibit A."
+      },
+      {
+        "pub": "CNBC",
+        "date": "16 Oct 2026",
+        "url": "https://www.cnbc.com/2026/10/16/spacex-policy-manger-to-testify-in-nyc-council-ai-safety-investigation.html",
+        "hed": "SpaceX AI policy leader grilled by NYC Council on Grok safety, sexualized images",
+        "fact": "CNBC reports SpaceX AI policy leader Gabriela Castillo Madrid faced NYC Council questioning on Grok safeguards. Speaker Julie Menin said she and her team generated a sexualised image of Menin using Grok that morning; Castillo Madrid said the company has strict controls and would have safety review the case. Council Member Carmen De La Rosa called the ease of sexualising real women without consent “disgusting.”",
+        "why": "Non-consensual sexualised likeness is no longer a niche trust-and-safety ticket—it is a live legislative hearing with the product demonstrated in the room. Image generators without a hard person-likeness brake are a civic liability.",
+        "hook": "She typed her name. Grok undressed her.",
+        "teach": "For any likeness or “portray this person” feature, default to block-on-real-person unless you have verified consent infrastructure. Ship an appeals path, but do not ship open-ended sexualisation of named individuals.",
+        "signal": "City councils are becoming AI product reviewers. Demo-able harms beat model cards; if a speaker can reproduce the failure in session, your safeguard language is already dead."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "16 Oct 2026",
+        "url": "https://www.theguardian.com/uk-news/2026/oct/16/london-driverless-robotaxis-uber-drivers-wayve-tfl-licences",
+        "hed": "‘We should all be worried’: calls grow to limit London rollout of robotaxis",
+        "fact": "The Guardian reports more than 100,000 people are on Uber’s London robotaxi waitlist after Wayve’s autonomous Uber rides launched, while drivers plan protests and politicians push for TfL powers to permit or suspend operations. Uber has talked up 100,000 Nvidia robotaxis worldwide starting next year; trials also expanded to Manchester. Driver job-loss fears are attributed to unions and drivers, not a single official forecast.",
+        "why": "Autonomous mobility is a dual UX: passenger delight on a waitlist, worker dread at the depot. Cities that only design the rider journey will get the politics wrong.",
+        "hook": "100,000 want a ride. Drivers want a veto.",
+        "teach": "If you design mobility products, add a stakeholder journey for the displaced worker beside the rider flow: notification timing, transition benefits entry points, and human-handoff modes. Shipping only the shiny passenger UI is incomplete product work.",
+        "signal": "Waitlist size is being used as a mandate. Regulators will increasingly treat demand metrics as lobbying; product teams should expect their growth charts to appear in council reports."
+      },
+      {
+        "pub": "The Verge",
+        "date": "16 Oct 2026",
+        "url": "https://www.theverge.com/tech/1011950/vibe-coded-3d-printed-gun-ai-generated-cody-wilson",
+        "hed": "The first vibe-coded gun is here",
+        "fact": "The Verge reports Cody Wilson’s Defense Distributed fired the WASP, a .22 3D-printed pistol Wilson calls AI-generated via a model named GatGPT trained on DEFCAD files. On a backyard test the gun misfired once then fired; Wilson later fired it by hand (two of three successful shots that day). Wilson’s “Hochulization” tool to alter file hashes had been used more than 26,000 times by late September, he claimed. Experts quoted call the design marginally functional.",
+        "why": "Vibe coding’s barrier-lowering logic does not stop at apps. Generative design plus hash-evasion tools is a direct attack on detection UX that states are writing into printer firmware.",
+        "hook": "Prompted, printed, fired. Mostly.",
+        "teach": "If you work on generative or manufacturing software, treat weapons and regulated artefacts as a first-class refusal class with offline-capable detectors—not a hash blocklist alone. Assume adversaries will mutate files faster than your list updates.",
+        "signal": "Wilson’s claim—“not an AI-generated gun, but an AI that can generate guns”—is the product framing regulators will cite. Novelty of output matters less than collapsing skill barriers."
+      },
+      {
+        "pub": "CNBC",
+        "date": "16 Oct 2026",
+        "url": "https://www.cnbc.com/2026/10/16/eutelsat-starshield-ukraine-spacex.html",
+        "hed": "Europe's answer to SpaceX pops 19% as Ukraine's Starshield limits raise concerns",
+        "fact": "CNBC reports Eutelsat shares rose 19% Friday and about 25% over five days after Ukraine accused SpaceX of sudden Starshield/Starlink restrictions that Zelenskyy said impaired drone interception and contributed to civilian deaths. Musk blamed US government control of Starshield. Deutsche Bank analysts, per CNBC, framed Eutelsat as a credible Starlink alternative for sovereign networks.",
+        "why": "Connectivity that can be remotely curtailed is now priced as geopolitical product risk. “Move fast” infrastructure is being revalued as sovereign dependency.",
+        "hook": "Turn off the link, reprice the continent.",
+        "teach": "For products that depend on a single cloud or connectivity vendor, write a one-page dependency card: who can revoke access, on what notice, and what the degraded mode looks like in the UI. If you cannot describe the degraded mode, you do not have a contingency design.",
+        "signal": "Markets are treating European satellite capacity as an option on US private-network risk. Expect more procurement UIs and public-sector RFPs to demand visible failover, not slideware."
+      }
+    ]
+  }
+}
