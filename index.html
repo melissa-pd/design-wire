@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-10-20" aria-current="true">
+          <span class="d">20 Oct 2026</span>
+          <span class="m">Tue · 24 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,448 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-10-20 ############ -->
+      <article class="edition" data-ed="2026-10-20" data-label="Tuesday, 20 October 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/" target="_blank" rel="noopener">Microsoft says AI agents are like insider threats as ‘frontier models can’t be trusted’</a></h4>
+              <p class="fact">TechCrunch reports Microsoft is adding Guardian Agents inside Project Perception to monitor the AI agents enterprises already deploy, after CEO Satya Nadella argued companies should stop trusting model-provider safety assurances and build separate systems for agentic behaviour. Security business chief Hayete Gallot wrote that “frontier models, regardless of their origin, cannot be trusted,” not because they are malicious but because they are unpredictable and often hold keys to sensitive data and tools. Characterizations of the threat model come from Microsoft executives and are relayed by TechCrunch.</p>
+              <p class="why"><b>Why it matters</b>The security frame for agents has flipped from external red-team models to the employees’ own copilots. That makes permission design, activity logging, and kill switches first-class product surfaces rather than SOC afterthoughts.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent isn’t a tool. Microsoft is selling it as an insider threat.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For every agent that can read mail, write tickets, or call an API, ship a visible action log and a one-click revoke that terminates sessions across tools. If you cannot name what the agent did in the last hour, you do not have a product—you have an unmonitored employee.</p>
+                    <p><span>Signal</span>Microsoft selling agent guardians while partnering with the same frontier labs is the platform play: trust moves from model cards to the cloud vendor’s control plane. Expect enterprise buyers to demand third-party monitors as a procurement checkbox, which will pressure every agent UX to expose audit hooks or lose the deal.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/" target="_blank" rel="noopener">Figma co-founder Dylan Field thinks MCP is not a perfect protocol</a></h4>
+              <p class="fact">At Figma’s first Config conference in India, TechCrunch reports the company announced 20 new Model Context Protocol partners—including Amp, ClickUp, Linear, Meta Muse, Mistral, Notion, and OpenCode—while co-founder Dylan Field told a media briefing MCP “is not a perfect protocol” and is “advantaged more to frontier labs.” Field said Figma will not fully open design data over MCP because greater exposure raises abuse risk, even though most users are not malicious. He later said Figma plans to support the open-source tool Pi after a public spat with an MCP co-creator.</p>
+              <p class="why"><b>Why it matters</b>The design-tool ecosystem is standardising on MCP for agent access, but the company that owns the canvas is already arguing the protocol’s openness is a security and competitive liability. That tension will shape what agents are allowed to see in your files.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">20 new MCP partners. The CEO still won’t call the protocol perfect.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Before wiring an agent into your Figma library, write an explicit allowlist of which tokens, components, and layers it may read or edit, and treat everything else as closed. Do not assume “MCP connected” equals “safe to share the file.”</p>
+                    <p><span>Signal</span>Field reframing open-versus-closed as asymmetric context sharing is the tell: MCP is becoming a negotiation over who holds the richer context graph. Design platforms that expose less may look less agent-friendly short term and more liability-aware long term.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/" target="_blank" rel="noopener">Yelp can now call on your behalf to check wait times at a restaurant</a></h4>
+              <p class="fact">TechCrunch reports Yelp is rolling out Check for Me on restaurant pages: users enter party size and phone number, an AI agent calls the restaurant, and texts the wait-time result. The company is also updating its AI assistant with OpenTable booking inside the app, preference memory from prior chats, 30-day chat history with full-history delete, custom reminders, Been Here / Want to Go lists, and weekly personalized recommendations next month. Yelp notes a user’s call may reach another AI agent on the restaurant’s side.</p>
+              <p class="why"><b>Why it matters</b>Consumer agents are leaving the chat box and placing real phone calls into local businesses—often into other agents. That is a new interaction design problem: consent, identity, and escalation when two machines negotiate a human waitlist.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your wait-time check is now a phone call between two AIs.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design any “agent will contact them for you” flow, require an explicit consent screen that states channel (call/SMS), what personal data is spoken, and how to cancel mid-task. Then test the failure mode where the other party is also a bot.</p>
+                    <p><span>Signal</span>Yelp already shipped the restaurant-side voice stack last year; Check for Me closes the loop. Agent-to-agent local commerce will normalize before most design systems have patterns for “human override on a live call.”</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/" target="_blank" rel="noopener">Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts</a></h4>
+              <p class="fact">TechCrunch reports OpenCode disclosed a security breach tied to a large-scale distillation attack that impacted 1.4% of OpenCode Console users, with some reporting unauthorized API spend in the hundreds of dollars and a few describing totals above $1,000. Anthropic and Google blocked exposed keys; OpenAI worked with OpenCode on refunds. Co-founder Dax Raad said attackers pressed for 48 hours and that frontier-model safety filters hindered defensive analysis until OpenCode gained OpenAI Daybreak Blue access. How keys were obtained remains incompletely detailed by the company.</p>
+              <p class="why"><b>Why it matters</b>Coding-agent consoles that hold provider API keys are now high-value targets for distillation and spend abuse. The incident also shows safety refusals can block defenders mid-incident—a product and policy failure mode for agent tooling.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">1.4% of Console users hit. Some woke up to four-figure AI bills.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product stores third-party model keys, treat Console as a vault: short-lived keys, per-workspace revoke, spend caps with SMS/email alerts, and a one-tap “freeze all providers” control. Ship the freeze before you ship the agent.</p>
+                    <p><span>Signal</span>David Sacks calling out guardrails that block exploit analysis mid-attack is the policy signal: consumer safety filters and defender tooling are colliding. Expect pressure for privileged “incident response” model modes—and for UX that makes those modes auditable, not silent.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/" target="_blank" rel="noopener">Meta Muse exposes users’ personal and business secrets when they share conversations</a></h4>
+              <p class="fact">Ars Technica reports Claroc researchers found Muse share links on cf.metaaiusercontent.com discoverable via passive DNS because conversation titles sit in the URL, creating what Claroc calls GhostShares—pages open to people never handed the link. Claroc said gathering them “took one query.” Meta paused sharing while investigating and cited its bug-bounty program. Zuckerberg had pitched Muse as built for privacy; Muse needs broad account access to act, and Wardle previously found a zero-day letting other Mac apps seize a Muse account.</p>
+              <p class="why"><b>Why it matters</b>Share-by-link is still designed like a secret URL, but DNS history and title-in-path patterns turn “unlisted” into “indexed.” Agent products that hold mail, purchases, and appointments inherit that failure at higher stakes.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">One DNS query. Your “private” Muse share was already public.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Ban conversation titles and PII from share URLs. Use random opaque IDs, expire links by default, show who opened them, and require re-auth to view. If you cannot explain the URL’s entropy in one sentence, do not ship share.</p>
+                    <p><span>Signal</span>Pausing share after launch is cheaper than redesigning URL grammar, but GhostShares will keep appearing wherever agent artifacts reuse CMS-style slug URLs. The durable fix is infrastructure, not a blog post about privacy-by-design.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>19 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/gaming/2026/10/ai-game-clones-are-making-indie-developers-afraid-to-show-their-work/" target="_blank" rel="noopener">AI game clones are making indie developers afraid to show their work</a></h4>
+              <p class="fact">Ars Technica reports Alliance Arts delayed a planned Steam Next Fest public demo of Drunken Goddess Reflux, citing worry that demo content could be quickly imitated or replicated with AI, and will instead run closed sessions with posting and streaming rules. Papers, Please developer Lucas Pope is quoted saying creators increasingly avoid talking about work in progress. Digital Sun similarly kept a ReVamp playtest private over clone risk, per related coverage referenced in the same news cycle.</p>
+              <p class="why"><b>Why it matters</b>Early playtests and Next Fest demos were the indie discovery funnel; AI cloning turns public demos into reverse-engineering sessions. That starves players of previews and starves designers of feedback loops.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Steam Next Fest demos are going dark. AI clones are why.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you run or design a public preview, define a closed-alpha track with watermarked builds, NDAs for streamers, and a changelog that ships unique systems only after store-page lock. Treat the public demo as marketing, not as your full mechanic reveal.</p>
+                    <p><span>Signal</span>When the discovery surface becomes a cloning surface, platforms that fail to ship provenance, takedown speed, and demo watermarking will push indies toward secrecy—and the storefront loses the very demos that drove conversion.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>20 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/features/google-meets-appearance-filters-just-sent-me-into-an-existential-spiral" target="_blank" rel="noopener">Google Meet's appearance filters just sent me into an existential spiral</a></h4>
+              <p class="fact">Creative Bloq’s Natalie Fear describes discovering Google Meet appearance filters—including options such as “dewy fresh” and “dramatic eye”—while sick and joining a work call, arguing workplace video tools are normalizing beauty filters that blur professional presence with social-media self-editing. The piece is first-person commentary on the shipped Meet UI rather than a controlled study; filter names and the workplace framing come from the author’s live use of the product as reported.</p>
+              <p class="why"><b>Why it matters</b>Video meeting products are quietly importing influencer beauty defaults into the professional context where credibility and fatigue already distort self-presentation. That is a defaults-and-consent problem, not a novelty filter problem.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your standup now ships with “dewy fresh.” Work video learned FaceTune.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit your video product’s appearance controls: default to off, put filters behind an intentional toggle (not adjacent to mute), label them as cosmetic alteration, and add a meeting-level admin policy for regulated or client-facing contexts.</p>
+                    <p><span>Signal</span>Once beauty filters are one click from the toolbar, opting out becomes the marked behaviour. Expect “camera authenticity” to join lighting and background blur as a workplace norms fight—and for HR and brand teams to demand org-wide defaults designers have not budgeted.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/tv-and-radio/2026/oct/20/smart-tv-television-dumb-wifi-techies-privacy" target="_blank" rel="noopener">‘It was so satisfying when I threw a rock through the screen’: the people sick of being spied on by their TVs</a></h4>
+              <p class="fact">The Guardian profiles tech-literate viewers who refuse smart-TV connectivity—keeping sets offline, routing through Apple TV or Sky boxes, or hunting scarce dumb panels—citing invasive ads, microphones, and data scraping. Interviewees include a computer-science master’s graduate who calls modern TV “increasingly enshittified,” a Connecticut couple whose house rule is not to give devices the Wi‑Fi password, and a UK Health Security Agency AI worker who struggled to find a non-smart replacement. Industry voice Parsons notes rising privacy concern about sensor-laden TVs.</p>
+              <p class="why"><b>Why it matters</b>The living-room display is a case study in forced smart defaults: when the non-connected option disappears, privacy-seeking users invent workarounds that break the manufacturer’s engagement model. Designers of any always-online appliance should watch this revolt.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The power users are unsoldering the smart out of the living room.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship a connected device, offer a first-run “display only” mode that disables microphones, ACR, and ad IDs without requiring a developer jailbreak. Make that mode a supported SKU, not a support-forum hack.</p>
+                    <p><span>Signal</span>When the most technical users treat your product’s network stack as the adversary, your growth metrics are measuring surveillance tolerance, not satisfaction. Retail “dumb TV” scarcity is the market admitting the opt-out was designed out.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Smashing Magazine</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/" target="_blank" rel="noopener">Embracing Playful Imperfection With The CSS random() Function</a></h4>
+              <p class="fact">Smashing Magazine’s Brecht De Ruyte walks through the native CSS random() function from Values and Units Level 5—now in Safari and rolling out in Chrome 156, with positive Mozilla signals—covering min/max ranges, optional step sizes, and caching keys so paired properties stay coordinated. Demos include organic typography, bouncing letters, and splayed cards, framed as controlled imperfection inside design systems rather than chaos. Author commentary on when randomness belongs in a system.</p>
+              <p class="why"><b>Why it matters</b>Randomness is moving from JavaScript novelty to a first-class stylesheet primitive. That reopens the craft question of which surfaces should feel hand-made versus machine-aligned—without shipping a dependency.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Safari shipped random(). Your design system has to decide if fun is a token.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pick one non-critical decorative surface—card rotation ±3deg, sticker scatter, or hero type jitter—and implement it with random() plus a caching key so layout stays stable. Document it as a “play” token with a reduced-motion fallback that disables the variance.</p>
+                    <p><span>Signal</span>Once random() is cross-browser, brand systems that forbid any deviation will look brittle next to products that bake tasteful noise into CSS. The senior move is governance of randomness, not a blanket ban.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/olo-new-food-delivery-app-could-be-the-antidote-to-menu-markups/" target="_blank" rel="noopener">This New Food Delivery App Could Be the Antidote to Menu Markups</a></h4>
+              <p class="fact">Wired reports Olo launching a consumer delivery app nationwide on Android and iOS that keeps in-store menu prices and charges a flat 5% service fee, contrasting CEO Noah Glass’s claim that restaurants pay 20–30% marketplace commissions and mark up menus accordingly. The app launches with 250 brands, no sponsored listings in the browse experience Wired describes, while the company’s restaurant software already claims to help process more than 3.5 million orders daily. Delivery fees still apply; switching costs from incumbents remain high.</p>
+              <p class="why"><b>Why it matters</b>Pricing UX in delivery has become a trust crisis of opaque markups and sponsored results. A flat fee plus menu parity is a clear information-architecture choice: make the cost model legible before the cart.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Same menu price. Flat 5%. No sponsored restaurants in the list.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>In any marketplace checkout, show the merchant’s list price, your fee as a single percentage or flat line, and whether results are paid. If you cannot explain the delta from in-store price in one line, redesign the cart before you redesign the brand.</p>
+                    <p><span>Signal</span>Olo already owns the behind-the-scenes ordering rails; the consumer app is a distribution play against fee opacity. If it gains traction, expect incumbents to copy the “menu parity” claim while burying residual fees—legibility will be contested in marketing, not only in UI.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/the-new-clayface-poster-is-skin-crawlingly-creepy" target="_blank" rel="noopener">The new Clayface poster is skin crawlingly creepy</a></h4>
+              <p class="fact">Creative Bloq reports illustrator Estevan Silveira’s new Clayface poster blends comic-style and classic-horror craft—hunched figure clutching his head as form melts—drawing strong praise on X and Reddit for body-horror detail. The piece situates the art as raising expectations for the upcoming film; reactions quoted are social posts, not box-office data.</p>
+              <p class="why"><b>Why it matters</b>In a year of AI-smoothed key art, a hand-wrought grotesque poster that rewards close looking is a reminder that craft and discomfort still cut through the feed. Poster design remains a primary brand surface for spectacle IP.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The poster that gets worse the longer you look—and fans love it.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For a launch visual, brief one hero image that holds a second read at zoom: a detail that changes meaning on inspection. Test it at thumbnail and full-bleed; if both reads work, you have a poster, not a slide.</p>
+                    <p><span>Signal</span>Audience praise for “grotesque arty” work is a market correction against sanitized AI key art. Studios that outsource first impressions to generative sameness will lose the pause that makes a campaign image memorable.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/19/ai-assistant-startup-town-nabs-unicorn-valuation-four-months-after-launch/" target="_blank" rel="noopener">AI assistant startup Town nabs unicorn valuation 4 months after launch</a></h4>
+              <p class="fact">TechCrunch reports Town raised a $108 million Series B co-led by Forerunner Ventures and Menlo Ventures at a unicorn valuation, four months after public launch, with at least $160 million raised to date after a $55 million Series A in June. The company said it reached millions of dollars in ARR within weeks. Each employee gets a Townie assistant wired to email, calendar, and work systems; Townies can talk to each other and, newly, to external customers, with a shared workflow that pushes business updates into every Townie. a16z, Serena Ventures, and First Round also participated. Figures are company-reported via TechCrunch.</p>
+              <p class="why"><b>Why it matters</b>Enterprise assistants are competing on shared organizational memory, not single-player chat. The product surface that matters is how knowledge propagates across agents without each employee becoming a SysAdmin.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$108M Series B. Four months public. Townies that talk to each other.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design a work assistant, specify the shared-memory model: what updates fan out automatically, what stays private, and where a human approves external-facing agent speech. Draw that as a permission matrix before you ship “agents can email customers.”</p>
+                    <p><span>Signal</span>Unicorn speed with multi-agent org sync suggests investors are underwriting the company graph, not the chatbot. The next failure mode is confidential data leaking across Townies that were “just being helpful.”</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/" target="_blank" rel="noopener">Otter.ai raises $320 million from General Catalyst’s growth fund for its meeting tool</a></h4>
+              <p class="fact">TechCrunch reports Otter.ai raised $320 million from General Catalyst’s growth fund for enterprise growth, go-to-market, international expansion, and product work. PitchBook data cited in the piece puts prior funding at $50 million with a last round in 2021; Otter said it crossed $100 million ARR last year and that 40 million people have used the product, up from 25 million a year earlier. Updated revenue figures were not disclosed. Competition from Fireflies, Granola, Read AI, and others is noted.</p>
+              <p class="why"><b>Why it matters</b>Meeting transcription is consolidating as enterprise voice infrastructure while the UI war shifts from “notes you can search” to retention against a crowded notetaker shelf. Designers in this category are competing on trust, redaction, and meeting hygiene as much as accuracy.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$320M into meeting notes. 40M users. The category still isn’t won.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Ship a meeting-privacy checklist in-product: who is being recorded, where transcripts live, how long they retain, and a one-tap delete for a single meeting. Put it before the “join” confirmation, not in a settings graveyard.</p>
+                    <p><span>Signal</span>A near-decade-old player raising growth capital this late means voice capture is still expanding—and that differentiation will come from workflow lock-in (CRM, tasks, coaching) rather than another waveform UI.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/" target="_blank" rel="noopener">Eka is worth $1.45B thanks to a physical AI model that has experts raving</a></h4>
+              <p class="fact">TechCrunch reports Eka Robotics’ force-sensitive gripper and physical AI model underpin a $1.45 billion valuation, with a16z’s Raghu Raguram co-leading and claiming emerging superhuman dexterity on some tasks. Eka says the robot can pick about 1,500 objects up to 1 kg per hour versus about 600 for a human, with &gt;95% reliability, using a vision-plus-touch approach rather than a pure vision-language-action model. Academic and anonymous frontier-lab roboticists quoted describe a “wow factor.” Performance claims are company- and investor-reported.</p>
+              <p class="why"><b>Why it matters</b>Physical AI demos are finally putting touch closure—not just camera plans—at the center of manipulation UX. Interface designers working on robot supervision will inherit force, failure, and handoff patterns from this stack.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">1,500 picks an hour. Vision finds it; touch finishes the last millimeter.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design a robot operator UI, surface grip force and slip risk as first-class status—not buried telemetry—and require a human confirm when the model enters an untrained object class.</p>
+                    <p><span>Signal</span>Investor language of “superhuman” dexterity will pull product timelines forward faster than safety UX. The teams that win factories will be the ones who design graceful degradation when the 5% failure case is a crushed raspberry—or a crushed finger.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/20/salesforce-braze-acquisition-deal.html" target="_blank" rel="noopener">Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 50%</a></h4>
+              <p class="fact">CNBC reports Salesforce agreed to buy customer-engagement platform Braze for about $5.66 billion, or $47.50 cash per Braze Class A share, with close expected in fiscal 2028 pending approvals. Braze closed at $30.04 Monday and jumped more than 50% on the news; Salesforce slipped about 1%. The deal follows Salesforce’s roughly $3.6 billion Fin purchase for agentic customer service and an expanded Anthropic partnership including Claudeforce. Braze builds AI marketing tools for customer data and messaging.</p>
+              <p class="why"><b>Why it matters</b>CRM giants are buying the messaging and lifecycle layer that owns customer timing, creative, and channel choice. Designers in marketing tech should expect Salesforce-shaped constraints—and agentic send paths—on tools that used to feel independent.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$5.66B for the engagement layer. Braze up 50%. Salesforce shrugs 1%.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product sends customer messages, map every automated send to a human-readable reason code and a one-tap suppress. Acquisition seasons are when quiet agentic sends multiply without a redesign of consent UX.</p>
+                    <p><span>Signal</span>Stacking Braze on Fin and Claudeforce is Salesforce assembling an agentic go-to-market OS. Independent lifecycle tools that cannot explain their data graph will be acquisition targets or roadkill.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/20/ex-openai-executive-builds-1point5-billion-ai-manufacturing-startup-arda.html" target="_blank" rel="noopener">Former OpenAI exec has quietly built $1.5 billion startup, betting AI can revive U.S. manufacturing</a></h4>
+              <p class="fact">CNBC reports former OpenAI research chief Bob McGrew’s Arda raised $230 million at a $1.5 billion valuation led by Altimeter, Accel, and Khosla, building an AI assistant for manufacturing engineers—described as Claude/Cursor for the factory—with deployments at Anduril. McGrew says design changes that retrain humans in a day can take three to six months to retool automation; Arda aims to shorten that. Altimeter cites a $16 trillion global / $3 trillion U.S. manufacturing market. Company-reported funding and customer claims.</p>
+              <p class="why"><b>Why it matters</b>Agent UX is leaving knowledge work and entering change-management for physical production. The design problem is versioning assembly instructions as fast as CAD changes—not another chatbot skin.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$230M at $1.5B to make the factory retool as fast as the engineer.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any ops or manufacturing assistant, design a diff view between the previous and new work instruction, with sign-off per station. Never let an agent silently replace a procedure without a human-readable change set.</p>
+                    <p><span>Signal</span>OpenAI alumni building vertical agents for factories is the second wave after coding agents: the interface that wins is the one that makes process change auditable. “Cursor for manufacturing” only works if the undo story is as good as the generate story.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/20/spotify-launches-paid-podcast-memberships-with-perks-beyond-bonus-content/" target="_blank" rel="noopener">Spotify launches paid podcast memberships with perks beyond bonus content</a></h4>
+              <p class="fact">TechCrunch reports Spotify is rolling paid podcast memberships to 34 markets including the U.S., letting creators offer tiers beyond bonus episodes; creators keep 90% of membership revenue, and purchases happen on the web rather than in-app. Launch shows include Making Sense with Sam Harris, Shawn Ryan Show, and YMH Studios across 12 shows. Memberships join ads and the Partner Program; Spotify previously previewed the idea at Investor Day alongside AI Q&amp;A for listeners.</p>
+              <p class="why"><b>Why it matters</b>Podcast monetization UX is shifting from tip jars and ads toward membership as a first-class product surface on the show page. That changes how creators package exclusives—and how Spotify competes with YouTube for video-native shows.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Creators keep 90%. Fans subscribe on the web. Memberships hit 34 markets.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design creator monetization, put tier comparison and “what I unlock” above the pay wall, and keep billing off the app-store cut when policy allows. Test the post-purchase jump back into the listening surface so the perk feels instant.</p>
+                    <p><span>Signal</span>Web checkout for memberships is a deliberate App Store tax dodge and a product bet that exclusive audio/video can hold fans. Watch whether AI listening features become member-gated—monetization often follows the new interaction.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/20/oura-is-launching-two-new-ways-to-track-and-understand-activity/" target="_blank" rel="noopener">Oura adds new fitness metrics to show how workouts impact your body</a></h4>
+              <p class="fact">TechCrunch reports Oura is adding Cardio Effort (per-workout and weekly totals labeled Light through higher effort bands, based on elevated heart rate vs long-term resting rate) for Gen3 and later rings, plus VO₂ Max estimates in Oura Labs after five qualifying activities, with fitness categories Low/Fair/High/Peak. The company frames the pair as showing acute effort and longer-term fitness together amid competition from RingConn and Ultrahuman. Metric definitions are company-described.</p>
+              <p class="why"><b>Why it matters</b>Wearable UX is moving from nightly readiness scores to effort accounting that needs careful baseline education. Misread cardio load is a trust and safety issue, not just a chart.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Cardio Effort plus VO₂ Max—two more scores that need a legend.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When you add a composite health score, ship an inline definition, personal baseline explanation, and a “not medical advice” path to clinician-shareable raw metrics. Never lead with a color without the formula in one tap.</p>
+                    <p><span>Signal</span>Oura Labs as the VO₂ Max kennel shows the pattern: experimental physiology metrics graduate only after users learn not to panic. Competitors will copy the scores; the moat is educational UI.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>20 Oct 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/us-news/2026/oct/20/us-bans-china-deepseek-ai-tools-government-agencies" target="_blank" rel="noopener">US bans use of China’s DeepSeek AI tools by government agencies</a></h4>
+              <p class="fact">The Guardian reports the Trump administration ordered U.S. civilian agencies to remove DeepSeek AI tools—and third-party tools built with DeepSeek—from IT devices, via a Department of Homeland Security notice citing multiple threat vectors and possible sensitive-data transfer to China. DHS can direct civilian agencies but not military or intelligence services; the defense department did not comment to AFP as cited. Parallel TechCrunch and CNBC coverage the same day corroborate the removal order.</p>
+              <p class="why"><b>Why it matters</b>Model choice is now a procurement and device-management problem, not only a quality problem. Design and research teams in regulated orgs will need clear “allowed model” indicators in tools that embed third-party AI.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">DeepSeek is off federal civilian devices. Third-party wrappers too.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Inventory every product surface that can call a user-supplied or default model endpoint. Add an admin allowlist and a visible “blocked model” state so employees are not debugging silent failures after a policy drop.</p>
+                    <p><span>Signal</span>Banning the model family including downstream tools is the escalation pattern: origin becomes a supply-chain attribute in the UI layer. Expect more geography-and-vendor badges on model pickers inside enterprise design tools.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/10/20/data-center-financing-ai-debt-hsbc.html" target="_blank" rel="noopener">HSBC CEO warns the AI boom won’t make every data center a good bet</a></h4>
+              <p class="fact">CNBC reports HSBC CEO Georges Elhedery calling AI transformational for the bank while urging selectivity on data-center investments based on tenant quality and contract pricing. The piece cites McKinsey that global data-center spending could reach $7 trillion by 2030, Mohamed El-Erian saying hyperscalers may raise about a trillion dollars in bond financing this year after $200 billion last year, and JPMorgan estimating $4.1 trillion in AI-related debt by decade’s end. HSBC is described as both financier and operator in the sector.</p>
+              <p class="why"><b>Why it matters</b>The AI build-out is being priced as credit risk, not just tech optimism. Product and design orgs dependent on cheap inference should plan for cost and availability shocks when weak tenants fail.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$7T in data centers by 2030—and a bank CEO saying be picky.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For AI features with high inference cost, document a degraded mode that preserves core UX when model or region capacity tightens—cached answers, smaller models, or human queues—before finance forces the cut.</p>
+                    <p><span>Signal</span>When the largest European lender stresses tenancy quality while McKinsey floats trillions in build-out, the bottleneck shifts from chips to balance sheets. Design roadmaps that assume infinite cheap tokens are underwriting the same fantasy as weak data-center SPVs.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/is-this-what-designers-need-to-do-to-get-work-in-2026-a-viral-high-production-video-has-sparked-debate" target="_blank" rel="noopener">"Is this what designers need to do to find work in 2026?" a viral high-production video has sparked debate</a></h4>
+              <p class="fact">Creative Bloq reports Bengaluru designer-illustrator Darshita Patankar’s four-minute 8K self-pitch film Design is Dead—produced with her brother Vikrant on a Barbieland-scale set—drew nearly 3 million views on X within a day plus heavy Instagram and LinkedIn response, sparking debate about whether Hollywood-level calling cards are the new job-market baseline. Patankar frames AI anxiety and argues design should sit at brand decision-making, not only output. Creative Bloq’s read is that personality and storytelling matter more than matching the production budget.</p>
+              <p class="why"><b>Why it matters</b>Portfolio norms are shifting under AI anxiety: spectacle pitches go viral, and mid-level designers wonder if craft alone still clears the feed. The durable lesson is memorable point of view, not a mandatory film crew.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Nearly 3M views on a designer’s 8K self-pitch. The comments are scared.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Refresh your portfolio’s first 15 seconds: one sharp point of view, one project story with stakes, and proof of decision-making—not a reel of polished mockups. Ship that narrative as a short page or Loom before you budget a crew.</p>
+                    <p><span>Signal</span>Viral panic that “this is who you’re competing with” reveals a market confusing attention tactics with hiring bars. Clients still buy judgment; platforms reward theater. Seniors who hire on theater will staff for demos, not for systems.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>20 Oct 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/10/20/tiktok-staff-raised-child-safety-concerns-but-executives-reportedly-failed-to-act/" target="_blank" rel="noopener">TikTok staff raised child safety concerns, but executives reportedly failed to act</a></h4>
+              <p class="fact">TechCrunch, citing NPR and March 2026 depositions in consolidated litigation, reports TikTok employees warned minors appeared in purchasable sexual content and that the company avoided age surveys over concern about sharing results with the FTC. TikTok faces suits with Meta, Google, and Snap alleging platforms harm minors; a Los Angeles jury previously found Meta and YouTube designed addictive products for young users, per the piece. TikTok had not responded to TechCrunch at publication.</p>
+              <p class="why"><b>Why it matters</b>Child-safety design debt is being litigated as deposition history, not as a roadmap slide. Product teams shipping youth surfaces need evidence trails for what was known and what shipped.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Staff warnings. No age surveys. The depositions are public now.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any under-18 surface, log the safety review date, the known risk, and the mitigation shipped—in the ticket, not a slide. If legal discovery is the first time the warning is coherent, your process failed.</p>
+                    <p><span>Signal</span>Avoiding research because the FTC might see it is the anti-pattern: measurement became liability. Regulators and juries increasingly treat willful blindness as design intent.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>19 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/music/2026/oct/19/australia-music-global-copywright-outlier-ai-music-body-warnsns" target="_blank" rel="noopener">Kylie Minogue songs already used to train AI as tech firms ‘strong-arm’ Australian government, music body says</a></h4>
+              <p class="fact">The Guardian reports the International Confederation of Music Publishers—representing Sony, Warner, Universal, and independents—claims Australian artists including Kylie Minogue and Nick Cave have already had works used to train AI without compensation, and that of dozens of countries approached to weaken copyright for AI training, Australia appears alone in considering it. ICMP’s John Phelan accused firms of trying to “legitimise larceny” and strong-arm investment threats. Prime Minister Albanese said in July unconsented training would be “theft.” ICMP’s claims are advocacy assertions reported by the Guardian.</p>
+              <p class="why"><b>Why it matters</b>Training-data consent is becoming a national IP design constraint for any product that generates music or voice. Provenance UI and licensing badges will follow wherever law hardens.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Minogue and Cave already in the training set. Australia may legalise the taking.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your generative music or voice feature cannot show licensed-vs-unlicensed training status, add a provenance panel and a disable-training toggle for user uploads before you expand to new markets.</p>
+                    <p><span>Signal</span>A global publishers’ body naming Australia as the outlier is a lobbying map: one jurisdiction’s exception becomes the training-data haven. Product policy will fragment by region faster than model cards admit.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>20 Oct 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/business/2026/oct/20/ai-stock-market-boom-beginning-of-the-end-imf-wallstreet-nasdaq" target="_blank" rel="noopener">Is this the beginning of the end of the AI stock market boom?</a></h4>
+              <p class="fact">The Guardian reports angst after the Nasdaq 100 dropped 5.5% last week against an estimated $US1tn of AI investment this year, with some observers reading a more balanced reassessment rather than a full bust. It ties recent nerves to Firmus, an Australian datacentre hopeful whose multi-billion IPO ambitions—at one stage valued above Telstra before earnings—failed to list on the ASX and chilled similar bets. Expert framing in the piece stresses selectivity, not a verdict that all AI businesses are doomed.</p>
+              <p class="why"><b>Why it matters</b>Public-market wobble changes what gets funded inside product orgs: speculative agent features lose air cover when datacentre IPOs flame out. Design leaders should separate durable user value from narrative-driven roadmap items.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Nasdaq −5.5%. A failed datacentre IPO. $1tn of AI spend under a microscope.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Label each AI initiative on your roadmap as user-validated, efficiency-validated, or narrative-only. Freeze narrative-only work until it has a measurable retention or cost metric you would defend in a downturn review.</p>
+                    <p><span>Signal</span>Firmus-as-wake-up-call is the real-economy tell: equity stories without earnings now infect product prioritization. Teams that can show unit economics for AI features will keep shipping; teams selling vibes will get cut first.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
