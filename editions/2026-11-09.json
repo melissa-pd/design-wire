@@ -1,0 +1,294 @@
+{
+  "date": "2026-11-09",
+  "label": "Monday, 9 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "Wired",
+        "date": "9 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.wired.com/story/i-let-pangram-loose-on-my-gmail-inbox-heres-how-much-ai-it-found/",
+        "hed": "I Let Pangram Loose on My Gmail Inbox. Here’s How Much AI It Found",
+        "fact": "Wired reports that Pangram’s new Gmail integration, available on the $20-per-month individual plan, scans the 100 most recent email threads plus new messages and, in the author’s test of 108 threads, labeled eight as AI, 37 as human, and the rest as mixed, with press releases the most common AI culprits. Pangram says email contents are not stored after assessment or used to train detection models.",
+        "why": "Inbox triage is becoming a provenance UI problem. Once an AI label sits next to a sender name, the design question shifts from whether the detector is perfect to what the product does with a probabilistic verdict.",
+        "hook": "Over half your threads may already read as machine-made.",
+        "teach": "If you ship outbound email templates, add a human-edit gate before send: require a named reviewer change at least one substantive sentence. Treat auto-generated PR, support, and CRM copy as a labeled class in your design system, not as invisible default prose.",
+        "signal": "The optional auto-archive/spam routing of AI-labeled mail will train recipients to treat unlabeled human mail as the scarce resource. Products that still send unmarked machine prose into that environment will look like spam even when they are not."
+      },
+      {
+        "pub": "Wired",
+        "date": "8 Nov 2026",
+        "url": "https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/",
+        "hed": "World Models Will Soon Be Inescapable. Here’s What You Need to Know",
+        "fact": "Wired explains world models as systems that predict the next visual state from an image rather than the next word from text, citing Niantic Spatial’s real-world reconstruction work, Wayve’s dashcam-trained driving simulations, and Odyssey CEO Oliver Cameron’s framing of physics-aware next-state prediction. The piece also notes Yann LeCun raising over a billion dollars for Advanced Machines Intelligence and AMD acquiring Fei-Fei Li’s World Labs this year for over $8 billion.",
+        "why": "Spatial product design is about to inherit a simulation layer the way chat UIs inherited LLMs. The interface burden moves from prompting text to specifying environments, constraints, and acceptable failure modes in physical space.",
+        "hook": "The next model class doesn’t finish your sentence. It finishes the room.",
+        "teach": "For any robotics, AR, or spatial feature on the roadmap, write a one-page “environment contract”: what the system may assume about physics, what it must ask the user to confirm, and how a failed next-state prediction surfaces as recoverable UI rather than silent motion.",
+        "signal": "The gig-labor footnote—recording chores for meagre payouts to feed world models—means the training data for domestic robots is already being harvested from unpaid household aesthetics. Design systems that ignore domestic mess will train bots on aspirational rooms that do not exist."
+      },
+      {
+        "pub": "Wired",
+        "date": "9 Nov 2026",
+        "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+        "hed": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+        "fact": "Wired reports that after Pangram flagged about 78% of the novel Shy Girl as AI-generated and Hachette canceled its US run, startups including Workings, Blindproof, Wintertext, Human Ink, and ObraVera are selling process-tracking and cryptographic fingerprint tools so writers can document authorship. Authors Guild CEO Mary Rasenberger says the guild will not require such tools and has heard of false positives when human work is run through Pangram, despite the company’s claimed 0.01% false-positive rate on creative writing.",
+        "why": "Creative industries are inventing a receipt culture for human authorship before they have a shared standard for what counts. That puts provenance UX ahead of policy consensus.",
+        "hook": "The burden of proof just flipped onto the human.",
+        "teach": "If your product publishes user-generated text at scale, ship an optional process log—draft timestamps, edit spans, model-assist toggles—exportable as a shareable provenance summary. Make disclosure a control the author owns, not a post-hoc accusation surface.",
+        "signal": "Pangram CEO Max Spero’s own caveat that hand-typed AI text and multi-file workflows defeat paper trails means these tools certify workflow theater more than authorship. The durable design pattern is editable disclosure, not a binary human badge."
+      },
+      {
+        "pub": "The Verge",
+        "date": "8 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+        "hed": "Apple is racing to make Siri more agentic",
+        "fact": "The Verge, citing Bloomberg’s Mark Gurman, reports CEO John Ternus is pressing Craig Federighi to accelerate Siri into a competitive AI agent versus OpenAI’s Dots and Meta’s Muse, with fine-grained first-party app control expected in iOS 27.3 and third-party actions such as Grubhub orders or OpenTable reservations later in spring, plus longer-horizon goal tracking possibly next year. This is unconfirmed reporting, not an Apple announcement.",
+        "why": "If accurate, Apple is about to force every major iOS surface to expose agent-callable verbs. That is an App Intent design sprint disguised as a Siri update.",
+        "hook": "Siri’s next job is not answering. It’s finishing multi-step goals.",
+        "teach": "Audit your iOS app for one high-value, undoable action an agent could invoke—book, pay, send, delete—and define confirmation copy, success state, and reverse path as if Siri initiated it without your UI on screen.",
+        "signal": "The reported gap between first-party fine control and third-party booking is Apple sequencing trust before marketplace. Teams that only prepare deep links will lose to teams that prepare agent-safe confirmation and receipt surfaces."
+      },
+      {
+        "pub": "The Verge",
+        "date": "9 Nov 2026",
+        "url": "https://www.theverge.com/tech/1029627/meta-instagram-ai-age-assurance-global-expansion",
+        "hed": "Instagram’s AI age detection is expanding globally",
+        "fact": "The Verge reports Meta is expanding Instagram’s AI age-estimation tools globally to place millions more teens into Teen Accounts—private by default, with restricted content and stranger DMs blocked—even when they signed up with a fake adult birthday, after earlier launches in the US, EU, and Brazil. Meta also cites Apple’s age-range signal in Australia and ties the expansion to an August $17.1 billion settlement; similar tools are rolling to Facebook and later Threads. A correction clarifies the global expansion places teens into Teen Accounts and does not cover under-13 removal.",
+        "why": "Age assurance is becoming a default product layer, not a regional compliance patch. Design systems now need teen-mode states as first-class variants, not CSS hacks.",
+        "hook": "Fake birthdays are losing to model inference.",
+        "teach": "Map every feature that changes for under-18 users into a single teen-mode matrix—visibility, messaging, recommendations, supervision—and test the adult-to-teen flip as a product transition, including how you explain the reclassification to the user and parent.",
+        "signal": "Parent notifications that explain estimation rather than ask for consent show platforms treating inferred age as an operational fact. The next design fight is contestability: how a wrongly classified adult proves adulthood without handing over more biometrics."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "8 Nov 2026",
+        "url": "https://www.theguardian.com/technology/2026/nov/09/weakening-ai-copyright-law-will-spell-disaster-for-creativity-australia",
+        "hed": "Weakening AI copyright law will spell ‘disaster for creativity’, global music body warns Albanese",
+        "fact": "The Guardian reports IFPI chief executive Victoria Oakley warning that Australia weakening copyright to aid AI training would be “ridiculous and dangerous,” arguing a single safe harbour would let models train on music from anywhere. Oakley says labels have already struck dozens of licensing deals with smaller AI firms and rejects Anthropic’s suggested opt-out scrape model; Attorney-General Michelle Rowland’s office reiterated commitment to “meaningful control and fair compensation.”",
+        "why": "Training-data policy is becoming a product constraint for generative music features. Opt-out regimes quietly move rights UX from license negotiation into obscure preference centers nobody visits.",
+        "hook": "One country’s safe harbour trains the world’s catalogue.",
+        "teach": "If you ship generative audio, inventory every training and output path against license-in versus opt-out assumptions, and design a rights status chip users can understand before they publish.",
+        "signal": "Oakley’s point that Spotify-style licensing already works for music undercuts the “too hard to license” product narrative. The real blocker is large labs preferring statutory access over deal desks—and product teams inheriting that preference as default architecture."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "9 Nov 2026",
+        "url": "https://www.theguardian.com/us-news/2026/nov/09/parents-teachers-google-search-schools-ai",
+        "hed": "Parents and teachers decry Google pledge to yank Search if schools block AI: ‘This threat is nothing but extortion’",
+        "fact": "The Guardian reports parent and teacher backlash after Google said K-12 student access to Gemini products and Google Search will stay off until administrators explicitly enable them, and that schools blocking Google’s AI tools will also lose Search. Google education VP Chris Phillips framed the change as giving schools control; critics quoted by the Guardian called the Search coupling “extortion” and urged alternatives such as DuckDuckGo or academic databases.",
+        "why": "Bundling Search to AI adoption turns an education control panel into a coercion surface. That is a classic dark-pattern structure applied to public institutions.",
+        "hook": "Block the chatbot, lose the library card.",
+        "teach": "If you design admin controls that gate AI features, never couple them to unrelated core utilities. Separate AI toggles from search, docs, and identity so a school can refuse Gemini without losing navigation.",
+        "signal": "Default-off AI with Search held hostage is still a forced choice architecture. The political risk is that districts document the coupling as evidence in procurement fights, not as a thoughtful safety posture."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "Creative Bloq",
+        "date": "9 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.creativebloq.com/news/an-anti-ai-indie-game-about-keeping-hand-drawn-fish-has-become-a-surprise-viral-hit",
+        "hed": "An anti-AI indie game about keeping hand-drawn fish has become a surprise viral hit",
+        "fact": "Creative Bloq reports that Kaleb Lechowski’s Drawquarium—an upcoming sandbox about drawing and raising fish, releasing 13 November—gained about 70,000 new Steam wishlists in a week after an emotive trailer that withholds gameplay until past the halfway mark of a three-minute film, with related posts clearing 100,000 and 128,000 likes. The developer said the anti-AI, handmade message resonated; unauthorized Play Store copies of the demo have already appeared.",
+        "why": "In a feed full of AI-generated game assets, a story-first trailer that breaks “show gameplay early” orthodoxy outperformed convention. Craft positioning is now a launch mechanic.",
+        "hook": "70,000 wishlists for a trailer that hid the game.",
+        "teach": "For your next launch asset, storyboard a 90-second cut that leads with human process—sketches, hands, mistakes—before UI. Test whether process footage outperforms feature montage with the same media spend.",
+        "signal": "The Play Store clones arriving within days show virality now includes immediate counterfeit UX. Handmade positioning only works if distribution integrity is part of the launch checklist."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "9 Nov 2026",
+        "url": "https://www.creativebloq.com/news/disney-just-dropped-a-magical-festive-short-and-people-cant-stop-crying",
+        "hed": "Disney just dropped a magical holiday short, and people can't stop crying",
+        "fact": "Creative Bloq reports Disney released The Invisible Horse, a roughly three-minute live-action holiday short directed by Dougal Wilson for the “Make the Holidays Magic” campaign, with cameos from Toy Story’s Woody and Frozen’s Elsa, drawing tearful YouTube reactions after backlash to other 2026 festive ads.",
+        "why": "Brand film is doing the emotional work product pages cannot. The craft lesson is restraint: cameos as seasoning, original story as the product.",
+        "hook": "Disney’s best feature this week is a three-minute YouTube short.",
+        "teach": "When briefing seasonal creative, constrain IP cameos to one beat and force the script to work if those cameos are cut. If it still lands, you have a brand story; if not, you have fan service.",
+        "signal": "The contrast with Hexed controversy and “same-face” fatigue suggests Disney’s live-action trust is being rebuilt in shorts, not tentpoles. Short-form brand cinema is becoming the reputation repair surface."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "9 Nov 2026",
+        "url": "https://www.creativebloq.com/news/kim-kardashians-shocking-advent-calendar-is-the-perfect-metaphor-for-2026",
+        "hed": "Kim Kardashian's shocking advent calendar is the perfect metaphor for 2026",
+        "fact": "Creative Bloq reports SKIMS’ $148/£158 twelve-door Accessories Advent Calendar drew viral unboxing backlash for low-value contents such as hair ties, scrunchies, bobby pins, and a furry compact keychain, despite polished packaging; SKIMS emailed buyers apologizing that the product “did not meet customers’ expectations.”",
+        "why": "This is a packaging-over-product failure mode designers keep warning about and brands keep shipping. The object looks premium until the interaction reveals the emptiness.",
+        "hook": "$148 for the contents of a bathroom drawer.",
+        "teach": "Before any unboxing-led SKU ships, run a door-by-door value audit: photograph each reveal beside a retail price reference and kill any door that cannot survive mute video. Packaging polish is not a substitute for content hierarchy.",
+        "signal": "The apology email after tens of millions of TikTok views shows post-purchase recovery UX arriving after the design decision that caused the harm. Advent calendars are stress tests for honesty in progressive disclosure."
+      },
+      {
+        "pub": "The Verge",
+        "date": "9 Nov 2026",
+        "url": "https://www.theverge.com/gadgets/1029603/pomeras-dm25us-distraction-free-writing-review",
+        "hed": "Pomera’s sleek distraction-free writing machine is just too small",
+        "fact": "The Verge’s review of the $549 Pomera DM250US—the first US-English Pomera digital typewriter—praises portability, roughly 24-hour rated battery life, and robust editing tools, but finds the cramped keyboard painful for long sessions, with the reviewer needing breaks about every 300 words, plus clunky Gmail/QR sync workflows versus simple USB-C file transfer.",
+        "why": "Distraction-free hardware keeps optimizing for bag size while the job-to-be-done is hour-long typing. Ergonomics is the actual product; minimalism is the marketing.",
+        "hook": "The distraction-free writer that distracts your wrists.",
+        "teach": "For any focus device or writing mode, define a minimum continuous-use target in minutes and fail the design if comfort breaks before that mark. Portability metrics without endurance metrics are incomplete specs.",
+        "signal": "Pomera’s feature-rich software on an undersized keyboard shows Japanese cult hardware hitting US hands without a resizing pass. Localization is not just language—it is anthropometrics."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "7 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/07/parents-want-safer-phones-for-kids-these-companies-are-answering-the-call/",
+        "hed": "Parents want safer phones for kids. These companies are answering the call.",
+        "fact": "TechCrunch surveys the kid-phone market—Bark Phone from $240 plus plans from $29/month, Gabb from about $159.99 plus ~$24.99 service, Pinwheel from about $119 plus $14.99 caregiver portal, Teracube Thrive at $99, Ooma MyPhone at $99.99, Tin Can at $100, Waffle Home/Go at $119/$169 shipping 23 November, and TextNow’s Yello! at $149.99 plus $19.99/month—devices that strip browsers, social, or app stores and put contact, location, and screen-time controls in parent apps.",
+        "why": "Child safety UX is consolidating into a parallel phone OS category with progressive unlock as the core interaction model. That is a design pattern adult products keep reinventing poorly as “focus modes.”",
+        "hook": "The real teen OS is a parent-approved allowlist.",
+        "teach": "Steal the progressive-unlock pattern: ship a staged capability ladder—calls only, then texts, then one approved app class—with explicit parent/child confirmation at each step, and reuse it for workplace device lockdown demos.",
+        "signal": "Landline-shaped kid devices like Tin Can and Waffle Home show the market rejecting smartphone inevitability for younger ages. Adult product teams still treating “full internet by default” as neutral UX are out of step with the parental majority."
+      },
+      {
+        "pub": "Wired",
+        "date": "7 Nov 2026",
+        "url": "https://www.wired.com/story/apps-for-caregivers-get-a-dose-of-ai-but-that-might-not-be-enough/",
+        "hed": "Apps for Caregivers Get a Dose of AI, but That Might Not Be Enough",
+        "fact": "Wired reports caregiver tools adding AI—Caring Village’s Julia assistant, Citizen Health’s Ari “health teammate” in beta for rare-disease users that can text, pull records and calendars, and prep appointment questions—against AARP’s estimate of 63 million US caregivers averaging up to 27 hours of care weekly. Harvard’s I. Glenn Cohen warns most such apps are not FDA-reviewed and sit outside HIPAA when users enter data themselves; Denise M. Brown notes many apps die because uploading care plans is tedious.",
+        "why": "Care coordination UX fails on maintenance cost, not feature gaps. AI that creates more logging work will lose to AI that captures context from channels caregivers already use.",
+        "hook": "63 million caregivers don’t need another empty care plan form.",
+        "teach": "If you design multi-caregiver handoff, prioritize capture from existing surfaces—calendar events, shared notes, SMS summaries—over blank journals. Measure success as minutes saved per handoff, not features shipped.",
+        "signal": "Cohen’s HIPAA gap warning means “trust us” privacy copy is doing regulatory work the product cannot. Caregiver AI that looks clinical without clinical accountability is a liability UI waiting for a screenshot."
+      }
+    ],
+    "product": [
+      {
+        "pub": "TechCrunch",
+        "date": "9 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/09/meet-drops-the-new-music-app-bringing-back-the-fun-of-sharing-songs-with-friends/",
+        "hed": "Meet Drops, the new music app bringing back the fun of sharing songs with friends",
+        "fact": "TechCrunch reports Samsung subsidiary Harman launched Drops, an invite-only US iOS/Android app for swiping 10-to-30-second song snippets with lyrics and artwork, Droplists, DMs, and deep links into Apple Music, Qobuz, and TIDAL. Harman says it uses no generative AI for audio or visuals, pays rights holders including Universal Music Group and others, and counts plays toward partner stream totals.",
+        "why": "Music discovery product design is swinging back from algorithmic infinite feeds toward clip-led social sharing—with an explicit anti-AI media stance as a differentiator.",
+        "hook": "TikTok’s scroll, without TikTok’s AI audio.",
+        "teach": "For media products, prototype a “best 20 seconds” share unit with caption and timestamp deep link before building another For You ranking. Measure whether friend-sent clips beat algorithmic first plays on retention.",
+        "signal": "Promising that plays count on the streaming services users already pay for is the real growth hack: Drops is positioning as a discovery layer, not a subscription rival. Expect more vertical apps that refuse to own the catalog."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "9 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/",
+        "hed": "Automattic debuts a platform to deploy vibe coding apps amid a changing internet",
+        "fact": "TechCrunch reports Automattic launched Spacefast, infrastructure for vibe-coded apps covering databases, auth, uploads, email, and analytics, connectable to agents including ChatGPT, Claude, Cursor, Muse and others or to a Git repo, competing with Lovable and Emergent while leaning on Automattic’s CDN, WordPress, WooCommerce, and enterprise relationships. Soft launch began in September; the piece notes Automattic’s recent board turmoil and layoffs as backdrop.",
+        "why": "Vibe-coding tools are splitting into IDE toys and deployment rails. Spacefast bets the durable product is ops for non-technical builders, not another chat canvas.",
+        "hook": "The CMS company just shipped rails for apps that skip CMSes.",
+        "teach": "If designers on your team ship Lovable/Cursor prototypes to stakeholders, define a promotion path: which environments get auth, analytics, and a named owner before anyone pastes a public URL into Slack.",
+        "signal": "İçöz’s “IT sprawl” pitch—marketing teams proliferating Lovable landing pages—means Spacefast is selling governance to enterprises that already lost control of prototype surface area. DesignOps just became a hosting category."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "9 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/09/tesla-expands-robotaxi-service-to-san-antonio/",
+        "hed": "Tesla expands robotaxi service to San Antonio",
+        "fact": "TechCrunch reports Tesla said its robotaxis would open in San Antonio at 5 a.m. Monday, joining limited service in Austin, Miami, Orlando, Dallas, Fort Worth, and Houston, while Waymo already operates there. Tesla gave no fleet-mix or safety-monitor details; Robotaxi Tracker data cited in the piece shows small fleets outside Austin—24 vehicles in Fort Worth and five in Miami—and summer data showed fewer paying miles in Q2 than Q1.",
+        "why": "Robotaxi UX is still a geo-fenced scarcity product marketed as network scale. The map pin expands faster than the fleet.",
+        "hook": "Another city. Still a handful of cars.",
+        "teach": "When designing AV or on-demand mobility status UI, show fleet density and service-area edges explicitly—pins without capacity create false availability expectations that support tickets will inherit.",
+        "signal": "Waymo’s San Antonio restart after flood-stuck incidents means competitors are learning in the same cities Tesla is entering. Local edge-case lore is becoming the real product moat, not brand demos."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "9 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/09/musk-says-tesla-will-refund-some-cybertruck-deposits-defends-decision-to-end-production/",
+        "hed": "Musk says Tesla will refund some Cybertruck deposits, defends decision to end production",
+        "fact": "TechCrunch reports Elon Musk said Tesla will stop Cybertruck production in about eight months, try to build as many as possible before then, and “have to return deposits for a lot of people,” framing the kill as opportunity cost versus Cybercab production rather than unprofitability. Industry estimates cited put lifetime Cybertruck sales around 71,000 since late 2023 versus earlier talk of 250,000 annual sales and roughly a million reservations; SpaceXSI bought $131 million of Cybertrucks in 2025 per its S-1.",
+        "why": "Hardware end-of-life is a customer-experience event. Deposit refunds at scale are a trust product, not a finance footnote.",
+        "hook": "From a million reservations to refunds.",
+        "teach": "If you run preorders or deposits, write the kill-switch journey now: timeline email, refund ETA, partial-fulfillment options, and a status page. Do not invent that flow the week production ends.",
+        "signal": "Musk’s complexity-versus-Cybercab framing is a factory UX decision leaking into brand narrative. Polarizing industrial design lost to platform concentration on the higher-multiple product."
+      },
+      {
+        "pub": "The Verge",
+        "date": "8 Nov 2026",
+        "url": "https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos",
+        "hed": "Epic Games Launcher is coming to SteamOS",
+        "fact": "The Verge reports Epic communications director Jake Jones confirming the preview Linux Epic Games Launcher will support SteamOS and Steam Decks among other distros, with AppImage restoration planned this month, while Fortnite on Deck still hinges on unresolved Easy Anti-Cheat Linux v2 support and Valve talks.",
+        "why": "Storefront UX on handheld Linux is consolidating around SteamOS as the host OS even when Epic owns the catalog. Launcher compatibility is the real port.",
+        "hook": "Epic is coming to Valve’s OS before Fortnite is.",
+        "teach": "For multi-store clients, prioritize install-and-update flows on the dominant handheld OS shell before chasing feature parity with desktop launchers. A broken Deck update path kills store trust faster than missing cosmetics.",
+        "signal": "EAC as the blocker means anti-cheat policy is the silent product manager for live-service ports. Platform design now includes security-vendor roadmaps you do not control."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "8 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/08/ninjas-autobarista-is-impressively-versatile-but-one-feature-was-a-dealbreaker-for-me/",
+        "hed": "Ninja’s AutoBarista is impressively versatile, but one feature was a dealbreaker for me",
+        "fact": "TechCrunch’s hands-on of the $999.99 Ninja AutoBarista describes Grind iQ auto-calibrating grind, weight, and dose across 13 one-button drinks, with automatic rinses and plant-milk frothing, but flags a drip tray that fills after a few drinks and a knock box that grew blue mold after a few days of neglect as dealbreakers for a low-ritual user.",
+        "why": "Appliance “intelligence” still fails on maintenance UX. The smartest brew path dies if emptying waste is a daily chore the product never designed for honestly.",
+        "hook": "A $1,000 barista that loses to a moldy knock box.",
+        "teach": "For any auto device review or product brief, add a maintenance journey map—empty, clean, descale, alert—and require capacity and alert thresholds that match realistic multi-user kitchens before celebrating one-button modes.",
+        "signal": "Grind iQ selling calibration as a feature admits most buyers will never learn espresso craft. The premium tier of kitchen AI is competence theater wrapped around chores the industrial design still under-specs."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "6 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://arstechnica.com/gaming/2026/11/could-potential-ai-clones-of-gta-vi-force-a-quicker-official-port/",
+        "hed": "Could potential AI clones of GTA VI force a quicker official port?",
+        "fact": "Ars Technica reports former Rockstar tech director Obbe Vermeij telling Rock Paper Shotgun he would worry, if still at Rockstar, that AI reverse-engineering could turn the PS5 GTA VI binary into a good-enough PC port for “tens of thousands of dollars in tokens,” potentially compressing the usual console-first gap; unofficial reports still point to an official PC window in Q1 2027. Speculative commentary, not a Rockstar plan.",
+        "why": "Release-window strategy is colliding with AI decompilation economics. Platform exclusivity timing is becoming a security and tooling problem, not just a marketing calendar.",
+        "hook": "The PC port’s new competitor is a token bill.",
+        "teach": "If you ship console-first software, treat reverse-engineering time-to-good-enough as a product risk: document which features must stay server-authoritative and which client assets are acceptable to leak early.",
+        "signal": "Vermeij’s “won’t be as good, but good enough” line is the entire AI product threat model. Official ports will be judged against pirate adequacy, not against their own previous bar."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "CNBC",
+        "date": "9 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.cnbc.com/2026/11/09/coreweave-debt-credit-risk-neoclouds.html",
+        "hed": "CoreWeave confronts 'doom cycle' narrative as neocloud credit risk overshadows growth",
+        "fact": "CNBC reports CoreWeave and Nebius have each lost about half their value in the past month, with some CoreWeave 2031 bond yields above 16% and five-year CDS spreads above 1,240 basis points, up 50% in a month. CoreWeave held $5.5 billion cash against $35 billion debt at end of June; analysts expect ~160% revenue growth to $3.55 billion this quarter. Midterm anti-data-center votes and Nvidia CEO turmoil added pressure; Freedom Capital’s Paul Meeks called the credit narrative a self-fulfilling “doom cycle.”",
+        "why": "AI infrastructure is being repriced as credit risk, not just growth equity. Design and product roadmaps that assume endless cheap GPU capacity are now scenario-planning exercises.",
+        "hook": "Half off the neoclouds. Double-digit yields on the debt.",
+        "teach": "For any AI feature with variable inference cost, add a degraded-mode design: what the product does if GPU spend is cut 30% next quarter—cached answers, lower-res media, human fallback—and put it in the sprint backlog, not a wiki.",
+        "signal": "Intrator’s claim that politics will not hit existing backlog while bonds scream otherwise shows equity storytelling and credit markets diverging. The financing gap Yang flags—beaten-down equity plus expensive debt—is how buildouts stall even when customer demand remains."
+      },
+      {
+        "pub": "Wired",
+        "date": "9 Nov 2026",
+        "url": "https://www.wired.com/story/the-midterms-were-a-pretty-good-sign-for-right-to-repair/",
+        "hed": "The Midterms Were a Pretty Good Sign for the Right-to-Repair Movement",
+        "fact": "Wired reports right-to-repair champions advancing after the midterms, including Iowa senator-elect Josh Turek and a Minnesota renter repair ballot measure that passed overwhelmingly, with PIRG’s Nathan Proctor calling the climate favorable for bipartisan reform and advocates targeting DMCA Section 1201’s anti-circumvention rules as the federal bottleneck.",
+        "why": "Hardware and software lockouts are re-entering mainstream politics as affordability policy. Product teams that treat repairability as niche compliance are behind the electorate.",
+        "hook": "Voters just made wrench access a kitchen-table issue.",
+        "teach": "Inventory one shipped product for parts, manuals, and software unlocks a third party needs to repair it. File a one-page gap list against a hypothetical DMCA-1201 carve-out and assign owners before regulators do.",
+        "signal": "O’Reilly’s framing that device ownership fights mirror ballot anger means repair UX is becoming brand politics. Subscription locks and paired parts will read as tariff-adjacent price gouging in the next cycle of hearings."
+      },
+      {
+        "pub": "Wired",
+        "date": "9 Nov 2026",
+        "url": "https://www.wired.com/story/bug-activists-and-biker-gang-members-are-teaming-up-to-protest-data-centers/",
+        "hed": "Bikers and Bug-Lovers Join Forces to Fight a New Google Data Center",
+        "fact": "Wired reports an alliance of Buglife, Foxglove, and the Thurrock Hammers motorcycle club delivered a petition of almost 55,000 signatures opposing Google’s planned Thurrock data center east of London, citing endangered habitat, up to 570,000 tonnes of annual emissions claimed by Foxglove, and loss of a disused raceway; of roughly 1,000 public planning responses, only one supported the project. Google says it will deliver biodiversity net gain and renewable offsets; Thurrock Council expects an initial ruling early next year.",
+        "why": "Data-center opposition has become a coalition sport—wildlife, carbon, and local leisure in one protest. Siting UX now includes petition surfaces and years-long planning attrition.",
+        "hook": "55,000 signatures, one yes vote, and a motorcycle club.",
+        "teach": "If your company depends on new compute sites, treat community objection paths as a product journey: map petition, planning comment, and protest moments, and prepare plain-language impact pages that answer habitat, water, and noise before the first headline.",
+        "signal": "Foxglove’s earlier win forcing withdrawal of west-London permission shows UK legal tactics are catching US ballot energy. Global AI capacity is increasingly gated by local storytelling, not just power purchase agreements."
+      },
+      {
+        "pub": "CNBC",
+        "date": "8 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html",
+        "hed": "Nvidia investigates CEO Jensen Huang's relationship with alleged Chinese spy",
+        "fact": "CNBC reports Jensen Huang emailed staff admitting an affair and that Nvidia’s board opened an independent investigation into allegations—reported via the New York Times and Financial Times—that Alice Huang, affiliated with Nvidia customer Megaspeed, is a Chinese intelligence asset. The board said it has no reason so far to believe national security or Nvidia secrets were compromised; House Republican chairs had already asked Huang for a closed-door briefing on 18 November, with earnings due 17 November.",
+        "why": "The AI chip bottleneck company now carries CEO-level national-security process risk into earnings week. Governance drama is infrastructure risk.",
+        "hook": "The AI supply chain’s single point of failure just got a board probe.",
+        "teach": "For vendor-risk reviews this week, add a qualitative “key-person / geopolitics” note on Nvidia-dependent roadmaps and identify one alternate capacity path—cloud region, model tier, or delay—you can brief stakeholders on without panic language.",
+        "signal": "Megaspeed already being in Nvidia’s export-control orbit means the personal scandal sits on top of an existing diversion narrative. Markets will price process risk even if the board finds no secret leaked."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "6 Nov 2026",
+        "url": "https://arstechnica.com/tech-policy/2026/11/faa-to-finally-ditch-floppy-disks-in-what-it-calls-historic-tech-upgrade/",
+        "hed": "FAA to finally ditch floppy disks in what it calls “historic” tech upgrade",
+        "fact": "Ars Technica reports the FAA will replace floppy-disk-era information display systems at 435 facilities with the Enterprise Information Display System by end of 2028, starting at Atlantic City, Nashville, Rochester, and hubs in Atlanta and Salt Lake City, addressing GAO-cited failures around weather alerts and NOTAMs. The Leidos E-IDS contract dates to August 2020 inside the broader NextGen program.",
+        "why": "Critical-infrastructure UX is still climbing out of 1980s information architecture. The controller’s screen is a safety product with a multi-year migration tax.",
+        "hook": "Air traffic control is retiring the floppy before 2029.",
+        "teach": "When redesigning internal tools that sit on legacy data, ship a dual-run period with side-by-side retrieval metrics—time to find a NOTAM-equivalent—and kill the old path only after the new one wins on speed, not aesthetics.",
+        "signal": "A six-plus-year path from contract to floppy retirement is the real tempo of regulated systems. Consumer AI product cycles that assume overnight infrastructure change are designing against a fantasy clock."
+      }
+    ]
+  }
+}
