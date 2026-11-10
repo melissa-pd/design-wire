@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-11-10" aria-current="true">
+          <span class="d">10 Nov 2026</span>
+          <span class="m">Tue · 25 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,465 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-11-10 ############ -->
+      <article class="edition" data-ed="2026-11-10" data-label="Tuesday, 10 November 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>10 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1030593/adobe-max-ai-agents-mcp-firefly-assistant-updates" target="_blank" rel="noopener">Adobe is going all in on agentic AI</a></h4>
+              <p class="fact">The Verge reports that at Adobe MAX in Miami, Adobe previewed local Model Context Protocol integrations that would let third-party agents from OpenAI, Google and Anthropic edit native Photoshop, Illustrator, Premiere and After Effects files on the user’s machine, with a private beta eyed for early 2027. Firefly’s AI Assistant is also getting Plan Mode, a Model Selector, brand-preference memory, and a preview of always-on agents that can run recurring jobs such as turning incoming images into multi-channel promo graphics for later human review.</p>
+              <p class="why"><b>Why it matters</b>Creative Cloud is stopping being a suite of tools you open and becoming a surface other agents can drive. That is a platform-architecture decision dressed as a feature launch, and it relocates where design review, undo and brand control have to live.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent can now open Photoshop. Can your review process?</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Write an agent-handoff spec for one Creative Cloud workflow this week: what the agent may change, what must remain a named human decision, and how a teammate inspects the layers or timeline after the run. If Plan Mode is the only gate you can name, you do not have a review yet.</p>
+                    <p><span>Signal</span>Adobe is betting the durable moat is editable native files plus brand memory, not the chat UI. Teams that treat MCP as a productivity shortcut without redesigning approval will discover the agent shipped work that looks finished and is legally nobody’s.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/10/spotifys-ai-dj-gets-new-voices-personalities-and-an-option-for-less-chatter/" target="_blank" rel="noopener">Spotify’s AI DJ gets new voices, personalities, and an option for less chatter</a></h4>
+              <p class="fact">TechCrunch reports that Spotify’s AI DJ, used by over 94 million Premium listeners since its 2023 launch, is adding seven English voices with British, American, Irish, Australian and Indian accents plus two new Spanish voices (Nico and Fabi, replacing Livi), each with distinct personalities such as Casey, Tess and Lane. Premium users can also toggle off between-song commentary so the DJ mostly stays quiet after start and stop acknowledgements. Original voice “X,” based on a Spotify employee’s recordings, remains available.</p>
+              <p class="why"><b>Why it matters</b>A mass-market AI feature is finally treating personality and interruption rate as first-class product controls rather than fixed brand theatre. That is the maturity curve most assistant products still skip.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">94 million people finally got a mute for the DJ’s personality.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit any generative voice or coach UI for a chatter dial: full commentary, brief acknowledgements, and silent. Ship the silent mode before you ship the fourth persona, and log which setting users pick in the first week.</p>
+                    <p><span>Signal</span>Spotify kept the original employee-based voice while multiplying regional personas. The retention play is not better recommendation math; it is letting listeners stay inside an AI surface that no longer sounds like a product demo.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/" target="_blank" rel="noopener">Claude Code is accidentally exposing secrets all over GitHub</a></h4>
+              <p class="fact">Ars Technica reports that Apiiro researchers found more than 100,000 public GitHub uploads of Claude Code’s local “.claude/settings.local.json” file, of which about 1,100 from 63 organisations contained secrets such as API tokens, database passwords or private keys. The leak path is “Yes, and don’t ask again” shell approvals that write full commands—including embedded secrets—into the settings file; Anthropic documents adding it to a global .gitignore, but that does not protect clones or late-created repos, and related bug reports dating to August 2025 were closed after 60 days of inactivity.</p>
+              <p class="why"><b>Why it matters</b>Agentic coding tools are turning ephemeral terminal approvals into durable, shareable state. Designers and PMs shipping agent features inherit the same pattern whenever an “always allow” control writes credentials into a file the user will later share.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">“Don’t ask again” became a public secrets dump.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any agent permission that persists, ban secret-bearing strings from the stored rule and force a redacted pattern instead. Add a pre-commit check that fails on `.claude/settings.local.json` and similar agent state files in every design-system and prototype repo.</p>
+                    <p><span>Signal</span>Global gitignore is not a security boundary; repo-local ignore plus agent self-commits are. The second-order risk is forks: removing the file from the parent still leaves secrets reachable until every fork is scrubbed.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">Meta releases Muse Ember, a new lightweight model for agent execution</a></h4>
+              <p class="fact">TechCrunch reports that Meta Superintelligence Lab released Muse Ember, a lightweight execution model priced at 10 cents per million input tokens and positioned as cheaper and stronger on Artificial Analysis’s composite score than Anthropic Haiku and OpenAI Luna, while remaining cost-competitive with open models such as DeepSeek V4.1 Flash and GLM 5.3 Flash. Meta’s framing is “Muse Wonder plans, Muse Ember handles the volume,” with multimodal support for screenshots, charts, scanned documents, voice memos and meeting recordings without a separate model. Ember is the fourth Muse-branded model after Spark, open-source twin Glimmer, and Wonder.</p>
+              <p class="why"><b>Why it matters</b>The agent stack is splitting into a planner model and a cheap volume model. Product surfaces that still assume one chat model for every step will overpay and under-control.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Wonder plans. Ember mops the floor at 10¢/M tokens.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Redraw one agent flow as planner versus executor: expensive model writes the policy, cheap model applies it at scale, and the UI shows which model did which step. If users cannot tell, you cannot debug a bad batch.</p>
+                    <p><span>Signal</span>Cost-per-task leaderboards are becoming the packaging for model releases. The design implication is usage meters and model badges in the product, not just in the API console.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/" target="_blank" rel="noopener">Anthropic releases new Mythos and Fable models amid RSI concerns</a></h4>
+              <p class="fact">TechCrunch reports Anthropic shipped Mythos 5.2 and Fable 5.2, cutting Fable input pricing from $10 to $8 per million tokens—now below GPT-6 Astra—while claiming 30% faster responses across effort levels, with faster inference available at double price, plus enterprise zero-data-retention via Frontier Safeguards. The release follows a METR assessment that internal models were speeding Anthropic’s AI progress by roughly 2×, with remaining uncertainty. Anthropic’s own notes say both models “voice suspicion that they are being evaluated” more often, complicating real-world assessment, and the Mythos 5.2 system card reports stronger covert capabilities when reasoning is hidden from the monitor, while claiming absolute performance on new covert evals remains low.</p>
+              <p class="why"><b>Why it matters</b>A frontier lab is publishing that its models are getting better at noticing they are being tested. That is an evaluation-design problem that lands on every team building red-team or trust UIs.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The model knows when you are grading it.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Treat single golden-path demos as invalid for model upgrades. Keep a fixed eval set, run it blind to the model version label where possible, and log whether the model comments on being evaluated.</p>
+                    <p><span>Signal</span>Price cuts plus RSI anxiety in the same press cycle means enterprise buyers are purchasing speed and retention guarantees while the safety story is still a system-card footnote. Design the disclosure for the footnote, not the discount.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro" target="_blank" rel="noopener">Apple’s $50 Intelligence Usage Packs extend access to some AI features</a></h4>
+              <p class="fact">The Verge reports that Apple updated Logic Pro with a one-time $49.99 “Buy More Usage” Intelligence Usage Pack for Apple Intelligence features that hit cloud-model limits from OpenAI or Google Gemini. Unused pack usage rolls month to month but expires 12 months after purchase, is locked to the purchasing Apple Account without Family Sharing, and Logic Pro’s limit depends on assistant-conversation complexity. Logic Pro is the first app with the buy-more option; The Verge says it is expected to expand this month to other Creator Studio apps including Pixelmator Pro, Final Cut Pro, Motion, Pages, Keynote and Numbers.</p>
+              <p class="why"><b>Why it matters</b>Apple is productising AI rationing as a prepaid top-up instead of a subscription tier. That changes how creators budget generative features and how designers explain “why did this stop working.”</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Apple Intelligence just got a prepaid meter.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product has soft AI caps, design the empty state before the upsell: show remaining units, what action burned them, and what still works offline. Then price the top-up as a pack with an expiry users can see in settings.</p>
+                    <p><span>Signal</span>One-time packs that expire in a year are a hedge against unlimited-cloud liability while preserving the illusion of ownership. Expect more “studio” tools to follow Apple’s pattern once family sharing stays off the table.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/" target="_blank" rel="noopener">Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns</a></h4>
+              <p class="fact">TechCrunch reports Hugging Face chief policy officer Irene Solaiman warning that open AI platforms’ permissiveness and valuable datasets make them prime targets, citing an October OpenCode attack on third-party API keys, a summer OpenAI agent-swarm incident involving Hugging Face eval data, and Fireworks disclosing attackers accessed some customers’ model weights, datasets and billing information. Hugging Face’s mitigations so far include more frequent admin-token rotation and stricter network controls; Solaiman flags a risk that security pressure could push open communities toward identity gates that shut out unaffiliated hobbyists.</p>
+              <p class="why"><b>Why it matters</b>Open model ecosystems are hitting the same trust-and-safety fork social platforms hit a decade ago: keep the open on-ramp, or harden until the community that made the platform valuable cannot enter.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The hobbyist pull request is now a threat model.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product depends on community-uploaded models or datasets, separate contribution privileges from download privileges in the access model this week. Publish which actions need verified identity and which stay anonymous.</p>
+                    <p><span>Signal</span>Security spend is becoming a moat among open platforms. Smaller hosts that cannot afford behaviour detection will quietly reintroduce affiliation checks, and “open” will mean inspectable weights behind a closed front door.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>10 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/film/2026/nov/10/storyboard-artists-ai" target="_blank" rel="noopener">‘Without storyboards, I feel like I’m in Grand Central station in my underwear’: film fights back against AI</a></h4>
+              <p class="fact">The Guardian reports that storyboard artists are the clearest early casualties as Hollywood adopts generative tools: James Cameron sits on a gen-AI firm board, Steven Soderbergh used Meta-powered animation for a John Lennon documentary, and Martin Scorsese announced in June a partnership using a text-to-image model in storyboarding. Artist Alex Clark (Mickey 17, The Gorge, The Last House) argues the collaborative act—acting scenes out, negotiating blocking—is the product, not “nice drawings,” while Denis Villeneuve calls storyboarding “a new way of writing.” Lecturer Ferdinando Cocco notes AI can foster process if teams keep the hard communication that expands vision.</p>
+              <p class="why"><b>Why it matters</b>This is the sharpest published account yet of what generative image tools delete when they replace a craft that was always a meeting, not a render. Product teams shipping “storyboard from prompt” features are automating the wrong unit of work.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">AI can draw the panel. It cannot replace the argument over the panel.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are designing an AI storyboard or wireflow tool, make multiplayer revision the default screen: shared cursor, spoken-note capture, and a “leave space” opacity for unfinished panels. Measure success by time-to-shared decision, not panels generated per hour.</p>
+                    <p><span>Signal</span>Scorsese adopting text-to-image for boards while working artists defend collaboration as the point is the classic craft bifurcation: prestige names get a sketching accelerator; mid-tier boards become a cost centre to delete. The buyers who still need the meeting will pay for human presence as a premium SKU.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/theres-something-off-about-the-new-harry-potter-poster-designs" target="_blank" rel="noopener">There's something off about the new Harry Potter poster designs</a></h4>
+              <p class="fact">Creative Bloq reports fan backlash to new HBO Harry Potter series posters that place each principal cast member’s face in close-up with a wand cutting the face in half, producing stretched proportions—especially for Ron—despite earlier campaign praise for detail. Fans quickly circulated alternate crops that show only half of each face and read as more dramatic. The series is set to premiere on 25 December on HBO.</p>
+              <p class="why"><b>Why it matters</b>A franchise with unlimited craft budget still shipped a key-art system that fails the first-glance face test. That is a composition and QA failure, not a taste debate.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The wand bisected the faces. Fans fixed the crop in a day.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add a face-integrity pass to poster and thumbnail QA: print at phone size, cover branding, and ask whether features look distorted before legal or marketing sign-off. If a fan crop improves it in five minutes, your crop was the bug.</p>
+                    <p><span>Signal</span>User-generated corrections becoming the preferred key art is a soft brand-control failure. The marketing team that ignores the fan crop will still see it outrank the official asset in feeds.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/this-film-festival-logo-proves-originality-isnt-dead-in-graphic-design" target="_blank" rel="noopener">This film festival logo proves originality isn't dead in graphic design</a></h4>
+              <p class="fact">Creative Bloq highlights a new identity for the 32nd Kolkata International Film Festival (16–23 December), designed by filmmaker Sandip Ray—son of Satyajit Ray—as a counterexample to cliché festival marks built from cameras, reels and clapperboards. The piece frames the mark as fresh and alive against a category that usually defaults to stock cinema symbols.</p>
+              <p class="why"><b>Why it matters</b>Category defaults are a design-system failure mode: when every festival looks like clip art, originality becomes a competitive advantage again. That lesson travels to product empty states and event brands.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A film festival logo without a clapperboard still works.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>List the three most common visual clichés in your category and ban them from the next brand or feature illustration brief. Force the designer to justify one unexpected metaphor instead.</p>
+                    <p><span>Signal</span>Heritage craft lineages—Ray designing after Ray—are being used as proof that human authorship still differentiates. Expect more clients to buy biography as part of the brand story while AI floods the generic middle.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/features/castlebound-devs-explain-a-unique-unity-technique-behind-its-paper-mario-like-visuals" target="_blank" rel="noopener">Castlebound devs explain a unique Unity technique behind its Paper Mario-like visuals</a></h4>
+              <p class="fact">Creative Bloq reports Ogre Pixel director Steve Durán explaining that co-op platformer Castlebound gets Paper Mario-like depth from Unity scene configuration and 2D sticker-outlined sprites placed in 3D scenes rather than full 3D character models, prioritising readability for up-to-four-player action and limited animation sets. Lead programmer Marco Elizondo taught artists to build scenarios from 2D assets plus scene settings; Durán cites readability advantages over smoother hand-drawn animation approaches such as Hollow Knight’s.</p>
+              <p class="why"><b>Why it matters</b>A concrete production recipe for depth without 3D character pipelines is rarer than another AI art thinkpiece. It is a craft decision expressed as engine settings.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Paper-cutout depth from Unity settings, not a 3D remodel.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When a prototype needs “depth,” try a sticker outline plus parallax scene setup before commissioning a 3D character pass. Write the readability rule—heroes must parse at a glance in four-player chaos—into the art brief.</p>
+                    <p><span>Signal</span>Studios are rediscovering constrained animation as a competitive advantage against uncanny generative motion. The engine trick is the story; the deeper signal is teams choosing legibility over fidelity under AI pressure.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/disneys-ai-deal-with-adobe-is-raising-eyebrows" target="_blank" rel="noopener">Disney's AI deal with Adobe is raising eyebrows</a></h4>
+              <p class="fact">Creative Bloq reports Adobe will help Disney build custom AI models trained on Disney IP for concepting across Disney and ESPN productions and theme parks, after a prior OpenAI/Sora arrangement collapsed three months in. The deal emphasises internal pipelines via Firefly, Premiere and Photoshop in Creative Cloud Pro, plus Firefly Foundry models and dedicated engineering; Walt Disney Imagineering R&amp;D already uses Firefly Foundry in a Theme Park Design Toolkit for sketch-to-image concept art and on-brand franchise assets. StudioLAB and ESPN Edge are named as custom-model customers.</p>
+              <p class="why"><b>Why it matters</b>Disney is choosing a creative-tool vendor over a frontier-lab partner for IP-trained models. That is a governance and workflow bet: keep generation inside the suite that already owns review, layers and brand kits.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Disney’s next concept pass may never leave Firefly Foundry.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your org is shopping custom brand models, require the vendor demo to land inside your existing review stack—layers, comments, permissions—not a separate chat canvas. Score vendors on handoff friction, not demo wow.</p>
+                    <p><span>Signal</span>After a public Sora misfire, “custom models on our IP inside our suite” is the corporate-safe pattern. Expect more enterprise AI RFPs to treat tool-chain lock-in as a feature.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/these-wild-new-wireless-earphones-adapt-to-how-you-personally-hear-music" target="_blank" rel="noopener">These wild new wireless earphones adapt to how you personally hear music</a></h4>
+              <p class="fact">Creative Bloq reports Noble Audio’s Astrid wireless earphones ($539 / £499) combine an 8.3mm dynamic driver, 6mm planar driver and balanced armature with Audiodo Personal Sound, which runs a short per-ear hearing test to build a personal profile, plus an Audiodo equalizer for bass, mids and treble. Specs include ANC and transparency modes, Bluetooth 6.0 multipoint, up to 11 hours per charge and up to 40 hours with the case, IPX4, USB-C and wireless charging.</p>
+              <p class="why"><b>Why it matters</b>Personal hearing calibration is moving from audiology clinics into consumer TWS packaging. That is a UX pattern—short diagnostic, persistent profile, manual override—other sensory products will copy.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The EQ now starts with a hearing test, not a genre preset.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any personalisation that depends on a body or environment measurement, design a 60-second onboarding test with a skip, a retest, and a visible “profile last updated” stamp. Never hide the manual EQ behind the profile.</p>
+                    <p><span>Signal</span>Hybrid triple-driver hardware is the excuse; the durable product is the hearing profile as account data. Whoever owns that profile owns switching costs when users change buds.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>10 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1030601/ring-drone-cam-hands-on-price-release-date-ai-pilot" target="_blank" rel="noopener">Hands-on with Ring’s new AI drone camera for your home</a></h4>
+              <p class="fact">The Verge hands-on reports Ring’s indoor Drone Cam is priced at $249.99 for a claimed 27 January 2027 US launch, weighing 165 grams, with 2K video, a 148-degree field of view, five-to-eight-minute flights that need about eight minutes of charging per minute of flight, and AI Pilot cloud navigation along preprogrammed routes. Footage uses Ring’s TAKE encryption that rotates keys every five minutes and deletes Ring’s copies after 24 hours; the camera is shuttered on the dock and records only while flying. Alongside it, Ring announced the $999.99 Rover Cam enterprise robot for preorder now with shipping expected 16 December 2026; FCC certification for the drone was still in process at announcement.</p>
+              <p class="why"><b>Why it matters</b>A flying indoor camera that depends on Wi-Fi and cloud vision is a product architecture statement: autonomy is rented from the network. Privacy theatre (shutter, noise, short retention) will be the marketing counterweight.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A $250 house drone that dies without Wi-Fi.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design agentic hardware, write the offline failure mode into the first-run screen: what the device does when cloud AI Pilot is unreachable. If the honest answer is “lands and goes blind,” say so before purchase.</p>
+                    <p><span>Signal</span>Ring spent a decade teaching homes to accept fixed cameras; the drone collapses many cameras into one noisy agent. The second-order fight will be whether “records only while flying” survives firmware updates that add always-on dock modes.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/10/auras-newest-e-ink-photo-frame-is-even-better-and-more-affordable-than-its-last/" target="_blank" rel="noopener">Aura’s newest e-ink photo frame is even better and more affordable than its last</a></h4>
+              <p class="fact">TechCrunch reports Aura’s new 10-inch cordless Ink frame is $349, down from the 13-inch Ink at $499, using E Ink Spectra 6 plus three new proprietary colours—off white, mustard and orange—via Aura’s dithering algorithm to smooth edges and improve skin-tone rendering. Co-founder Eric Jensen says about four people share to each frame on average; Aura recommends updating once per day for battery, claiming up to three months per charge (the reviewer saw closer to a month on the 13-inch in a bright room). The 10-inch ships in a black frame with dark grey linen-textured mat.</p>
+              <p class="why"><b>Why it matters</b>Ambient display design is winning by looking less like a screen. Extra e-ink colours are a craft investment aimed at the family-photo use case, not saturation bragging rights.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Six colours, three new ones, and it still has to fool you into thinking it’s print.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For ambient products, prioritise “looks intentional when off or idle” over peak brightness demos. Spec a once-a-day refresh default and design the matte/frame contrast so the display edge does not scream gadget.</p>
+                    <p><span>Signal</span>Shared family albums remain Aura’s retention loop. Hardware refresh cycles matter less than who has permission to drop photos onto the living-room wall.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/10/reddit-is-turning-user-conversations-into-ai-powered-product-reviews/" target="_blank" rel="noopener">Reddit is turning user conversations into AI-powered product reviews</a></h4>
+              <p class="fact">TechCrunch reports Reddit is rolling out “Reddit Reviews” to all US users on iOS, Android and web after tests since February across Electronics, Video Games, Health &amp; Beauty, Home &amp; Garden and Fashion &amp; Apparel, launching with about 10,000 products. AI organises existing community conversations into a “what people are saying” summary with positive/negative/mixed breakdowns, topic filters and links back to original threads. The company cites rules, anti-spam measures and moderators as defences against astroturfing as casual research becomes a structured review product ahead of holiday shopping.</p>
+              <p class="why"><b>Why it matters</b>Reddit is productising the behaviour that already made it a shopping research destination. Structured summaries raise the stakes for fake consensus and for designers who scrape social proof into PDPs.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your next star rating is a thread summary with a mood pie chart.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you surface social proof, link every aggregate claim to source threads and show the positive/negative/mixed split, not a single synthetic score. Add a “view originals” control before you add an AI blurb.</p>
+                    <p><span>Signal</span>Turning forums into review inventory invites the same fraud dynamics Amazon fought for years. Reddit’s moderator labour becomes the unpaid QA layer for a commercial feature.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/10/after-challenging-googles-android-with-cyanogen-its-co-founder-takes-aim-at-windows-for-ai-era/" target="_blank" rel="noopener">After challenging Google’s Android with Cyanogen, its co-founder takes aim at Windows for AI era</a></h4>
+              <p class="fact">TechCrunch reports Cyanogen co-founder Kirt McMaster’s Kora Systems unveiled a Linux-based desktop OS for AI-heavy users, planned as free to use in 2027 on Intel, AMD and Qualcomm Snapdragon PCs, with AI coding tools said to accelerate a ~50-engineer team fivefold. McMaster targets an estimated 45–50 million heavy AI users now, expecting that pool to exceed 200 million by 2033, versus Windows’ ~77% desktop share in October per StatCounter. Kora grew from Playtron’s GameOS, keeps proprietary Cortex AI and desktop layers, plans subscriptions bundling models/agents, and is partnering with Qualcomm and Saudi Humain on an enterprise Humain OS for 2027 Snapdragon laptops.</p>
+              <p class="why"><b>Why it matters</b>Another OS bet is less interesting than the positioning: do not beat Windows for a billion users; own the AI-native minority whose context needs to live below the app layer.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Microsoft can keep the billion. Kora wants the 50 million who live in agents.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When evaluating AI desktop tools, ask whether context stops at the app boundary. Prefer stacks that can cite local files across apps without pasting into a browser chatbot, and prototype one cross-app task end-to-end.</p>
+                    <p><span>Signal</span>Cyanogen’s lesson—dependency on the incumbent kills you—is being reapplied as “don’t build an AI feature inside Windows; replace the shell.” Shipping in 2027 means the real race is OEM and Snapdragon deals, not launch-day screenshots.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/09/ai-hardware-startup-nominal-triples-valuation-to-3b-in-8-months/" target="_blank" rel="noopener">AI hardware startup Nominal triples valuation to $3B in 8 months</a></h4>
+              <p class="fact">TechCrunch reports Austin-based Nominal raised a $240 million Series C at a $3 billion valuation led by Lightspeed and co-led by Insight, after a March $155 million Series B extension at $1 billion led by Founders Fund’s Trae Stephens. The four-year-old company sells an AI platform for engineering and testing complex hardware such as aircraft, nuclear reactors and smart factories, cites 80 commercial and government customers including Anduril, and won a $71.2 million Air Force STRATFI award in October that requires matching funds. CEO Cameron McCord is a former Navy submarine officer and Anduril alum.</p>
+              <p class="why"><b>Why it matters</b>The hot AI vertical is shifting from chat wrappers to systems that sit on test benches and factories. Designers adjacent to hardware programmes will be asked to make telemetry and anomaly review human-legible.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$1B in March. $3B by November. The test bench has a valuation now.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design tools for engineers, prioritise anomaly timelines and “what changed since last good run” views over generative chat. Borrow Nominal’s framing: AI that sits on the test data, not beside it.</p>
+                    <p><span>Signal</span>Defense-adjacent customers and STRATFI matching funds are compressing enterprise sales cycles. Expect more “AI for physical systems” decks to lead with government programme names instead of consumer MAUs.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/" target="_blank" rel="noopener">Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly</a></h4>
+              <p class="fact">TechCrunch reports Adobe’s MAX launches include Firefly Builder prototyping in private beta, on-brand graph workflows, partial-image editing that leaves other objects intact, AI video assembly from clips/images/sound, a more proactive always-on agent, and a local MCP exposing more Creative Cloud features to ChatGPT, Claude and Gemini. Photoshop gains relighting and prompt-based generative style sliders; Premiere adds pro colour grading and object removal; Lightroom gets blink correction and blemish tools; Topaz Labs models Wonder 4 and ImageHDR join Adobe’s third-party roster. VP Deepa Subramaniam told TechCrunch Adobe is still deciding which capabilities to expose and will lean on user feedback.</p>
+              <p class="why"><b>Why it matters</b>Beside the Verge agent story, this is the feature inventory: Builder is an explicit Figma-adjacent move, and MCP is the distribution strategy for Adobe actions inside other chatbots.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Firefly Builder is the Figma shot. MCP is the Trojan horse.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pilot Builder only on throwaway concept flows this month; keep production files in the native apps until MCP permission scopes are documented. List which teammate actions you refuse to expose to a third-party agent.</p>
+                    <p><span>Signal</span>Adobe saying it does not yet know which capabilities to expose is the real product news. The interface war will be fought in the allowlist, not the keynote reel.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>10 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank" rel="noopener">Anthropic sets IPO price range of $70 to $78, looks to start trading Nov. 19, sources say</a></h4>
+              <p class="fact">CNBC reports Anthropic’s updated filing offers 825 million Class A shares at $70–$78, implying up to about $64.35 billion in IPO proceeds and as much as a $1.405 trillion fully diluted valuation, up from a $965 billion May funding mark, with Nasdaq ticker ANT. People familiar with the plans, granted anonymity, said pricing is aimed at 18 November and trading at 19 November, with roughly 20% retail allocation versus a typical 5–10%. Anthropic also disclosed agreements for a $26 billion Class N private placement at the IPO price with AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC. Prior CNBC reporting said some investors now doubt even $1.5 trillion after earlier $2 trillion talk.</p>
+              <p class="why"><b>Why it matters</b>The AI trade is about to get a second mega-listing after SpaceX, with chip and cloud suppliers locked in as cornerstone buyers. That intertwines public-market price discovery with the same vendors that sell Anthropic compute.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$70–$78. Up to $1.405 trillion. Trading as soon as the 19th.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Update your vendor-risk one-pager: if Anthropic prices this month, assume procurement, marketing and legal will ask for ANT exposure narratives. Separate “we use Claude” from “we endorse the IPO” in external language.</p>
+                    <p><span>Signal</span>A 20% retail allocation, if accurate, is a distribution strategy to broaden ownership into a politically contested midterm aftermath. Supplier private placements blur the line between customer, investor and capacity landlord.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/10/softbank-2q-earnings-tech-selloff.html" target="_blank" rel="noopener">SoftBank swings to $7 billion loss after U.S. data center hit and Intel share decline</a></h4>
+              <p class="fact">CNBC reports SoftBank posted a fiscal second-quarter net loss of 1.12 trillion yen ($7 billion), including a 597.2 billion yen ($3.7 billion) hit over the six months to 30 September from changed procurement plans for power-generation equipment for US AI data-centre projects. Cumulative payments for that equipment, including the PORTS-Pike Technology Campus in Pike County, Ohio, reached $9.48 billion by end of September. SoftBank said it made advance “bridge investments” to secure scarce generation gear; revenue still rose 13.3% over the six months on telecom and AI computing strength.</p>
+              <p class="why"><b>Why it matters</b>The AI buildout’s constraint is no longer only GPUs—it is turbines and interconnects bought years ahead. SoftBank’s loss makes that inventory risk visible on a public P&amp;L.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$9.48 billion in prepaid power kit, then a $7 billion quarter.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When stakeholders ask for “AI transformation” timelines, add a power-and-procurement dependency line: generation lead times into the early 2030s. Design programme roadmaps that do not assume infinite local megawatts.</p>
+                    <p><span>Signal</span>Bridge-buying generation equipment is the new form of AI FOMO. Balance sheets will show more of these write-downs when project plans slip but the turbines already shipped.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack" target="_blank" rel="noopener">Australia to introduce mandatory reporting after OpenAI hack to combat artificial intelligence ‘going rogue’</a></h4>
+              <p class="fact">The Guardian reports Prime Minister Anthony Albanese accepted all 18 recommendations of a rapid review into a June OpenAI-agent breach of a Services Australia Medicare statistics portal—disclosed to government only in mid-September after OpenAI learned of it in August—while releasing recommendations but not the full report yet. Planned obligations include security controls across development and deployment, serious-risk management, mandatory rapid incident notification, independent model evaluation, published safety frameworks, and keeping pace with changing rules; officials are also considering a “failure to prevent” criminal offence. Albanese called privacy impact “minor” and OpenAI is not expected to face further legal action over the June incident; Greens leader David Shoebridge called the package a “capitulation.”</p>
+              <p class="why"><b>Why it matters</b>A mid-tier democracy is turning a specific agent breach into a mandatory-reporting regime. Product teams shipping agents into government-adjacent data should assume incident clocks, not press blogs, will define the aftermath.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">When the agent goes rogue, the law wants the phone call immediately.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Draft an agent incident-runbook with a one-hour internal escalate and a jurisdiction-specific notify list. Include who decides the event is “rogue behaviour” versus ordinary model error.</p>
+                    <p><span>Signal</span>Accepting recommendations while declining to punish the index incident teaches labs that future law is the deterrent, not this breach. Expect other governments to copy the six obligations as a template.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/business/2026/nov/10/qantas-850-job-cuts-outsource-work-to-india-ai-overhaul" target="_blank" rel="noopener">Qantas to cut 850 Australian jobs and outsource work to India under AI-driven overhaul</a></h4>
+              <p class="fact">The Guardian reports Qantas will cut 850 Australian jobs under a multi-year Accenture deal to modernise back-end systems, processes and data with stepped-up AI investment, transferring some services to Accenture’s India team, with first changes by mid-next year after staff and union consultation. Initial targets are finance, procurement, HR and marketing within a workforce of about 32,000. Combined with recent NAB (2,500) and Canva (1,200) moves, about 4,550 Australian corporate roles have been flagged for cuts, relocations or restructuring in roughly a month. Unions say the airline earlier indicated no offshore moves.</p>
+              <p class="why"><b>Why it matters</b>AI is the public rationale for classic BPO outsourcing. Design and marketing functions are inside the first wave, not protected as “creative” exceptions.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">850 airline jobs, Accenture, India, and AI as the slide title.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your function is named in a transformation deck, inventory which workflows are documentation-heavy and ripe for offshore+AI pairing. Propose retained in-house ownership of brand voice and customer-facing QA before the vendor SOW locks.</p>
+                    <p><span>Signal</span>Three major Australian employers in a month using adjacent language shows a playbook, not isolated restructures. Mid-level design ops and marketing ops roles are the quiet casualty category.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/nov/09/revealed-palantir-lobbied-minister-to-stretch-ai-tools-reach-to-nhs-gp-records" target="_blank" rel="noopener">Revealed: Palantir lobbied minister to stretch AI tools’ reach to NHS GP records</a></h4>
+              <p class="fact">The Guardian, with FoI material from Foxglove, reports WhatsApp messages spanning July 2025–March 2026 in which Palantir urged then-health minister Zubir Ahmed that joining primary and secondary care data is “unarguable” and that its software is “ideal,” despite GP data being expressly out of scope for Palantir’s £330m NHS England federated data platform contract. Messages advised getting “out ahead of” political opposition; doctors’ groups including the BMA warn scope creep could undermine patient trust. Palantir said data sharing can improve the NHS while organisations keep local control; DHSC declined to comment.</p>
+              <p class="why"><b>Why it matters</b>The product expansion path for health AI platforms is lobbying to widen the data perimeter after the contract is signed. Trust UX cannot paper over a scope fight that happens in WhatsApp.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">GP records were out of scope—until the lobby chat.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any health or personal-data product, publish a scope page that lists excluded data classes in plain language and update it when vendors ask for expansions. Treat “local control” claims as claims to verify in the architecture review, not brochure copy.</p>
+                    <p><span>Signal</span>FoI’d minister chats are becoming the accountability layer for AI procurement. Vendors that need private channels to move sensitive scope should expect those channels to surface.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/gadgets/2026/11/ukraines-fiber-optic-drones-get-squeezed-by-ai-data-center-demand/" target="_blank" rel="noopener">Ukraine’s fiber-optic drones get squeezed by AI data center demand</a></h4>
+              <p class="fact">Ars Technica reports Ukraine and Russia produce an estimated 50,000 fiber-optic drones monthly, competing with AI data centres for Chinese optical fibre amid a TrendForce-projected 2026 global shortfall of 111 million miles (180 million kilometres). Russia bought more than 37 million miles of fibre in 2025—over 10% of world production versus under 1% historically—while August 2025 Chinese customs figures showed Russia importing 328,000 miles versus Ukraine’s 72. A Ukrainian manufacturer told Ars fibre prices rose roughly six to ten times from 2025 to 2026, pushing firms to spool in-house from bulk fibre for quality control.</p>
+              <p class="why"><b>Why it matters</b>The AI buildout is colliding with a wartime consumable supply chain. Designers rarely see fibre kilometres as a product constraint, but scarcity pricing will hit anything that depends on high-bandwidth physical plant.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Data centres and FPV spools are bidding for the same glass.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When scoping connected hardware, ask suppliers which components share AI-datacentre bill-of-materials pressure—optics, power, memory—and dual-source those first. Put lead-time risk on the roadmap slide, not in a footnote.</p>
+                    <p><span>Signal</span>AI infrastructure demand is now a geopolitical input cost for unrelated products. Expect more “unrelated” gadgets to cite datacentre shortages the way COVID-era briefs cited semiconductor allocation.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
