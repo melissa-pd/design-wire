@@ -1,0 +1,305 @@
+{
+  "date": "2026-11-12",
+  "label": "Thursday, 12 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "TechCrunch",
+        "date": "12 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+        "hed": "Cyberattack on Fireworks AI allowed hackers to access Notion customers’ chat transcripts",
+        "fact": "TechCrunch reports that attackers who breached Fireworks AI’s cloud provider stole customer billing information and some datasets, and that Notion confirmed the spillover hit roughly 1% of its own customers — specifically chat transcripts from Notion AI users of the Insights feature, covering model inputs and outputs written to those transcripts. Notion says it disconnected from Fireworks on 3 November and deleted stored data there; Fireworks calls the attackers financially motivated token thieves and notes this is its second breach in as many months after an October incident. Scope beyond the named disclosures is as characterized by the companies.",
+        "why": "Agent and assistant features now sit on nested inference vendors. When the middle hop is compromised, the product that looks like a notebook becomes a transcript warehouse.",
+        "hook": "Your AI feature’s threat model includes your vendor’s vendor.",
+        "teach": "Map every model call that persists prompts or completions off-box. For each hop, write who holds the transcript, what retention window applies, and how you would revoke access in under an hour. If you cannot answer for Insights-like features, treat that as an incident-ready gap.",
+        "signal": "The second Fireworks hit in two months turns “trusted inference partner” into a procurement question with a failure rate. Designers shipping ambient AI memory without an exportable, deletable transcript surface are shipping the liability without the recovery UI."
+      },
+      {
+        "pub": "Smashing Magazine",
+        "date": "12 Nov 2026",
+        "url": "https://www.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+        "hed": "Should You Actually Add AI To That? A Four-Question Audit For Product Teams",
+        "fact": "Smashing Magazine publishes a four-question AI-addition audit for product teams: whether AI reduces total task effort including checking, whether it beats the user’s current method, whether users can catch errors, and whether they could still judge wrong output after a year of use. The piece opens with a health-insurer appeals tool that failed when it drafted full determinations — specialists spent as long verifying as writing — then succeeded when AI only surfaced policy provisions and prior decisions. It cites Dratsch et al. (2023): radiologists averaging 15 years’ experience fell from 82.3% to 45.5% correct categories when seeded with wrong AI suggestions, and the least experienced group from 79.7% to 19.8%. Framework is the author’s synthesis, not a regulator mandate.",
+        "why": "Most AI roadmaps still start with “what can the model do.” This audit starts with where verification cost exceeds the gain — the actual design failure mode teams keep rediscovering in research.",
+        "hook": "If checking takes as long as writing, you shipped a demotion.",
+        "teach": "Before the next AI ticket leaves discovery, run the four questions with one person who does the job. Write the break-even line in one sentence and the design condition for any weak answer (segment exit, provenance, or a named skill-maintenance mechanism).",
+        "signal": "The radiology numbers are a warning about automation bias over time, not model quality. Features that absorb judgment without a blind-review loop quietly train the organisation out of the only skill that makes delegation safe."
+      },
+      {
+        "pub": "Google Developers Blog",
+        "date": "11 Nov 2026",
+        "url": "https://developers.googleblog.com/en/a2ui-10-build-delightful-fast-reliable-agentic-experiences/",
+        "hed": "A2UI 1.0: Build delightful, fast, reliable, agentic experiences",
+        "fact": "Google announces A2UI 1.0 as the first stable release of its open protocol for generative UI, letting agents return interactive screens (forms, charts, pickers) that host apps render with native components, with open-source renderer SDKs for web (React, Angular, Lit), Flutter, SwiftUI, and Jetpack Compose, plus agent SDKs for Python, TypeScript, and Dart. The post says Atlassian, Alation, Bloomberg, and ByteDance are already building with it; Atlassian is bringing A2UI cards into Jira agent work items, Alation renders metric cards and charts with underlying SQL, and ByteDance shipped a Lynx renderer. First-party announcement with partner examples as characterized by Google.",
+        "why": "Agent UX is leaving the chat bubble. A stable cross-app UI protocol means the design system, not the transcript, becomes the contract between agent and host.",
+        "hook": "Agents that only answer in paragraphs are stuck in 2023.",
+        "teach": "For one agent flow that currently dumps text (plan approval, booking, metrics), sketch the native card it should return: fields, confirm/edit, and undo. Check whether your component library could render that without a one-off chat widget.",
+        "signal": "If Jira agents ask for missing details via A2UI cards inside the work item, the competitive surface moves from model chat quality to which host can render agent UI without a tab switch. Design systems that cannot host generative components become the bottleneck."
+      },
+      {
+        "pub": "The Verge",
+        "date": "11 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+        "hed": "United won’t let your AI agent book your flight",
+        "fact": "The Verge reports United will not let personal AI assistants complete ticket bookings, citing privacy, unintended purchases, and federal rules such as explosive-in-baggage attestations; agents may still show flights but cannot finish the transaction. United CEO Scott Kirby, per The Wall Street Journal as relayed by The Verge, said he does not want “another middleman,” and the airline says it has not yet seen many booking attempts — in line with observations The Verge attributes to other businesses such as DoorDash. United says it could reconsider as third-party agents advance. Transaction-block policy is as stated by United; volume claims rest on Journal reporting.",
+        "why": "Agent commerce is hitting regulated attestation walls. The booking button is not just checkout UX — it is a legal speech act the airline will not let a bot perform.",
+        "hook": "Your agent can browse the flight. It cannot swear about the bag.",
+        "teach": "Inventory any step in your product that requires a human attestation, signature, or regulated disclosure. Mark those as agent-blocked by default and design an explicit handoff screen that names what the human must affirm.",
+        "signal": "United’s “no middleman” line is a channel-power fight dressed as safety. As banks and eBay also restrict unauthorized agents, the winning agent products may be the ones airlines and merchants authorize — not the ones users prefer."
+      },
+      {
+        "pub": "The Verge",
+        "date": "11 Nov 2026",
+        "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
+        "hed": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
+        "fact": "The Verge reports Google Labs launched Tabletop, an experimental AI tool that generates customized collaborative hubs — chore charts, expense splitters, trip itineraries, dinner polls, tournament brackets — from links, files, and natural-language prompts or templates, then shareable via invite link for simultaneous editing “like a Google Doc,” per Google Labs design and engineering lead Roman Nurik. Beta access is waitlisted and limited to people 18+ in the US. Product claims are as described by Google and The Verge.",
+        "why": "Consumer “vibecoding” is arriving as multiplayer workspace generation. The design problem shifts from building the tool to reviewing what the prompt just invented for the group.",
+        "hook": "Asana for the group chat — generated, not configured.",
+        "teach": "If you ship collaborative AI canvases, add a first-run review of generated structure: who can edit, what data is shared, and a one-tap revert to a blank template. Treat the invite link as a permissions surface, not just a share URL.",
+        "signal": "The 18+ waitlist on a product demoed for family planning is a policy/UX mismatch worth watching. Age gates that block the stated use case usually collapse into softer household roles — or they kill adoption."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "11 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
+        "hed": "With $720M round, Britain’s Fractile gets a leg up in the race for AI chips",
+        "fact": "TechCrunch reports British AI-chip startup Fractile raised a $720 million Series C with backing that includes Britain’s Sovereign AI Fund, led by Thrive Capital, Founders Fund, Lightspeed, and Redpoint, positioning it among the top-funded purpose-built AI chip startups alongside names such as Axelera, Etched, and OLIX. Fractile’s pitch pairs hardware with a machine-learning compiler and a DRAM-stacked chip design aimed at faster LLM execution for longer agentic task chains; CEO Walter Goodwin said in a LinkedIn post cited by TechCrunch that funding will help ship first chips and systems next year. Round size and investor list are as reported; performance claims are company-framed.",
+        "why": "Agent latency is becoming a silicon problem. Designers building multi-step agents will feel chip memory bandwidth as UX lag long before users know why.",
+        "hook": "Agentic AI is a DRAM stacking problem in a leather jacket.",
+        "teach": "For your longest agent workflow, time the wait states users already hate. Label which waits are model reasoning versus tool round-trips versus UI confirmation — and cut or parallelize one this sprint.",
+        "signal": "Sovereign AI Fund capital in a UK chip Series C is industrial policy entering the agent stack. Expect more “full-stack chip + compiler” pitches that sell designer-facing latency as a national capability story."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "11 Nov 2026",
+        "url": "https://arstechnica.com/gaming/2026/11/big-walk-used-ai-to-fix-a-bug-now-the-indie-gaming-world-is-having-a-reckoning/",
+        "hed": "Big Walk used AI to fix a bug. Now the indie gaming world is having a reckoning.",
+        "fact": "Ars Technica reports Independent Games Festival jurors privately debated generative AI after a “significant increase” in submitted games using it, with some jurors urging a future IGF ban on any AI-generated work. House House disclosed that Big Walk used an LLM to help fix a Unity “infinite length” shadows bug representing “well under 0.1%” of the game’s code, disclosed for IGF because Valve’s Steam AI form does not require code/chatbot disclosure. Jurists including Austin Walker argued even minimal AI use should disqualify awards consideration; last year the separate Indie Game Awards rescinded Clair Obscur: Expedition 33 awards after AI admissions. Studio statements and juror posts as reported by Ars.",
+        "why": "Creative industries are drawing bright lines at any generative assist, even under 0.1%. Disclosure UI and policy are becoming part of the craft, not a legal afterthought.",
+        "hook": "Under 0.1% of the code. 100% of the argument.",
+        "teach": "Add an AI-use ledger to your project wiki: tool, date, artifact touched, human review. If awards, clients, or App Store forms ask later, you should be able to paste — not reconstruct from memory.",
+        "signal": "Steam’s narrow disclosure form versus IGF’s any-AI posture creates a two-track creative economy: ship quietly, then confess for prestige. Designers on AI-assisted teams need a disclosure story before the press cycle writes one."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "The Guardian",
+        "date": "12 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/technology/2026/nov/12/facial-recognition-errors-put-ethnic-minorities-at-risk-of-wrongful-arrest-police-watchdog-warns",
+        "hed": "Facial recognition errors put ethnic minorities at risk of wrongful arrest, police watchdog warns",
+        "fact": "The Guardian reports His Majesty’s Inspectorate of Constabulary found retrospective facial recognition (RFR) is beset by errors and biases, with some investigators treating matches as evidence rather than intelligence requiring further enquiries, creating wrongful-arrest risk especially for ethnic minorities. Inspectors found cases where officers relied too heavily on RFR before enough corroboration, and said the algorithm remains more likely to wrongly flag people from ethnic minorities. The report covers retrospective use only, not live facial recognition. Findings as stated in the HMIC report via The Guardian.",
+        "why": "Match UIs that look like evidence train operators to skip the human verification step. Confidence presentation is a safety control, not a visual flourish.",
+        "hook": "A match is intelligence. Your UI is treating it like a verdict.",
+        "teach": "If you ship any identification or match score, label it “intelligence — verify before action,” require a corroboration checklist before enforcement-style outcomes, and log when operators skip steps.",
+        "signal": "Bias in the model is necessary but not sufficient. The inspectorate’s core finding is operator misuse of the interface — a design failure that survives even a fairer algorithm."
+      },
+      {
+        "pub": "Wired",
+        "date": "12 Nov 2026",
+        "url": "https://www.wired.com/story/how-google-is-making-its-smart-glasses-more-private/",
+        "hed": "Here’s How Google Says It’s Making Its Smart Glasses More Private",
+        "fact": "Wired reports Google is positioning Android XR Intelligent Eyewear (with Samsung, Warby Parker, and Gentle Monster; preorders open, sales from 10 December) as the privacy-minded alternative to Meta’s glasses: power switch to run as ordinary glasses, recording light, 90-second recording limit, no save of Gemini-look visuals to Gemini History or for training/ads, Play policies barring real-time face recognition and livestreaming, LED-tamper detection that blocks capture, face redaction and voice denoising before Gemini processing, an 18+ setup agreement, and Shopping/Ads bans on LED-cover accessories. Privacy advocates cited say bystander consent remains unresolved. Features are as characterized by Google to Wired.",
+        "why": "Wearable camera UX is becoming a platform policy stack — lights, redaction, store rules, and terms — not a single indicator LED.",
+        "hook": "Privacy is a product decision, Google says. Meta left that on the table.",
+        "teach": "For any always-on camera or mic feature, write a one-page bystander policy: visible indicator, max capture length, what is redacted before upload, and what happens if the indicator is covered. Ship the enforcement path with the hardware, not after launch.",
+        "signal": "Google’s “ambiguity is not your friend” line is the real design brief. Trust rebuilds through declarative defaults that sacrifice training data — face redaction before the server — not through better marketing of the same capture pipeline."
+      },
+      {
+        "pub": "Wired",
+        "date": "12 Nov 2026",
+        "url": "https://www.wired.com/story/apples-homeview-tries-face-authentication-without-faceid/",
+        "hed": "Apple’s HomeView Tries Face Authentication Without FaceID",
+        "fact": "Wired reports Apple’s HomeView smart display, debuting Friday, personalizes for up to six people via ambient face and voice “person recognition,” switching iCloud contexts while blocking access to another user’s messages or travel plans, and requiring the user’s iPhone/iPad on the same Wi-Fi and recently unlocked. Apple concluded FaceID/Secure Enclave was a poor fit for multi-user ambient AI, so HomeView uses Secure Exclave — a memory-protected processor region also on recent Watch and iPhone chips — with formal verification claimed for its microkernel; Wired notes person recognition may be more susceptible to depth-map or voiceprint attacks than FaceID. Security architecture as described by Apple and Wired.",
+        "why": "Shared-device personalization forces a weaker biometric than phones. The UX win (seamless household switching) is also the attack surface.",
+        "hook": "FaceID was too strong for the kitchen counter. That should worry you.",
+        "teach": "For multi-user ambient devices, separate “who’s in the room” from “open private data.” Require a second factor (nearby unlocked phone, PIN, or guest mode) before calendar/messages, and make guest mode the default after idle.",
+        "signal": "Secure Exclave is Apple admitting ambient AI cannot live inside Secure Enclave. Every brand copying HomeView’s seamless switch without Apple’s nearby-device check is shipping the convenience without the compensating control."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "12 Nov 2026",
+        "url": "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled",
+        "hed": "The toy company Tomy has a new logo, and people are baffled",
+        "fact": "Creative Bloq reports Takara Tomy’s first rebrand in 20 years: outside Asia the Tomy name becomes Takara Tomy everywhere, with a unified mark pairing a Quality Blue / Quality Gradation teal-to-magenta symbol — said to fuse katakana for “asobi” (play) — with a wordmark where each repeated letter is subtly distinct. Public reactions quoted include credit-card-chip and seafood-company readings, plus jokes about the 1 April 2027 rollout date; the company frames a shift from “toy company” to “play company” under “One Takaratomy.” Brand explanation is company-stated; reception is anecdotal social reaction via Creative Bloq.",
+        "why": "Semantic logos that need a video explainer fail the glance test. Playfulness in the letterforms is invisible at distance — the icon carries the whole brand bet.",
+        "hook": "If X thinks it’s a seafood processor, the metaphor didn’t travel.",
+        "teach": "Before locking a symbolic mark, test recognition at favicon size and on a shelf without the explainer video. If the story needs katakana literacy your market lacks, keep a readable wordmark as the primary lockup.",
+        "signal": "Global name consolidation plus an abstract glyph is a classic dual risk: you spend equity explaining both. The 1 April 2027 date becoming a punchline shows timing is part of the brand system."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "11 Nov 2026",
+        "url": "https://www.creativebloq.com/features/adobe-max-2026-sneaks-project-link-up-is-making-design-playful-again",
+        "hed": "Adobe MAX 2026 Sneaks: Project Link Up is making design playful again",
+        "fact": "Creative Bloq interviews Adobe research lead Hailin Jin on Project Link Up, a MAX sneak that turns dragging one vector object onto another into context-aware fusion — using drag path, velocity, and object understanding to merge assets with automatic perspective matching while keeping results editable vectors, including illustrated elements fused into still-editable type. Positioning and capabilities are as demoed/described by Adobe via Creative Bloq; not a shipped product.",
+        "why": "Direct manipulation is absorbing semantic AI. The drag gesture stops meaning “move” and starts meaning “compose with intent.”",
+        "hook": "Drag-and-drop just learned what you meant by the drag.",
+        "teach": "In your next vector or layout prototype, redefine one drag: on drop, show a fusion preview (perspective match / clip / recolor) with an explicit Keep separate control. Measure whether designers accept the inference or fight it.",
+        "signal": "If fusion stays fully editable vectors, Adobe is defending the design-system object model against raster generative mush. The moat is not the model — it is undoable structure."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "11 Nov 2026",
+        "url": "https://www.creativebloq.com/news/5-wild-adobe-sneaks-that-creatives-need-to-know-about",
+        "hed": "5 wild Adobe Sneaks that creatives need to know about",
+        "fact": "Creative Bloq’s MAX sneaks roundup highlights Project Deep Brush (physically decomposed layers for lighting-aware paint and branding on curved surfaces, tryable on Adobe Labs Playground), Project Hands On (control points to reshape AI image details by dragging instead of re-prompting), and Project Scene Sweep (multi-shot edits from one prompt or frame across cuts for wardrobe swaps, logo clearance, or localisation variants), among other experiments. These are research teasers, not shipping dates; Creative Bloq notes sneaks often arrive later in some form.",
+        "why": "Adobe is prototyping post-prompt craft: layer physics, handles, and sequence-aware edits. The interaction model is becoming the product, not the text box.",
+        "hook": "Stop rewriting the prompt. Grab the handle.",
+        "teach": "For any generative image tool you own, add one non-text edit: a handle, mask, or reference frame that constrains the next generation. Put it on the canvas, not in a settings drawer.",
+        "signal": "Scene Sweep’s clearance and product-placement pitches show legal/ops use cases funding creative AI. Expect “fix the logo in every shot” to ship before “talk to your character” does."
+      }
+    ],
+    "product": [
+      {
+        "pub": "Wired",
+        "date": "12 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/",
+        "hed": "Google and Samsung’s Android XR Smart Glasses Are Finally Here",
+        "fact": "Wired reports Google and Samsung’s Android XR “Intelligent Eyewear,” designed with Warby Parker and Gentle Monster, is available for preorder with sales starting 10 December: Warby frames from $395 (Alden, Reid, Wren) and Gentle Monster from higher price points, ~41g hardware, about nine hours’ battery plus a case for up to seven extra charges, “Hey Gemini” hotword, and compatibility limited to select Pixel, Galaxy, and iPhone models (Pixel 7+, certain Galaxy S/Z Fold with One UI). First devices positioned as Gemini-forward without lens displays. Specs and pricing as reported by Wired from the launch.",
+        "why": "Meta no longer owns the stylish AI-glasses category alone. Frame partnerships plus Gemini continuity are the product bet against Ray-Ban volume.",
+        "hook": "Meta had the frames. Google brought the platform.",
+        "teach": "If you design companion apps for wearables, assume split phone ecosystems and gate features by device capability lists — not OS family. Document the Pixel/Galaxy/iPhone matrix in the onboarding checklist.",
+        "signal": "Requiring “Hey Gemini” as the cultural hotword is brand design as much as ASR. Google is training wearers to address a model, not a search engine — and that identity will shape every glasses UI pattern that follows."
+      },
+      {
+        "pub": "Wired",
+        "date": "12 Nov 2026",
+        "url": "https://www.wired.com/story/exclusive-fairphone-lands-its-first-us-carrier-partner-in-boost-mobile/",
+        "hed": "Fairphone Lands Its First US Carrier Partner in Boost Mobile",
+        "fact": "Wired reports Fairphone’s first US carrier partnership is with Boost Mobile for the $650 Fairphone Gen. 6+, the only Fairphone cellular device sold in the US, certified for T-Mobile or AT&T networks; buyers still purchase from Fairphone rather than directly from Boost in this phase-one deal. The Gen. 6+ ships with a screwdriver and 12 user-replaceable modules (USB-C, battery, screen, cameras), with spare parts sold affordably online; Fairphone holds a 10/10 repairability rating per Wired. Commercial terms as characterized by Fairphone’s CCO to Wired.",
+        "why": "Repairability needs distribution, not just modular hardware. A Boost partnership is how a European repair story becomes a US checkout path.",
+        "hook": "Twelve modules and a screwdriver — finally with a US carrier lane.",
+        "teach": "If you design hardware unboxing or support, put spare-part ordering and the included tool in the first-run screen, not a buried FAQ. Measure repair starts, not only warranty returns.",
+        "signal": "Phase-one “compatible but not sold in-store” deals are how repairable phones enter US retail without carrier SKU risk. Watch whether Boost ever shelves the device — that’s when modular design becomes mass-market UX."
+      },
+      {
+        "pub": "The Verge",
+        "date": "12 Nov 2026",
+        "url": "https://www.theverge.com/tech/1031817/ring-drone-cam-manual-flight-controls",
+        "hed": "Ring confirms its camera drone won’t have manual controls after crashing on CBS News",
+        "fact": "The Verge reports Ring’s Drone Cam, due January, will ship with AI Pilot autonomous patrol only — no customer manual controls — after a CBS Mornings demo where founder Jamie Siminoff let a reporter manually fly an early unit that crashed twice (collision-avoidance malfunction per Ring to CBS; second crash after lost connectivity when it “did not” stop and land as claimed). Ring told The Verge autonomous flight to patrol points is “the best customer benefit and experience” and did not say whether the CBS crashes drove the cut. Company statements via The Verge.",
+        "why": "Autonomy is being sold as safety after manual controls failed on camera. The UX lesson is brutal: if teleoperation demos crash, remove the mode.",
+        "hook": "The drone crashed on morning TV. Manual mode didn’t ship.",
+        "teach": "For any robot or agent with a “manual override,” define the fail-safe when connectivity drops before you film the demo. If override depends on the network, it is not an override — document that in the UI.",
+        "signal": "Ring’s refusal to show the app and the post-hoc autonomy pitch suggest product narrative chasing a PR failure. Trust in home drones will track crash videos more than AI Pilot copy."
+      },
+      {
+        "pub": "The Verge",
+        "date": "11 Nov 2026",
+        "url": "https://www.theverge.com/tech/1031601/home-assistant-connect-aux-2-hands-on",
+        "hed": "Hands on with Home Assistant’s new ‘smart home multi-tool’",
+        "fact": "The Verge’s hands-on finds Nabu Casa’s Home Assistant Connect Aux-2 is a $69 deck-of-cards box with Wi-Fi, Bluetooth, Ethernet/PoE, USB-A/C, audio jack, Grove, and RS-232, used to proxy Bluetooth sensors, extend Zigbee/Z-Wave radios, drive older amps, and (untested here) serial-control TVs and inverters. Setup was browser firmware install then ESPHome discovery in Home Assistant; the reviewer restored garage-fridge monitoring via Govee Bluetooth hygrometers and streamed music to in-wall speakers through Music Assistant in under half an hour of audio setup. Capabilities leverage open ESPHome integrations; DIY ESP32 alternatives exist cheaper.",
+        "why": "The winning smart-home UX right now is a wizard over open plumbing — not another closed hub. Aux-2 sells permission to finish the half-done projects sitting in the garage.",
+        "hook": "$69 to finish the fridge sensor and the dead wall speakers.",
+        "teach": "If you design IoT onboarding, offer a USB-C “configure on a computer first” path with Wi-Fi credentials before the device hits its final power spot. Reduce the living-room fail loop.",
+        "signal": "Nabu Casa is productizing the ESPHome skill gap. The competitive threat to Google/Apple Home is not feature parity — it is making openness feel as easy as a setup wizard."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "11 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/11/siri-co-founder-backs-helix-for-its-voice-id-tech/",
+        "hed": "Siri co-founder backs Helix for its voice ID tech",
+        "fact": "TechCrunch reports Helix raised $6.2 million led by Chicago Ventures, with Siri co-founder Dag Kittlaus backing and advising, for on-device voice technology that aims to determine whether a user is human and estimate age — positioned against CAPTCHAs and photo/video checks as AI agents proliferate. Founders include Alex Oberg (ex-Ticketmaster Verified Fan), Anna Dorofiyenko, and Mike Hall; the company is also piloting voice as a biomarker for health conditions. Funding and product claims as reported; efficacy not independently tested here.",
+        "why": "Bot defense is moving from visual puzzles to biometric liveness. Voice becomes both accessibility path and gatekeeping signal.",
+        "hook": "CAPTCHA is losing. Your voice is the new ticket stub.",
+        "teach": "If your flows still rely on CAPTCHA or selfie checks, prototype a voice liveness step with a clear fallback for silent/public spaces and a privacy note that audio stays on-device when it does.",
+        "signal": "Verified Fan DNA plus agent-era identity is a telling founder combo. The platforms that win agent commerce will need human attestation that isn’t a JPEG — and voice startups are lining up to sell it."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "10 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "hed": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+        "fact": "TechCrunch reports OpenAI acquired AI travel agent Odessia; founder Francis Davidson (Sonder) says he has joined OpenAI to work on travel, and an OpenAI spokesperson confirmed the hire while disclosing neither terms nor new travel products. Odessia was about a year old and raised a small pre-seed; OpenAI notes Booking.com, Expedia, and KAYAK among customers/partners and says 1.2 billion people turn to ChatGPT each week with travel among frequent topics. Acqui-hire framing is TechCrunch’s reading.",
+        "why": "Travel is where agents must book, not just recommend. Buying a founder who already orchestrated agent teams is a product strategy disguised as talent.",
+        "hook": "1.2 billion weekly ChatGPT users keep asking about trips. OpenAI just hired the travel agent.",
+        "teach": "If your domain is high-intent planning (travel, events, healthcare), list the three partner APIs an agent would need to finish the job — and whether your ToS allows that agent middleman. Fix the policy before the demo.",
+        "signal": "OpenAI confirming the person but not the product is classic acqui-hire fog. Watch whether ChatGPT travel stays affiliate cards or becomes ticketed checkout — United’s agent ban shows how hard the second path is."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "10 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/10/x-launches-its-own-clipping-feature-to-spur-influencer-engagement/",
+        "hed": "X launches its own clipping feature to spur influencer engagement",
+        "fact": "TechCrunch reports X launched an in-app clipping tool so users can trim moments from videos, add a take, and post without leaving X, with each clip carrying a “Clip from” label back to the original and eligibility for Original Content Rewards for both creators and clippers. The feature is described as straightforward trimming aimed at competing with short-form clip culture on other platforms. Capabilities as announced by X via TechCrunch.",
+        "why": "Clipping is the distribution layer for long video. Owning trim-and-repost inside the feed keeps attention — and ad revenue — from leaking to TikTok editors.",
+        "hook": "The clip farm just moved inside the bird site.",
+        "teach": "If you publish long video in-product, ship a native “clip this moment” with mandatory source attribution and a creator revenue path. Do not make fans jump to CapCut to promote you.",
+        "signal": "“Clip from” labels are the design system for derivative culture. Platforms that skip attribution will lose creators; platforms that monetize clippers will industrialize them."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "TechCrunch",
+        "date": "12 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/",
+        "hed": "Nvidia’s Jensen Huang resigns, chipmaker names CFO Colette Kress as interim CEO",
+        "fact": "TechCrunch reports Nvidia’s board accepted Jensen Huang’s resignation as president and CEO after he admitted an affair with alleged Chinese spy Alice Huang and The New York Times reported a second affair with Nvidia healthcare VP Kimberly Powell; CFO Colette Kress becomes interim CEO while remaining CFO. Nvidia shares were down nearly 12% in early Thursday trading, and TechCrunch cites a fall of as much as 19% since Friday with more than $855 billion in market-cap loss. Governance details from Nvidia’s regulatory filing as reported.",
+        "why": "The AI boom’s central supplier just entered succession crisis. Capex plans, China export politics, and neocloud financing all priced Huang as a single point of failure.",
+        "hook": "Nearly 12% in a morning. The leather jacket left the building.",
+        "teach": "If your roadmap assumes Nvidia supply or CUDA-specific optimization, write a one-page dependency risk: alternate accelerators, cloud reservations, and what slips if allocation tightens this quarter.",
+        "signal": "Interim CFO-as-CEO is a stability signal to markets, not a product vision hire. Design and infra leaders should expect slower, more committee-driven partnership decisions until a permanent CEO lands."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "12 Nov 2026",
+        "url": "https://www.theguardian.com/technology/2026/nov/12/nhs-england-deletes-misleading-claim-137-trusts-benefiting-from-palantir-ai-tools",
+        "hed": "NHS England deletes ‘misleading’ claim 137 trusts benefiting from Palantir AI tools",
+        "fact": "The Guardian reports NHS England removed a webpage claiming 137 hospital trusts were “live” with and “realising benefits” from Palantir’s AI-powered Federated Data Platform after reporting that 29 were not using all or part of it; the Office for Statistics Regulation is examining NHS usage claims, and ministers are weighing extending Palantir’s £330m contract to 2029. Medact FOIs drove the exposure; OSR had previously warned there was no evidence for an NHS claim of 117,000 extra operations due to the FDP. Figures via The Guardian’s reporting and named MPs/campaigners.",
+        "why": "AI transformation metrics are becoming a trust crisis. When the benefit dashboard is wrong, procurement — not the model — is the product failure.",
+        "hook": "137 trusts “benefiting.” 29 said they weren’t. Page deleted.",
+        "teach": "Never put vendor success counts on a public page without a per-site confirmation checkbox and a last-verified date. If you cannot audit usage, you cannot claim benefits.",
+        "signal": "OSR scrutiny of AI outcome stats will spread beyond the NHS. Any design team shipping “lives improved” or “hours saved” tiles without methodology footnotes is building the next takedown."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "12 Nov 2026",
+        "url": "https://www.theguardian.com/technology/2026/nov/12/us-workers-governments-unions-ai",
+        "hed": "US workers are fighting to protect their jobs from AI – and winning",
+        "fact": "The Guardian reports Oakland city workers’ IFPTE Local 21 authorized a strike with 94.1% support over AI surveillance and performance evaluation, then reached a tentative three-year deal requiring retraining or reassignment rather than AI-driven firings. Nearly 70% of state and local agencies say they have adopted or are implementing generative AI per an Ernst & Young survey (July–August 2026). The piece also cites California’s No Robo Bosses and AI surveillance bills signed 30 September, Pennsylvania SEIU wins on ChatGPT Enterprise guardrails, and Columbus TWU veto power over autonomous transit. Survey and contract details as reported.",
+        "why": "Public-sector AI UX is being negotiated in union contracts: notice, bargaining rights, and no algorithmic discipline. Designers inside government vendors will inherit those constraints as requirements.",
+        "hook": "94.1% ready to strike. Then the AI clause landed.",
+        "teach": "If you sell workplace AI into government or enterprise, add contract-ready controls: advance notice copy, human appeal on automated discipline, and an admin log of model-influenced HR actions.",
+        "signal": "AFL-CIO’s line — guardrails via contracts because policy is slow — means product requirements will arrive as CBA language, not App Store guidelines. Read the Oakland clause; it is a preview of your enterprise checklist."
+      },
+      {
+        "pub": "CNBC",
+        "date": "12 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/12/ai-consulting-billable-hours-graduate-hiring.html",
+        "hed": "AI is coming for consulting’s billable hours — and its graduate pipeline",
+        "fact": "CNBC reports AI is undercutting consulting’s advice-for-hours model: KPMG’s global head of consulting Svilena Tzekova says clients can quickly reach advice that once took days or months, while procurement still compares firms on headcount even as clients ask for outcomes; AI adds compute and token costs to pricing. Challenger Elixirr says it never billed time-and-materials, took six months to ready data for AI, and argues nimble firms can out-adopt the Big Four; the piece also questions the graduate recruitment pipeline that traditionally staffed leverage models. Quotes as given to CNBC; no single industry-wide revenue figure cited.",
+        "why": "When advice is cheap, consulting UX becomes delivery of built systems and measurable outcomes — the same shift product designers already lived through with DIY research tools.",
+        "hook": "Procurement still counts heads. Clients want outcomes. AI broke the spreadsheet.",
+        "teach": "If you package design or research services, rewrite one SOW from hours to a fixed deliverable with acceptance criteria. Price the artifact, not the calendar.",
+        "signal": "The graduate pipeline note is the quiet bomb. If juniors stop learning by doing the grunt analysis AI now drafts, firms lose the humans who can catch model errors — Smashing’s year-later skill question at industry scale."
+      },
+      {
+        "pub": "CNBC",
+        "date": "12 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/12/nebius-q3-earnings-report-2026.html",
+        "hed": "Nebius falls 16% as company expects increased 2026 capex spend, issues weak outlook",
+        "fact": "CNBC reports Nebius shares sank 16% after Q3 revenue of $980.8 million (vs $907.5 million LSEG estimate), up 571% year over year, with a $37.5 million net loss ($0.13/share). CEO Arkady Volozh guided FY2026 revenue to the low end of $3–3.4 billion and FY2027 to $12–13 billion, while lifting FY2026 capex to $27 billion (from $20–25 billion prior) and FY2027 capex to $40–45 billion; Nvidia held about $329 million in Nebius shares at end of June. Guidance and figures from company materials via CNBC.",
+        "why": "Neoclouds can beat on revenue and still punish equity holders when capex and conservatism collide. The AI buildout’s financing story is getting louder than the utilization story.",
+        "hook": "571% revenue growth. 16% stock drop. Capex ate the narrative.",
+        "teach": "When vendors pitch AI capacity, ask for utilization and prepaid backlog, not just booked megawatts. Put those two numbers on the same slide as price.",
+        "signal": "Guiding to the low end while raising capex is a tell: build-out pace is a political and power constrained variable. Design roadmaps that assume elastic GPU supply are pricing a 2024 market."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "12 Nov 2026",
+        "url": "https://www.theguardian.com/environment/2026/nov/12/datacentres-unpopular-sweden-ecodatacenter-falun",
+        "hed": "Datacentres are deeply unpopular. Has Sweden made one we can all love?",
+        "fact": "The Guardian’s feature on EcoDataCenter in Falun describes a cross-laminated timber facility assembled like flatpack furniture, running on 100% renewable power (75% hydro, 25% wind) in a Sweden grid that is about 1% fossil versus much higher EU averages, with 80MW capacity (~60,000 homes equivalent). About 70% of compute goes to AI; waste heat dries wood pellets; clients named include DeepL, CoreWeave, and Mistral. Portrayal is reportage from site visit; “love” framing is editorial.",
+        "why": "US midterms made datacentres a ballot issue. Falun is the counter-demo: material, power mix, and heat reuse as the product surface communities can see.",
+        "hook": "An Ikea datacentre on hydro. The US is still fighting the concrete boxes.",
+        "teach": "If your company announces AI infra near residents, publish power source, water/heat plan, and a public tour path — not only megawatt headlines. Treat the site like a product with onboarding for neighbours.",
+        "signal": "Timber and district heat will not travel unchanged to Texas. The transferable design is legibility: make the environmental bargain inspectable, or locals will invent a worse story."
+      }
+    ]
+  }
+}
