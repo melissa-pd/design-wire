@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-11-14" aria-current="true">
+          <span class="d">14 Nov 2026</span>
+          <span class="m">Sat · 24 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,448 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-11-14 ############ -->
+      <article class="edition" data-ed="2026-11-14" data-label="Saturday, 14 November 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>13 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/" target="_blank" rel="noopener">ChatGPT’s new Wallet lets AI agents shop and check out for you</a></h4>
+              <p class="fact">TechCrunch reports that OpenAI launched ChatGPT Wallet for a limited set of U.S. ChatGPT Pro subscribers aged 18+, with eligible U.S.-issued Visa, Mastercard or American Express cards, so Dots agents can shop and check out after the user reviews items, total and card and approves via Face ID or fingerprint. Purchases use a payment token rather than sharing raw card details with the agent or merchant; future controls for spending limits, categories and time windows are planned. Amazon is cited as blocking AI agents while OpenAI published a Commerce Partner Playbook for retailers.</p>
+              <p class="why"><b>Why it matters</b>Agentic shopping just stopped being a prompt demo and became a payment surface. The approval beat, the tokenisation model and the merchant-block list are now the design system for anyone shipping a buy-for-me flow.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your agent can check out. You still have to Face ID it.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Map your checkout into three agent-readable states: draft cart the user can edit, approval with biometric confirmation, and post-purchase receipt the agent cannot silently mutate. If any of those states collapses into a single confirm dialog, redesign before you wire payment tokens.</p>
+                    <p><span>Signal</span>The real fight is not who has the better agent — it is who owns the merchant allowlist. OpenAI’s playbook and Amazon’s block are competing standards for whether agent commerce is a platform right or a retailer veto. Product teams that design only the buyer side will ship into a wall.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>13 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/" target="_blank" rel="noopener">AI agent startup LangChain hits $3B valuation</a></h4>
+              <p class="fact">TechCrunch reports LangChain raised a $300 million Series C at a $3 billion valuation led by CapitalG, more than doubling its prior $1.25 billion valuation after a $125 million round about a year ago. The company claims 7,000 LangSmith customers including Harvey, Rippling, Clay, Nvidia, Toyota and Salesforce, and positions LangSmith as model- and cloud-agnostic agent management software that can contain agent behaviour.</p>
+              <p class="why"><b>Why it matters</b>Agent tooling is consolidating around the harness and the observability layer, not the model. Designers working on agent products now inherit LangSmith-class expectations for inspection, containment and vendor neutrality.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">7,000 customers are buying agent management, not another chat box.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your team is shipping an internal agent, write the containment UI before the prompt pack: a place to see what tools ran, what was refused, and how to kill a runaway loop. Treat that panel as a launch requirement, not a polish pass.</p>
+                    <p><span>Signal</span>LangChain’s pitch — own your intelligence, don’t rent a lab’s — is the same language procurement already uses for design systems. Expect RFPs to ask whether your agent stack is lock-in or LangSmith-shaped, the way they once asked about Figma vs Sketch.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>12 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/" target="_blank" rel="noopener">Google’s latest Search upgrade promises better answers to your most complicated questions</a></h4>
+              <p class="fact">TechCrunch reports Google is rolling Gemini 4 Hydrogen into Search globally, calling it its biggest model improvement to Search yet. Google says Hydrogen completes tasks 2.5 times faster than Gemini 3.8 Flash, improves multi-part and typo-heavy queries, strengthens Search’s fan-out into subqueries, and increases visual responses such as images, structured answers, comparison tables and custom tools in AI Mode. Hydrogen also adds an extra-high (“xhigh”) thinking tier alongside low, medium and high.</p>
+              <p class="why"><b>Why it matters</b>Search is becoming a multi-step agent surface that still has to feel like a single answer. The design problem is no longer ranking ten blue links — it is composing structured, visual replies without burying the user’s actual question.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your messy multi-part prompt is now a first-class Search query.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Test your help and docs surfaces with one deliberately messy multi-intent query this week. If the UI returns a single blob instead of a structured comparison or table, add a response template that can split intents the way Hydrogen’s fan-out does.</p>
+                    <p><span>Signal</span>Hydrogen beating Argon on one broad intelligence benchmark at default high thinking is Google advertising that Search does not need the frontier model. Expect product orgs to demand a fast-tier model for customer-facing agents and reserve Carbon/Argon-class spend for offline jobs — a cost architecture that will show up in design critiques as latency budgets.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>13 Nov 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search" target="_blank" rel="noopener">Amazon has a plan to index the world’s online shopping data</a></h4>
+              <p class="fact">The Verge, citing Reuters, reports Amazon is planning a “World Product Graph” that would index product details sold across the internet, including items Amazon does not sell, to keep shoppers and AI agents on Amazon rather than Reddit or Google. An internal document reportedly says many Rufus answers are factually wrong or incomplete and that AI search is expensive; a target release date of 1 October 2027 was mentioned. Amazon told Reuters draft documents may not reflect current plans. Existence and timing are unconfirmed.</p>
+              <p class="why"><b>Why it matters</b>If Amazon indexes every product page on the web for agents, product discovery UX becomes a fight over whose graph is authoritative — not whose storefront is prettier.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Amazon wants to be Reddit for bots.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit how your product pages render for non-browser agents: structured attributes, clear price and availability, and machine-readable variants. If the only accurate description lives in a hero carousel, agent traffic will mis-sell you.</p>
+                    <p><span>Signal</span>The leaked admission that Rufus answers are wrong is the design brief Amazon is trying to solve with more data rather than better interaction. Teams copying Amazon’s agent shopping patterns should assume the graph war is about reducing hallucination cost, not delight — and price their own trust UI accordingly.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>9 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/09/mediums-new-tk-app-brings-ai-assistance-directly-into-the-writing-process/" target="_blank" rel="noopener">Medium’s new TK app brings AI assistance directly into the writing process</a></h4>
+              <p class="fact">TechCrunch reports Medium launched TK, a free writing app for Medium accounts where authors invoke an in-editor AI assistant by typing “@TK”, with skills for editorial and headline feedback and Medium publication style guides. Authors can publish notes explaining how AI was used; TK can optionally connect to a user’s own AI agent via MCP or a Claude skill. At launch it is web-only, imports and exports Markdown, and is not encrypted because it is built for collaboration with access controls.</p>
+              <p class="why"><b>Why it matters</b>Provenance of writing is moving from a detection arms race into a first-party disclosure UI. That is a design pattern every content product will be asked to copy.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">“@TK” is the new sparkle — with a receipt.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product generates or co-authors text, ship a provenance note the author can edit before publish: what was prompted, what was accepted, what was human. Put it next to the byline, not in a buried settings menu.</p>
+                    <p><span>Signal</span>Medium’s bet that nuance between “AI-written” and “AI-assisted” will stop mattering is a publishing-industry wager, not a settled norm. Products that only offer a binary AI badge will look crude next to inspectable prompt-and-source trails.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">WIRED</span> · <span>14 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/" target="_blank" rel="noopener">Beware the New AI-Fueled Ransomware Boom</a></h4>
+              <p class="fact">WIRED’s Kernel Panic newsletter reports researchers see claimed ransomware incidents elevated, with some putting alleged leak-site attacks near 3,000 over the summer — a rough 20–40% rise since spring by some estimates — and more international activity. Analysts say AI is showing up in phishing copy and negotiations more than in fully automated ransomware; ReliaQuest notes new groups like Global Secret Group claiming 48 victims and Storm listing 71 in 20 days, and says one inexperienced teen operator made more than $800,000 in under two weeks. Figures are researcher estimates and attacker claims, not audited counts.</p>
+              <p class="why"><b>Why it matters</b>AI is lowering the craft barrier for social-engineering copy, which means trust UI and recovery flows matter more than another CAPTCHA. Designers own a chunk of the blast radius.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The ransomware boom is still human-operated. The phishing is not.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Run a phishing-readability pass on your transactional email templates: remove urgency theatre, make the real domain unmistakable, and add a one-tap “I didn’t request this” path that does not require logging into a suspicious mirror site.</p>
+                    <p><span>Signal</span>Fragmentation into lone-wolf groups using AI to skip ransomware-as-a-service gatekeepers means incident volume can spike without sophistication rising. Expect more low-quality extortion noise hitting customer support — design the support triage for volume, not for elite APT narratives.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/" target="_blank" rel="noopener">Meta’s AI agent Muse lands on Apple Watch and Android Wear OS</a></h4>
+              <p class="fact">TechCrunch reports Meta brought Muse to Apple Watch and Wear OS with voice calls, text and dictation on-wrist, following a dedicated iPad app a month earlier. Muse connects accounts for email, meetings, bills, reservations, groceries and purchases, and lets users personalise avatars. TechCrunch notes Muse was among only 12 mobile apps to pass 10 million U.S. downloads in their first 40 days on the App Store.</p>
+              <p class="why"><b>Why it matters</b>The agent is leaving the phone screen for a glance-and-speak surface. Wrist UX forces shorter confirmations, louder errors and harder undo — constraints phone-first agent designs keep ignoring.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">10 million downloads later, Muse has to fit on a watch face.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Take one agent confirmation that currently needs a full-screen sheet and rewrite it for a 40mm watch: one sentence status, one approve, one cancel. If you cannot, that flow is not ready for wearable distribution.</p>
+                    <p><span>Signal</span>Meta’s pace — Spaces, video chat, then watch — is treating Muse as an OS layer across form factors. Competitors still shipping phone-only agents are designing for a channel Meta has already left behind.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Nielsen Norman Group</span> · <span>13 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.nngroup.com/articles/research-in-the-loop/" target="_blank" rel="noopener">Research-In-The-Loop: How UXR Adapts to Development at AI Speed</a></h4>
+              <p class="fact">NN/g’s Tony Alicea argues that AI coding agents make shipping cheaper than long upfront studies, and proposes research-in-the-loop: write research requirements into the same spec coding agents build from so instrumentation, dashboards and intercepts ship with the feature. The piece frames evaluation, investigation and discovery as distinct activities, and lists new researcher skills including markdown/Git fluency, directing coding agents, and analytics-instrumentation literacy.</p>
+              <p class="why"><b>Why it matters</b>This is the clearest public playbook yet for keeping UX research alive when engineering can ship a feature in an afternoon. It reframes research from a gate before build into a continuous system beside build.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">If agents can ship the feature, they can ship the instrumentation too.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For your next release, add a five-line research section to the spec: hypothesis, success signs, harm signs, events to log, and when to schedule talks. Hand it to the coding agent with the feature so the dashboard is not a follow-up ticket.</p>
+                    <p><span>Signal</span>The open questions NN/g lists — who owns research requirements, how much instrumentation becomes surveillance, whether measurable releases crowd out big questions — are the political fights design orgs will have in 2027. Teams that only adopt the instrumentation half will optimise themselves into local maxima.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>12 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/gadgets/2026/11/hundreds-of-streaming-services-and-nothing-to-watch/" target="_blank" rel="noopener">Hundreds of streaming services and nothing to watch</a></h4>
+              <p class="fact">Ars Technica reports on Nielsen Gracenote’s survey of 3,000 adult streaming users across the US, Brazil, France, Germany, Mexico and the UK: over 51% said abundance makes it harder to find something to watch; 47% spend more time looking than a year ago, averaging 12 minutes; 72.3% want a consolidated guide across services; nearly 52% frequently don’t know which service carries a sports event; and almost 35% spend more time on free ad-supported services because subscriptions feel overwhelming.</p>
+              <p class="why"><b>Why it matters</b>Content discovery is failing at the ecosystem layer, not the title layer. That is a UX systems problem disguised as a programming problem.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">72% of streamers want a TV Guide back.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you design a content product, instrument “time to first play” and “abandoned browse” as primary metrics this sprint, not just completion rate. A 12-minute average hunt is a product defect even when the catalogue is huge.</p>
+                    <p><span>Signal</span>The FAST rebound is users voting against personalisation theatre. When nearly a third say they still lack good recommendations, the AI search demos are not closing the job — the missing piece is cross-service wayfinding platforms refuse to build because it threatens churn.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>14 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/sydneys-logo-controversy-shows-how-politics-can-get-in-the-way-of-good-design" target="_blank" rel="noopener">A simple logo redesign has become Australia's latest culture war – why that's bad news for designers</a></h4>
+              <p class="fact">Creative Bloq reports Sutherland Shire Council near Sydney shifted everyday communications to a simpler light-blue wave logo while keeping its Captain Cook crest for civic and ceremonial use, covering a population of around 240,000. A councillor challenged the change on national TV; the piece notes the wave itself dates to 2017 and earlier crest tweaks in 2008 and for Cook’s 250th anniversary did not become national news.</p>
+              <p class="why"><b>Why it matters</b>Brand maintenance is being reframed as cultural erasure even when the old mark stays in ceremonial use. That raises the political cost of ordinary design hygiene.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">An email-signature logo became a culture-war prop.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any public-sector or heritage-adjacent rebrand, publish a one-page usage matrix on day one: which mark appears where, and what is explicitly not being retired. Ambiguity is what turns a wave icon into a national fight.</p>
+                    <p><span>Signal</span>Creative Bloq’s warning — clients learn it is safer never to change — is the chilling effect that matters more than Sutherland Shire. Expect more frozen identities that fail on small screens because legal and comms fear the Today show more than illegible crests.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>14 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/the-gatto-trailer-is-dividing-opinion-over-pixars-new-painterly-style" target="_blank" rel="noopener">The Gatto trailer is dividing opinion over Pixar's new painterly style</a></h4>
+              <p class="fact">Creative Bloq reports Pixar’s Gatto trailer shows a hybrid approach: 3D-modelled environments and characters with hand-painted 2D textures, shaders and flattened perspective, closer to Disney’s Paperman than pure 2D, for a March 5, 2027 release. Viewer reaction splits between relief that it matches concept art and criticism that it chases Spider-Verse / Mutant Mayhem trends without going far enough.</p>
+              <p class="why"><b>Why it matters</b>House-style brands cannot jump aesthetics the way challenger studios can. Pixar’s compromise is a live case study in how much visual identity a beloved system can bend before audiences call it fake.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Pixar’s first non-3D house style still has to look like Pixar.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When evolving a product visual system, ship a short “kept / changed / refused” note with the first public asset: what spatial rules stayed (depth, lighting, camera) and what surface language changed. It pre-empts the “you’re chasing a trend” critique.</p>
+                    <p><span>Signal</span>The uncanny moments CB flags — when hybrid 2D fails to feel warm — map to UI glass and generative skins that look styled but not authored. Audiences punish half-committed aesthetic shifts harder than either full tradition or full rupture.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>13 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/does-nvidia-need-a-new-logo-as-well-as-a-new-ceo" target="_blank" rel="noopener">Does Nvidia need a new logo as well as a new CEO?</a></h4>
+              <p class="fact">Creative Bloq revisits Nvidia’s 2006 logo after Jensen Huang’s resignation, noting Reddit designers cite its spiral eye, lime-green palette and retro-futurist type as among tech’s least coherent marks, while arguing the eye remains unusually distinctive versus converging sans-serif wordmarks. The piece floats careful evolution — type, green, eye — rather than a full break, and contrasts Nvidia with Apple’s consumer-facing minimalism.</p>
+              <p class="why"><b>Why it matters</b>Leadership crises reopen brand debt. Nvidia’s mark still reads as a 2000s GPU vendor while the company sells AI infrastructure — a mismatch designers will be asked to fix under maximum scrutiny.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The world’s AI landlord still looks like a LAN-party sticker.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your brand still signals a prior product category, draft a one-slide “recognition vs modernity” audit: list three elements you cannot lose and three that date the company. Use it before anyone proposes a crisis rebrand.</p>
+                    <p><span>Signal</span>CB’s strongest point is that distinctiveness may beat modernity while every lab converges on the same geometric wordmark. A forced post-scandal rebrand that erases the eye would trade the only memorable asset Nvidia has for temporary moral distancing.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">WIRED</span> · <span>14 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/audit-all-the-cloud-storage-links-youve-shared/" target="_blank" rel="noopener">It’s Time to Run an Audit of All the Cloud Storage Links You’ve Shared</a></h4>
+              <p class="fact">WIRED walks through how to review and revoke shared links in OneDrive, iCloud, Dropbox and Google Drive, noting OneDrive and Dropbox offer link expiry on share while iCloud and Google Drive require manual cleanup, and that Google Drive lacks a simple list of everything you have shared.</p>
+              <p class="why"><b>Why it matters</b>Link sprawl is a UX failure of sharing defaults. The how-to exists because the products never made expiry and inventory first-class.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your oldest share link is still a door.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Default new external shares in your product to 7- or 14-day expiry with an explicit “keep forever” toggle. If Google can ship Drive without a global shared inventory, you can still beat them by shipping one.</p>
+                    <p><span>Signal</span>The asymmetry WIRED documents — expiry in OneDrive/Dropbox, absent in iCloud/Drive — is becoming a procurement differentiator for security-conscious teams. Sharing UX is now a trust feature, not a convenience checkbox.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>14 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/transportation/1033844/tesla-personal-cybercab-orders-299-subscription-fine-print" target="_blank" rel="noopener">Tesla is inviting some people to buy a Cybercab ‘for personal use’ — but read the fine print</a></h4>
+              <p class="fact">The Verge reports Tesla is inviting select customers in Robotaxi service areas to buy a Cybercab for $29,990 plus a mandatory $299/month Autonomy Subscription, with a $1,000 non-refundable deposit toward a December delivery window that is not guaranteed. Over five years the subscription adds about $17,940, bringing baseline cost near $47,600 before tax and insurance; cancelling the subscription makes the car unusable on public roads, commercial use is banned for now, and NHTSA is still auditing Tesla’s self-certification of a vehicle without steering wheel, pedals or side mirrors. Crowd-sourced tracking puts 278 Cybercabs in Tesla’s fleet, about 40%.</p>
+              <p class="why"><b>Why it matters</b>This is subscription hardware with no manual fallback — the product is a service seat glued to a chassis. The fine print is the interface.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Cancel the $299 and the car becomes a brick.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you sell a device that dies without a subscription, put the failure mode in the primary purchase UI: what stops working, what money is non-refundable, and what regulators still have not cleared. Hidden terms are now a launch-blocking UX bug.</p>
+                    <p><span>Signal</span>Musk calling his own $299 fee “too high” while taking deposits under an open NHTSA audit is product marketing running ahead of legality. Expect more “invite-only” hardware launches that outsource risk disclosure to journalists.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>13 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/" target="_blank" rel="noopener">Amazon’s new Kindle Colorsoft is a premium e-reader with a premium price</a></h4>
+              <p class="fact">TechCrunch’s hands-on says the new Kindle Colorsoft starts at $290, or $320 for the 32GB Signature Edition, with a 7-inch color E-Ink panel at 300ppi mono / 150ppi color, up to eight weeks of battery versus up to 12 for Paperwhite, waterproofing, and a power button moved to the top-right edge. Basic Kindle and Paperwhite start at $169.99 and $199.99; the reviewer finds little reason to upgrade from the first-generation Colorsoft.</p>
+              <p class="why"><b>Why it matters</b>Color e-ink is still a niche priced like a premium gadget, which keeps comics and cookbook reading from becoming default Kindle behaviour.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$320 for muted color — and the power button finally moved.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When iterating a mature device, prioritise the small physical annoyance users hit daily (here, accidental power presses) over panel marketing. Document those fixes in the release notes so upgrade-hesitant owners can see them.</p>
+                    <p><span>Signal</span>Amazon’s own reviewer saying owners of gen-one Colorsoft should skip this is rare honesty that undercuts the refresh cycle. Hardware teams that cannot name a must-upgrade reason should not ship a new SKU just to fill a holiday slot.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>13 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1033159/keychron-t1-he-trackball-wireless-mouse-adjustable" target="_blank" rel="noopener">You can adjust the position of the trackball on Keychron’s new wireless mouse</a></h4>
+              <p class="fact">The Verge reports Keychron’s T1 HE trackball mouse is on preorder for $59.99 in black, white or translucent, with shipping expected early December. Underside dials adjust the 34mm side trackball a few millimetres vertically, horizontally, and in/out under the thumb; the optical sensor runs 100–2,400 DPI across six customisable buttons, with claimed battery life up to 106 hours on Bluetooth or 98 on 2.4GHz, plus USB-C wired use.</p>
+              <p class="why"><b>Why it matters</b>Ergonomics is becoming a micro-adjustment problem, not a one-size shape problem. A few millimetres of trackball travel is a product feature competitors leave to aftermarket hacks.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The trackball finally moves to meet your thumb.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For any pointing or grip product, identify one dimension users currently fix with tape, stickers or third-party parts and make it a first-party adjuster — even if the travel is only a few millimetres.</p>
+                    <p><span>Signal</span>Keychron is importing keyboard-enthusiast tweak culture into mice. Expect “adjustable geometry” to become a mid-price differentiator while premium brands still ship fixed sculptures.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>14 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1013985/crkd-atom-plus-tmr-analog-thumbstick-controller-gamepad-switch-ios-android-hands-on" target="_blank" rel="noopener">This tiny gamepad with dual analog thumbsticks pushes the limits of portable controllers</a></h4>
+              <p class="fact">The Verge’s hands-on finds CRKD’s $29.99 Atom Plus measures about 3.5 inches wide — roughly a half-inch smaller than an 8BitDo Zero 2 — yet adds dual TMR analog sticks, shoulder buttons, digital triggers, rumble, motion controls and app remapping for Switch/Switch 2, PC, Android, iOS and smart TVs. The reviewer flags crowded controls, digital-only triggers unsuitable for analog racing, and hard-to-remember Bluetooth mode chords, while praising travel usefulness.</p>
+              <p class="why"><b>Why it matters</b>Portable controllers are hitting a hard limit where every added input costs ergonomics. The design lesson is knowing which compromise you are selling.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Dual sticks in 3.5 inches — and your thumb will notice.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For multi-platform Bluetooth hardware, etch pairing chords on the device or in a persistent status LED legend. If the reviewer needs the manual every switch, the mode model has failed.</p>
+                    <p><span>Signal</span>CRKD is racing Microsoft’s larger Xbox Nano on price and size. The market is splitting between “pocketable compromise” and “small but comfortable” — pick a lane in the product brief or lose both audiences.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>10 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/11/alibaba-pr.html" target="_blank" rel="noopener">Alibaba announces plans to list T-Head, its Nvidia chip rival</a></h4>
+              <p class="fact">CNBC reports Alibaba said the Hong Kong Stock Exchange will allow a spin-off listing of its semiconductor subsidiary T-Head, after a confidential filing on 11 September; date and raise size were not disclosed. In late September Alibaba said its next-generation Zhenwu V900 AI chip delivers three times the performance of the Zhenwu M890 released in May. Hong Kong-listed Alibaba shares were down about 29% year-to-date as of the report, and CNBC notes increased Chinese regulatory scrutiny of tech IPOs.</p>
+              <p class="why"><b>Why it matters</b>Homegrown AI silicon is moving from national-policy slideware into a listable subsidiary. That changes how Western product teams should think about long-term chip vendor risk.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Alibaba’s chip unit is going public as Nvidia stumbles.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Add a dual-path compute assumption to any 18-month AI product roadmap: what ships if your primary GPU vendor’s China exposure or pricing shifts. Even teams outside China inherit second-order supply shocks.</p>
+                    <p><span>Signal</span>T-Head listing while Baidu’s Kunlunxin and YMTC listings reportedly delay is China sorting which AI hardware stories can absorb public capital. The V900’s 3× claim will be tested in filings — treat it as marketing until the prospectus numbers land.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>13 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener">Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say</a></h4>
+              <p class="fact">TechCrunch reports Nvidia participated in 105 startup rounds this year alone and has been a prolific investor across AI-native and neocloud companies, often as the largest check. Investors told TC that many investment decisions came from Huang personally; interim CEO Colette Kress is described as more conservative, with expectations of smaller checks and more selective new bets. Named portfolio examples include CoreWeave, Crusoe, Hugging Face ($13 billion deal expected to close in 2027), Mistral, Lambda, Black Forest Labs and an $800 million check into Reflection AI’s $2 billion Series B per the Wall Street Journal.</p>
+              <p class="why"><b>Why it matters</b>The AI startup stack was partly a Nvidia balance-sheet phenomenon. Design-led AI companies that assumed Nvidia co-investment as social proof need a new capital narrative.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">105 rounds a year just lost their most enthusiastic signer.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If Nvidia logos appear in your fundraising or partnership story, rewrite the deck for a world of smaller Nvidia checks: who else validates your infrastructure choice, and what happens to pricing if CUDA lock-in softens.</p>
+                    <p><span>Signal</span>VCs saying rivals will fund mature startups but not pre-revenue GPU burns implies a barbell: application-layer design tools may still raise, while infrastructure theatre valuations compress. That is a quiet reshuffle of which product categories stay fashionable.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>14 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/14/gta-6-grand-theft-auto-launch.html" target="_blank" rel="noopener">How Rockstar's 'GTA VI' release could reshape gaming, streaming and even paid time off</a></h4>
+              <p class="fact">CNBC reports GTA VI launches 19 November after two delays, with Roth estimating more than $1 billion in development cost, Sensor Tower counting over 12 million preorders through 13 November, and Morgan Stanley forecasting 40 million copies sold by March 2027. BambooHR says PTO requests for the launch date are nearly 13% higher than equivalent days in 2024 and 2025, with nearly one in five workers planning time off. PwC flags upside for food delivery and Miami tourism and downside for streaming attention into Q1 2027.</p>
+              <p class="why"><b>Why it matters</b>A single entertainment release is bending workplace calendars and competing attention markets. Product and design orgs should expect a mid-November productivity dip that is rational, not lazy.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Nearly 1 in 5 workers are taking PTO for a video game.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Do not schedule usability tests or launch freezes for 19–21 November if your participants skew into GTA’s demo. Build the blackout into the research calendar now.</p>
+                    <p><span>Signal</span>BambooHR turning launch day into an HR dataset means culture companies can quantify attention shocks. Expect more “event PTO” analytics sold back to employers — a weird new workplace-surveillance genre dressed as workforce planning.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>14 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/14/meet-the-seven-co-founders-of-anthropic.html" target="_blank" rel="noopener">Meet the seven co-founders of Anthropic</a></h4>
+              <p class="fact">CNBC profiles Anthropic’s seven co-founders ahead of a planned 19 November IPO: each holds about 240 million Class A shares (~1.4%), collectively ~10% equity, with Founder LLC’s Class F share giving 50.1% voting control. At a $70–$78 IPO target near a $1.4 trillion valuation, CNBC estimates each stake at roughly $17–$18 billion, with about $250 million cash each from selling over 20 million shares collectively; they say they will dedicate 80% of personal equity wealth to philanthropy, a pledge CNBC notes is not legally binding. Anthropic did not comment.</p>
+              <p class="why"><b>Why it matters</b>Safety-branded labs are about to mint liquid billionaires under dual-class control. That tension will shape how seriously the market takes public-benefit governance theatre.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Seven safety founders, 50.1% of the votes, ~$250M cash each.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When a vendor markets public-benefit status, ask for the governance diagram: voting control, lockups, and whether philanthropy pledges are binding. Put the answers in your procurement notes beside the model card.</p>
+                    <p><span>Signal</span>The non-binding 80% pledge next to a 50.1% founder lock is the story. Public markets are being asked to price alignment culture while founders keep the vote — a template other AI IPOs will copy.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>12 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/12/cisco-csco-q1-2027-earnings.html" target="_blank" rel="noopener">Cisco beats on earnings, says AI infrastructure revenue will double this fiscal year</a></h4>
+              <p class="fact">CNBC reports Cisco posted $18.5 billion revenue (+24% year over year) and $1.40 adjusted EPS for fiscal Q1, beating estimates, and raised its hyperscaler AI infrastructure revenue outlook to $9 billion this fiscal year — more than double fiscal 2026. The stock was up about 35% year to date versus roughly 9% for the Nasdaq as of the report. CEO Chuck Robbins framed demand around scaling and securing environments for the “agentic AI era.”</p>
+              <p class="why"><b>Why it matters</b>Networking incumbents are monetising the agentic buildout after missing early GPU glory. The money is moving from chips alone into the connective tissue agents need.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Cisco just doubled its AI infrastructure target to $9B.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product roadmap assumes “AI features” without networking, identity and observability partners, add those dependencies to the architecture review. Agentic eras fail on plumbing, not prompts.</p>
+                    <p><span>Signal</span>Robbins naming the agentic era in an earnings quote is Cisco telling Wall Street that agents are a networking story. Design orgs will feel this as more enterprise RFPs demanding zero-trust agent traffic controls before any copilots go live.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>12 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/12/nscale-updates-ipo-prospectus-that-shows-widening-loss.html" target="_blank" rel="noopener">Nscale updates IPO prospectus that shows widening loss</a></h4>
+              <p class="fact">CNBC reports Nvidia-backed neocloud Nscale updated its U.S. IPO prospectus with Q3 revenue of $307.5 million (up 1,344% year over year) and a $1.69 billion net loss, widened from a $1.02 billion loss on $140.6 million revenue in Q2. Microsoft walked away from an England data-center plan over power access, and the FT reported Microsoft did not renew a Texas contract; Nscale still calls Microsoft a significant future customer and notes Anthropic expanded West Virginia compute. Raise size was not specified.</p>
+              <p class="why"><b>Why it matters</b>Hypergrowth neocloud IPOs are arriving with billion-dollar losses and soft Big Tech contracts just as Nvidia’s investment umbrella wobbles.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">+1,344% revenue — and a $1.69B quarterly loss.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When evaluating AI infra vendors, read the customer concentration and power-access risk before the growth chart. Ask what happens to your roadmap if the hyperscaler walk-away clause triggers.</p>
+                    <p><span>Signal</span>Nscale’s filing is the neocloud genre in one page: explosive revenue, widening losses, Microsoft optionality language, Anthropic as the demand bright spot. Public markets are about to price whether that story is infrastructure or circular financing.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>13 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/" target="_blank" rel="noopener">Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!</a></h4>
+              <p class="fact">TechCrunch reports Unemployment Labs analysis of open weights from DeepSeek, Moonshot, MiniMax and Ant Group found fingerprints consistent with training on Blackwell GPUs banned for export to China. Epoch AI estimates about two million advanced chips entered China in 2024–2025 via diversion schemes and about 275,000 Nvidia AI accelerators imported to Malaysia in those years. White House adviser Michael Kratsios had previously said Moonshot used banned Nvidia chips. Offshore training would not necessarily violate ownership rules; the policy goal of denying Chinese labs frontier compute is still undermined.</p>
+              <p class="why"><b>Why it matters</b>Export controls are failing as a UX of geopolitics — the rules track ownership and geography, not who actually trains. Product teams depending on a durable U.S. model lead should plan for parity arriving anyway.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The weights remember the banned chips.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Stop treating “trained in China vs not” as a binary trust badge in model selection. Add a compute-provenance question to vendor reviews: which GPU generations, which regions, which cloud intermediaries.</p>
+                    <p><span>Signal</span>Weight forensics turning into open research means model cards may soon face demands for hardware fingerprints, not just data mix. That is a new compliance surface designers of model directories have not budgeted.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
