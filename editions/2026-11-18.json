@@ -1,0 +1,271 @@
+{
+  "date": "2026-11-18",
+  "label": "Wednesday, 18 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "Ars Technica",
+        "date": "17 Nov 2026",
+        "flag": "Top story",
+        "url": "https://arstechnica.com/gadgets/2026/11/microsoft-calls-copilot-the-new-os-for-work-at-ignite-keynote/",
+        "hed": "Copilot is \"the new OS for work,\" and now Office runs inside of it",
+        "fact": "Ars Technica reports that at Ignite, Satya Nadella announced Word, Excel, and PowerPoint as generally available inside Copilot—framed as \"the new OS for work\"—alongside Copilot Autopilot (a persistent productivity agent billed via Copilot Credits, pricing TBA), Work IQ as an org context layer, Agent 365 governance, and an AI Transparency Initiative with 40-plus partners including Adobe and Mastercard. Nadella said models cannot be trusted to govern themselves and that authority must be separated from the supply of intelligence.",
+        "why": "The product surface just inverted: documents are no longer the home for an assistant, the assistant is the home for documents. Every permission dialog, agent identity, and undo path you design now sits above Word rather than inside it.",
+        "hook": "Office is now a plugin. Copilot is the shell.",
+        "teach": "Pick one document-creation flow in your product and redraw it as agent-first: the user states an outcome, reviews a plan, then opens an editable artifact. Write the approval gates for send, spend, and share before you sketch the canvas.",
+        "signal": "Nadella’s concession that mechanistic understanding is elusive, paired with Agent 365 as an \"ERP of AI usage,\" means the next enterprise design brief is observability of agents, not chat polish. Teams still shipping sparkle-in-the-toolbar will be designing the wrong layer."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "17 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/",
+        "hed": "Google expands access to Gemini Tasks, which can help with calls, purchases",
+        "fact": "TechCrunch reports Google is expanding Gemini Tasks—originally Gemini Spark for select testers, then U.S. AI Ultra—so free users on Gemini 4 Hydrogen can toggle from Chat to Tasks and have the assistant call businesses, book appointments, complete Google Pay purchases, and sign into websites when prompted. Josh Woodward’s blog post describes using it to schedule minivan service and analyze an electrical bill.",
+        "why": "A free Chat-to-Tasks toggle is the clearest mass-market agent mode switch shipped this week, and it forces every consumer product to decide what \"help\" means once calling and paying are table stakes.",
+        "hook": "Chat is informational. Tasks buys things.",
+        "teach": "If you ship an assistant, add an explicit mode control that names what it may do—read-only vs call vs pay—and show the active mode in every session chrome. Ambiguous \"help me\" prompts are how surprise purchases happen.",
+        "signal": "Making Tasks free on Hydrogen while Ultra was the earlier gate suggests Google is buying distribution for agentic habits ahead of monetisation. The design competition shifts from answer quality to how legible and reversible the first paid action feels."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "17 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+        "hed": "Google to keep Gemini chats for 2 months, up from 72 hours, even with history off",
+        "fact": "TechCrunch reports Google is extending retention of temporary Gemini chats and history-off conversations to around two months, up from 72 hours, rolling out globally in the Gemini app, while splitting the old Keep Activity control into separate chat-history and AI-training toggles. Google says temporary chats are not used for training; OpenAI and Anthropic are cited as keeping temporary/incognito chats up to 30 days. Google did not answer what prompted the change.",
+        "why": "\"History off\" just stopped meaning what users think it means, and the settings split is the first honest UI admission that retention for safety and retention for training are different products.",
+        "hook": "Incognito now lasts ~60 days.",
+        "teach": "Audit every label that implies ephemerality—temporary, history off, incognito—and put the actual retention window in the same sentence as the control. If the number changed, surface a one-time notice; silent policy edits are how trust dies.",
+        "signal": "Moving from 72 hours to ~60 days while peers sit at 30 days raises the industry floor for \"safety\" retention without a matching floor for user-visible delete confirmations. Privacy copy that still says \"we don’t keep this\" is now a defect."
+      },
+      {
+        "pub": "The Verge",
+        "date": "18 Nov 2026",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1036415/suno-visuals-ai-generated-video-images-feature",
+        "hed": "Suno now lets you make AI videos for your AI music",
+        "fact": "The Verge reports Suno launched Visuals—image and up-to-15-second video generation that can lipsync to lyrics—on web, iOS, and Android, powered by MiniMax’s H3 Move AI model with filters against likeness of specific artists and public figures. Visuals uses separate Visuals credits from song credits; reference images can be presets, uploads, or prompts, and clips can be assembled on a timeline with lyric text.",
+        "why": "Music generators are becoming end-to-end media studios, which means the credit meter, provenance filters, and edit timeline are now the product—not the waveform.",
+        "hook": "Separate credits for the thing nobody asked for.",
+        "teach": "If you add a second generative modality, give it its own credit pool, its own safety filter list, and a timeline that treats clips as editable assets. Do not bury video spend inside the same meter as the core output users already pay for.",
+        "signal": "Launch-video commenters demanding audio fixes before \"crap nobody asked for\" is the adoption risk for every modality stack: diversification reads as avoidance when the primary quality bar is still contested in court and in product."
+      },
+      {
+        "pub": "CNBC",
+        "date": "17 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+        "hed": "JPMorgan is working on AI agent transactions that don’t involve humans",
+        "fact": "CNBC reports JPMorgan and Hyundai Card completed a proof-of-concept in which AI agents ran a simulated foreign-exchange transaction without direct human intervention—the first private blockchain bank-agent-to-client-agent treasury test on Kinexys—and aim to expand in H1 2027 to multi-agent negotiation. Wee Kee Toh said technology was not the hardest part; governance and limits were, with agents boxed to parameters such as a $5 million cap. AvePoint’s State of AI 2026 is cited: unauthorized autonomous agent actions were the third-most-common agent security breach, affecting 34.1% of companies that reported such incidents.",
+        "why": "Payments are where agent UX stops being conversational and becomes irreversible, and JPMorgan is saying out loud that the box around the agent is the product.",
+        "hook": "Draw a box. The agent never leaves it.",
+        "teach": "For any agent that can spend or transfer, ship hard numeric limits, an always-visible remaining budget, and a one-tap revoke before the first live transaction. Treat \"outside the box\" as a rejected state with a human-readable reason, not a silent fail.",
+        "signal": "Toh’s line that tech was easy and governance was hard is the inversion most design orgs still have backwards. The competitive surface in agentic finance will be limit UX and cascade-failure messaging, not model choice."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "17 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/",
+        "hed": "Proton’s Lumo, a privacy-focused alternative to ChatGPT and Claude, arrives on desktop",
+        "fact": "TechCrunch reports Proton launched Lumo Desktop for Windows, macOS, and Linux with connectors for local files, shell, browser fetching, Proton Mail, Confluence, Dropbox, Jira, and local/remote MCP servers. Per connector, users set which actions run automatically, need approval, or are blocked; chat history is encrypted so Proton cannot read it, with Swiss privacy law and EU hosting cited. Proton says conversations and connected data are not used for ads or model training.",
+        "why": "As desktop agents demand Full Disk Access, Proton is shipping the permission matrix as the differentiator—exactly the control surface Apple’s new Mac agent settings imply users now expect.",
+        "hook": "The moat is the approval grid.",
+        "teach": "Build a per-tool matrix with three columns—auto, ask, block—and make scheduled tasks inherit their own matrix. Default new connectors to ask; never auto-enable shell or filesystem write.",
+        "signal": "MCP support plus Swiss non-training claims positions Lumo against the same agent desktop pattern OpenAI/Anthropic/Meta ship, but the design lesson is portable: when agents can act locally, the settings page is the product homepage."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "WIRED",
+        "date": "17 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.wired.com/story/apple-watch-audio-intelligence-live-rewind-siri-recap/",
+        "hed": "The Apple Watch’s Live Rewind Can Record and Rewind Spoken Conversations. It’s Pretty Awkward",
+        "fact": "WIRED’s hands-on finds Live Rewind (public beta in watchOS 27.3) can spin back ~15 seconds of on-device conversation transcript via a Digital Crown double-tap, with an audible chime, while Siri Recap can summarize ambient talk on a schedule and self-delete unsaved recaps in seven days. Features require Watch Series 12 or Ultra 4, iPhone 16+, iOS 27, Apple Intelligence, English only, and are blocked under 18. Recaps sometimes logged YouTube/Instagram audio; Fight for the Future flagged bystander consent.",
+        "why": "Ambient capture on a device you never put down is a social-protocol problem before it is a privacy-policy problem, and the spouse’s \"why wouldn’t you just ask me\" is the usability finding.",
+        "hook": "The feature works. The etiquette doesn’t.",
+        "teach": "If you ship ambient recall, require a visible/audible start signal, cap the buffer in the UI copy (\"last 15 seconds\"), and add a one-tap \"ask them instead\" dismissal that teaches the social alternative. Test activation in front of a conversational partner, not alone at a desk.",
+        "signal": "Recaps ingesting media the wearer is watching exposes the failure of \"liveness\" assumptions without wearer-voice gating. Every ambient notetaker that skips that check will fill memory with content the user never meant to keep—and that third parties never consented to enter."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "18 Nov 2026",
+        "url": "https://www.creativebloq.com/news/the-nhls-virtual-logos-are-a-step-too-far-for-digital-branding",
+        "hed": "The NHL's virtual logos are not going down well",
+        "fact": "Creative Bloq reports the NHL is digitally overlaying Hometown Remix alternate logos on the ice for TV while arena spectators still see the painted home logo, on top of existing virtual dasher and ice ads. Viewers cite missing motion blur/shadows, a white glow around players, and black logo areas swallowing the puck; some say they will stop watching. The campaign sells local-reference alternate uniforms.",
+        "why": "Broadcast AR branding just failed the same uncanny-keying test designers already know from bad green-screen work, except the \"set\" is the sport’s defining surface.",
+        "hook": "The ice was the brand. You covered it with a sticker.",
+        "teach": "Before shipping a virtual overlay on a real-world surface, run a motion pass: players crossing the plate, dark puck on dark fills, and edge glow. If any frame looks keyed, kill the overlay—merchandise upside does not survive a illegible puck.",
+        "signal": "Fans already tolerated virtual board ads; replacing the centre-ice identity crossed from ad load into ontological distrust (\"what’s real on my screen?\"). That is the threshold every live-sports and retail AR brand team is about to hit."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "18 Nov 2026",
+        "url": "https://www.creativebloq.com/news/artists-and-creators-are-leaving-etsy-in-droves-over-its-new-ai-policy",
+        "hed": "Artists and creators are leaving Etsy in droves over its new AI policy",
+        "fact": "Creative Bloq reports that after Etsy cracked down on AI-slop listings, revised Terms of Use (effective 16 December) add that Etsy and third-party partners may use seller content to develop, train, test, and improve AI/ML technologies, subject to Privacy Policy opt-outs. Sellers are closing shops with stylised goodbye posts; VP James Ossman says sellers retain ownership and cites fraud detection, inventory, recommendations, and seller tools, without a general AI-training opt-out.",
+        "why": "The same week a marketplace bans AI junk, it claims training rights on handmade work—proof that anti-slop UX and training-rights UX are different products that must be designed together.",
+        "hook": "Ban the bots, license the humans.",
+        "teach": "If you update ToS for AI, ship a plain-language diff, a dedicated training toggle defaulting off for creator content, and an in-dashboard explanation of every listed use. Do not bury \"train, test and improve\" inside a perpetual licence clause at peak holiday GMV.",
+        "signal": "Ossman’s examples are all first-party marketplace ML, but the clause covers third-party partners without a seller-facing opt-out—exactly the ambiguity that turns a policy update into an exodus. Trust design failed before the models trained anything."
+      },
+      {
+        "pub": "Nielsen Norman Group",
+        "date": "13 Nov 2026",
+        "url": "https://www.nngroup.com/articles/journey-mapping-101/",
+        "hed": "Journey Mapping 101",
+        "fact": "NN/g’s rewritten Journey Mapping 101 (Wang and Gibbons, 13 Nov 2026) defines a journey map as a visualisation of the process a person goes through to accomplish a goal, lists five components (actor, scenario/expectations, phases, actions/mindsets/emotions, opportunities), and adds an AI section: maps may show agents acting beside people or treat the agent as the primary actor, grounded in logs and research rather than inference.",
+        "why": "The canonical journey-map primer just made agent lanes first-class, which means your next workshop template is incomplete if it only has a human swimlane.",
+        "hook": "Your journey map needs an agent lane.",
+        "teach": "Duplicate your primary journey map and add an Agent lane under Actions: what the agent does, where it blocks, and where a human must approve. Mark every emotion about the agent (uncertainty, anxiety) from research quotes, not model role-play.",
+        "signal": "NN/g’s warning that AI-generated thoughts/emotions need verification is the quiet landmine: teams will accelerate map drafting with LLMs and ship inferred feelings as fact. The artefact still only works if the alignment conversation stays human."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "18 Nov 2026",
+        "url": "https://www.creativebloq.com/news/after-a-week-with-the-iphone-duo-i-never-want-to-go-back",
+        "hed": "After a week with the iPhone Duo, I never want to go back",
+        "fact": "Creative Bloq’s Daniel John, after a week with the iPhone Duo, praises the closed Art Deco-like proportions, compact pocketability versus \"too small\" critics, and a matte nano-texture inner display that cuts glare and hides the crease. Software notes include a blur open/close animation that signals content moving between screens and StandBy in tent mode as a desk clock/calendar.",
+        "why": "Foldables finally have a design review arguing elegance over spectacle, and the blur transition is a rare example of motion used as explanation rather than ornament.",
+        "hook": "The crease didn’t vanish. The glare did.",
+        "teach": "When content jumps displays, animate a short blur/hand-off rather than a hard cut so users understand state moved. For dual-screen devices, prototype tent-mode StandBy as a first-class posture, not an afterthought lock screen.",
+        "signal": "Defending mini-scale against \"too small\" discourse while charging a luxury price suggests Apple is segmenting foldables by posture and pocket, not just diagonal inches. Creative workflows will split between Duo-as-reference-surface and larger canvases still to come."
+      },
+      {
+        "pub": "WIRED",
+        "date": "18 Nov 2026",
+        "url": "https://www.wired.com/story/over-a-third-of-gen-z-rely-on-ai-for-friendship/",
+        "hed": "Over a Third of Gen Z-ers Rely on AI for Friendship",
+        "fact": "WIRED reports a Gallup / Boston Children’s Digital Wellness Lab survey of 15,925 people aged 15–22 across 16 countries (May–August) finding 33% of Gen Z rely on AI for companionship—50% among daily AI users and 42% among those with online-only friends—while in-person friendships scored highest for strength and support. Instagram and Discord led U.S. platforms for staying in touch with online-only friends; researchers caution whether AI follows loneliness or reinforces it remains open.",
+        "why": "Companion chat is no longer an edge case in youth UX research—it is a measured third of a generation—and product teams still treat it like a novelty persona.",
+        "hook": "33% brought a chatbot to the friendship stack.",
+        "teach": "If teens are in your audience, add research probes that separate in-person, digitally sustained, and online-only ties from AI companionship, and instrument whether AI chats spike after failed human reach-outs. Design escalation to human help into the companion surface, not only content filters.",
+        "signal": "The finding that lonely socially anxious boys seek chatbots while struggling to make human connections reframes \"engagement\" metrics on companion products as possible distress signals. Optimising streak and session length without loneliness covariates is malpractice."
+      }
+    ],
+    "product": [
+      {
+        "pub": "TechCrunch",
+        "date": "17 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/17/daydreams-new-ai-agent-acts-as-your-personal-stylist-and-can-shop-for-you-too/",
+        "hed": "Daydream’s new AI agent acts as your personal stylist — and can shop for you, too",
+        "fact": "TechCrunch reports Daydream launched Daydream Agent, which remembers style, fit, and budget, supports virtual try-on from an uploaded photo, one-click checkout, sale/drop monitoring, a persistent \"clothing rack,\" and closet plus calendar connections across a catalog of over 10,000 brands, using fine-tuned OpenAI, Gemini, and Claude models plus in-house models. The company cites $50 million funding, more than 2 million shoppers since June 2025, and hired stylist Francesca Salih; Meta’s Muse is cited with shopping as a top use and 25% of Muse setups using it daily.",
+        "why": "Fashion is the consumer proving ground for agentic checkout, and Daydream’s clothing rack is a deliberate delay mechanic in a category that usually optimises for impulse.",
+        "hook": "The cart became a rack. Then the agent buys.",
+        "teach": "Separate shortlist from purchase in any shopping agent: a persistent comparison surface, explicit budget memory, and a single confirmation that restates size, price, and return window before one-click pay.",
+        "signal": "Keeping a human stylist-in-residence to feed the knowledge base admits taste is still a content problem. Pure model routing will not differentiate apparel agents; curated taste graphs will."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "18 Nov 2026",
+        "url": "https://www.creativebloq.com/reviews/logitech-mx-keypad-review-can-nine-lcd-keys-take-the-pain-out-of-photoshop",
+        "hed": "Logitech MX Keypad review: Can nine LCD keys take the pain out of Photoshop?",
+        "fact": "Creative Bloq’s review of the Logitech MX Keypad ($99.99 / £89.99) finds nine LCD keys across up to 15 pages (135 actions), context-aware Logi Options+ presets for Adobe apps, Figma, Clip Studio Paint, CorelDRAW, VS Code, and more, with soft-push keys and a wired-only USB-C cable. Unsupported apps like Rebelle need ~30 minutes of manual setup per page; the kickstand can drift when keys are pressed.",
+        "why": "Shortcut hardware is becoming a portable design-system for hands, and LCD labels beat the memorisation tax Adobe’s shifting menus impose.",
+        "hook": "135 shortcuts. One drifting stand.",
+        "teach": "If you rely on dense creative shortcuts, budget an afternoon to build per-app pages for the five actions you hit hourly, and physically secure the pad. Treat unsupported apps as a documentation task: write the key combo list before you map buttons.",
+        "signal": "Presets for Copilot and Claude Code beside Photoshop show Logitech underwriting the agentic IDE and the creative suite as one desk. The input layer is consolidating even as software fragments."
+      },
+      {
+        "pub": "CNBC",
+        "date": "18 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/18/booking-holdings-enterprise.html",
+        "hed": "Booking Holdings creates new enterprise division as AI reshapes travel planning",
+        "fact": "CNBC reports Booking Holdings will launch Booking Partner Division in January under Agoda CEO Omri Morgenshtern, combining Booking.com Strategic Partnerships with Rocket Travel by Agoda to offer white-label and branded travel supply—citing more than 4.7 million properties, 33 million accommodation listings, 500-plus airlines, and 200-plus car rental providers—and a $2 trillion addressable market estimate. Expedia’s B2B grew to $4.8 billion revenue in 2025; Disney’s Josh D’Amaro said guests already use AI to discover, plan, and sometimes book trips.",
+        "why": "OTAs are redesigning for a world where the first query never hits their homepage, so the partner API and vertical agent become the customer experience.",
+        "hook": "If AI plans the trip, Booking wants to be the pipes.",
+        "teach": "Inventory any consumer journey that starts in ChatGPT/Gemini and ends on your site; document deep links, rate freshness, and failure copy for agent-originated bookings. Build a partner-facing agent that fails safe on sold-out and irregular ops, not a demo happy path.",
+        "signal": "Morgenshtern’s dig at AI demos that die under emergency load is the real RFP. Travel agents will be judged on exception UX—cancellations, weather, overbooks—while marketing still shows the sunny itinerary."
+      },
+      {
+        "pub": "WIRED",
+        "date": "18 Nov 2026",
+        "url": "https://www.wired.com/story/germ-dm-is-now-available-on-android/",
+        "hed": "Germ DM Is a Signal Alternative That’s Now on Android",
+        "fact": "WIRED reports Germ DM expanded from iOS (2023) to Android with multi-identity \"burner cards\" shared via QR or links (1–100 uses), Messaging Layer Security encryption, Bluesky AT integration, and claimed quantum-secure design from a three-person team including an ex-iMessage privacy engineer. Cards are not mutually discoverable; deleting a burner drops those chats. Germ has not had a third-party security audit; group chat is next.",
+        "why": "Identity multiplicity as the core messaging UX—not a single handle—is a direct challenge to every walled-garden assumption baked into onboarding.",
+        "hook": "One app. Many selves. Burnable.",
+        "teach": "When designing social or creator messaging, prototype separate shareable contact cards per context (clients, fans, friends) with expiry and revoke, instead of forcing one persistent username into every relationship.",
+        "signal": "Queer and multi-job creatives \"getting Germ immediately\" is the product-market insight: platforms that force a single portable identity are increasingly misaligned with how people actually work and date. Audit is still outstanding—trust UX without third-party review remains provisional."
+      },
+      {
+        "pub": "The Verge",
+        "date": "17 Nov 2026",
+        "url": "https://www.theverge.com/tech/1036045/ifixit-teardown-apple-homeview-smart-home-hub",
+        "hed": "iFixit’s Apple HomeView teardown reveals a device that will be difficult to repair",
+        "fact": "The Verge reports iFixit’s HomeView teardown found unusually strong display glue, a thermal-bonded heat shield that made board separation \"remarkably risky,\" and damage including a ripped connector and snapped speaker—contrasting recent easier iPad and HomePod repairs. Wall and tabletop versions are both $299, but the wall unit needs a separate mount and uses smaller speaker drivers.",
+        "why": "Apple’s repairability progress just took a visible step back on a brand-new hub, which is a hardware UX story as much as a wrench story.",
+        "hook": "Smart speaker. Dumb to open.",
+        "teach": "If you influence hardware packaging, demand a service path for the top three failure parts before industrial design lock: battery, display, speakers. Add the repair score to the launch checklist beside the keynote demo.",
+        "signal": "Factory assembly optimisations (chassis-as-heatsink, glue) are silently undoing years of right-to-repair narrative Apple had started earning. Accessories that need an extra paid mount for worse audio make the value story worse on the teardown bench than in the render."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "The Guardian",
+        "date": "18 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/uk-news/2026/nov/18/social-media-ban-once-in-a-generation-study",
+        "hed": "£10m ‘once-in-a-generation’ study to explore effects of children’s social media ban",
+        "fact": "The Guardian reports Wellcome is backing ten projects with £9.3 million to study Britain’s under-16 social media ban expected spring 2027—covering Instagram, YouTube, TikTok, Snapchat, Facebook and X, plus gaming live-stream/stranger-contact limits—across more than 300,000 young people. Smart Schools Plus alone will follow 800 pupils in 16 English schools on mental health, sleep, activity, attainment and whether risky content migrates platforms; other arms study equity impacts and family conflict/workarounds.",
+        "why": "Policy is shipping ahead of evidence, and this is the first large attempt to measure the ban as a natural experiment rather than a moral panic.",
+        "hook": "The A/B test is an entire generation.",
+        "teach": "If you design youth products for the UK, document how age-gates, school-managed modes, and parent dashboards will behave under a spring 2027 ban, and plan research access for workaround behaviour rather than assuming compliance.",
+        "signal": "Wellcome’s refusal of a binary good/bad frame is the briefing note regulators rarely write. Platforms that only prepare legal blocks without studying displacement to unregulated channels will be blindsided by the same researchers’ findings."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "17 Nov 2026",
+        "url": "https://arstechnica.com/tech-policy/2026/11/san-diego-dumps-both-flock-cameras-and-smart-streetlights/",
+        "hed": "San Diego dumps both Flock cameras and smart streetlights",
+        "fact": "Ars Technica reports San Diego’s city council voted to end contracts with Flock and Ubicquia, darkening 500-plus cameras—one of the largest cities to drop Flock (valuation cited at $8.3 billion). Mayor Todd Gloria will not veto; police cited a 20% vehicle-theft decline since 2023 and 689 recoveries via Flock. Secure Justice says it has documented at least 513 ended Flock contracts; this is San Diego’s second smart-streetlight rejection in under a decade.",
+        "why": "Municipal ALPR is losing cross-partisan consent, which reopens the design of \"public safety\" interfaces that cities can actually keep.",
+        "hook": "500 cameras. Council said no.",
+        "teach": "If your product roadmap assumes citywide camera or plate data, build a graceful degradation mode that works when the feed is politically revoked—and a public transparency dashboard strong enough that an advisory board’s \"listen to us\" warning is visible before purchase.",
+        "signal": "Councilmember Whitburn’s pivot—that cameras making residents feel unsafe lose public-safety value—is a product requirement statement. Perceived safety is now a measurable UX outcome for civic tech, not only clearance rates."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "18 Nov 2026",
+        "url": "https://www.theguardian.com/music/2026/nov/18/elton-john-ai-campaign-australia-artists-aria-awards-copyright",
+        "hed": "Elton John backs Australian artists in fight against AI in surprise Aria awards appearance",
+        "fact": "The Guardian reports Elton John backed the Not AI’s To Take campaign at the 2026 Arias, urging the Albanese government not to let AI use Australian artists’ work without full permission. The campaign—supported by recording, publishing, film, TV and media groups including News Corp and Guardian Australia—warns AI lobbying could risk a $70 billion creative industry and 600,000 workers; Anthropic has floated an opt-out scraping model. Government AI legislation is expected late 2026 or early 2027.",
+        "why": "Copyright bargaining just became awards-show infrastructure, which means consent UX for training data is moving from terms pages to national industrial policy.",
+        "hook": "Pay us. Or the Arias will say it louder.",
+        "teach": "If your generative feature trains on licensed music or might, inventory every territory’s consent model (opt-in vs opt-out) and surface rights status in the create UI—not only in a legal footer.",
+        "signal": "When News Corp, Guardian Australia, and Peter Garrett share a slogan, the Overton window on unpaid training has closed in Australia. Opt-out regimes will read as the \"weak link\" Dobby warned about—design for explicit licence states."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "17 Nov 2026",
+        "url": "https://www.theguardian.com/education/2026/nov/18/ofqual-urges-life-altering-penalties-for-students-who-use-tech-to",
+        "hed": "Ofqual urges ‘life-altering’ penalties for students who use tech to cheat",
+        "fact": "The Guardian reports Ofqual chief Ian Bauckham warned students in England risk disqualification from GCSEs and A-levels for undeclared AI in coursework or wearable-assisted exam cheating, citing 2,225 smart-device/phone malpractice cases in summer 2025 and 100 AI plagiarism cases (up from 85 in 2024). He wants retailers barred from marketing wearables for cheating, invigilator training for next summer, and says unsupervised extended essays’ time \"is likely to be quite short.\"",
+        "why": "Assessment design is collapsing under AI and wearables at once, and the regulator is reaching for life-altering stakes because the interface of coursework no longer proves authorship.",
+        "hook": "The essay is ending. The penalty is career-sized.",
+        "teach": "Edtech and wearable teams: strip any marketing that implies exam stealth, and if you sell student writing tools, default to declared-AI modes with exportable process logs teachers can request.",
+        "signal": "Linking coursework to spoken/written exams is Ofqual sketching the next authentication UX: authorship will be demonstrated in supervised performance, not take-home prose. Product that only detects AI text is already solving yesterday’s problem."
+      },
+      {
+        "pub": "The Verge",
+        "date": "18 Nov 2026",
+        "url": "https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling",
+        "hed": "Nvidia isn’t selling any more AI chips to China",
+        "fact": "The Verge reports interim Nvidia CEO Colette Kress said on the earnings call that guidance includes no licensed Hopper data-centre products and Nvidia is no longer shipping licensed Hopper data-centre products to China, despite prior White House approval to sell H200s. No detailed rationale was given; context includes Huang’s exit after alleged-spy affair reporting and Reuters’ earlier figure of roughly 600,000 H200s stuck in Hong Kong amid Beijing import caution.",
+        "why": "The default AI hardware supply map just redrew again, which cascades into every product roadmap that assumed China-accessible Hopper capacity.",
+        "hook": "Approved to sell. Choosing not to.",
+        "teach": "Revisit capacity and vendor-lock assumptions in any AI feature plan that depended on H200-class supply paths through China; document alternate regions and model tiers you can actually buy.",
+        "signal": "Kress’s silence on why matters as much as the halt: post-Huang Nvidia is performing national-security alignment in public while leaving product teams to read tea leaves. Expect more sudden regional availability cliffs without matching design-system updates."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "18 Nov 2026",
+        "url": "https://www.theguardian.com/science/2026/nov/18/cambridge-word-of-the-year-human",
+        "hed": "‘Human’ wins Cambridge dictionary’s word of the year",
+        "fact": "The Guardian reports Cambridge Dictionary named \"human\" its 2026 word of the year—defined as having the qualities, faults, and feelings people have, as opposed to gods, animals, or machines—citing rising compounds like \"human-made\" and shortlist mates \"agent\" and \"analogues.\" Editor Colin McIntosh said AI is changing how we talk about being human amid fears of outsourcing thinking.",
+        "why": "When a dictionary crowns \"human\" against a shortlist of \"agent,\" language itself is documenting the design problem of disclosure and authorship.",
+        "hook": "Word of the year is a species label.",
+        "teach": "Replace vague \"AI-assisted\" badges with plain contrast pairs users already say aloud—human-made vs model-made—and put them next to export and share actions, not only in settings.",
+        "signal": "Lexical panic is lagging product reality: \"agent\" on the shortlist means the public category has already shifted from chatbot to actor. Interfaces still titled \"Assistant\" are speaking last year’s dialect."
+      }
+    ]
+  }
+}
