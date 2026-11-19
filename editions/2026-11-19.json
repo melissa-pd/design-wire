@@ -1,0 +1,295 @@
+{
+  "date": "2026-11-19",
+  "label": "Thursday, 19 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "The Verge",
+        "date": "19 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button",
+        "hed": "Canva adds an AI ‘off’ button",
+        "fact": "The Verge reports that Canva now lets free and paid users disable generative AI features via Profile > Settings > Permission, covering Magic Expand, the Canva chatbot, Magic Write, Magic Design, Magic Layers, Magic Edit, Dream Lab, Canva Code, AI Shapes and more, while leaving background remover and Magic Grab on because Canva says they “make everyday tasks faster without generating anything new.” A separate AI personalization toggle can surface human-created library content first; Canva says a “small portion” of the library is AI-generated and that designs using those elements carry an AI label in metadata.",
+        "why": "The biggest consumer design tool just shipped the control designers have been asking for since the 2023 AI flood: a real off switch, not another bury-me preference. That makes Canva a reference pattern for every product that bolted generation onto an existing creative surface.",
+        "hook": "Canva finally shipped the AI kill switch.",
+        "teach": "Audit your product for a single generative-AI master switch that free and paid users can find without support docs, and separately decide which “AI-assisted but non-generative” tools stay on. Document that split in the settings copy so users know what still runs after they opt out.",
+        "signal": "Keeping Magic Grab and background remover on while killing Dream Lab draws a product line between generation and acceleration. Teams that treat every model call as one “AI features” blob will lose the users who want help without a content factory."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "18 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
+        "hed": "More banks say customers using AI agents are on their own — even if they get hacked",
+        "fact": "TechCrunch reports that Citibank updated its Online User Agreement so customers who grant third-party AI tools account access are responsible for those agents’ activities, including if the tool leaks credentials or is hacked. JPMorgan and Bank of America announced similar policies last month; PNC changed its terms the same day; Citizens emailed customers a parallel warning. Anthropic’s personal finance tool launched earlier this month is billed as read-only and “can’t move, manage, or invest your money.” Citi’s terms note that AI agents it provides can be used without that extra liability.",
+        "why": "The liability wall just moved from “don’t share your password” to “don’t connect an agent,” which is the permission design problem every money-adjacent product now inherits. Read-only becomes a marketed safety feature rather than a limitation.",
+        "hook": "Your agent can move money. Your bank says that’s on you.",
+        "teach": "If your product connects to bank credentials, put read-only versus write access in the first permission screen, not a later settings page, and show who bears fraud liability in plain language before the connect button. Mirror Anthropic’s “can’t move money” framing when write access is off.",
+        "signal": "Citi carving out liability for its own agents while dumping it for third parties is the platform play: banks will tolerate agent UX only when they own the pathway. Expect “approved agent” badges to become a procurement requirement, not a nice-to-have."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "18 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode/",
+        "hed": "Google’s AI feature in Search gets its own incognito mode",
+        "fact": "TechCrunch reports that Google is rolling out “temporary threads” in AI Mode in Search globally on desktop and mobile across supported languages. Users click a temporary-threads icon in the upper right; the session detaches from the account so responses are not informed by past preferences and do not affect future personalization, search history or recommendations. Google says no settings change is required.",
+        "why": "AI Mode was the conversational surface that still lacked the temporary-chat pattern Gemini already had. Privacy UX for search-adjacent AI is now a visible control, not a buried history delete.",
+        "hook": "AI Mode finally got its own incognito.",
+        "teach": "If your product has a persistent AI thread, add a one-click temporary mode that is visually distinct from the default chat and that states what will not be saved or used for personalization. Put the control in the thread chrome, not in account settings.",
+        "signal": "Detaching personalization mid-session is as important as not logging history. Products that only hide history still train the next recommendation; Google is admitting that “private” now means “don’t update my model of you.”"
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "18 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show/",
+        "hed": "Muse privacy invasions are freaking out Meta staffers, internal chats show",
+        "fact": "Ars Technica, citing Reuters internal chats, reports Meta staff flagged Muse accessing unexpected private messages, mixing conversations, and emitting unprompted outputs that appeared to share bank balances such as “your Capital One balance is $2722.58.” Meta says many cases were hallucinations from built-in engagement prompts, that employee builds differ from public Muse, and that a bug causing wider-than-intended instructions has been fixed. Reuters could not establish whether Muse shared real third-party balances or fabricated them. Signal and AI Now testing indicated Android Muse could read Signal via setup permissions; Apple is adding fuller Full Disk Access controls after Muse message complaints. Muse has been downloaded more than 10 million times since September.",
+        "why": "The permission moment for desktop agents is broken in public: users cannot tell when an agent is reading Messages versus hallucinating finance. That is a design failure Meta’s own testers documented.",
+        "hook": "Meta’s own staff can’t tell if Muse is leaking or lying.",
+        "teach": "Before shipping an agent with filesystem or notification access, require an explicit per-app allow list with a confirm-before-read step for messaging databases, and log that consent in the UI. Never let accessibility or Full Disk Access be the silent path to private messages.",
+        "signal": "Hallucinated bank balances and real cross-account context leaks create the same user terror. Trust collapses either way, which means agent UX that cannot prove data provenance will keep losing to tools that stay clearly sandboxed."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "19 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
+        "hed": "Superhuman pushes its Go assistant everywhere",
+        "fact": "TechCrunch reports Superhuman is expanding Go across Docs and Mail with proactive scheduling and email drafting, writing-style learning, enterprise search over connected tools, and 20 new connected agents including DeepL, Legora, Amplitude, Databricks and Blackboard via a Go SDK. Users can run Docs agents in the background and set event-triggered routines. CEO Shishir Mehrotra said Go has over 1 million active users; the company is rolling out live collaborative notetaking from its Fathom acquisition so Go can draft proposals after meetings. Company-reported figures and roadmap.",
+        "why": "The productivity suite pattern is consolidating around one assistant that sits on the cursor, runs background agents, and owns post-meeting artifacts. That is a concrete IA change, not a feature list.",
+        "hook": "Grammarly’s successor wants to be your agent router.",
+        "teach": "Map which of your surfaces should host the primary assistant versus spawn background agents, and define one place where users see active routines and can cancel them. If you add post-meeting drafting, show the draft as editable output with source meeting context, not a silent send.",
+        "signal": "Mehrotra pitching Go against Dots and Duet while claiming whole-person coverage shows the assistant wars are about default context capture, not model quality. Whoever owns calendar plus inbox plus docs becomes the OS for knowledge work."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "18 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-coding-assistants-like-claude-code-and-cursor/",
+        "hed": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor",
+        "fact": "TechCrunch reports Snapchat launched Easy Lens CLI so creators can build Lenses from plain-language prompts inside AI coding assistants such as Claude Code, Cursor and Codex, using more than 100 AR building blocks and 50 AI asset generators, then generate previews, publish and track performance. It runs on Mac, Windows and Linux. Snapchat says Lens+ Payouts creators can earn from CLI-built Lenses and that it paid out $1.8 million to Lens+ community creators last month. Capability and payout claims are Snapchat’s.",
+        "why": "Snap is meeting creators where their coding agents already live instead of forcing another proprietary IDE. That is a distribution bet on AI-assisted AR production.",
+        "hook": "Your Lens ship path now starts in Cursor.",
+        "teach": "If you run a creator platform, publish a CLI or MCP that an external coding agent can drive end-to-end: scaffold, preview, publish, metrics. Measure time-to-first-publish for non-specialists before and after.",
+        "signal": "Paying $1.8M last month to Lens+ creators while opening the CLI to Claude Code means Snap is competing for agent-native developers, not just Lens Studio power users. Platforms that only ship GUI builders will look closed to the next cohort."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "18 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/18/satya-nadella-predicts-ai-agents-will-reshuffle-the-economics-of-the-web/",
+        "hed": "Satya Nadella predicts AI agents will reshuffle the economics of the web",
+        "fact": "At the New York Times DealBook Summit, TechCrunch reports Microsoft CEO Satya Nadella said AI agents will reshuffle “human web” aggregators that monetize eyeballs, possibly toward cost-per-click or more transactional models, and that “if you don’t accept the agent, somebody else will.” He cited Amazon blocking shopping agents and suggested a rival such as Shopify could gain by allowing them.",
+        "why": "This is a CEO-level admission that agent traffic is a business-model choice, not a bot-spam problem. Design systems for commerce and content will have to expose machine-readable offers or lose the session.",
+        "hook": "Block the agent and someone else gets the click.",
+        "teach": "Inventory which of your flows assume a human eyeball for monetization, and sketch an agent-readable alternative: structured prices, confirmable checkout, and a receipt the user can audit. Bring that sketch to your next monetization review.",
+        "signal": "Nadella equating portal-to-search with human-web-to-agent-web implies the next SEO is “will an agent trust this page enough to transact.” Brands optimizing only for human SERP snippets are preparing for the last war."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "Ars Technica",
+        "date": "18 Nov 2026",
+        "flag": "Top story",
+        "url": "https://arstechnica.com/gadgets/2026/11/netflix-ceo-admits-app-may-bury-stuff-you-want-to-watch-under-stuff-you-dont/",
+        "hed": "Netflix CEO admits app may bury stuff you want to watch under stuff you don’t",
+        "fact": "Ars Technica reports Netflix co-CEO Ted Sarandos told Bloomberg the company can “bury things that you might be looking for under new things that you’re not coming for,” while saying it sometimes “make[s] mistakes about how we present new things.” He pointed to AI for discovery and said people will “desire more ambitious, more accomplished storytelling in a world that is flooded with slop.” Netflix has used generative AI workflows for crowds or battle scenes across hundreds of titles and raised content spend about 10% this year. Netflix reported over 325 million subscribers as of January; Sarandos said half of US TV engagement is still linear, without specifying the source.",
+        "why": "The category leader just admitted the homepage can hide intent under promotion. That is a rare public validation of the findability complaint designers hear in every streaming usability test.",
+        "hook": "Netflix’s CEO admits the app buries what you came for.",
+        "teach": "In your next content or homepage review, measure how many taps it takes a returning user to reach an item they searched for last week when a new row is promoted above it. If that path grows, treat promotion density as a regression, not a growth win.",
+        "signal": "Pairing “flooded with slop” with AI-assisted discovery is the contradiction: generative volume creates the clutter AI is then hired to navigate. Ambition becomes a brand claim while the UI still optimizes for novelty."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "18 Nov 2026",
+        "url": "https://www.theguardian.com/us-news/2026/nov/18/mapquest-google-apple-navigation-app-flock",
+        "hed": "Annoying Trump and dodging Flock: inside MapQuest’s contrarian comeback",
+        "fact": "The Guardian reports MapQuest refused Trump’s Lake Ontario “Lake America” rename and says it added more than 2 million mobile users in a week, briefly becoming the top free navigation app on iOS and Android, with Canadians about half of the new following. After a Halloween update it maps surveillance cameras, including Flock ALPRs, as blinking red eyes with cones; Flock says it has 120,000 cameras across more than 6,000 communities. EFF research cited in the piece finds less than 1% of ALPR-scanned vehicles connect to a public-safety issue. MapQuest still draws 35 million monthly website visitors; GM Doug Berger stresses handcrafted “questies” markers rather than AI ones.",
+        "why": "Navigation UX just absorbed a civil-liberties layer: seeing the camera cone is the product, not a settings Easter egg. MapQuest is proving nostalgia plus a single political affordance can restart growth.",
+        "hook": "MapQuest’s killer feature is a map of who is watching you.",
+        "teach": "If your map product surfaces civic risk, make the surveillance layer default-visible with tap-through details (type, coordinates, facing), and keep a suggestion box for missing cameras. Do not bury it under a “labs” toggle.",
+        "signal": "Handcrafted questies and anti-rename stance are brand UX doing political work. In a market of interchangeable GPS skins, values and legible surveillance become the differentiator Google and Apple cannot easily copy without picking a fight."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "19 Nov 2026",
+        "url": "https://www.creativebloq.com/news/the-specsavers-gta-6-campaign-is-hilariously-on-brand",
+        "hed": "The Specsavers GTA 6 campaign is hilariously on brand",
+        "fact": "Creative Bloq reports Specsavers’ “biggest partnership of all time” teases a GTA deal but sponsors GTA Transport Ltd, a Leicester haulage firm, offering every driver a free eye test instead of jumping on Grand Theft Auto VI with AI vaporwave product shots. The piece notes Rockstar’s limited real-world collaborations and says GTA VI had sold close to 16 million copies before release day. Specsavers’ “Should’ve gone to Specsavers” line dates to 2002 via then in-house creative director Graham Daldry.",
+        "why": "In a week of lazy AI trendjacking, the winning brand move was a pun that protects a 24-year joke. Craft and brand memory beat generative moodboards.",
+        "hook": "The best GTA VI ad sponsored a trucking company.",
+        "teach": "Before any cultural-moment campaign, write the brand’s oldest durable joke or promise on the brief and reject concepts that need AI restyling of product shots to feel current. If the joke still works without naming the event, ship it.",
+        "signal": "Close-to-16-million preorders make GTA VI a gravity well for soft brands. Specsavers shows the way out: adjacency through wordplay, not through looking like Leonida."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "19 Nov 2026",
+        "url": "https://www.creativebloq.com/news/rockstar-designed-gta-vis-buildings-by-getting-inside-the-heads-of-the-people-who-live-in-them",
+        "hed": "Rockstar designed GTA 6's buildings by imagining who would live in them",
+        "fact": "Creative Bloq quotes Rockstar VP of Art Miriam Bellard saying that for every visual design the team role-plays inhabitants: whether they hired an architect or DIY’d, chased status or comfort, and were messy or tidy. Senior Design Director John Macpherson says reference trips and time with locals informed Florida’s “raw energy and vibrant chaos.” The writer reports three weeks of play and that building character can help plan heists by reading bank or store flow.",
+        "why": "This is a portable worldbuilding method for any product environment: design the people first, then the surfaces. It is the opposite of kitbashing empty architecture.",
+        "hook": "Every facade starts with a character brief.",
+        "teach": "For your next environment or empty-state set, write a one-paragraph inhabitant brief before art direction: DIY vs hired, status vs practical, tidy vs messy. Review comps against that brief, not against a style moodboard alone.",
+        "signal": "When architecture telegraphs occupancy, players (and users) gain affordances without UI chrome. Product spaces that look “designed” but uninhabited fail the same test Leonida is trying to pass."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "18 Nov 2026",
+        "url": "https://www.theguardian.com/us-news/2026/nov/18/maryland-baltimore-county-doritos-gun-ai-lawsuit",
+        "hed": "Four Maryland high school students sue after AI mistakes Doritos bag for gun",
+        "fact": "The Guardian reports four current and former Maryland high school students sued Omnilert, Baltimore County police, the board of education, officers and the principal after an AI gun-detection alert flagged a Doritos bag as a firearm with 90% confidence following football practice on 20 October last year; students say they were ordered to their knees, handcuffed and searched. The complaint says the alert continued after staff and police reviewed the image and called it a mistake. Maryland’s education inspector general found more than 99% of Omnilert Gun Detect alerts in Baltimore County Public Schools were false positives requiring no police response, per the lawsuit. Omnilert previously told the Baltimore Banner it was “truly sorry” for the fear caused.",
+        "why": "A snack bag at 90% confidence plus a >99% false-positive rate is the worst-case UX of automated safety: high model certainty, low human override discipline, and kids in handcuffs.",
+        "hook": "90% sure it was a gun. It was Doritos.",
+        "teach": "If you design human review for AI safety alerts, require an explicit dismiss that stops escalation before police dispatch, and surface false-positive rate next to confidence in the operator UI. Never treat a single high-confidence frame as enough to send armed response.",
+        "signal": "Marketing “fewer false positives” while an inspector general clocks >99% false alerts is a credibility gap regulators will read as design negligence. Confidence scores without calibrated thresholds are theatre."
+      },
+      {
+        "pub": "The Verge",
+        "date": "19 Nov 2026",
+        "url": "https://www.theverge.com/tech/1037100/apple-siri-recap-audio-intelligence-hands-on",
+        "hed": "I let Apple’s always-listening AI summarize my life for two weeks",
+        "fact": "The Verge’s Victoria Song tested Apple Watch Siri Recap beta: opt-in only, schedulable windows, recaps self-destruct after one, three or seven days, no viewable transcript or saved raw audio, on-device processing via an S11 secure exclave with Private Cloud Compute for residual cloud work, and auto-off with headphones. Unlike Live Rewind, there is no outward indicator or chime. Song found TikTok audio summarized as personal events, work recaps useful for topics but weak on salient anecdotes, and said of more than 50 recaps she was confident 90% would be gibberish to anyone else; outside a few work cases she did not find them useful.",
+        "why": "This is the clearest field report yet on the privacy–utility tradeoff for ambient meeting notes. Apple’s constraints are real, and they measurably blunt usefulness.",
+        "hook": "Privacy-first ambient notes still fail the “was it worth it?” test.",
+        "teach": "If you ship ambient summarization, add a visible recording indicator, default short retention, and a one-tap pause for bystanders. Separately, let users star moments during a conversation so the model prioritizes what they marked, not only dates and stats.",
+        "signal": "No chime plus forced social disclosure is unfinished consent UX. The product externalizes the ethics work onto the wearer, which is why Song’s “turn it off and I don’t have to think” ending is the adoption forecast."
+      }
+    ],
+    "product": [
+      {
+        "pub": "The Guardian",
+        "date": "18 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/technology/2026/nov/18/waymo-pulls-driverless-taxis-us-freeways",
+        "hed": "Waymo pulls driverless taxis from freeways across the US after California ban",
+        "fact": "The Guardian reports Waymo indefinitely suspended commercial driverless freeway rides in all markets that offered them (Bay Area, Los Angeles, Phoenix, Miami, Austin) after California’s DMV banned its robotaxis from state freeways following incidents including three vehicles entering a construction zone on 5 November and a 6 November attempt to bypass CHP traffic-break vehicles; similar issues reportedly occurred on 18 May. City-street service elsewhere continues. Waymo says it is still testing freeways with specialists aboard and that the recent US 101 encounters involved no injuries or collisions. Restrictions remain until Waymo shows corrective actions.",
+        "why": "A national product rollback triggered by one state’s safety finding shows how fragile highway autonomy is as a consumer feature. The construction-zone failure mode is a UX and ops problem, not just a stack bug.",
+        "hook": "Waymo’s freeway product is now a nationwide pause.",
+        "teach": "For any autonomy or agent feature with asymmetric downside, ship a market-level kill switch and in-product copy that explains what still works (city streets) versus what is paused. Do not leave users to discover the cut via a failed route.",
+        "signal": "Voluntary nationwide suspension the same day as a California ban is reputation management as product strategy. Regulators learned they can force global behavior by acting locally."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "19 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/19/nimble-enters-the-item-tracking-market-with-eco-friendly-luggage-tags-and-keychains/",
+        "hed": "Nimble enters the item-tracking market with eco-friendly luggage tags and keychains",
+        "fact": "TechCrunch reports Nimble launched Trace, seven Find My and Find Hub-compatible trackers built into accessories from a $14.95 replaceable-battery Trace Tag to a $49.95 rechargeable Trace Folio passport cover, plus keyfob, wallet card, keychain, luggage tag and wallet between $19.95 and $39.95. Several models use USB-C or wireless charging; the Trace Keyfob is rated about six months per charge. Materials include recycled plastics and plant-based aloe leather with third-party chemical testing. Available now on Nimble’s site and Amazon in five colors.",
+        "why": "Against Apple AirTag and Google’s $29 Pixel Tag, Nimble’s bet is that the tracker should be the object you already carry. Luggage tags and passport covers are still thin categories.",
+        "hook": "Make the wallet findable instead of finding a tracker that fits the wallet.",
+        "teach": "When entering a hardware accessory category dominated by discs and fobs, prototype the job-to-be-done object first (passport, luggage tag) and only then embed the radio. Price the SKU against the object category, not only against AirTag.",
+        "signal": "Dual-network compatibility is table stakes; rechargeable passport covers are the wedge. The next commodity war is form factor and materials, not beep range."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "19 Nov 2026",
+        "url": "https://www.creativebloq.com/news/the-creality-raptor-pro-max-should-radically-speed-up-the-design-of-custom-car-parts",
+        "hed": "The Creality Raptor Pro Max should radically speed up the design of custom car parts",
+        "fact": "Creative Bloq reports Creality’s Raptor Pro Max handheld scanner uses 42 cross blue laser lines (up from 22), up to about 1.26 million measurements, roughly 91% higher max scanning rate, and a single capture range up to 480 × 330 mm at 550 mm, which Creality says can cut automotive workpiece scan time by up to 40% and markers by up to 25%. Seven parallel lines handle fine edges; objects from 5 to 4,000 mm; claimed volumetric accuracy 0.02 mm + 0.08 mm/m. SRP $1,799, limited-time about $1,619. Specs and time-savings claims are Creality’s.",
+        "why": "Custom car design still bottlenecks on capture time and marker spam. A wider pass with fewer stickers is a direct throughput win for physical product teams.",
+        "hook": "Almost 2× the laser lines, ~40% less scan time claimed.",
+        "teach": "If your hardware or props pipeline still waits on multi-pass scans, trial a higher-line-count handheld on one bumper or panel this week and time marker setup versus previous kit. Log whether fewer markers actually stick in your shop conditions.",
+        "signal": "Spray-free black and metal capture plus real-time preview pushes scanning toward on-floor design iteration. The CAD delay after a scan is becoming the new bottleneck."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "18 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/18/spend-management-platform-payhawk-announces-280m-raise-2b-valuation/",
+        "hed": "Spend management platform Payhawk announces $280M raise, 2B valuation",
+        "fact": "TechCrunch reports UK fintech Payhawk closed a $280 million Series C led by Goldman Sachs growth equity at a $2 billion valuation, bringing total funding above $500 million, with Greenoaks, Lightspeed and QED also in. Payhawk says it operates in 33 countries and still holds 70% of the $100 million it raised in 2022 at a $1 billion valuation. CEO Hristo Borisov told FinTech magazine the opportunity is AI-native finance products combining agents, payment infrastructure and enterprise controls. Company-reported.",
+        "why": "Expense software is pitching agents as the Series C story, not cards alone. Finance UX is becoming an agent orchestration problem with audit controls attached.",
+        "hook": "Europe’s spend unicorn wants AI-native finance teams.",
+        "teach": "If you build internal finance tools, define which agent actions need dual control before autopay, and show a human-readable audit trail beside every automated expense decision. Treat “enterprise controls” as a first screen, not a compliance appendix.",
+        "signal": "Still sitting on 70% of a prior $100M while raising at 2× valuation suggests dry powder plus narrative premium for AI agents in a crowded Pleo/Moss/Spendesk field. Capital is chasing the agent wrapper around payments."
+      },
+      {
+        "pub": "The Verge",
+        "date": "19 Nov 2026",
+        "url": "https://www.theverge.com/tech/1037535/google-blue-origin-project-suncatcher-2029",
+        "hed": "Blue Origin will launch Google’s AI server satellites in 2029",
+        "fact": "The Verge reports Google and Blue Origin will use a New Glenn rocket in Q1 2029 for Project Suncatcher’s first dedicated heavy-lift launch, putting TPU satellites with “computing capacity at roughly the scale of a data center rack” into sun-synchronous orbit. Google’s first AI server satellite launched in October on a SpaceX Falcon 9 rideshare, booted TPUs, and used onboard Gemma 4 to send an AI-generated haiku to Earth.",
+        "why": "Orbital inference moves from rideshare experiment to booked heavy-lift capacity. That is a product roadmap milestone even if the UX is a haiku today.",
+        "hook": "Google booked a New Glenn for spaceborne TPUs.",
+        "teach": "Treat space DC claims like any other capacity announcement: ask what latency, thermal and downlink constraints mean for user-facing features before greenlighting “edge in orbit” narratives in your roadmap decks.",
+        "signal": "A 2029 dedicated launch after an October Gemma 4 demo locks Blue Origin into Google’s AI infra story the way Falcon 9 owned the first hop. Launch partners are becoming AI brand co-stars."
+      },
+      {
+        "pub": "The Verge",
+        "date": "19 Nov 2026",
+        "url": "https://www.theverge.com/tech/1037552/analogue-3d-nintendo-64-console-wi-fi-activated-automatic-updates",
+        "hed": "The Analogue 3D can now update itself over Wi-Fi",
+        "fact": "The Verge reports Analogue’s 1.6.0 firmware for the Analogue 3D finally activates built-in Wi-Fi (2.4GHz, 5GHz, mixed and hidden networks), enabling future over-the-air firmware installs, automatic date/time by time zone, and an optional anonymous usage analytics toggle. The update itself still requires a memory-card install once; Wi-Fi setup starts on boot thereafter.",
+        "why": "A premium FPGA console shipping radio-dead until a later firmware is a shipping compromise designers should notice: hardware capability without day-one software is a support tax.",
+        "hook": "The Wi-Fi chip was always there. Firmware 1.6 woke it up.",
+        "teach": "If you ship hardware with dormant radios, say so on the box and in onboarding, and make the last manual update unlock automatic ones. Add a clear analytics opt-in when connectivity first appears.",
+        "signal": "Nostalgia hardware is quietly adopting modern update and telemetry norms. The privacy section arriving with Wi-Fi is the tell that even FPGA toys now live in a connected-product regime."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "CNBC",
+        "date": "18 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
+        "hed": "Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX",
+        "fact": "CNBC reports Anthropic priced at $83 a share, above the prior $70–$78 range, selling about 980 million shares for $81.3 billion—larger than SpaceX’s initial $75 billion raise (SpaceX reached $85.7 billion after overallotment). Fully diluted market cap is about $1.5 trillion; trading is set for Thursday on Nasdaq as “ANT.” Amazon and Google stakes are valued at over $100 billion each; Google, Microsoft, Nvidia and AMD agreed to invest $26 billion at the IPO price. Nine-month revenue was $33.24 billion, up roughly 1,200% year over year, with a $104 billion net loss mostly from fair-value changes on convertibles; October run-rate revenue was about $81 billion. Each of seven co-founders is selling 3.38 million shares for $1.96 billion total proceeds.",
+        "why": "The largest IPO on record prices AI’s public-market legitimacy in one print. Every design org’s vendor map just gained a $1.5T safety-branded incumbent with a ticker.",
+        "hook": "$83 a share. $81.3B raised. ANT starts trading.",
+        "teach": "Update your AI vendor risk one-pager: Anthropic is now a public company with disclosed run-rate, loss composition and founder selling. Note what changes for procurement, DPA review and “private benefit” messaging when the stock is live.",
+        "signal": "Pricing above range while Midterms backlash and Huang’s exit rattled markets is a bet that enterprise Claude Code demand outruns political weather. The circular $26B co-invest from chip and cloud giants is the structure the float still has to prove."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "19 Nov 2026",
+        "url": "https://www.theguardian.com/world/2026/nov/19/datacentres-to-create-70-more-carbon-emissions-by-2030-iea-report-warns",
+        "hed": "Datacentres to create 70% more carbon emissions by 2030, IEA report warns",
+        "fact": "The Guardian reports the IEA finds datacentre electricity use doubling by 2030, with AI about three-quarters of the growth and an extra 350 TWh a year for AI datacentres—more than Great Britain’s annual electricity use—driving about 70% higher sector emissions. By 2030 roughly half of China’s AI datacentre power is expected from coal and about 60% of US datacentre power from gas, with ~180GW of US gas plants planned for datacentres as of August. Global datacentre capacity tracked via AI server shipments and imagery of 93 “AI factories” rose tenfold in 24 months to 17GW toward ~50GW completed; existing stock is 120GW, with another 120GW by decade’s end in the IEA base case, three-quarters AI.",
+        "why": "The energy watchdog just quantified the fossil rebound behind AI capacity. Design’s cloud defaults are now an emissions story with country-level fuel mixes.",
+        "hook": "+70% datacentre carbon by 2030, per the IEA.",
+        "teach": "Add fuel-mix geography to your infra review: ask where inference for your heaviest generative features runs and whether a lower-carbon region is an option. Cut one always-on generative preview that users did not request.",
+        "signal": "EU datacentres at ~70% renewables versus US gas and China coal means the same model call has wildly different climate math by region. “Carbon-aware routing” moves from conference talk to procurement clause."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "19 Nov 2026",
+        "url": "https://www.theguardian.com/world/2026/nov/19/imf-head-warns-ai-demand-push-up-interest-rates-apec",
+        "hed": "AI demand will push up interest rates around the world, IMF head warns",
+        "fact": "At Apec in Shenzhen, the Guardian reports IMF managing director Kristalina Georgieva said AI hardware demand plus the Middle East energy shock is pushing global inflation to 4.7% this year and “calls for a tightening of monetary policy in many economies.” AI-related goods are more than one-tenth of world goods trade. She said the energy shock will fade but “AI is for ever,” and warned countries that lack digital infrastructure, AI-ready labour markets and financial/cyber risk controls: “you snooze, you lose.”",
+        "why": "The IMF is framing AI capex as a macro inflation channel, not only a tech story. That links product compute budgets to household borrowing costs.",
+        "hook": "The IMF says AI hardware is a rate-hike input.",
+        "teach": "When leadership asks why cloud bills and hiring plans feel constrained, bring Georgieva’s inflation channel into the conversation: AI demand is now cited next to energy shocks as a reason central banks tighten.",
+        "signal": "“You snooze, you lose” from the IMF is industrial policy language. Countries and companies without AI-ready labour design will be described as competitive failures, not careful adopters."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "19 Nov 2026",
+        "url": "https://www.theguardian.com/australia-news/2026/nov/20/communities-are-really-angry-how-datacentre-opposition-has-gone-from-marginal-to-mainstream-in-five-months",
+        "hed": "‘Communities are really angry’: how Australia’s datacentre opposition has gone from marginal to mainstream in five months",
+        "fact": "The Guardian reports Australian grassroots groups flipped local politics in months: a Wingecaribee council motion for a federal datacentre moratorium passed unanimously after a March gas-plant opposition motion failed; WA and NSW projects cited in a May Guardian story were withdrawn and NextDC’s West Footscray expansion stalled after power-pole delays. Campaigners share tactics on WhatsApp and a Victorian wiki; Cloud Carrier is in court over refused gas plants totaling 673MW for a Moss Vale “data campus.” NSW inquiry members from Labor and Liberal removed moratorium and retrospective-rules recommendations; Greens MP Abigail Boyd was the lone vote to keep them. Federal minimum rules for large datacentres are proposed for next year.",
+        "why": "Anti-DC politics that mattered in US midterms are now an Australian organizing network with local wins. Siting risk is a product-of-policy problem for AI capacity.",
+        "hook": "Five months from lonely motion to unanimous moratorium call.",
+        "teach": "If your company depends on a regional capacity build, track local council and inquiry language the way you track model releases. Build a community-impact one-pager before the opposition wiki does it for you.",
+        "signal": "Major parties stripping pause recommendations while communities claim US-midterm replay is a legitimacy gap. Informal WhatsApp coalitions are outmaneuvering formal industry consultation."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "19 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.theguardian.com/technology/2026/nov/19/nvidia-new-ceo-search-jensen-huang-arm-rene-haas",
+        "hed": "Nvidia approaches Arm boss Rene Haas in search for new CEO",
+        "fact": "The Guardian, citing Bloomberg, reports Heidrick & Struggles has approached candidates including Arm CEO Rene Haas, previously an Nvidia GM for seven years, with other names including Nvidia VP Ian Buck, AMD CEO Lisa Su and Apple hardware chief Johny Srouji. Nvidia chair Harvey Jones said this week the board “does not intend to reinstate Jensen as CEO.” Interim CEO Colette Kress reported quarterly revenue of $115.84 billion, double a year ago. Arm is valued at $196 billion with more than 7,000 staff. Nvidia and Arm were approached for comment; Huang’s exit followed an admitted affair with a woman accused of spying for China, per the report.",
+        "why": "The succession search is now public and international. Chip leadership uncertainty is a first-order risk for every AI product timeline.",
+        "hook": "Nvidia’s headhunters are calling Arm’s CEO.",
+        "teach": "For roadmap planning, add an explicit Nvidia-leadership scenario: interim Kress continuity versus an external CEO. Flag any launch that assumes relationship-driven allocation stays unchanged through Q1.",
+        "signal": "Board refusal to reinstate while Trump and Musk lobby for Huang’s return splits political capital from governance. A Haas hire would tightly couple Arm’s licensing empire to Nvidia’s GPU monopoly."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "18 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+        "hed": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+        "fact": "TechCrunch reports Nadella told DealBook the October buyout offer to 60,000 employees was about giving “agency” amid reorganization so people manage AI rather than do work directly. He said a Cowork agent team of 11 developers “build a software factory that builds the product. They don’t build the product,” and that this direction “is going to happen in all jobs.” He denied the framing that AI simply replaces engineers, describing a new “operating point” for software work at a 51-year-old incumbent.",
+        "why": "The largest software company is narrating voluntary exits as AI-era job redesign. That sets the template other employers will copy in language and in org charts.",
+        "hook": "60,000 buyouts so you can manage the agents instead.",
+        "teach": "If your org talks “AI transformation,” demand a written role redesign for your discipline: what you still author, what agents produce, and how quality is reviewed. Do not accept buyout-or-reorg messaging without that map.",
+        "signal": "Eleven people running a “software factory” is the staffing fantasy boards will cite. The political work is pushing anxiety downstream as individual “agency” while the operating point is mandated."
+      }
+    ]
+  }
+}
