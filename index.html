@@ -378,7 +378,13 @@ img{max-width:100%}
     <input class="search" id="q" type="search" placeholder="Search this edition…" aria-label="Search stories in this edition">
     <ul class="archive" id="archive">
       <li>
-        <button class="ed-link" type="button" data-ed="2026-09-07" aria-current="true">
+        <button class="ed-link" type="button" data-ed="2026-11-20" aria-current="true">
+          <span class="d">20 Nov 2026</span>
+          <span class="m">Fri · 25 stories</span>
+        </button>
+      </li>
+      <li>
+        <button class="ed-link" type="button" data-ed="2026-09-07">
           <span class="d">7 Sep 2026</span>
           <span class="m">Mon · 24 stories</span>
         </button>
@@ -441,6 +447,465 @@ img{max-width:100%}
     <p class="empty" id="empty" hidden="">Nothing in this edition matches that filter.</p>
 
     <div id="editions">
+
+      <!-- ############ EDITION 2026-11-20 ############ -->
+      <article class="edition" data-ed="2026-11-20" data-label="Friday, 20 November 2026">
+
+        <section class="beat" data-beat="ai">
+          <div class="beat-head"><h3>AI &amp; Tooling</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>20 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app" target="_blank" rel="noopener">Signal is blocking Gemini and Siri AI from reading your screen</a></h4>
+              <p class="fact">The Verge reports that Signal is blocking screenshots on iOS 27 and Android by default so on-device agents including Siri AI and Gemini cannot read chat content, with president Meredith Whittaker calling OS-level agents without developer controls an “existential threat to privacy at the application layer.” Users can restore screenshots in settings, but Whittaker warns that re-enabling them can expose Signal content and break the app’s privacy guarantees; the post says macOS protections are not available yet and that screenshot blocking is incomplete against file-system access.</p>
+              <p class="why"><b>Why it matters</b>This is the clearest product conflict yet between encrypted-app guarantees and OS agents that treat the screen as a free sensor. Privacy is no longer only an end-to-end crypto problem; it is a permission-surface problem between platforms and apps.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your chat app just had to disable screenshots to stay private.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product holds sensitive content, inventory every path an OS or third-party agent can read it—screenshot APIs, accessibility hooks, clipboard, file exports—and document what you can and cannot block. Ship a settings copy that names the tradeoff when the user re-opens those paths.</p>
+                    <p><span>Signal</span>Signal is forcing the platform question into the open: without a standard agent-deny API, privacy apps will keep amputating core UX (screenshot, share, accessibility) as a proxy control. Design systems that assume agents can “see” whatever is on screen are designing against the next wave of app-level defenses.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/ai-artificial-intelligence/1038334/openai-is-testing-a-new-design-for-mobile-chatgpt" target="_blank" rel="noopener">OpenAI is testing a new design for mobile ChatGPT</a></h4>
+              <p class="fact">The Verge reports that OpenAI is testing a revised mobile ChatGPT layout with a bottom tab bar for home and a Dot AI agent, plus the ability to pin surfaces such as Codex or Images, as shown by OpenAI’s Thibault Sottiaux. ChatGPT Pro users with Dots, or who are eligible for one, can turn the updated design on in settings.</p>
+              <p class="why"><b>Why it matters</b>ChatGPT is shifting from a single chat thread to an agent shell with a dock. That is the same IA move assistants make when chat stops being the product and becomes one mode among many.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">ChatGPT is getting a home screen for agents.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are shipping multiple AI modes, prototype a persistent bottom or side rail that makes the primary agent and two pinned tools visible without nesting them in a hamburger. Test whether users can switch modes without losing thread context.</p>
+                    <p><span>Signal</span>Pinning Codex and Images beside a personal Dot tells you OpenAI expects the mobile home to be a portfolio of agents, not a transcript. Competitors still selling one chat box will look under-structured once this ships widely.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/" target="_blank" rel="noopener">Google gives Gemini the ability to use your Mac for you</a></h4>
+              <p class="fact">TechCrunch reports that Google brought computer use to the Gemini macOS app so the agent can complete multi-step tasks across local files, native apps, and the web, with users able to pause, stop, and approve actions. The feature is initially available in English in the U.S. for Google AI Plus, Pro, or Ultra subscribers; Google suggests uses such as form filling, batch file organization, and building slideshows from online material.</p>
+              <p class="why"><b>Why it matters</b>Computer-use agents are becoming a desktop product category with visible control affordances, not a lab demo. The approval loop and live-preview window are the UX that will decide whether people trust the category.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Gemini can drive your Mac—if you keep your finger on the brake.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When you design an agent that acts in apps, require a live preview of what it is doing and a one-tap pause before irreversible steps. Write the approval prompt as a plain-language summary of the next action, not a raw tool call.</p>
+                    <p><span>Signal</span>Google is shipping Mac computer use in the same week Apple tightens full-disk-access warnings for third-party agents. The near-term desktop market will be a race between first-party agents that get privileged access and third-party ones that get sandboxed into uselessness.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>19 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats" target="_blank" rel="noopener">Google is putting AI chats right on the homepage</a></h4>
+              <p class="fact">The Verge reports that Google is rolling out a collapsible homepage sidebar on desktop that lists AI Mode searches, lets users continue threads, start a new chat, search threads, or connect a Gemini Notebook. VP of product Robby Stein said people are coming to Search with questions that “aren’t just one and done,” and that in testing the sidebar “made a big difference for making progress &amp; continuing to explore the web.”</p>
+              <p class="why"><b>Why it matters</b>Google’s homepage was the last sacred one-box UI. Turning it into a chat history rail admits that AI Mode sessions are becoming the primary unit of search, not the query.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The Google homepage now has a chat inbox.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product has multi-turn AI, put recent threads within one click of the empty-state entry point. Continuity beats starting over; design a sidebar or tray before you add another prompt flourish.</p>
+                    <p><span>Signal</span>Stein’s quote reframes Search success as progress across a session, not a single blue link. Ranking and analytics teams that still optimise for one-shot CTR are measuring the wrong job.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Nov 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/" target="_blank" rel="noopener">Apple may be developing its own AI agent that runs your Mac</a></h4>
+              <p class="fact">TechCrunch, citing Bloomberg’s report of a senior engineering manager job listing, says Apple appears to be building an AI agent that can browse the web, work across apps, run commands, write and debug code, and call services “privately and with the user’s permission.” TechCrunch says Apple did not respond to its request for comment; Bloomberg also notes macOS 27.3 will warn users against granting full access to third-party agents.</p>
+              <p class="why"><b>Why it matters</b>Apple is simultaneously hiring to build a first-party computer-use agent and hardening the OS against everyone else’s. That is a platform strategy, not a feature rumor.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Apple wants an agent—and fewer agents that aren’t Apple’s.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship a Mac agent, design for a world where full-disk access is denied by default: list the minimum entitlements you need per task and show users why each one is required before the system dialog appears.</p>
+                    <p><span>Signal</span>The job-post language (“the way a capable person does”) is the same capability bar OpenAI and Anthropic already market. Apple’s differentiator will be permission theater and private-by-default routing, not raw tool range.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/19/want-to-see-your-live-ai-usage-on-your-macs-icons-this-clever-new-app-lets-you/" target="_blank" rel="noopener">Want to see your live AI usage on your Mac’s icons? This clever new app lets you</a></h4>
+              <p class="fact">TechCrunch reports that designer Michael Flarup launched IconSwapper, a Mac utility that replaces app icons and can turn them into live indicators of AI usage and limit resets for ChatGPT, Claude, and Cursor, among other playful live icons for Messages, Mail, Safari, and more. Flarup runs a Copenhagen design studio and has been customising Mac icons since the early 2000s.</p>
+              <p class="why"><b>Why it matters</b>Usage limits are becoming ambient UI. Putting remaining quota on the dock icon is a reminder that AI metering is now part of everyday craft tooling, not billing settings buried three menus deep.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your dock just became an AI meter.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product meters AI, expose remaining capacity where people already look—status bar, dock badge, or empty-state banner—not only on an account page. Design a calm depleted state that explains when the limit resets.</p>
+                    <p><span>Signal</span>Indie icon utilities filling this gap means the big AI apps still treat quotas as backend accounting. Whoever ships a first-party, glanceable usage glyph will own the “am I about to hit the wall?” moment that currently lives in panic refreshes of the settings page.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>18 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/" target="_blank" rel="noopener">Will Wright’s next simulation will use AI to mine content from your memories</a></h4>
+              <p class="fact">Ars Technica reports that Will Wright’s Gallium Studios and Artificial Agency announced MyMems, due next year, which uses generative AI plus a proprietary behavior engine to turn player-typed memories into simulated people and themed zones such as sports, vacations, injuries, and deaths. Marketing claims MemDNA learns from memories “locally and only with your permission”; Wright’s earlier Proxi project from 2018 is cited as the predecessor.</p>
+              <p class="why"><b>Why it matters</b>The Sims creator is treating memory as the new content pipeline. That makes consent, local processing, and editable memory graphs design requirements, not privacy footnotes.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The next Sims-like game wants your childhood as DLC.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your product ingests personal narrative, show a reviewable memory inventory before generation runs, and let users delete a memory and regenerate affected content. Never bury “local only” as a slogan without a settings screen that proves it.</p>
+                    <p><span>Signal</span>Artificial Agency’s jab that “nobody knows what you remember” positions intimate memory graphs as the next competitive moat after clickstream and watch history. Expect copycats that are cloud-first and much less careful.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="ux">
+          <div class="beat-head"><h3>UX Craft &amp; Research</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>19 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/tech-policy/2026/11/amazon-takes-its-fight-against-nyc-delivery-bill-to-shoppers-with-in-app-pop-up/" target="_blank" rel="noopener">Amazon fights the Delivery Protection Act with homepage banner, in-app pop-up</a></h4>
+              <p class="fact">Ars Technica reports that Amazon is showing NYC shoppers a homepage banner reading “ATTENTION NYC Council could add up to $5 per order” with an “Act now” button, plus confirmation-page notices and an in-app pop-up (per Bloomberg), steering users to contact council members against Introduction 0518-2026, the Delivery Protection Act. Amazon’s page claims the bill would force it to stop working with small delivery businesses and consider moving operations outside the city; the bill is stalled in committee after an April hearing.</p>
+              <p class="why"><b>Why it matters</b>This is marketplace UI used as a lobbying channel. The dark-pattern lesson is not the politics—it is that a commerce homepage can interrupt checkout intent with one-sided civic messaging at massive scale.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Amazon turned the homepage into a petition booth.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Audit any interstitial that appears between intent and purchase: if it is advocacy, label the sponsor, link the opposing summary, and never use urgency framing that invents a price hike as the only outcome. Treat political overlays with the same scrutiny you give cookie walls.</p>
+                    <p><span>Signal</span>Ars notes Uber and Lyft have used similar tactics before. Once one megaplatform normalises in-product lobbying overlays, expect copycats on every high-traffic surface—and a regulatory fight over whether those overlays need equal-time disclosure.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/gta-6s-environmental-storytelling-is-hidden-in-the-details-you-might-never-notice" target="_blank" rel="noopener">GTA 6's environmental storytelling is hidden in the details you might never notice</a></h4>
+              <p class="fact">Creative Bloq quotes Rockstar VP of Art Adam Cochrane on Leonida details such as “a puddle of bin juice around the bottom of a dumpster” and overgrown gardens at unoccupied properties, and Senior Design Director Steven Messinger on fully mapped gang-compound drug networks that players “will only pick up on bits and pieces of.” The piece argues the backstory structure makes the world feel like a machine that keeps running when the player is elsewhere.</p>
+              <p class="why"><b>Why it matters</b>This is a masterclass in invisible systems design: deep narrative scaffolding that users only partially perceive, yet that makes every surface feel authored rather than random.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Bin juice is a design system.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For your next environment or empty state, write a one-page backstory for objects users will barely notice—who left this, why is it worn, what happens when nobody looks—and use it to brief visual details. Kill decorative clutter that has no story.</p>
+                    <p><span>Signal</span>Messinger’s “big machine always running” is the same principle as live product ecosystems that update when the user is offline. Most SaaS dashboards still feel paused when you leave; inhabited worlds do not.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/this-artist-made-photoshop-alt-has-no-ai-and-no-subscription" target="_blank" rel="noopener">This artist-made Photoshop alternative has no AI and no subscription</a></h4>
+              <p class="fact">Creative Bloq reports that artist Stuart Semple’s browser app NIVA—built without generative AI and without a subscription—drew close to 30,000 users in 48 hours after an Instagram launch, after a Kickstarter originally called Abode raised $240,000 from 3,000 backers. Pricing is free for an hour a day, $10 day passes, or $100 permanent access with day-pass credit; Semple says over half of first-day users made something within 40 seconds of getting access.</p>
+              <p class="why"><b>Why it matters</b>An anti-AI, anti-subscription creative tool going viral is a demand signal, not a novelty. Designers are shopping for tools that refuse the sparkle default.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">30,000 users showed up for software that won’t draw for them.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are pitching a creative tool this week, prototype a “no generative AI” mode with a clear value proposition and a try-before-buy meter (time-boxed free use beats a 14-day trial nobody finishes). Measure time-to-first-artifact in seconds.</p>
+                    <p><span>Signal</span>The Abode-to-NIVA rename and Semple’s lawyer joke are reminders that category naming is still contested ground. The lasting product idea is the pricing grammar: hour free, day pass, permanent—designed for craft sessions, not seat renewals.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Wired</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.wired.com/story/muse-is-unleashing-a-world-of-pettiness-on-instagram/" target="_blank" rel="noopener">Muse Is Unleashing a World of Pettiness on Instagram</a></h4>
+              <p class="fact">Wired reports Instagram users are prompting Meta’s Muse agent to list non-celebrity accounts that do not follow them back and to unfollow at scale—one user with over 7,600 followers got a 151-account spreadsheet and approval prompt within minutes; another posted about unfollowing 1,000+ people. Wired notes Meta removed an October ad that promoted Muse with “see who unfollowed you each week,” and that Meta did not comment on the removal.</p>
+              <p class="why"><b>Why it matters</b>Agents are collapsing socially awkward research that used to take hours into a one-prompt ritual. Reciprocity hygiene becomes an automated product surface—and Meta already flinched on advertising it.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Muse turned unfollow audits into a party trick.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your agent can take socially consequential actions, require a reviewable list and an explicit confirm before bulk changes, and log what was changed. Do not market features that weaponise asymmetric social data even if the agent can do them.</p>
+                    <p><span>Signal</span>Colorado State’s Natalie Pennington flags outsourcing “emotionally uncomfortable” decisions to tech. The second-order risk is etiquette collapse: when agents make petty moves cheap, platforms will be blamed for the culture they automated.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/the-best-gta-6-brand-reactions-from-mercedes-benz-to-huggies" target="_blank" rel="noopener">The best GTA 6 brand reactions, from Mercedes Benz to... Huggies?</a></h4>
+              <p class="fact">Creative Bloq reports GTA 6 had sold a reported 19 million copies by release, generating over $1.8bn in sales, and surveys brand responses ranging from Heineken’s dig at console-level realism to Mercedes using Andrew Mytro’s human-made artwork and KFC’s fake-funeral day-off alibi in Australia. The piece says lazy “GTA-ified” posts got called out, while Specsavers’ long-running joke about sponsoring “the wrong GTA” stood out.</p>
+              <p class="why"><b>Why it matters</b>Cultural launches are now a live test of brand systems: parody literacy, human craft, and restraint beat filter-on-logo spam.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">19 million copies sold. Most brand posts still looked like homework.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Before you trendjack a mega-release, write one rule: no logo-in-game-filter posts. Prefer a joke that only works because of your existing brand platform, and show human-made craft when the internet is drowning in AI sheen.</p>
+                    <p><span>Signal</span>Rockstar’s in-world parody brands raise the bar: real advertisers are competing with a satire engine that already mocks them. Brands that cannot out-write the parody lose twice.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Creative Bloq</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.creativebloq.com/news/these-8bitdo-tomb-raider-controllers-have-made-me-rethink-collectable-gaming-hardware" target="_blank" rel="noopener">These 8BitDo Tomb Raider controllers have made me rethink collectable gaming hardware</a></h4>
+              <p class="fact">Creative Bloq’s Ian Dean reviews 8BitDo’s Tomb Raider 30th Anniversary Ultimate 3 and Pro 3 controllers, praising packaging that “opens, slides and reveals” like a tomb discovery, a hidden golden envelope with instructions and a month of Xbox Game Pass Ultimate, and a charging stand that feels like seating a relic. The Ultimate 3 is noted at a $120 collectable price point; a metal D-pad disc once fell off but clipped back in.</p>
+              <p class="why"><b>Why it matters</b>Collectable hardware usually fails the daily-use test. Here the unboxing is designed as part of the product experience without making the controller a shelf ornament.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The box was the second controller.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you ship a limited edition, storyboard the unboxing as a five-step interaction—open, slide, reveal, remove, dock—and make the stand earn a permanent place on the desk. Integrate brand motifs into materials, not sticker decals.</p>
+                    <p><span>Signal</span>Dean’s conversion from sceptic to buyer is the KPI for premium peripherals: packaging that creates ritual without sacrificing ergonomics. Most “collector” SKUs still fail one of those two tests.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="product">
+          <div class="beat-head"><h3>Product &amp; Startups</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>20 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/transportation/1037667/waymo-serve-robotics-ditch-uber-autonomous-partnerships" target="_blank" rel="noopener">Why the robots are ditching Uber</a></h4>
+              <p class="fact">The Verge reports Waymo will end exclusive Uber partnerships in Austin and Atlanta after January 2028 so riders can hail directly in the Waymo app, after co-CEO Tekedra Mawakana called the mixed-fleet experience a “crapshoot.” Serve Robotics, with more than 2,000 sidewalk robots, will not renew Uber Eats when the deal expires in 2027 and is pushing a developer API so local businesses can add robot delivery without the 15–30% delivery-app cut; Uber says it flagged Serve performance issues and still expects “tens of thousands” of unsupervised AVs across more than 50 cities by 2028.</p>
+              <p class="why"><b>Why it matters</b>Autonomy startups are graduating from platform distribution to owning the customer relationship. The product fight is no longer “can the robot drive,” it is “whose app is the default.”</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">The robots learned the city. Now they want the customer.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you distribute through a mega-app, define the exit criteria for a first-party experience early: predictability of what the user gets, margin after platform take rate, and brand control of first impressions. Prototype the direct-hail empty state before you need it.</p>
+                    <p><span>Signal</span>Villanova’s TC Eley nails the mixed-fleet failure mode: mismatched expectations poison first rides in both directions. Aggregators that blur human and robot inventory will keep losing partners who need a deterministic product story.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>19 Nov 2026</span> <span class="flag">Reported, not confirmed</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/" target="_blank" rel="noopener">Meta’s new Muse Charm device may cost $300</a></h4>
+              <p class="fact">TechCrunch, citing The Information, reports Meta plans to charge $300 for Muse Charm, a Tamagotchi-like AI wearable teased at Connect and expected around the holidays; a Meta spokesperson told TechCrunch only that the company is “charmed by the interest” and will “have more to share soon.” TechCrunch compares the price to Friend’s AI wearable and notes AI pins have struggled commercially.</p>
+              <p class="why"><b>Why it matters</b>Meta is attaching a hardware price to a software agent personality. At $300 for a keychain-scale companion, the product has to clear the Humane-shaped trust gap with charm alone.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$300 for a pocket Muse—if The Information is right.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you are pricing an AI wearable, write the first-week retention loop before the BOM: what does the user do on day one that is not a gimmick demo? A $300 object without a daily job is a desk toy with a battery.</p>
+                    <p><span>Signal</span>Meta’s non-denial is the softest possible confirmation theatre. Watch whether Charm ships with a mandatory subscription; hardware ASP without recurring AI margin is how prior wearables died.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Verge</span> · <span>19 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theverge.com/tech/1038157/meta-quest-vr-3d-movies-tv-app" target="_blank" rel="noopener">Meta now sells 3D movies on Quest VR headsets</a></h4>
+              <p class="fact">The Verge reports Meta now offers more than 150 3D movies to buy or rent in the Quest TV app on Quest 3 and 3S, including Avatar, Spider-Man: Far From Home, Jurassic World Rebirth, Wicked: For Good, and a Billie Eilish concert film. A Theater view in a new Quest update dims surroundings for a personal cinema; Meta says thousands of titles and international availability are planned when VR Glasses launch next spring, alongside existing Disney+ 3D on Quest.</p>
+              <p class="why"><b>Why it matters</b>Quest is being repositioned as a living-room cinema as much as a games console. Buy/rent 3D catalogue depth is how Meta argues the headset stays on faces after the game session ends.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Quest wants to be your 3D multiplex.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>For spatial media products, design a dedicated Theater mode that reduces chrome and ambient distraction before you add social features. Catalogue merchandising beats another home-environment skin.</p>
+                    <p><span>Signal</span>Promising “thousands” for VR Glasses next spring means today’s 150-title shelf is a beachhead. The strategic bet is that stereoscopic movies, not VR games, become the mass-market justification for face-worn displays.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>18 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/18/sonys-updated-turntable-is-an-easy-entry-into-the-world-of-vinyl/" target="_blank" rel="noopener">Sony’s updated turntable is an easy entry into the world of vinyl</a></h4>
+              <p class="fact">TechCrunch reviews Sony’s PS-LX3BT successor to the discontinued PS-LX310BT: $399.99 list (discounted to $238 for Black Friday in the piece), with automatic tonearm start, USB-C power, aptX Adaptive Bluetooth up to 24-bit/96kHz, phono output, and USB digitising. The reviewer flags that start/stop controls moved under the dust cover, forcing users to lift it to press start.</p>
+              <p class="why"><b>Why it matters</b>A beginner turntable is a UX problem disguised as hi-fi: automation and codec updates help, but burying the start button under the lid is a classic industrial-design own-goal.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Sony automated the needle—then hid the start button.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>On hardware with a protective lid, keep primary controls reachable without opening the enclosure, or add a duplicate control on the outer edge. Test the first-play flow with the lid closed.</p>
+                    <p><span>Signal</span>Vinyl’s comeback products succeed when they remove ritual friction without removing ritual romance. Moving buttons under the lid adds friction without adding romance—an easy miss that will show up in returns and Reddit threads.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">TechCrunch</span> · <span>18 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://techcrunch.com/2026/11/18/felicis-leads-7-5m-bet-on-unsiloed-ai-to-make-enterprise-documents-usable-by-ai-agents/" target="_blank" rel="noopener">Felicis leads $7.5M bet on Unsiloed AI to make enterprise documents usable by AI agents</a></h4>
+              <p class="fact">TechCrunch reports Unsiloed AI raised a $7.5 million seed led by Felicis, with Y Combinator and others participating, to turn complex enterprise documents—tables, charts, layouts—into structured data agents can use, with provenance showing where extracted information came from. Co-founder Aman Mishra stresses LLMs are “inherently probabilistic” and that hallucination risk is severe for banks, hospitals, and law firms; customers are described in finance, legal, and healthcare without being named.</p>
+              <p class="why"><b>Why it matters</b>Agent adoption is bottlenecked on document fidelity, not chat UX. Provenance-linked extraction is becoming the trust layer enterprises will demand before letting agents touch contracts and claims.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Agents don’t need smarter chat. They need trustworthy PDFs.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your agent reads documents, show the source span beside every extracted field and make “uncertain” a first-class state in the UI. Do not let a probabilistic parse silently become a system-of-record value.</p>
+                    <p><span>Signal</span>Mishra’s quote is the category thesis: probabilistic models need deterministic wrappers for high-stakes docs. The winners will look boring—audit trails and table extractors—not flashy copilots.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">Ars Technica</span> · <span>19 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://arstechnica.com/gadgets/2026/11/google-will-launch-android-app-verification-requirement-globally-in-january-2027/" target="_blank" rel="noopener">Google will launch Android app verification requirement globally in January 2027</a></h4>
+              <p class="fact">Ars Technica reports Google will expand Android developer verification globally starting January 2027 after pilots in Brazil, Indonesia, Singapore, and Thailand, requiring sideloaded apps to come from developers who register with government ID and a $25 fee. Google claims “millions” of non-Play apps are registered, covering more than 99% of global Android installs; hobbyist accounts rose from 25 to 50 installs, and an “advanced flow” opt-out exists with scary warnings and a 24-hour wait. Guides suggest full enforcement around March 1, 2027.</p>
+              <p class="why"><b>Why it matters</b>Sideloading is becoming a verified privilege with friction baked into the escape hatch. That reshapes how indie and enterprise internal apps reach Android devices.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Sideloading survives—behind a 24-hour guilt trip.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If you distribute Android builds outside Play, register before January and document the advanced-flow path for testers. Redesign your install docs for a world where “unknown sources” is no longer enough.</p>
+                    <p><span>Signal</span>A buried opt-out with a cooling-off period is the new pattern for platform paternalism: choice remains technically available while defaults and delay do the policy work. Expect the same pattern on desktop agent permissions next.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="beat" data-beat="industry">
+          <div class="beat-head"><h3>Industry &amp; Careers</h3><span class="rule"></span><span class="count"></span></div>
+          <div class="grid">
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>20 Nov 2026</span> <span class="flag">Top story</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html" target="_blank" rel="noopener">Anthropic raises $93.5 billion total as underwriters scoop up ‘greenshoe’ overallotment</a></h4>
+              <p class="fact">CNBC reports Anthropic underwriters exercised the IPO overallotment, bringing total capital raised to $93.5 billion after $81.3 billion on Wednesday plus $12.2 billion more—selling 1.127 billion Class A shares at $83, including 147 million overallotment shares. Shares opened at $111.50 Thursday, closed at $97.17, and sank 12% in Friday pre-market trading; a concurrent $26 billion Class N private placement with AMD, Google, Microsoft, Nvidia and others also closed.</p>
+              <p class="why"><b>Why it matters</b>The greenshoe turns the largest IPO into an even larger capital raise while the stock already wobbles. Design and product orgs reading this as “AI is fine” are missing the volatility signal in the same week’s tape.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">$93.5 billion raised. The stock still caught the tech cold.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Treat Anthropic’s post-IPO week as a planning input: freeze non-critical AI vendor lock-in decisions until pricing and compute commitments stabilize, and keep dual-provider prototypes warm.</p>
+                    <p><span>Signal</span>The Class N concurrent placement with chip and cloud giants embeds circular financing into the IPO structure itself. Public float and supplier capital are no longer separate stories.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html" target="_blank" rel="noopener">SoftBank suffers worst day in over two years as AI sell-off hits Asian tech stocks</a></h4>
+              <p class="fact">CNBC reports SoftBank Group closed 14.48% lower on Friday, its worst day since August 2024, amid an Asian tech sell-off after Anthropic’s debut. SoftBank has invested a total of $64.6 billion in OpenAI; the stock lost 30% in October and is down 31% so far this month. Tokyo Electron fell 7.06%, Lasertec 9.21%, SK Hynix 5.92%, Samsung 7.01%, Kospi 5.21%, and TSMC 4.76%.</p>
+              <p class="why"><b>Why it matters</b>Anthropic’s listing did not calm the AI trade—it synchronised a region-wide derating of AI infrastructure names. SoftBank’s OpenAI exposure makes it the sentiment lightning rod.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Anthropic debuted. SoftBank had its worst day in two years.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your roadmap assumes endless AI infra spend, add a downside scenario where Asian suppliers and SoftBank-linked capital tighten. Prioritise features that do not require net-new GPU capacity this quarter.</p>
+                    <p><span>Signal</span>A 14% SoftBank crash on an IPO day is the market saying distribution of AI equity does not equal belief in AI returns. Watch whether consumer AI budgets get cut before enterprise ones.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/australia-news/2026/nov/20/nextdc-vows-to-keep-future-datacentres-away-from-homes-after-community-backlash-in-melbourne" target="_blank" rel="noopener">NextDC vows to keep future datacentres away from homes after community backlash in Melbourne</a></h4>
+              <p class="fact">The Guardian reports NextDC’s share price dropped 40% after community backlash forced delay of its M3 expansion in West Footscray when Jemena paused 22-metre power poles; CEO Craig Scroggie called the AGM his “hardest” in 15 years after a second strike on executive pay, and said the company will no longer pursue new developments near homes. The share price later recovered above $9, while Goodman Group bought a nearly 10% stake.</p>
+              <p class="why"><b>Why it matters</b>Australian data-centre operators are rewriting siting policy in public after local protest hit equity value. Community UX—noise, poles, proximity—is now a capital-markets variable.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">A 40% drawdown taught NextDC to stop building next to houses.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>If your company depends on AI infra capacity, ask vendors for community-impact plans and backup regions that are not residential-adjacent. Treat local opposition as a delivery risk equal to power lead times.</p>
+                    <p><span>Signal</span>Scroggie’s pledge is an admission that the social license phase of AI buildout has begun in Australia. Expect “distance from homes” to become a standard diligence checkbox in DC prospectuses.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/20/cursor-chinese-ai-models-geopolitical-risk.html" target="_blank" rel="noopener">SpaceX’s subsidiary Cursor tells lawmakers it's considering phasing out Chinese AI models</a></h4>
+              <p class="fact">CNBC reports that Cursor, acquired by SpaceX at an implied $60 billion equity value in August, told House committees it plans to “explore phasing out PRC-developed open-weight models because of geopolitical risk,” after Composer 2 was built on Moonshot AI’s Kimi K2.5. A House Homeland Security and Select Committee on China report shared with CNBC also notes Airbnb and DoorDash engaged about Chinese model use; Cursor, SpaceX, and DoorDash did not comment to CNBC.</p>
+              <p class="why"><b>Why it matters</b>Model choice is now a congressional diligence item for mainstream developer tools. Design and eng orgs that standardised on whichever open weights were best are inheriting geopolitical switching costs.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">Your coding agent’s base model just became a Hill problem.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Inventory which production features depend on PRC open-weight models and sketch a swap path to US or EU alternatives with quality gates. Do not wait for a customer security questionnaire to force the migration.</p>
+                    <p><span>Signal</span>Cursor’s statement will be copied by every SaaS that wants to stay procurement-clean for US enterprises. The open-weight advantage shrinks when “geopolitical risk” becomes a checkbox on the vendor review.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">The Guardian</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.theguardian.com/technology/2026/nov/20/ai-low-paid-workers-cognitive-tax" target="_blank" rel="noopener">AI is imposing a hidden ‘cognitive tax’ on the lowest-paid workers</a></h4>
+              <p class="fact">In a Guardian opinion essay, UCL’s Professor Dame Henrietta Moore argues AI raises a “cognitive tax” of insecurity on low-paid workers, citing WEF estimates that 59 in 100 workers will need training by 2030, a 2024 Journal of Economic Psychology analysis of 112,000 people on scarcity and cognition, and UK figures of about 2.7 million people out of work through long-term sickness. She argues universal basic services beat cash-only UBI responses and that every fiscal policy should ask how it affects the poorest people’s cognitive load.</p>
+              <p class="why"><b>Why it matters</b>This frames AI transition risk as attention and brain-health load on the already precarious—not only as job counts. Product and ops leaders shipping AI into shift work inherit that load.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">AI’s hidden fee is paid in headspace.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>When you introduce AI into frontline workflows, measure cognitive load: number of exception queues, schedule volatility, and retrain hours on top of existing insecurity. Cut a concurrent process before you add a monitoring dashboard.</p>
+                    <p><span>Signal</span>Moore’s “cognitive taxation” will travel into G20 and treasury language if Britain pushes it. Expect procurement RFPs to ask how AI tools reduce—not increase—exception handling for low-wage roles.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="src eyebrow"><span class="pub">CNBC</span> · <span>20 Nov 2026</span></div>
+              <h4 class="hed"><a href="https://www.cnbc.com/2026/11/20/ai-coding-tools-software-engineers.html" target="_blank" rel="noopener">AI is changing software engineering — and some developers miss the struggle</a></h4>
+              <p class="fact">CNBC reports that in a 2026 Stack Overflow survey, 83% of software developer respondents said they use at least one AI tool, while engineers describe lost “flow” and joy as prompts replace multi-day debugging. Taktile CTO James Broadhead says teams can generate 10 prototypes in an afternoon but struggle to judge which are good; Mindstone’s Joshua Wöhle describes a jump from “10X” to “100X” engineers and grief that “the thing you love doing is no longer the thing the company should be paying for.”</p>
+              <p class="why"><b>Why it matters</b>The craft identity of engineering is colliding with agent throughput. Design orgs partnering with eng will feel the same grief curve as judgment replaces authorship.</p>
+              <div class="angle">
+                <button type="button" class="angle-open" aria-haspopup="dialog">Write about this?<svg class="arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 6h7.2M6.8 3.2 9.6 6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="angle-brief" hidden>
+                  <p class="hook">83% use AI tools. Many miss the bug that used to take a week.</p>
+                  <div class="split">
+                    <p class="teach"><span>Teach</span>Pair every AI acceleration metric with a judgment ritual: structured review of agent output, a “prove it wrong” pass, and protected time for juniors to solve one problem without autocomplete. Write that into the team working agreement Monday.</p>
+                    <p><span>Signal</span>Wöhle’s “100X” framing predicts ruthless internal sorting between AI-fluent staff and everyone else. The companies that only optimise for the 100X will recreate the junior-scar-tissue shortage Sees warns about—and then wonder why review quality collapsed.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </article>
+
 
       <!-- ############ EDITION 2026-09-07 ############ -->
       <article class="edition" data-ed="2026-09-07" data-label="Monday, 7 September 2026">
