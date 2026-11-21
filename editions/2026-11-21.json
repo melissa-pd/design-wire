@@ -1,0 +1,284 @@
+{
+  "date": "2026-11-21",
+  "label": "Saturday, 21 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "Ars Technica",
+        "date": "20 Nov 2026",
+        "flag": "Top story",
+        "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+        "hed": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced.",
+        "fact": "Ars Technica reports that Dragos chief research officer HD Moore sent nearly two million AI prompts containing unique canary secrets through AI routers and resellers, finding evidence that at least three hosting providers were compromised, that some resellers logged and reused credentials, and that Zero Data Retention flags failed when attackers sat at the provider’s front door. One Chinese lab’s systems fetched secret URLs from more than half of prompts, including roughly two-thirds marked no-data-collection or ZDR, often two or three days later.",
+        "why": "Most product teams still treat “we use a US gateway” as a privacy story. This experiment shows the real unit of trust is every hop that decrypts the prompt, and privacy toggles are marketing copy until you control the host.",
+        "hook": "Two million canaries. Three breached hosts. ZDR did not help.",
+        "teach": "Map every model call in your product that leaves your VPC. For each hop, write who decrypts the prompt, whether ZDR is contractual or only a flag, and what a canary URL would prove if it were fetched. Default new features to first-party endpoints until that map is reviewed.",
+        "signal": "Moore’s advice — self-host or contract a first-tier provider and pick upstreams yourself — reframes agent product strategy. Teams still shopping “cheapest router pool” are buying an uninspectable trust surface, and that will show up as a procurement veto before it shows up as a design brief."
+      },
+      {
+        "pub": "The Verge",
+        "date": "20 Nov 2026",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1039188/claude-has-a-new-mobile-design-too",
+        "hed": "Claude has a new mobile design, too.",
+        "fact": "The Verge reports that Anthropic’s Claude mobile app is rolling out a bottom tab bar with Chat, Projects, Code, and Artifacts, according to Anthropic’s Daniel Destefanis on X, one day after OpenAI’s ChatGPT mobile redesign also added a bottom tab bar.",
+        "why": "Two frontier chat apps converging on the same mobile IA in 24 hours is not coincidence. The home screen is becoming an agent OS shell, and the tab set is the product strategy made visible.",
+        "hook": "ChatGPT got a tab bar. Claude copied the grammar overnight.",
+        "teach": "If you ship an AI companion app, draft the four permanent destinations you would put in a bottom bar and the one destination you refuse to demote to a menu. That refusal is your positioning statement; write it into the PRD before visual polish.",
+        "signal": "Projects, Code, and Artifacts as peer tabs to Chat means Anthropic is betting mobile Claude is a workspace, not a messenger. Watch whether ChatGPT’s pin-able Dot/Codex pattern or Claude’s fixed four-tab model wins habit — they encode different theories of agent scope."
+      },
+      {
+        "pub": "Wired",
+        "date": "21 Nov 2026",
+        "url": "https://www.wired.com/story/brace-yourself-for-years-of-outage-chaos/",
+        "hed": "The Outages Are Just Getting Started",
+        "fact": "Wired’s Kernel Panic newsletter says the recent streak of outages — Outlook, Apple, a half dozen US banks, United Airlines, and the NSA’s classified network — were not a coordinated AI hacking spree and had routine explanations individually, but argues AI-assisted vulnerability discovery and faster exploitation are compressing patch windows so IT teams can no longer validate updates the way they did even a couple of years ago. Microsoft’s 365 outage was tied to a flawed infrastructure update; the NSA outage was linked to botched patching after October’s critical PHP updates.",
+        "why": "Outage UX is no longer a rare incident pattern. If patch cadence becomes the default failure mode, status pages, degraded modes, and rollback affordances move from ops theatre to core product design.",
+        "hook": "The outages weren’t AI attacks. The AI still made them inevitable.",
+        "teach": "For your highest-traffic surface, write a one-page degraded-mode spec: what still works when auth, search, or AI features fail, how users learn that state without a marketing toast, and how they undo a forced client update. Test that page with your next staging outage drill.",
+        "signal": "Dataminr’s Joe Slowik saying validation time may no longer be an option is a design constraint on release trains. Products that require clients to update in lockstep with server patches are now more fragile than products that can refuse a bad update and keep a prior build alive."
+      },
+      {
+        "pub": "The Verge",
+        "date": "20 Nov 2026",
+        "url": "https://www.theverge.com/tech/1038771/googles-gemini-app-can-now-make-gifs",
+        "hed": "Google’s Gemini app can now make GIFs.",
+        "fact": "The Verge reports that Gemini can generate GIFs via Gemini Omni 1.2 Flash that loop for about three seconds, rolling out to all users in the US, Canada, the UK, Japan, Korea, Australia, Germany, and France.",
+        "why": "Short looping generative video is becoming a default reply format in chat apps. That changes what “send a reaction” means in product copy and moderation queues alike.",
+        "hook": "Three-second loops just became a first-class Gemini reply.",
+        "teach": "If your product accepts user-generated media in chat, add a GIF/loop path to your content-credentials and reporting flows this week. Treat a three-second generative loop as a distinct moderation class from still images and long video.",
+        "signal": "Omni 1.2 Flash as the GIF engine is Google stuffing motion into the cheapest model tier. Expect competitors to follow with similarly short, low-friction loops — and for “GIF” to become the camouflage word that lets generative video skip the heavier deepfake UI patterns."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "20 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+        "hed": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+        "fact": "TechCrunch reports that Anthropic mathematician Levent Alpöge announced a Lean-compilable solution to the Riemann hypothesis developed with Claude, and that independent mathematicians including MIT’s Andrew Sutherland say the Lean proof compiles, while Stanford’s Ravi Vakil posted a separate all-human General Riemann hypothesis draft by Alessandro Masullo that is not Lean-formalised. Alpöge also released related Navier-Stokes work with Tristan Buckmaster.",
+        "why": "The story is not “AI solved maths.” It is that machine-checkable artefacts are becoming the public interface for claims, while human-intelligible explanation lags. Designers working on research and knowledge products face the same split.",
+        "hook": "Lean compiled. Understanding did not ship.",
+        "teach": "Anywhere your product surfaces AI-assisted claims, separate “machine-verified” from “human-explained” in the UI. Two badges, two timestamps, two owners. Do not collapse them into a single green check.",
+        "signal": "Masullo’s “we are still here” note and Alpöge’s guilt about releasing without a human-readable path show the cultural fight is about credit and comprehension, not capability. Products that only celebrate the Lean pass will inherit the same backlash designers already see when genUI ships without a rationale trail."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "20 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+        "hed": "Six AI-powered gadgets that could make your home office smarter",
+        "fact": "TechCrunch’s Lauren Forristal surveys six AI desk gadgets, including Flowtica Scribe — a gel pen with onboard audio that can identify up to 15 speakers, supports 92 languages, and holds 32GB — and Anker’s Soundcore Work pin at $159 (sale $99) with up to eight hours of recording, 32 hours with the case, a claimed five-metre range, and 300 free transcription minutes a month.",
+        "why": "Ambient meeting capture is leaving the phone and becoming hardware jewellery. That moves consent, LED state, and speaker labelling from settings screens into physical product design.",
+        "hook": "The notetaker is a pen again. The mic never left.",
+        "teach": "If you design meeting tools, define a hardware-visible recording state: light, haptic, or lock-screen banner that cannot be dismissed while capture runs. Spec it for third-party pens and pins the way you already spec browser mic permissions.",
+        "signal": "Speaker diarisation (15 speakers) plus always-pocket form factors means “who was in the room” becomes a default metadata field. Expect enterprise buyers to demand retention and redaction controls on the gadget before they care which model writes the summary."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "Nielsen Norman Group",
+        "date": "20 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.nngroup.com/articles/raw-data-vs-synthesized-data/",
+        "hed": "Can AI Generate Good Designs from Raw User Data?",
+        "fact": "NN/g reports a study in which an AI model generated interfaces for a flight-rebooking form and an online checkout flow under matched prompts and design-system context. Designs fed synthesized findings and recommendations met 77.9% of scorecard criteria on average versus 69.5% for designs fed ~100 raw user comments — an 8.4 percentage-point gap (p < 0.001). Human and LLM graders agreed on about 96% of scoring decisions after calibration; eight designs were generated per task and condition.",
+        "why": "This is the first clean evidence many teams have needed that dumping research transcripts into a design model is not “research-informed design.” Synthesis is the product, not a polite middle step.",
+        "hook": "Raw comments scored 69.5%. Synthesized briefs scored 77.9%.",
+        "teach": "Before your next AI prototype pass, refuse to paste interview notes. Write a one-page findings-and-recommendations brief first, then generate. Keep the raw file out of the model context until that brief exists.",
+        "signal": "NN/g naming “UX-context design” as a practice means the research artefact is becoming an API for tools, not only a slide for stakeholders. The teams that win will version findings the way they version design tokens."
+      },
+      {
+        "pub": "The Verge",
+        "date": "20 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.theverge.com/streaming/1039096/youtube-social-media-addiction-school-districts-settlement",
+        "hed": "YouTube is reportedly preparing to settle social media addiction claims for $3 billion",
+        "fact": "The Verge, citing Bloomberg sources, reports YouTube has reached an agreement in principle to pay $3 billion to thousands of school districts over claims that its “addictive design” harmed kids, with new teen safeguards also on the table. Meta’s August deal was $17.1 billion over 10 years, with $5.3 billion contingent on YouTube and TikTok matching safeguards and payments. Google did not immediately comment to The Verge.",
+        "why": "Addiction claims are being priced as a design liability, not a content-moderation one. Infinite scroll, autoplay, and engagement loops are the exhibits.",
+        "hook": "$3 billion for “addictive design.” The brief is the product.",
+        "teach": "Audit your teen or under-18 surfaces for autoplay, infinite feed, and streak mechanics. For each, document a default-off alternative and a parent-visible control. Treat that doc as a legal exhibit you might have to produce.",
+        "signal": "Meta’s contingent $5.3 billion is a coordination game: one company’s settlement becomes another’s product roadmap. Expect “matching safeguards” language to travel across platforms faster than any standards body can draft."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "21 Nov 2026",
+        "url": "https://www.creativebloq.com/news/gta-6s-npcs-are-built-to-the-same-visual-standard-as-jason-and-lucia",
+        "hed": "GTA 6’s NPCs are built to the same visual standard as Jason and Lucia",
+        "fact": "Creative Bloq reports Rockstar senior technical art director Valmor Garcia saying Leonida’s crowds are no longer the “monolithic” lower-fidelity NPCs of GTAV and Red Dead Redemption 2, and that ambient characters are meant to sit on a visual par with leads Jason and Lucia. VP of Animation Mark Tennant says there are close to a thousand ambient animation sets, plus hundreds of bespoke one-off events, with new in-house hair, cloth, and customisation tech applied equally across the cast.",
+        "why": "Background fidelity is usually where product worlds cheat. Rockstar is arguing that believable systems require the extras to share the hero pipeline — a lesson for any simulated environment, digital twin, or avatar marketplace.",
+        "hook": "The crowd got the hero shader.",
+        "teach": "In your next world or avatar review, pick five background characters at random and score them on the same checklist as your primary persona. Any criterion you waive for “ambient” becomes a visible quality cliff — fix the pipeline, not the one-off mesh.",
+        "signal": "Equal tech for hair and cloth across NPCs is a staffing and tooling claim as much as an art claim. Mid-size studios copying the look without the shared customisation stack will recreate GTA V’s cast hierarchy under a prettier skin."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "21 Nov 2026",
+        "url": "https://www.creativebloq.com/news/this-movie-poster-is-one-big-ai-slop-easter-egg-hunt",
+        "hed": "This movie poster is one big AI slop Easter egg hunt",
+        "fact": "Creative Bloq covers the poster for Luca Guadagnino’s film Artificial, starring Andrew Garfield as OpenAI CEO Sam Altman, which is packed with uncanny AI-slop tells — an underwater Golden Gate Bridge, snakes, an upside-down plane, a Pinocchio face — while small corner text reads “Artwork made by Humans,” credited to Gravillis Inc. and Mike Thompson. The film is set for select theatres on Christmas Day and wider release on 8 January.",
+        "why": "The best anti-AI craft this week is not a manifesto. It is a poster that weaponises detection literacy as the joke, and labels human authorship as the punchline.",
+        "hook": "The Easter eggs are the AI tells. The flex is “made by humans.”",
+        "teach": "When you need to signal human-made work, put the provenance in the composition, not only in metadata. A readable “Artwork made by Humans” line that survives crop and screenshot beats a C2PA badge nobody notices.",
+        "signal": "Casting Garfield-as-Altman inside a parody of generative failure is Hollywood teaching audiences what to look for. That literacy raises the bar for every marketing image that still ships with six-finger hands and hopes nobody zooms."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "21 Nov 2026",
+        "url": "https://www.creativebloq.com/news/this-beautiful-logo-design-was-created-to-grow-like-nature",
+        "hed": "This beautiful logo design was created to grow like nature",
+        "fact": "Creative Bloq reports that Smith & Diction’s rebrand for the Pennsylvania Horticultural Society, turning 200 in 2027, replaces a generic single-tree mark with a three-letter logo whose letters become roots, each growing a different native plant drawn by Summer McClure inside rectangles that nod to Philadelphia’s grid. Henrique Barone animated the growth frame by frame for a flipbook and timelapse-style motion, with further native-flora illustrations for sub-brands including a peony for the flower show.",
+        "why": "Anniversary rebrands usually freeze a heritage mark. This one treats growth as the identity system, which is a stronger metaphor for a horticultural org than another leaf icon.",
+        "hook": "The letters are roots. The brand manual blooms.",
+        "teach": "If your brand owns a living metaphor, build one motion behaviour into the logo system before you ship static SVGs. Spec the frame count, the crop-safe still, and the flipbook or Lottie equivalent so marketing does not invent motion later.",
+        "signal": "Starting with botanical illustration inside city-grid rectangles is craft that refuses the flat geometric logo default. Agencies still selling “timeless minimal marks” will look thin next to identities that can only exist as time-based media."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "21 Nov 2026",
+        "url": "https://www.creativebloq.com/news/how-sntient-2-0-put-a-ruined-city-outside-a-bedroom-sized-set",
+        "hed": "How SNTIENT 2.0 put a ruined city outside a bedroom-sized set",
+        "fact": "Creative Bloq reports that Fashion Technology Institute / Dandelion + Burdock’s SNTIENT 2.0 short used Unreal Engine 5 and an LED wall to put a dystopian city outside a bedroom-sized set, after generative approaches for the city plate failed on resolution and fidelity. Cinematographer Ben Saffer’s Supervision VP team matched virtual and physical lighting in camera so city glow hit the performer’s face and props — preferred over green screen or a pre-rendered backdrop because the city assets already existed from a prior project.",
+        "why": "Virtual production wins here not as a cost stunt but as a lighting and performance system. Generative plates were tried and dropped for craft reasons, which is the useful part of the story.",
+        "hook": "GenAI failed the LED wall. Unreal made the room bigger.",
+        "teach": "When a stakeholder asks for “AI backgrounds,” run a fidelity gate: resolution at camera distance, interactive lighting on faces, and performer eyelines. If any fail, specify real-time engine or practical plates — do not argue vibes, argue the three gates.",
+        "signal": "The team already owned the city in Unreal, so LED was a reuse play. That is the quiet production lesson: generative tools compete with asset libraries you already paid for, and libraries still win when light has to bounce onto skin."
+      }
+    ],
+    "product": [
+      {
+        "pub": "The Verge",
+        "date": "21 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+        "hed": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+        "fact": "The Verge reports Chess.com is launching a Classic Games public beta on web and iOS/Android with ten additions — backgammon, checkers, go, hearts, mahjong, shogi, sudoku, solitaire, xiangqi, and “word” — on top of earlier Gambit poker, for 11 classics beyond chess. Chief growth officer Albert Cheng says AI sped coding for a tiny team on the shared Chess.com design system and bots, that art and design stayed human, that less than 1% of staff are fully dedicated to new games, and that the chess community is nearly 300 million members with record daily actives.",
+        "why": "This is a design-system expansion story disguised as a games launch. The moat is shared ratings, bots, lessons, and IA — AI only accelerates standing up adjacent surfaces on that stack.",
+        "hook": "Eleven classics. Under 1% of headcount. Same bot named Martin.",
+        "teach": "List the three systems in your product that another vertical could inherit without a rewrite — identity, progression, and component kit. If you cannot name them, you are not ready to “AI-accelerate” a new surface; you are ready to rebuild.",
+        "signal": "Cheng saying art/design hiring ratios are shifting up while coding is AI-accelerated is the counter-narrative to “AI replaces creatives.” The scarce resource is taste that keeps eleven games feeling like one product."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "20 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/20/bending-spoons-buys-mailchimp-for-3-68-billion/",
+        "hed": "Bending Spoons buys Mailchimp for $3.68B",
+        "fact": "TechCrunch reports Bending Spoons bought Mailchimp from Intuit for $3.68 billion after Intuit paid roughly $12 billion in 2021. The deal is described as all-cash, though Intuit is buying $368 million in new Bending Spoons shares — about 90% cash and 10% stock net. Intuit told Reuters the sale sharpens its focus on AI tools for small businesses; Bending Spoons’ recent haul includes AOL, Eventbrite, Airtable, and Miro.",
+        "why": "A beloved SMB marketing surface is moving from an AI-pivoting parent to an operator that collects late-stage brands. Design continuity for millions of small-business templates is now a private-equity-style product problem.",
+        "hook": "$12 billion down to $3.68 billion. The templates still have to work on Monday.",
+        "teach": "If you work on a mature creative tool facing an ownership change, inventory the top ten workflows that must not regress — import, brand kit, send, analytics — and freeze visual and IA changes on those until the new operator’s roadmap is public.",
+        "signal": "Intuit selling Mailchimp to fund AI SMB tools while Bending Spoons collects “beloved brands” is a split between generative futures and cash-flowing craftware. Designers should watch which roadmap Mailchimp’s editor actually follows — operator discipline or AI feature stuffing."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "20 Nov 2026",
+        "url": "https://arstechnica.com/gaming/2026/11/valve-says-it-might-have-to-raise-the-price-of-supply-limited-steam-machines/",
+        "hed": "Valve says it might have to raise the price of supply-limited Steam Machines",
+        "fact": "Ars Technica reports Valve saying memory and storage costs are rising at unprecedented levels, so it does not yet know how many Steam Machines it can make or at what price, with the 2TB model especially affected. July estimates put sales around 12,000–15,000 units a week versus PS5’s roughly 300,000 weekly average historically. Valve says the 512GB model has no waitlist left and purchase invites have gone to remaining reservation holders, with another availability update planned for January.",
+        "why": "Hardware UX includes pricing honesty. Valve is communicating uncertainty before a silent price hike, which is rarer than it should be.",
+        "hook": "The 2TB SKU is the canary for RAM pricing.",
+        "teach": "If you own a hardware or storage tier page, add a “pricing may change with component costs” note and a dated last-confirmed price. Ambiguous scarcity without a date reads like dark pattern; dated uncertainty reads like respect.",
+        "signal": "Valve’s supplier priority gap versus Nintendo, Sony, and Microsoft means indie-scale hardware cannot bluff through the memory crunch. Expect more “we might raise prices” posts — and more SKUs that exist only on paper."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "18 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/",
+        "hed": "India’s Humyn Labs raises $47M to feed US robotics companies the data they need",
+        "fact": "TechCrunch reports Bengaluru’s Humyn Labs raised $47 million Series A — $26 million equity led by Accel plus $21 million venture debt — to capture and label everyday human task video with two-camera hardware across more than 20 countries. The company says it has 12 paying customers, about 90% of revenue from the US, $10 million revenue from April to October, $20 million in signed contracts, and another $20 million in deals pending; customer names and those figures are company-reported.",
+        "why": "Robotics UX starts in the training data: which bodies, which kitchens, which hand angles. A data vendor with dual-camera capture and hand-tracking software is shaping what “everyday” means for agents that will later touch interfaces and appliances.",
+        "hook": "Robots learn from whose hands you film.",
+        "teach": "If your team is buying or generating physical-world training data, write a diversity and consent checklist covering geography, body types, left/right hand dominance, and opt-out for identifiable spaces. Treat it like a research protocol, not a vendor appendix.",
+        "signal": "Ninety percent US revenue from Global South capture is the political economy of embodiment data. Designers of robot UIs will inherit biases baked in those clips long before they inherit a nice onboarding flow."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "21 Nov 2026",
+        "url": "https://www.theguardian.com/games/2026/nov/21/a-new-record-for-entertainment-grand-theft-auto-vi-sales-hit-38bn-on-first-day-of-release-developer-says",
+        "hed": "‘A new record for entertainment’: Grand Theft Auto VI sales hit $3.8bn on first day of release, developer says",
+        "fact": "The Guardian reports Rockstar saying Grand Theft Auto VI generated $3.79 billion in retail sales on its first day, with 32.5 million units sold on prerelease, calling it the biggest entertainment launch across any medium — nearly five times GTA V’s roughly $800 million first-day take in 2013 and above Avengers: Endgame’s ~$2.9 billion lifetime box office after rerelease.",
+        "why": "Launch scale this large turns every UI affordance — install, patch, social share, map onboarding — into infrastructure. Design decisions ship to a city-sized concurrent audience on day one.",
+        "hook": "$3.79 billion before Friday coffee.",
+        "teach": "For any high-stakes launch, rehearse the first-hour path with production data volumes: account create, download, first session, crash recovery. Cap new feature flags at what you can support when traffic is “World Cup plus.”",
+        "signal": "Beating Endgame’s lifetime box office in a day reframes games as the default mass culture format. Brand and UX teams outside gaming are now competing with Leonida for attention budgets, not with other apps."
+      },
+      {
+        "pub": "The Verge",
+        "date": "21 Nov 2026",
+        "url": "https://www.theverge.com/games/1039371/gta-vi-broke-comcasts-network-traffic-records",
+        "hed": "GTA VI broke Comcast’s network traffic records.",
+        "fact": "The Verge reports Comcast saying 18 November — the day before GTA VI launched — was the busiest day in Comcast network history, with peak internet traffic 31% above an average day, and that during peak periods the game accounted for as much as 24% of all traffic across Comcast’s network. The note references a 200GB-plus game with 32.5 million pre-orders.",
+        "why": "Pre-load day is now a first-class product event. Bandwidth, disk, and progress UX fail before the title screen if the download is the size of a small OS.",
+        "hook": "24% of Comcast’s pipe. The install is the launch.",
+        "teach": "If your client exceeds ~50GB, ship a download manager with pause/resume, overnight scheduling, and a clear “playable subset” if you have one. Test it on mid-tier ISP caps, not only office fibre.",
+        "signal": "Pre-order counts becoming ISP load forecasts means platform holders and networks are now silent stakeholders in game UX. Expect more carrier-branded “game launch mode” QoS — and more blame when the progress bar lies."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "CNBC",
+        "date": "21 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
+        "hed": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+        "fact": "CNBC reports Anthropic raised $93.5 billion in its IPO plus $26 billion from tech giants at the offer price, opened at $111.50 on Thursday, and closed Friday at $88.91, with a fully diluted market cap around $1.6 trillion by week’s end. The same week the Nasdaq fell 10% — its worst week since early Covid 2020 — led by Nvidia’s 23% weekly plunge, the chipmaker’s sharpest in 18 years. Venture IPOs raised $73 billion in 2021 versus $39 billion across the next four years combined, per Jay Ritter’s data.",
+        "why": "The first pure-play frontier lab on public markets is pricing against a hardware-led AI selloff. Design and product hiring plans that assumed endless private capital now inherit quarterly earnings gravity.",
+        "hook": "$93.5 billion IPO. Nasdaq −10%. Same five trading days.",
+        "teach": "If your roadmap depends on AI vendor credits or partner labs, add a “public-market stress” scenario: what ships if model prices rise 20% or a key partner freezes hiring. Put one killable experimental surface on that list.",
+        "signal": "Anthropic ending the week behind only six US companies while Nvidia loses a fifth of its value is the new correlation puzzle. Pure-play software AI may still trade as if it were a chip stock — which is a budgeting problem for every design org buying tokens."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "21 Nov 2026",
+        "url": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
+        "hed": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
+        "fact": "The Guardian reports CoreWeave owes $47 billion, with more than $10 billion due next year, bled $709 million last quarter on $3.6 billion revenue, and runs about 52 datacentres. Creditors had put five-year default risk above 60% earlier this autumn; Nvidia owns roughly 11% and has a $6.3 billion compute backstop. A CoreWeave spokesperson cited $132.5 billion in contractual commitments and 1.7GW active capacity; Forrester’s Brian Hopkins notes roughly two-thirds of cash was customers paying in advance.",
+        "why": "The “neocloud” sandwich — Nvidia finance, CoreWeave debt, lab spend — is the physical substrate under every AI feature you ship. Designers do not own the debt, but they inherit the outage and pricing risk when the peanut butter shifts.",
+        "hook": "$47 billion of debt under your next Copilot button.",
+        "teach": "For any AI feature with a variable unit cost, document the fallback when inference price spikes or a neocloud partner stumbles: cached answers, smaller model, or human queue. Ship the fallback copy before you need it.",
+        "signal": "Hopkins’s point that interest accrues whether a datacentre opens on time is the permitting–product link. Local opposition and delayed builds are now latency and pricing inputs, not just ESG slides."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "20 Nov 2026",
+        "url": "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/",
+        "hed": "Meta reconsiders 2030 net-zero goal amid record emissions from AI data centers",
+        "fact": "Ars Technica reports Meta’s 2026 sustainability report saying it is re-evaluating its 2030 net-zero timeframe as AI infrastructure demand outpaced projections. Total emissions rose from 15.6 million to more than 21.7 million metric tonnes CO₂e between 2024 and 2025 (~40%), the highest percentage jump among the four major US tech giants versus Microsoft 25%, Google 18%, and Amazon 16%. Net emissions after removals rose from more than 8.1 to more than 11.8 million tonnes (~45%); water in stressed areas rose from 198 to 246 million gallons, while purchased-electricity water rose from 19 to more than 26 billion gallons.",
+        "why": "The first hyperscaler to publicly soften a 2030 net-zero date makes AI product growth an explicit climate disclosure problem. Feature velocity now shows up in Scope numbers.",
+        "hook": "Meta’s 2030 net-zero date is under review. Emissions are not.",
+        "teach": "Add a simple AI-cost line to feature briefs: estimated inference volume and whether the feature can degrade to a non-generative path. You are not doing carbon accounting — you are forcing a kill switch into the design.",
+        "signal": "Amazon, Google, and Microsoft still publicly holding 2030 goals while Meta flinches first may be sequencing, not virtue. Watch whether “re-evaluate timelines” becomes the industry euphemism of 2027."
+      },
+      {
+        "pub": "The Verge",
+        "date": "20 Nov 2026",
+        "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+        "hed": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US",
+        "fact": "The Verge reports President Trump saying at a Friday press conference after meetings with Xi Jinping and Vladimir Putin that the US will not allow companies to build data centres outside the country and would put a “tremendous tax” on those that do — a proposal he said he had not yet told his own people. The piece notes domestic moratoriums already push siting fights offshore, while a Democratic Congress arrives in weeks.",
+        "why": "Siting is now a three-body problem: local bans, federal pressure to keep builds onshore, and corporate latency needs. Product roadmaps that assume unlimited overseas capacity just gained a political tax line-item.",
+        "hook": "Local bans push DCs abroad. The White House threatens to tax that escape.",
+        "teach": "When stakeholders ask why inference is “slow in region X,” keep a one-slide map of where your model actually runs and which jurisdictions can veto expansion. Latency complaints are often permitting complaints in disguise.",
+        "signal": "Trump floating policy live before briefing staff is governance-as-spectacle, but the underlying bind is real: anti-DC ballots and onshore mandates cannot both be satisfied without higher prices. Someone’s AI feature budget pays."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "21 Nov 2026",
+        "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
+        "hed": "International talks on controlling use of autonomous weapons collapse",
+        "fact": "The Guardian reports week-long UN talks in Geneva on a negotiating mandate for a legally binding autonomous-weapons treaty collapsed near 5am Saturday under consensus rules among 128 CCW parties, after Russian filibustering and reluctance from military powers including the US. The weaker outcome asks states only “to elaborate by consensus” an instrument that may carry no legal obligations. More than 100 states wanted new law; Max Tegmark said states will now talk for a 14th year. The piece cites US military aims of 1,000 AI-assisted targeting decisions per hour and more than 1,000 targets struck in Iran on day one of that war.",
+        "why": "Human-control requirements that fail internationally still land in product ethics reviews for dual-use perception, mapping, and agent tooling. The design question is who can override an automated action — and how fast.",
+        "hook": "Fourteen years of talk. No binding kill switch.",
+        "teach": "For any agent that can act without a click, document the human override: who can stop it, in what UI, within what latency. If you cannot answer in one sentence, you do not have meaningful human control.",
+        "signal": "Consensus forums that have passed no new weapons law in 30 years are a governance UX failure. Expect coalitions to exit to faster treaty tracks — and expect dual-use AI vendors to face those tracks as customers, not spectators."
+      },
+      {
+        "pub": "CNBC",
+        "date": "19 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/20/baaja-bill-senate-passes-permitting-reform.html",
+        "hed": "Senate passes BAAJA permitting reform bill backed by AI, energy sectors",
+        "fact": "CNBC reports the Senate passed the Bipartisan American Affordability and Jobs Act 62-33 to ease environmental permitting and overhaul transmission rules, sending it to the House. Rhodium Group estimates 17–249 GW of additional clean energy by 2040, natural gas exports up 8–15% beyond an already large rise, and greenhouse gases down 5–148 million metric tons annually in 2040. More Democrats voted no than yes; Sen. Ron Wyden sought to block data centres on public lands. Hyperscalers would still have to pay for grid upgrades under the deal.",
+        "why": "Permitting reform is the unsexy dependency behind every “AI will be everywhere” roadmap. Transmission capacity is becoming a product constraint like App Store review once was.",
+        "hook": "62–33 for faster wires. Data centres still pay for the grid.",
+        "teach": "If you brief executives on AI capacity, replace abstract “compute” with “megawatts and interconnect queues.” One slide with local permitting status beats another model-benchmark chart.",
+        "signal": "A Democratic caucus split after an affordability-focused midterm shows AI infrastructure is no longer a left/right cartoon. The fight is ratepayers versus hyperscalers — and designers will feel it as regional model availability before they feel it as politics."
+      }
+    ]
+  }
+}
