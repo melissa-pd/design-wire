@@ -1,0 +1,282 @@
+{
+  "date": "2026-11-23",
+  "label": "Monday, 23 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "The Verge",
+        "date": "23 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+        "hed": "Meta Muse can do your Black Friday shopping at Walmart",
+        "fact": "The Verge reports that Walmart will let Meta’s Muse find and purchase Black Friday deals via a live Agent Gateway launching Tuesday 24 November, after a 24-hour delay Walmart confirmed post-publication. Muse acts through Walmart “Agent Profiles” with spending limits, purchase approval and agent purchase history, using a card saved in the Walmart account; Amazon and eBay have blocked browsing agents, while Walmart calls Muse “just the beginning.” Product behaviour as described by Walmart and relayed by The Verge.",
+        "why": "A major retailer just shipped the permission surface agents need to spend money: a dedicated profile, a spend cap and an approval gate, timed to the busiest shopping week of the year. That is a reference implementation of commercial agent UX, not another chatbot demo.",
+        "hook": "Black Friday’s hottest aisle is an Agent Profile with a spend limit.",
+        "teach": "If your product lets an agent act on money, inventory or bookings, ship three controls before the agent: a hard spend or action cap, an explicit approve step, and a separate history that lists only agent-initiated actions. Use Walmart’s Agent Profile as the checklist for what those three look like in production.",
+        "signal": "Walmart’s open gateway versus Amazon and eBay’s blocks is the market splitting into invite-only agent commerce and agent-hostile storefronts. Design systems that assume every merchant will accept autonomous checkout are designing for half the shelf — and the half that says yes will demand liability UX you have not budgeted."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "22 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+        "hed": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+        "fact": "TechCrunch reports that OpenAI chief scientist Jakub Pachocki’s blog post — which Sam Altman called “the most important thing OpenAI has published in a while” — proposes perplexity (average next-token prediction quality) as a shared yardstick for capping frontier progress, arguing downstream-capability benchmarks go stale while perplexity stays informative. Pachocki cites GPT-4 around ~0.91 perplexity enabling productive chain-of-thought, and losses below 0.8 coinciding with transformative cybersecurity and mathematics capabilities, and suggests firms not cross a shared threshold until monitoring milestones are met. OpenAI’s framing, not an industry-agreed standard.",
+        "why": "Safety discourse usually arrives as vibes and capability demos. A numeric rate limit designers can put on a dashboard — even a contested one — changes how product teams argue about when to ship the next agentic leap.",
+        "hook": "The speed limit for AGI might be a single loss curve.",
+        "teach": "Add a “capability gate” column to your AI release checklist that is not a leaderboard score: name the behavioural milestone (undo coverage, audit log completeness, human override latency) that must improve before the next model or agent permission ships. Treat Pachocki’s idea as a prompt to invent your product’s equivalent of perplexity, not to copy his metric.",
+        "signal": "If labs settle on a shared numeric ceiling, procurement and enterprise design reviews will start asking for the same number. Teams that only track feature velocity will look unserious next to vendors who can show they stopped at a threshold on purpose."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "23 Nov 2026",
+        "url": "https://arstechnica.com/reviews/2026/11/review-the-asus-proart-p16-offers-a-glimpse-of-a-future-powered-by-local-ai/",
+        "hed": "Review: The Asus ProArt P16 offers a glimpse of a future powered by local AI",
+        "fact": "Ars Technica’s Ryan Whitwam reviews the Asus ProArt P16 with Nvidia Spark RTX hardware: up to about 1,000 TOPS of FP4 AI compute, up to 128GB unified memory, and a top configuration priced at $7,000 for running local agents. Windows sees shared memory dynamically (example: 64GB system / 64GB video on the high-end unit), with AI workloads capped around 110GB versus a full DGX Spark box; the machine can load 100-plus-billion-parameter models locally. Reviewer’s hands-on, with vendor-stated peak specs.",
+        "why": "Local agent UX stops being a lab curiosity once a Windows creative laptop can host frontier-scale models offline. The design problem shifts from cloud latency to thermal, battery and “which agent is burning my RAM” observability.",
+        "hook": "$7,000 buys a small army of agents — and a new status bar problem.",
+        "teach": "If you design tools that assume cloud models, prototype one offline path this week: show model size, residual memory and which agent owns the GPU before the user launches a second agent. Borrow the ProArt reality that “local” still needs a resource meter, not just a privacy badge.",
+        "signal": "Unified-memory laptops collapse the line between “creative workstation” and “personal inference cluster.” Expect clients to ask why your SaaS agent needs their data in the cloud when their own machine can host a 100B model — a sales objection that is really a product-architecture brief."
+      },
+      {
+        "pub": "The Verge",
+        "date": "22 Nov 2026",
+        "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+        "hed": "Binding of Isaac developer removes AI music from Repentance Plus",
+        "fact": "The Verge reports that Binding of Isaac: Repentance Plus was review-bombed on Steam after Reddit user ShweetsStuff found GTA-parody audio with Suno metadata, and creator Edmund McMillen said on X he “had no idea” generative AI music was used. Valve requires generative-AI disclosure; Nicalis had not mentioned the tracks. Within hours Nicalis said the generated files were removed; Steam still showed “overwhelmingly negative” at publication. Platform and studio statements as reported.",
+        "why": "AI disclosure is no longer a policy PDF — it is a player-facing trust surface that can erase years of goodwill in a weekend. Creative leads who outsource a “small” asset without a provenance check inherit the Steam score.",
+        "hook": "One undisclosed Suno track review-bombed a classic.",
+        "teach": "Add a generative-AI attestation to your asset intake form: tool used, human editor, and whether the storefront disclosure field is filled. For any ship this week, grep audio/image metadata for generator signatures the way players already do.",
+        "signal": "McMillen’s brand was anti-AI; the studio still shipped Suno. That gap between founder posture and production pipeline is where trust dies. Vendors selling “invisible” generative fill into AAA pipelines are selling a disclosure debt that lands on the store page, not the vendor."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "22 Nov 2026",
+        "url": "https://www.creativebloq.com/features/its-not-meant-to-replace-your-creativity-adobes-ai-pitch-hasnt-changed-in-two-years-but-the-tools-have",
+        "hed": "“It’s not meant to replace your creativity”: Adobe’s AI pitch hasn’t changed in two years, but the tools have",
+        "fact": "Creative Bloq interviews Adobe VP Deepa Subramaniam, who frames AI anxiety as a choice problem: flagship apps versus multimodal Firefly, and “an agent in the sidecar or in the driver’s seat,” arguing anxiety flares when creatives feel led down a path rather than choosing it. She says AI should take “un-fun” work off the plate so vision stays human, and notes a split between pre-AI craft veterans and a generation learning expression alongside models. First-party positioning via interview, not independent usage data.",
+        "why": "Adobe’s public language finally matches the control pattern designers need: agent mode as an explicit seat, not a sparkle that hijacks the canvas. That is a better mental model than “AI on/off.”",
+        "hook": "Sidecar or driver’s seat — name the agent’s job before it starts.",
+        "teach": "Relabel your AI modes this week as Sidecar (suggests, you commit) and Driver (acts, you can interrupt). Put the mode name in the chrome before the prompt field so the permission story is visible without opening settings.",
+        "signal": "If Adobe spends two years repeating “choice” while shipping always-on agents elsewhere in the suite, the gap between interview and default becomes the brand risk. Watch which mode is the actual install default — that, not the quote, is the strategy."
+      },
+      {
+        "pub": "Wired",
+        "date": "23 Nov 2026",
+        "url": "https://www.wired.com/story/nvidia-is-powering-brain-computer-interfaces-now/",
+        "hed": "Nvidia Is Powering Brain-Computer Interfaces Now",
+        "fact": "Wired reports Paradromics is partnering with Nvidia so speech decoding for its brain implant — more than 400 electrodes reading attempted speech — can move from a cart of outlet-powered electronics to a wheelchair-side box via Jetson modules and Holoscan sensor software, aiming eventually at phone-scale hardware. Nvidia’s David Niewolny says even small delays make communication feel unnatural and that Nvidia will not access brain data; foundation models may run locally for more expressive synthesised voices. Company and Nvidia statements as reported.",
+        "why": "BCI speech UX collapses if latency feels like a bad VoIP call. Edge inference is not a cost optimisation here — it is the difference between conversation and teletype.",
+        "hook": "The status bar for speech is now a neural decode clock.",
+        "teach": "If you design assistive or voice interfaces, instrument end-to-end speak-intent-to-audio latency and set a human-noticeable threshold (start at ~200–300ms) as a release blocker. Treat “works on the cart” as a prototype stage, not a shippable architecture.",
+        "signal": "Nvidia turning up in BCI stacks means the chip vendor’s edge SDK is becoming medical UX infrastructure. Accessibility teams should expect Jetson-class local models as a procurement checkbox — and a new privacy boundary when the synthesised voice runs on-device versus in a clinic rack."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/23/uber-now-lets-you-book-rides-that-record-the-drive-by-default/",
+        "hed": "Uber now lets you book rides that record the drive by default",
+        "fact": "TechCrunch reports Uber is piloting “Recorded Rides” in Baltimore, Raleigh, Indianapolis and St. Louis, booking trips where the driver’s phone front camera records the entire drive via Record My Ride, aimed especially at late-night and teen trips after earlier live-video and late-night audio tests. Uber says drivers can opt out in Settings and riders can decline via an in-app notification, and it is testing auto-record when a trip goes off-course or may have had an accident. Company-described pilot as relayed by TechCrunch.",
+        "why": "Safety features that record by default invert the usual consent pattern: the protective setting is on, and dignity is an opt-out. That is a high-stakes UX choice for any product that films people in enclosed spaces.",
+        "hook": "The safe ride is the one that films you unless you say no.",
+        "teach": "For any recording or logging default-on for safety, write the decline path as a first-class screen: what still works if you refuse, how long footage is kept, and who can see it. Test that copy with riders and drivers separately — they do not share the same threat model.",
+        "signal": "Auto-record on off-course detection is the thin end of predictive surveillance in consumer apps. Once “the model thought something was wrong” can start a camera without a tap, every mobility and delivery product will be asked for the same trigger — and for an audit UI that does not exist yet."
+      },
+      {
+        "pub": "The Verge",
+        "date": "23 Nov 2026",
+        "url": "https://www.theverge.com/transportation/1039919/tesla-fsd-v15-reality-view-gta-nhtsa-safety-rollout",
+        "hed": "Tesla’s FSD v15 turns driving visuals into Grand Theft Auto",
+        "fact": "The Verge reports Tesla is rolling out Full Self-Driving (Supervised) v15 with Reality View, a generative third-person overhead display replacing wireframes so drivers can see and tap to influence planned manoeuvres, with Musk posting “FSD is GTA irl.” Tesla claims training on millions of online videos helps prevent serious mistakes 25 times more often on less compute, on AI4/HW4 hardware, leaving HW3 cars behind; federal regulators continue investigating the software. Safety multiplier is Tesla’s claim, not an independent audit.",
+        "why": "The HMI for supervised autonomy just became a game camera. When the safety interface looks like entertainment, trust and attention design have to fight the medium.",
+        "hook": "Your driver-assist UI now looks like a GTA trailer. Regulators still call it supervised.",
+        "teach": "If you ship a “god’s eye” or generative overlay on a safety-critical flow, run a distraction test: can users state the next planned action and the intervention control in under three seconds without the cinematic chrome? Cut any flourish that fails.",
+        "signal": "Hardware fragmentation (HW4 in, HW3 out) means the same product name now maps to two different mental models of what the car can show and do. Expect support and legal UX debt wherever marketing keeps one brand over a split capability set."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "23 Nov 2026",
+        "url": "https://www.creativebloq.com/news/how-gta-6s-interface-kept-the-classic-pricedown-font-but-still-managed-to-feel-modern",
+        "hed": "How GTA 6’s interface kept the classic Pricedown font but still managed to feel modern",
+        "fact": "Creative Bloq interviews Rockstar UI leaders including Stuart Petri and Sam Grosset on GTA 6’s HUD: keeping Pricedown, minimap, wanted stars and the Wasted screen while making UI “feel fresh,” shifting the phone to an in-hand model, and treating accessibility “from the outset” with larger fonts, minimal HUD and control tweaks such as sprint assists. Petri stresses UI that appears on a button press then disappears. Studio interview, not a formal a11y audit.",
+        "why": "Heritage UI is usually a nostalgia trap. Rockstar’s brief — same icons, new body — is a rare public case study in evolving a 25-year visual language without a rebrand splash page.",
+        "hook": "Keep Pricedown. Redesign everything that touches the thumb.",
+        "teach": "Pick one legacy pattern in your product (typeface, nav glyph, empty state) and write a one-page “retain / refresh / remove” brief before the next visual pass. Require at least one accessibility option that was designed with the default, not bolted on after handoff.",
+        "signal": "In-world phones and diegetic apps are eating flat system UI in games — and that pressure is coming to consumer products that want “immersive” agents. The teams that win will treat immersion and accessibility as the same spec, the way Grosset frames it."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "23 Nov 2026",
+        "url": "https://www.creativebloq.com/news/how-pets-at-homes-vibrant-new-family-solves-the-biggest-challenge-of-designing-sub-brands",
+        "hed": "How Pets at Home's vibrant new family solves the biggest challenge of designing sub-brands",
+        "fact": "Creative Bloq reports HOW+HOW redesigned Pets Insurance, Pets Foundation and Pet Pals for Pets at Home — about 450 UK stores plus roughly 400 vet practices and 300 grooming salons — as a family with shared DNA rather than one masterbrand stamped thrice. Founder Cath How says consistency came from shared principles and connective cues, not identical outputs, and architecture followed how owners move between retail, advice, vet care, insurance and support rather than internal org charts. Agency case study as told to Creative Bloq.",
+        "why": "Sub-brand systems usually fail by cloning the parent logo in three colours. Designing for the owner’s journey instead of the org chart is the difference between a family and a franchise sticker pack.",
+        "hook": "Stop cloning the masterbrand. Design the path between the vet and the till.",
+        "teach": "Map one real customer journey that crosses two of your product lines. If the only shared UI is a logo, invent two connective cues (tone, illustration rule, nav pattern) that travel with the user without forcing identical layouts.",
+        "signal": "Character-led kids clubs and “zoomies” motion for charities show brand systems absorbing product surfaces that used to be separate apps. Design ops will be asked to govern illustration universes as carefully as colour tokens — merchandising is becoming a design-system deliverable."
+      },
+      {
+        "pub": "Wired",
+        "date": "23 Nov 2026",
+        "url": "https://www.wired.com/story/inside-googles-failure-to-make-google-maps-work-for-palestinians/",
+        "hed": "Inside Google’s Failure to Make Google Maps Work for Palestinians",
+        "fact": "Wired, with Palestine Reporting Lab, ARIJ, Lighthouse Reports and Evident, reports Google Maps still fails to surface many of the more than 900 movement obstacles facing roughly 3.5 million Palestinians in the West Bank, despite a former product manager spending six years trying to fix it and Google already having checkpoint-alert capabilities from Covid-era maps elsewhere. Employees say efforts were abandoned; a Google spokesperson cited challenges acquiring comprehensive data. Investigative account based on interviews and documents.",
+        "why": "Maps UX is political infrastructure. When a global navigation product can mark a European low-emission zone but not a lethal checkpoint, “data quality” is a product decision with body-risk consequences.",
+        "hook": "Google can warn you about a congestion charge. Not always about a checkpoint.",
+        "teach": "Audit one map or routing surface for populations who face restrictions your majority users do not. List hazards your data pipeline cannot represent today, and escalate the gap as a safety defect — not a localisation nice-to-have.",
+        "signal": "Bootstrapped Telegram road-condition channels filling Google’s gap show users will invent parallel maps when the platform refuses. That is a trust exodus metric: when your missing layers become someone else’s product, you have already lost the ground truth war."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "23 Nov 2026",
+        "url": "https://www.creativebloq.com/news/this-hypnotising-app-turns-your-iphone-duo-into-a-record-player",
+        "hed": "This hypnotising app turns your iPhone Duo into a record player",
+        "fact": "Creative Bloq reports Ripple Player, a $4.99 App Store app, connects to Apple Music and turns the iPhone Duo’s dual screens into a virtual record player with spinning vinyl, tonearm, album art and an interactive ripple effect driven by the music. Social reactions quoted in the piece include users saying they want a Duo just for the visuals. Hands-on/feature write-up, not a lab study.",
+        "why": "Foldables need apps that only make sense on two faces. Ripple Player is a clear brief for hardware-specific delight instead of stretched phone layouts.",
+        "hook": "The killer Duo app is a turntable, not a spreadsheet.",
+        "teach": "For any dual-screen or fold target on your roadmap, prototype one experience that requires both surfaces simultaneously — content plus a physical metaphor — before you port a single-column phone UI. If removing a screen kills the idea, you found a real foldable feature.",
+        "signal": "When people say they would buy the hardware for one $5 aesthetic app, the platform war has moved from productivity demos to cultural objects. Expect OEMs to court tiny experiential studios the way console makers court exclusive games."
+      }
+    ],
+    "product": [
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+        "hed": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+        "fact": "TechCrunch reports Bret Taylor’s Sierra raised $1.75 billion Series F led by Greenoaks and Lightspeed, doubling valuation to $30 billion within six months of a $15 billion round. Sierra says it serves almost 50% of Fortune 50 companies (clients named include BNY, HSBC, Wells Fargo, JPMorganChase) and late last month claimed outcome-based pricing helped double run-rate revenue to $400 million in five months; it is also working on agent protocol definitions with firms including Meta, Stripe and Walmart. Company-reported metrics via TechCrunch.",
+        "why": "CX agents are where enterprise AI budgets are clearing first. Protocol work with Meta, Stripe and Walmart hints that the next product surface is not a chatbot skin — it is an interoperability layer for agents that can pay and fulfil.",
+        "hook": "$15B to $30B in six months. The customer-service bot became infrastructure.",
+        "teach": "If you own a support or account flow, list every handoff an external agent would need (auth, order state, refund policy, human escalate). Mark which are API-ready versus phone-tree only — that list is your 2027 integration backlog.",
+        "signal": "Outcome-based pricing at this scale means vendors get paid when the agent resolves, not when the seat is provisioned. That aligns incentives toward containment UX that ends tickets — and against delightful loops that keep humans chatting."
+      },
+      {
+        "pub": "The Verge",
+        "date": "23 Nov 2026",
+        "url": "https://www.theverge.com/tech/1038650/kodak-slidetag-keychain-photo-display-tracker-find-my-hub-google-apple-e-ink",
+        "hed": "Kodak’s next collectible is a tiny digital photo frame that doubles as a tracker",
+        "fact": "The Verge reports Reto’s Kodak SlideTag is a keychain digital frame with a 1.54-inch 240×240 colour E Ink display (six inks), holding up to 12 photos via the Memory Link app over Bluetooth, plus to-do, contact, timer or QR modes, at $34.99 each (full eight-design set $279.92, plus a secret metallic blind-box edition). It joins Apple Find My or Google Find Hub without UWB — Bluetooth to about 30 metres and a 75 dB buzzer, CR2032 battery. Specs as reported from the product.",
+        "why": "Trackers are winning on networks; Kodak is winning on objecthood. A findable slide is a reminder that accessory UX can be collectible first and utility second.",
+        "hook": "AirTag energy, film-slide soul, mystery-box pricing.",
+        "teach": "When you brief a small hardware or wearable accessory, decide whether the primary job is locate, display or identity — then cut features that dilute that job. If you need both findability and a screen, budget for the compromise (no UWB) in the marketing copy so support does not inherit the surprise.",
+        "signal": "Blind-box hardware for adults is teaching product teams that scarcity and finish variants can outrun feature lists. Expect more “secret edition” SKUs in productivity gadgets — a merchandising tactic leaking into tools."
+      },
+      {
+        "pub": "The Verge",
+        "date": "23 Nov 2026",
+        "url": "https://www.theverge.com/games/1039838/samsungs-odyssey-g6-1100hz-gaming-monitor",
+        "hed": "Samsung’s absurd 1,100Hz gaming monitor hits shelves next month for $899.99",
+        "fact": "The Verge reports the 27-inch Samsung Odyssey G6 G60H ships next month for $899.99 with a Dual Mode IPS panel hitting 1,100Hz at 1080p and 600Hz at 1440p, plus Odyssey Clear Motion anti-blur and Black Equalizer, narrowly topping LG’s 1,000Hz UltraGear. Whether humans perceive the jump remains debated in the piece. Launch pricing and specs as stated.",
+        "why": "Spec-sheet wars have left the perceptual range. When 600Hz at 1440p is the “downshift,” display product design is signalling to enthusiasts, not solving a readability problem.",
+        "hook": "1,100Hz at 1080p. Your eyes did not ask for this.",
+        "teach": "For performance-oriented UI or game settings screens, pair every extreme default with a plain-language “who this is for” note and a recommended mode for typical vision and tasks. Do not let the marketing ceiling become the out-of-box setting.",
+        "signal": "Clear Motion and Black Equalizer matter more to most players than the headline hertz. Brands that lead with four-digit refresh are training buyers to ignore the features that actually change match outcomes — a habit that will punish clearer products."
+      },
+      {
+        "pub": "The Verge",
+        "date": "23 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.theverge.com/tech/1039903/motorola-moto-tag-3-tracker-amazon-leak",
+        "hed": "Amazon is taking orders for the Moto Tag 3 before it’s even been announced",
+        "fact": "The Verge reports an Amazon UK listing spotted by @matteventu for an unannounced “Moto Tag 3” in Pantone Lucent White at £24.96 (about $33) with 1–4 month shipping, plus an Italy listing in Pantone Indigo Blue shared via leaker Evan Blass, five months after Moto Tag 2’s US launch. Specs listed match Tag 2 (CR2032, 500-plus days, UWB in Find Hub) and the XT2561-1 model number matches Tag 2, so the piece notes this may be new colours mislabelled as a Tag 3. Retail listing leak, not a Motorola announcement.",
+        "why": "Channel leaks now ship the PDP before the keynote. Product designers need a plan for when Amazon becomes the unofficial launch venue.",
+        "hook": "The Tag 3 launch is an Amazon cart. Or it is just new paint.",
+        "teach": "Maintain a living “what is shipping vs what is colourway” matrix for your SKUs and brief support before Black Friday. If a retailer can invent a generation number, your packaging and help centre must disambiguate faster than the listing.",
+        "signal": "When model numbers do not change but the name does, retailers are manufacturing upgrade pressure. Expect more phantom generations in tracker and earbud categories — a merchandising exploit that erodes trust in versioning itself."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "23 Nov 2026",
+        "url": "https://arstechnica.com/gadgets/2026/11/a-triple-screen-portable-monitor-means-more-pixels-and-more-bulk/",
+        "hed": "Tri-screen portable monitors aren’t for the faint of heart",
+        "fact": "Ars Technica tests KYY’s X90G (~$360): three 15.6-inch 1920×1080 IPS panels up to 400 nits, one left, one right and one above the laptop, supporting Windows, macOS (M1+), Linux and Android, for laptops up to 17.3 inches. The reviewer found four disparate displays with awkward mouse travel, visible bezels and a distracting upper panel/handle gap on a 13-inch laptop, while praising independent brightness and OSD per screen for mixed writing/image work. Hands-on review.",
+        "why": "Portable multimonitor kits sell a productivity fantasy that layout and pointer UX have to make real. More pixels without a unified coordinate space is just more places to lose the cursor.",
+        "hook": "Four screens. Zero cohesion. $360.",
+        "teach": "If you design desktop tools for multi-display users, test pointer travel and window snapping on a non-aligned layout (side + above) this week. Add a “warp pointer to focused window” or stronger display-edge affordances before recommending portable triple kits in any field guide.",
+        "signal": "The market is shipping hardware faster than OS window managers can absorb. Expect a wave of accessories that only feel good once software treats “rig” as a first-class layout preset — otherwise returns will teach the lesson."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "23 Nov 2026",
+        "url": "https://www.theguardian.com/technology/2026/nov/23/apple-iphone-duo-review-most-novel-interesting-iphone-in-almost-a-decade",
+        "hed": "Apple iPhone Duo review: the most novel and interesting iPhone in almost a decade",
+        "fact": "The Guardian’s Samuel Gibbs reviews the iPhone Duo at £1,999 / $1,999: a squat wide foldable with a 5.4-inch cover display and 7.6-inch matt internal OLED at a matched 1.4:1 ratio, closed width 84.1mm (wider than iPhone 18 Pro Max), forcing two-handed reach. iOS moves the dock to the right and collapses the status bar to a circle to reclaim vertical space; apps land in three classes — unupdated letterboxed, iOS 27.1-updated, or Duo-redesigned (Google Maps cited). Hands-on review noting crease feel, soft-screen marking risk and reported faulty units.",
+        "why": "Apple finally broke phone chrome for a new aspect ratio. That is a platform event: every iOS pattern that assumed tall portrait is up for renegotiation.",
+        "hook": "The dock moved right. A decade of iPhone muscle memory went with it.",
+        "teach": "Open your primary iOS app on a wide short viewport (or Duo simulator) and mark every top/bottom chrome assumption. Ship a landscape-first or side-rail navigation variant for any screen that loses content above the keyboard.",
+        "signal": "Three app quality classes on day one recreate the early-iPad wasteland. Teams that only “support” Duo with letterboxing will look dated next to the few redesigned clients — and App Store screenshots will make that gap public."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "CNBC",
+        "date": "23 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+        "hed": "Nvidia skyrockets 30% on Huang’s return as CEO, recovering nearly all the losses since he disclosed affair",
+        "fact": "CNBC reports Nvidia’s board unanimously reinstated Jensen Huang as CEO effective immediately after discussions and “input from senior levels of the United States government” that the board says leaves it confident reinstatement “poses no national security risk,” while an independent investigation continues with Huang’s cooperation. Shares surged about 29% on the news after roughly a 33% drop from Huang’s 8 November affair admission; President Trump publicly backed the return. Market moves and board statements as reported.",
+        "why": "The AI supply chain’s single point of failure just toggled twice in eleven days. Design and product orgs dependent on Nvidia roadmaps just learned how political leadership risk is priced into every GPU-dependent roadmap.",
+        "hook": "Eleven days out. One board vote. Thirty percent back.",
+        "teach": "For any roadmap that assumes a single vendor’s executive continuity, write a one-page “if the CEO chair flips” contingency: which launches slip, which chip SKUs freeze, who briefs customers within 24 hours. Rehearse it once — this fortnight proved the scenario is not theoretical.",
+        "signal": "Government comfort letters as a board input for a public CEO reinstatement set a precedent: frontier-chip leadership is now treated like critical infrastructure staffing. Expect more national-security theatre in ordinary corporate governance — and more volatility in creative-cloud pricing when the ticker swings 30% before lunch."
+      },
+      {
+        "pub": "CNBC",
+        "date": "23 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/23/crowdstrike-zscaler-aquisition-ai-cyberattacks.html",
+        "hed": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks",
+        "fact": "CNBC reports CrowdStrike plans to buy Zscaler for $43.9 billion in an all-stock deal (1.135 CrowdStrike shares per Zscaler share), expected to close in the second half of CrowdStrike’s fiscal 2028, with CrowdStrike shares down about 5% and Zscaler up more than 20% early Monday. CEO George Kurtz framed a “single control plane to deploy AI, control AI, and enable any agentic application to run safely”; combined market value exceeded $265 billion as of Friday versus Palo Alto at $282 billion. Deal terms as announced.",
+        "why": "Security vendors are consolidating into “AI operating systems” just as enterprises green-light agents. Procurement will increasingly buy one pane of glass — which means product security UX gets standardised by whoever owns that pane.",
+        "hook": "$43.9 billion to become the bouncer for every agentic app.",
+        "teach": "Ask your security partners whether agent actions (tool calls, browser control, payments) will log into the same console as endpoint alerts by 2027. If not, design an exportable agent-audit trail now so you are not trapped when the control plane consolidates.",
+        "signal": "Kurtz’s “largest AI safety and security company” line collapses safety and SOC tooling into one category. Designers shipping agents will face security questionnaires written by vendors who think safety is a network policy — bring your own interaction-level threat model or inherit theirs."
+      },
+      {
+        "pub": "CNBC",
+        "date": "23 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/23/oregon-virginia-spacex-grok-deepfake-lawsuits.html",
+        "hed": "SpaceX sued by Oregon and Virginia over AI deepfake porn, Grok safety claims",
+        "fact": "CNBC reports Oregon AG Dan Rayfield and Virginia AG Jay Jones filed the first state suits against SpaceX over Grok and X enabling non-consensual sexual deepfakes, including alleged AI-generated CSAM, citing research by the Internet Watch Foundation, CCDH and others, and alleging false safety claims under state consumer laws while X allows users 13+. Both seek injunctions, penalties and costs; Virginia also seeks restitution. Complaints pending court acceptance as of early Monday; SpaceX has argued Section 230 and user-prompt liability in related cases.",
+        "why": "State AGs are turning generative-image safety into consumer-protection UX: what you claim in the marketing string is now exhibit A. “Safe by default” copy without matching controls is a lawsuit waiting for a screenshot.",
+        "hook": "Two states just made Grok’s safety claims a consumer-protection case.",
+        "teach": "Inventory every user-facing sentence that calls your generative feature safe, filtered or protected. Match each claim to a control that can fail closed, and remove adjectives you cannot demonstrate in a demo for counsel.",
+        "signal": "SpaceX suing a user while states sue SpaceX shows the liability hot potato between prompt and platform. Product teams that only design “report this image” without upstream generation blocks are picking the wrong layer of the stack to defend."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "23 Nov 2026",
+        "url": "https://www.theguardian.com/australia-news/2026/nov/23/datacentre-bosses-met-australian-state-premiers-and-ministers-almost-120-times-in-three-years-analysis-finds",
+        "hed": "Datacentre bosses met Australian state premiers and ministers almost 120 times in three years, analysis finds",
+        "fact": "The Guardian reports Transparency International Australia found bosses at 10 datacentre companies secured 119 meetings with premiers and ministers across NSW, Victoria, Tasmania, Queensland and the ACT over three years (jurisdictions that publish diaries), while donations from major datacentre firms and lobbyists nearly tripled from $685,000 to $1.8 million. Queensland’s David Crisafulli logged 13 meetings, including three with NextDC shortly before a fast-track approvals framework; AWS, Macquarie Technology Group and NextDC took the most meetings. NGO analysis of public diaries and donations.",
+        "why": "The physical internet is being permitted in meeting rooms faster than in planning consultations. Designers working on climate, community or “responsible AI” narratives need to treat lobbying access as part of the product’s external UX.",
+        "hook": "119 meetings. The cloud’s real interface is a ministerial diary.",
+        "teach": "If your company discusses datacentre or AI-infra expansion, add a public stakeholder map to the project brief: which communities lose water, power or quiet, and where they can see the plan before the ribbon-cutting render. Treat missing consultation as a brand defect.",
+        "signal": "Fast-track frameworks that bypass councils after private meetings will define the next decade of AI politics. Products that celebrate “sovereign AI” without a consenting neighbourhood will inherit protest as a launch event."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "23 Nov 2026",
+        "url": "https://www.theguardian.com/science/2026/nov/23/pervert-glasses-meta-word-of-the-year-macquarie-dictionary-nudify-aidr",
+        "hed": "‘Pervert glasses’ named word of the year by Macquarie dictionary, ahead of ‘nudify’ and ‘AI;DR’",
+        "fact": "The Guardian reports Macquarie Dictionary named “pervert glasses” its 2026 word of the year (and people’s choice), for smartglasses with cameras, mics and AI assistants such as Meta’s Ray-Bans that have been banned at some Australian pools and playgrounds amid non-consensual filming fears. Honourable mentions included “agentic,” “nudify,” “AI;DR,” and people’s-choice “digital dementia” for short-term memory loss tied to tech reliance — which the committee notes is not a medical diagnosis. Dictionary committee commentary as reported.",
+        "why": "When the dictionary’s word of the year is a slur for your form factor, the cultural UX debt has outrun the hardware roadmap. Wearables that cannot signal recording state to bystanders are already losing the naming war.",
+        "hook": "The product category lost the dictionary. Everything else is catch-up.",
+        "teach": "For any camera-bearing wearable or agent, design a bystander-legible recording indicator that works at conversational distance — light, shutter sound, or locked-down capture in sensitive venues — and document venue-mode policies before the next retail push.",
+        "signal": "“Agentic” as an honourable mention means the jargon designers use in decks is now public vocabulary. Expect non-experts to demand plain-language explanations of agent permissions the way they now demand explanations of smartglass lenses."
+      },
+      {
+        "pub": "Wired",
+        "date": "23 Nov 2026",
+        "url": "https://www.wired.com/story/a-power-provider-for-meta-urged-regulators-to-exempt-data-center-plants-from-acid-rain-rules/",
+        "hed": "A Power Provider for Meta Urged Regulators to Exempt Data Center Plants From Acid Rain Rules",
+        "fact": "Wired, citing FOIA documents, reports Williams — powering at least four Meta datacentre projects among six-plus nationwide — sought EPA guidance to exclude “islanded” datacentre-only gas plants from Acid Rain Program permitting, and met EPA air officials; in July the EPA recommended such plants be exempt because the programme targeted grid sellers. Williams told Utah DEQ that uncertainty created obstacles for US datacentre development; Meta declined to comment. Reporting based on agency documents and statements.",
+        "why": "AI’s environmental UX is being rewritten in permit footnotes: plants built solely for model training may skip rules written for public utilities. That is a governance design choice with air-quality consequences.",
+        "hook": "If the plant only feeds the model, the acid-rain rulebook may not apply.",
+        "teach": "When your sustainability page cites “grid intensity,” ask whether any supporting generation is islanded and which programmes it sits outside. Publish the answer; if you cannot, stop implying utility-grade compliance.",
+        "signal": "Private power for private compute is becoming a parallel energy system with a thinner public rulebook. Brand claims about clean AI will be stress-tested against FOIA trails like this one — design the disclosure before the next investigation does."
+      }
+    ]
+  }
+}
