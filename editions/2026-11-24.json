@@ -1,0 +1,271 @@
+{
+  "date": "2026-11-24",
+  "label": "Tuesday, 24 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+        "hed": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+        "fact": "TechCrunch reports that Anthropic launched Claude Ship for Claude Team and Enterprise on GitHub: Code Review is generally available, while PR Steward and Claude Approvals are in beta. Approvals apply a natural-language policy file in the repo, and Anthropic recommends observe-only mode, a single-repo start, and monthly spend limits before enabling auto-merge authority.",
+        "why": "The review bottleneck just moved from writing code to deciding what is allowed to ship. Once an agent can approve, the product question is no longer model quality — it is how a team encodes escalation, rollback, and human override as readable policy.",
+        "hook": "Claude already writes the PR. Now it can merge it.",
+        "teach": "If your team uses coding agents, draft a one-page approval policy this week: which file paths auto-approve, which require a human, and what CI signals block merge. Put that policy in the repo before you turn on any auto-approve feature.",
+        "signal": "Observe-only as the recommended first mode admits the real risk: approval agents will inherit whatever sloppy norms already live in your review culture. The teams that win are the ones treating the policy file as a designed interface, not a config afterthought."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+        "hed": "Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses",
+        "fact": "TechCrunch reports that Google is expanding Personal Intelligence in Search AI Mode to Google Drive, Google Wallet, and the Gemini app, on top of existing Gmail, Calendar, and Photos connections. Wallet is optional and read-only for money movement; Google says a Personalization icon will soon show which context informed a response.",
+        "why": "Personal context is becoming a first-class search surface, which means the trust UI — what was used, what can be disconnected, what cannot spend money — is now part of the answer, not a settings afterthought.",
+        "hook": "Search just opened your Drive and your Wallet.",
+        "teach": "Audit any personalization feature you own for a visible “what context was used” affordance next to the answer, plus a one-tap disconnect. If users cannot inspect or revoke context without leaving the result, the control is not real.",
+        "signal": "Cross-app context between Gemini and AI Mode removes the restart tax that currently keeps assistants siloed. The competitive moat is not a better summary — it is continuity of memory across surfaces that rivals cannot reach."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "24 Nov 2026",
+        "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+        "hed": "Amazon says hackers’ AI agents found and exploited 0-day with little human input",
+        "fact": "Ars Technica reports that Amazon says Cairn agents, given a list of IPs and the goal “obtain shell access,” found a path-traversal zero-day in an open-source medical imaging AI app and went from API mapping to arbitrary file write in about 11 minutes, later gaining root via a reverse shell. Palo Alto Networks had earlier linked Cairn to 25 autonomous operations against at least 19 organizations, with at least 10 breached.",
+        "why": "Agent speed just collapsed the defender’s triage window. Designers of security products and admin consoles can no longer assume a human-paced incident timeline.",
+        "hook": "Eleven minutes from API map to zero-day write.",
+        "teach": "In any security or admin product, time-box your alert-to-action path: what can a defender do in the first five minutes without reading a novel? Cut one confirmation step that delays containment more than it prevents mistakes.",
+        "signal": "Amazon’s failed Redis and GPU-server campaigns ran for hours; the success was a boring upload filename parameter. Agentic offense does not invent exotic attacks — it exhausts the dull surface area your team stops reviewing because it “already works.”"
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "23 Nov 2026",
+        "url": "https://www.creativebloq.com/news/every-3d-artist-should-have-an-ai-assistant-maxon-says-as-it-launches-new-tools-and-agentic-licences",
+        "hed": "Every 3D artist should have an AI assistant, Maxon says as it launches new tools and agentic licences",
+        "fact": "Creative Bloq reports that Maxon launched Maxon Plus, a separate optional subscription from $10/€10 a month with generative tools including Model Generator, plus Agentic Licences for Cinema 4D and Autograph that run headless Redshift work on another machine. Maxon says MCP support released 30 September became “the most widely used feature in Cinema 4D’s history in the shortest period of time,” per CPO Steve Forde — a company claim.",
+        "why": "Maxon is splitting generative AI into an opt-in tier and giving agents their own licence so the creative session stays human-led. That is a clearer product stance than burying AI inside the default seat.",
+        "hook": "AI gets its own licence. The artist keeps theirs.",
+        "teach": "If you are adding generative features to a pro tool, ship them behind a separate plan or an explicit off switch in the primary workspace. Do not make “ignore the AI panel” the only escape hatch.",
+        "signal": "The Agentic Licence admits MCP’s real UX failure: the assistant hijacks the active session. Headless “ambitious intern” seats are Maxon productizing parallel work, not smarter prompts — a pattern every creative suite will copy."
+      },
+      {
+        "pub": "CNBC",
+        "date": "24 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/24/signal-airlines-banks-ai-limit.html",
+        "hed": "Signal joins United Airlines, banks in limiting AI agents over customer risks",
+        "fact": "CNBC reports that Signal will block screenshots on iOS and enable Android screen security when it detects an AI assistant reading the screen, arguing OS agents such as Gemini and Siri can scan on-screen content outside Signal’s control. The piece situates the move alongside restrictions by United Airlines, JPMorgan Chase, and Charles Schwab, and cites AvePoint’s State of AI 2026 survey of 750 IT leaders finding 88.4% reported at least one AI-agent-related security breach in the prior year.",
+        "why": "Agent access is no longer a power-user curiosity — it is a platform trust crisis spanning messaging, airlines, and banks. Designers of agent connectors inherit the liability surface even when the OS owns the screen.",
+        "hook": "88.4% of IT leaders already had an agent breach.",
+        "teach": "For any screen that shows secrets, map whether an OS or third-party agent can capture it via screenshot, accessibility APIs, or setup permissions. If the answer is yes, add an explicit sensitive-surface mode before your next release.",
+        "signal": "Whittaker’s call for OS-level deny tools means app-level screenshot blocks are stopgaps. The durable design pattern is classified data zones that agents cannot enter — not another modal asking users to trust the assistant."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/23/dutch-privacy-authority-urges-consumers-not-to-buy-pervert-glasses/",
+        "hed": "Dutch privacy authority urges consumers not to buy ‘pervert glasses’",
+        "fact": "TechCrunch reports that the Dutch Data Protection Authority is urging consumers not to buy AI-enabled camera glasses, saying always-on public recording is “almost always” unlawful. In one unnamed test cited by the authority, a pair of glasses wrongly identified a woman as a man and suggested she was available for a date — wrong and unsafe results as characterized by the regulator.",
+        "why": "Wearable AI UX is colliding with bystander consent. Indicator LEDs and capture UX are no longer enough when a national regulator is telling people not to buy the category.",
+        "hook": "The regulator’s UX review: do not buy them.",
+        "teach": "If you design a capture wearable, require a high-friction, audible or haptic record start, a persistent outward indicator that cannot be software-disabled, and a default that never runs face recognition in public without an explicit session opt-in.",
+        "signal": "The Dutch test failure that mattered was not privacy theatre — it was a gendered misread plus a dating suggestion. Wearable AI risk is hallucinated social inference in public, not only secret recording."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "Creative Bloq",
+        "date": "24 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.creativebloq.com/news/it-took-designers-20-years-to-bring-this-font-back-from-the-dead",
+        "hed": "It took designers 20 years to bring this font back from the dead",
+        "fact": "Creative Bloq reports that Production Type revived Vendôme, the 1950 French serif by François Ganeau under Roger Excoffon’s art direction, after more than 20 years of redrawing from archival proofs and filling missing weights. The revival launched as Vendôme Nouveau with a NYC subway stunt using fake typographic self-help titles.",
+        "why": "In a week dominated by agent demos, a 20-year type restoration is a reminder that craft still compounds on a different clock — and that brand systems still need letterforms with history, not just generated novelty.",
+        "hook": "Twenty years to restore what phototypesetting ruined.",
+        "teach": "When a brand asks for “something with heritage,” audit whether you are licensing a cleaned archival cut or a distorted scan lineage. Prefer foundries that publish their restoration method, not just a specimen PDF.",
+        "signal": "Vendôme died of popularity — sign-painter copies and phototype variants hollowed the original. The same entropy hits digital design systems: every unofficial fork of your type or component library is a quality debt you will one day have to redraw."
+      },
+      {
+        "pub": "The Verge",
+        "date": "24 Nov 2026",
+        "url": "https://www.theverge.com/tech/1041101/now-its-google-translates-turn-for-a-new-icon",
+        "hed": "Now it’s Google Translate’s turn for a new icon",
+        "fact": "The Verge reports that Google Translate’s website is showing a simplified, gradient-heavy icon that better matches Google’s redesigned Workspace icons from May, first spotted by 9to5Google. The mobile apps had not received the update at the time of reporting.",
+        "why": "Icon system rollouts that land web-first create a multi-week brand fracture across platforms — a small surface that still trains users what “Google” looks like this quarter.",
+        "hook": "Translate got the Workspace gradients. Apps are still waiting.",
+        "teach": "When you refresh an app icon, ship web, iOS, and Android in the same release train or publish a staged matrix so support and marketing know which icon users will see where.",
+        "signal": "Gradient simplification is Google finishing a system, not a one-off rebrand. Product teams still treating icons as marketing assets rather than system tokens will keep shipping orphans."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "23 Nov 2026",
+        "url": "https://arstechnica.com/tech-policy/2026/11/surveillance-pricing-uses-our-personal-data-to-make-us-pay-more/",
+        "hed": "Surveillance pricing uses our personal data to make us pay more",
+        "fact": "Ars Technica, citing EPIC, defines surveillance pricing as charging different people different prices for the same goods using personal data. Consumer Reports found Instacart variations that could swing about $1,200 a year for a typical household of four before Instacart removed the tools; the FTC said in 2025 that at least 250 companies used surveillance pricing; ZipRecruiter’s 2018 profits rose 84% versus a flat $99 price, per the piece.",
+        "why": "Price is a UX surface. When the number on the button depends on who you are, comparison shopping and trust collapse unless the interface discloses personalization as clearly as surge pricing does.",
+        "hook": "Same cart. Different you. Different price.",
+        "teach": "If your product personalizes price, add an explicit disclosure beside the total — “personalized price” with a way to see the standard rate. Mirror Uber’s surge honesty rather than Instacart’s quiet variance.",
+        "signal": "The FTC’s 250-company count and mouse-movement targeting mean pricing UX is now a civil-rights surface: biased training data becomes biased totals. Design systems that only style a price string are missing the fairness control."
+      },
+      {
+        "pub": "The Verge",
+        "date": "18 Nov 2026",
+        "url": "https://www.theverge.com/tech/1037065/amazon-kindle-scribe-alexa-tablet-braille-institute-atkinson-hyperlegible-font",
+        "hed": "Kindles are getting a new font designed by the Braille Institute to improve readability",
+        "fact": "The Verge reports that as of 18 November, all Kindle devices, the Kindle mobile apps on iOS and Android, and Alexa Tablets include the Braille Institute’s Atkinson Hyperlegible font, designed so letters and numbers are clearly distinct from one another.",
+        "why": "A low-vision typeface shipping as a default option across Amazon’s reading stack is one of the largest accessibility typography rollouts of the year — and a free lesson for every product that still treats fonts as brand-only.",
+        "hook": "Hyperlegible just became a Kindle setting.",
+        "teach": "Add Atkinson Hyperlegible or an equivalent distinct-forms face to your reading and dense-data UIs as a user-selectable option this sprint. Do not wait for a full type redesign.",
+        "signal": "Shipping the same accessibility face across hardware, mobile apps, and Alexa tablets shows Amazon treating readability as platform infrastructure. Most design systems still silo a11y type to a single web theme."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "24 Nov 2026",
+        "url": "https://www.creativebloq.com/news/the-ray-gunn-art-book-is-free-to-view-online-now",
+        "hed": "Can Ray Gunn’s early concept art win people over to the movie’s divisive style?",
+        "fact": "Creative Bloq reports that Abrams has put a free tease of Ray Gunn: The Art of the Brad Bird Film online ahead of a 240-page hardcover on 15 December, with the Brad Bird film in select cinemas 4 December and on Netflix from 18 December. Viewers have split over 3D CG character models versus expectations of Iron Giant-style 2D.",
+        "why": "When a film’s look divides audiences before release, the art book becomes the design rationale document — concept boards doing the persuasion the trailer did not.",
+        "hook": "The art book is the style guide the trailer skipped.",
+        "teach": "If stakeholders reject a visual direction from a polished frame alone, show the concept path: rejected 2D explorations, material studies, and environmental boards. Process artifacts often sell the system better than the final still.",
+        "signal": "Divisive CG “same-face” anxiety is the audience version of design-system convergence. Distinctive worldbuilding — Art Deco noir here — is what still reads as authored when character shading feels generic."
+      }
+    ],
+    "product": [
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+        "hed": "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+        "fact": "TechCrunch reports Amazon is acquiring Decart’s Decart Optimization Stack technology plus founders and AI staff as it prepares to sell Trainium chips externally. The $7.5 billion figure is attributed to Bloomberg, not confirmed in Amazon’s blog post cited by TechCrunch.",
+        "why": "Amazon is buying software that makes non-Nvidia silicon easier to target — the missing UX of chip lock-in. If Trainium is going on sale, portability tooling is the onboarding flow.",
+        "hook": "Trainium needs a migration story. Decart is it.",
+        "teach": "If your product depends on a single model host or chip vendor, write a one-page portability plan: what breaks if you switch, what abstractions you lack, and which customer-facing features assume that stack.",
+        "signal": "Reverse acqui-hires at this scale are how hyperscalers buy compiler UX without buying the whole company narrative. The durable asset is DOS’s sync-across-chips story, not Oasis demos."
+      },
+      {
+        "pub": "The Verge",
+        "date": "24 Nov 2026",
+        "url": "https://www.theverge.com/transportation/1040676/uber-nuro-lucid-driverless-robotaxi-testing-bay-area",
+        "hed": "Uber, Nuro, and Lucid kick off fully driverless robotaxi testing",
+        "fact": "The Verge reports that Uber, Nuro, and Lucid began fully driverless public-road testing in Palo Alto, Mountain View, Los Altos, and Sunnyvale, with employee-only rides next and Uber-app service aimed at Q1 2027 after slipping from late 2026. Lucid has delivered more than 100 upgraded Gravity SUVs; Uber has committed to buy at least 35,000 Lucid vehicles over coming years. Each SUV uses Nuro’s Level 4 stack with a roof LED “halo” that flashes a rider’s initials and pickup status.",
+        "why": "The pickup halo is the product: when there is no driver to wave at, identity and status have to live on the vehicle skin. Robotaxi UX is becoming industrial design plus LED choreography.",
+        "hook": "No driver. Just a halo flashing your initials.",
+        "teach": "For any autonomous or remote-handoff experience, design the external status language before the app screen: how a bystander knows the vehicle is claimed, waiting, or unavailable without unlocking a phone.",
+        "signal": "Pulling safety drivers is the milestone investors celebrate; the halo admits the remaining UX gap is social legibility on the street. Waymo and Zoox compete on maps — Uber is competing on findability at the curb."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+        "hed": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
+        "fact": "TechCrunch reports that Supertake raised a $20 million seed led by Adjacent, with Coinbase Ventures and Union Square Ventures participating. Users describe market beliefs in natural language; the product builds stock portfolios via Coinbase and Robinhood, with a public leaderboard of “takes.” Company framing says it is not a prediction market; expansion to shorts and derivatives is planned.",
+        "why": "Investing UX is shifting from tickers to thesis text. The trust problem is no longer chart literacy — it is how clearly the product shows what the agent bought because of what you said.",
+        "hook": "Type a take. Own the portfolio.",
+        "teach": "If you ship natural-language → irreversible action, require a confirmation screen that restates the parsed intent as concrete objects (tickers, sizes, brokers) before execution. Do not let the chat bubble be the receipt.",
+        "signal": "Leaderboarded beliefs turn investing into a social feed. That may democratize access and also industrialize copy-trading of half-formed opinions — a moderation and suitability problem dressed as product virality."
+      },
+      {
+        "pub": "The Verge",
+        "date": "24 Nov 2026",
+        "url": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative",
+        "hed": "Google alternative Kagi launches an email service",
+        "fact": "The Verge reports that Kagi launched a public beta of Kagi Mail with a 60-day free trial, then $99 a year or via $25-a-month Kagi Ultimate. The service offers @kagimail.com addresses, unlimited aliases and domains, 50GB storage, and a built-in calendar; contacts are slated for Q1 2027 and native mobile apps for Q3 2027.",
+        "why": "Kagi is assembling a paid anti-surveillance suite — search, browser, now mail — which is a coherent product strategy against Google’s ad-funded defaults.",
+        "hook": "Search, browser, now inbox — still no ads.",
+        "teach": "When evaluating “Google alternatives” for a team stack, check the mobile gap explicitly. A desktop-only inbox in 2026 is a support burden, not a privacy feature.",
+        "signal": "Q3 2027 for native mobile admits mail is a phone product first. Shipping web beta without mobile is fine for enthusiasts; it is a ceiling for mainstream switchers."
+      },
+      {
+        "pub": "The Verge",
+        "date": "24 Nov 2026",
+        "url": "https://www.theverge.com/tech/1041034/bambu-p3c-3d-printer-price-release-date",
+        "hed": "Bambu’s five-nozzle P3C isn’t quite the 3D printer I expected",
+        "fact": "The Verge’s Sean Hollister reports that the Bambu Lab P3C launches at $1,149 / £999 / €1,149 with five included 0.4mm nozzles (seven slots), a 256×256×260mm volume, and an AMS that omits filament auto-loading motors — manual loading that Bambu says takes about five minutes for five nozzles, with a software goal of under one minute. The flagship H3C is $2,499.",
+        "why": "This is a classic good-better-best trap: multi-material magic at half the flagship price, paid for with fiddly loading UX that pushes the machine toward tinkerers.",
+        "hook": "Half the H3C price. All the hand-loading.",
+        "teach": "When you cut cost on a hardware accessory system, list the new manual steps in the product page above the fold. Hobbyists will forgive friction that is disclosed; they punish friction that feels like a silent downgrade.",
+        "signal": "Bambu’s own quote frames the omitted motors as democratization. The reviewer’s body says tinkerer territory. Mid-tier SKUs increasingly sell capability charts while shipping maintenance choreography."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "22 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/22/as-people-look-for-ways-to-make-new-friends-here-are-the-apps-promising-to-help/",
+        "hed": "The best apps to make new friends right now",
+        "fact": "TechCrunch reports, via Appfigures estimates, that more than a dozen local-focused friendship apps have generated about $16 million in U.S. consumer spending so far this year. The roundup covers products such as 222 ($22.22 curation fee or monthly), Bumble’s BFF spin-out, Clyx (Miami and London), and Crowdier’s two-to-five-person group matching.",
+        "why": "Friendship apps are productizing the awkwardness dating apps already trained people to accept — and the UX patterns (group matching, event curation fees, personality quizzes) are converging fast.",
+        "hook": "$16M says loneliness is a growth market.",
+        "teach": "If you design social products for platonic intent, put “looking for friends” as a first-class mode with different safety defaults than dating — no surprise romantic upsells in the empty state.",
+        "signal": "Crowdier’s majority-wave group consent and 222’s paid curation both treat matching as facilitation, not endless swipe inventory. The category is moving from profiles to hosted situations."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "CNBC",
+        "date": "24 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.cnbc.com/2026/11/24/anthropic-stock-ipo-price.html",
+        "hed": "Anthropic stock falls below $83 IPO price, but analysts are still largely positive",
+        "fact": "CNBC reports Anthropic shares fell 7% on Tuesday, trading below the $83 IPO price after opening at $111.50 Thursday following an $81.3 billion raise. Canaccord initiated coverage with a buy and $135 target; Wedbush set outperform and $120 on Monday; Oppenheimer set outperform and $150 on Tuesday — analyst opinions, not outcomes.",
+        "why": "The largest IPO on record is already testing whether enterprise AI narratives can outrun infrastructure-commitment anxiety. Design orgs feel this as budget weather: tool spend tightens when ANT wobbles.",
+        "hook": "From $111.50 open to under the IPO print.",
+        "teach": "Treat AI vendor lock-in like market risk: keep a documented alternate for your top two AI-dependent workflows so a procurement freeze does not freeze shipping.",
+        "signal": "Bullish initiations landing on a sub-IPO print show Wall Street separating franchise faith from near-term tape. Inside companies, that split becomes “keep experimenting” versus “pause seat expansion” — usually decided by whoever owns the cloud bill."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "23 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/23/figma-employee-sues-alleging-company-forced-her-to-confront-harassers/",
+        "hed": "Figma employee sues, alleging company forced her to confront harassers",
+        "fact": "TechCrunch reports that Figma engineer Serry Park sued Figma and CEO Dylan Field in S.D.N.Y., alleging sexual harassment, retaliation, and that managers and HR repeatedly told her to confront alleged harassers under the company’s “direct feedback” culture. Figma said it does not tolerate discrimination or harassment, called the claims without merit, and said it “does not tolerate extortion,” stating it will present facts in court. Allegations are Park’s and unproven.",
+        "why": "Figma is the default workplace for product designers. A lawsuit that puts “direct feedback” culture on trial is a careers story for the entire tools ecosystem, not only one company.",
+        "hook": "“Direct feedback” is not an HR policy.",
+        "teach": "If you manage designers, write down your harassment escalation path and test it: reporting must never require the complainant to facilitate the conversation with the accused. If your handbook says otherwise, fix the handbook this week.",
+        "signal": "Exporting startup feedback culture into harassment response is a category error with legal consequences. Tool companies selling collaboration norms should expect those norms to be Exhibit A."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "24 Nov 2026",
+        "url": "https://www.theguardian.com/australia-news/2026/nov/24/nine-datacentre-projects-awaiting-approval-victoria-election",
+        "hed": "Days out from the Victorian election, nine datacentre projects await approval. What will their fate be?",
+        "fact": "The Guardian reports nine Victorian datacentre projects await approval, including NextDC’s West Footscray M3 expansion and GreenSquareDC’s $1.5bn, 240MW, 105,000+ sq m Spotswood proposal, which faces a petition of more than 4,400 signatures. Labor’s expectations for applications from 23 September include a 150m buffer from homes, schools, and hospitals; the Greens seek a moratorium on new projects.",
+        "why": "Local elections are now the binding constraint on AI infrastructure. Site selection and community UX — signage, buffers, published docs — are becoming as material as power contracts.",
+        "hook": "Nine permits. One election. 4,400 signatures.",
+        "teach": "If your company depends on model capacity, ask infra partners which jurisdictions have election-contingent permits and what the slip looks like. Capacity risk is political as often as technical.",
+        "signal": "NextDC arguing that revised guidelines do not apply to existing applications is the real fight: grandfathering versus community retrospectivity. Design of planning process — not chip supply — decides who builds."
+      },
+      {
+        "pub": "CNBC",
+        "date": "24 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/24/aws-asia-gains-roi.html",
+        "hed": "AI adoption grows in Asia, but measuring the gains remains tricky",
+        "fact": "CNBC reports an AWS-linked survey of 9,750 business leaders across 10 Asia-Pacific markets found 58% of AI-using businesses said investments had already surpassed initial costs, yet only 12% were very confident they could accurately measure ROI. Some 64% still rely on general-purpose or ready-made AI tools; only 19% have a formal comprehensive AI strategy. Australia led adoption at 61%, then Singapore 59% and South Korea 58%.",
+        "why": "Felt productivity without measurement confidence is how AI budgets get cut in the next planning cycle. Design leaders who cannot instrument outcomes will lose the ROI argument by default.",
+        "hook": "58% say AI paid back. 12% trust the math.",
+        "teach": "Pick one AI-assisted workflow and define a before/after metric this Monday — time-to-first-draft, error rate, or support deflection — and log it for four weeks. Narrative ROI will not survive finance review.",
+        "signal": "The 19% with a formal strategy reaching advanced adoption at 35% versus 8% without is the real chart. Strategy here means measurement and ownership, not a slide about transformation."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "20 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/20/a-transcription-firm-used-by-police-prosecutors-and-tech-giants-exposed-customer-data-online/",
+        "hed": "A transcription firm used by police, prosecutors, and tech giants exposed customer data online",
+        "fact": "TechCrunch reports that Tigerfish left customer transcriptions, police interview and body-cam materials, raw media, and invoices on a publicly listable Amazon S3 bucket with an easy-to-guess URL and no password. Researcher Anurag Sen found it in October; after TechCrunch contacted the firm, president Adam Goldberg said public access was blocked and other buckets checked. Goldberg said Sen’s disclosure email hit spam.",
+        "why": "Sensitive speech-to-text vendors sit in every legal and research stack. A guessable bucket is a reminder that the weakest vendor sets your confidentiality floor.",
+        "hook": "Police interviews on a public S3 URL.",
+        "teach": "Inventory which vendors receive raw audio or video from your research or support ops. Require written confirmation of private buckets and a breach-notification path before the next contract renewal.",
+        "signal": "Sen’s point that many leaks are Friday test databases, not nation-state craft, should reframe vendor security reviews toward configuration hygiene and spam-resistant disclosure channels — not only SOC logos."
+      },
+      {
+        "pub": "CNBC",
+        "date": "23 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/23/amazon-drone-crash-michigan-faa-investigation.html",
+        "hed": "Amazon faces FAA probe after delivery drone strikes Michigan fiber cable, garage",
+        "fact": "CNBC reports the FAA is investigating an Amazon MK30 drone incident in Huntington Woods, Michigan, after a Friday delivery in which the drone struck a fiber cable and residential garage and became entangled in power lines on takeoff following a shampoo drop-off around 4:30 p.m. Amazon said there were no injuries; the company is targeting drone service in 500 U.S. cities and towns by year-end.",
+        "why": "Last-mile autonomy is accumulating a public incident record just as Amazon scales city count. Trust in drone delivery will be designed in status UX and escalation, not only flight software.",
+        "hook": "Shampoo delivered. Garage and fiber not.",
+        "teach": "If you work on delivery or field-robot products, design the neighbor-facing incident flow: who gets notified, what the app shows within minutes, and how property damage claims start without a phone tree.",
+        "signal": "A second fiber-cable hit after Waco makes “extremely rare” a brittle phrase. Scale to 500 cities multiplies low-probability events into a weekly design problem."
+      }
+    ]
+  }
+}
