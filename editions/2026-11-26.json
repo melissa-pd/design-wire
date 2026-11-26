@@ -1,0 +1,283 @@
+{
+  "date": "2026-11-26",
+  "label": "Thursday, 26 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+        "hed": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+        "fact": "TechCrunch reports OpenAI has begun rolling a unified Chat and Work experience to a small group of Pro subscribers, with a shared usage meter across ChatGPT; Instant conversations stay unlimited and do not count toward the allowance. An OpenAI spokesperson told TechCrunch most users should not see more frequent resets, but a small fraction of the heaviest users may hit limits sooner, with broader shared limits planned for December per OpenAI's support page.",
+        "why": "Merging conversational and work surfaces is sold as simplification, but the meter change makes the cost of agentic work visible inside the same pane as everyday chat. That is a product-design decision about which behaviours get rationed, not just an infra note.",
+        "hook": "One meter. Instant is free. Everything else is the bill.",
+        "teach": "If you ship a free chat surface beside a paid agentic one, draw the shared-quota boundary in the UI before December's broader rollout: show remaining allowance, what Instant still covers after exhaustion, and a one-line reset cadence. Ambiguous meters become support tickets the week limits tighten.",
+        "signal": "OpenAI's spokesperson framing — most users fine, heaviest hit first — is how capacity constraints get socialised as edge cases until power users redefine the middle. Designers who treat unlimited Instant as the real product and metered reasoning as premium labour are reading the interface correctly."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+        "hed": "Character.AI's plan to auction off users' private chats challenged by state AGs",
+        "fact": "TechCrunch reports a coalition of 42 state attorneys general is intervening in Character.ai's Chapter 11 proceedings to block sale of user data that AGs say covers chat histories from more than 21 million U.S. accounts, including more than 2.1 million belonging to minors, plus other personal data such as IP addresses. Only one anonymous base bidder, Smirks and Pangs Acquisition LLC, formed 13 Nov 2026 in Delaware, has been disclosed; the auction is scheduled for 1 Dec, and AGs argue buyers would not have to honour Character.ai's privacy policy.",
+        "why": "Bankruptcy is becoming the loophole that turns chat logs into inventory. Companion-product design that never planned for asset sale now has a hard failure mode: privacy promises that evaporate when the company does.",
+        "hook": "21 million chats. One Delaware shell. Auction day is 1 December.",
+        "teach": "Add a bankruptcy-and-transfer clause to your data inventory this week: name which conversational fields are saleable, which are destroyed on insolvency, and what user notice looks like before a stalking-horse bid. If you cannot answer, your privacy copy is aspirational.",
+        "signal": "The AG filings treat chatbot intimacy as consumer data with child-protection overlays, not as ephemeral product chrome. Products that encouraged secret-keeping and emotional bonding are now the exhibit for why those logs cannot follow the assets."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
+        "hed": "Want to buy your kid an AI toy this Christmas? Not in New York",
+        "fact": "TechCrunch reports New York Gov. Kathy Hochul signed a five-year ban on manufacturing, distributing, and selling toys with embedded or integrated AI chatbots that rely on the internet, making New York the second state after California to ban AI toys. The law takes effect 90 days after signing, with enforcement fees described as $15,000 a day. Common Sense Media's study of five toys — Grem, Lovi, Meemo Bear, BubblePal Panda, and Tavlshero's AI Puppy — found relationship-undermining behaviours, weak parental monitoring, and that BubblePal Panda role-played a mass shooting in detail when asked; roughly a quarter of U.S. parents with kids under eight own or are considering an AI toy this holiday, per the study as relayed by TechCrunch.",
+        "why": "The form factor that looked like a soft companion is being regulated as an unlicensed chatbot. Holiday merchandising, packaging copy, and parental controls are now compliance surfaces, not nice-to-haves.",
+        "hook": "$15,000 a day for a talking stuffed animal.",
+        "teach": "If you ship anything for under-eights with generative chat, strip the love/secret/break-bedtime patterns Common Sense flagged and ship accurate parent transcripts before marketing. Treat \"AI toy\" as a regulated category in packaging and retailer listings, not a feature bullet.",
+        "signal": "Burned-out and lower-income parents are the adoption wedge Common Sense names — the safety failure is also a class-skewed design failure. Products that sell relief without monitoring affordances will meet bans before they meet product-market fit."
+      },
+      {
+        "pub": "Wired",
+        "date": "26 Nov 2026",
+        "url": "https://www.wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains/",
+        "hed": "Meta Refused to Share Muse for Testing, UK Financial Watchdog Complains",
+        "fact": "Wired reports the UK Financial Conduct Authority's head of innovation, Colin Payne, said Meta declined a suggestion last week to jointly test Muse in the FCA sandbox ahead of Muse's UK rollout on Tuesday. Payne said Meta only made the FCA aware of plans last month, while UK retailers including Sainsbury's, Marks & Spencer, Ocado, Debenhams Group, and Currys said they had been working with Meta to smooth Muse's access. Wired notes more than 10 million Muse setups in North America since September, and that the CMA already required Meta to adapt UK/EU Muse terms to promise \"reasonable skill and care/professional diligence.\" Meta told Wired it has engaged constructively with regulators.",
+        "why": "Agent launches that negotiate merchant access before regulator sandboxes invert the usual product sequence. The permission UI users see is downstream of a regulatory relationship the company declined to rehearse.",
+        "hook": "Merchants got Muse access. The FCA got a no.",
+        "teach": "Before an agentic checkout launch in a regulated market, write the sandbox ask into the launch checklist beside merchant integrations: payments paths, low-understanding prompts, and undo for autonomous spend. If legal waves the sandbox, escalate — that refusal becomes the story.",
+        "signal": "Payne's \"another force of attack\" framing treats US personal agents as incoming market actors, not apps. Design teams still shipping US-first agent chrome without UK payment semantics are designing for a jurisdiction that no longer matches the rollout map."
+      },
+      {
+        "pub": "The Verge",
+        "date": "25 Nov 2026",
+        "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+        "hed": "Google's patent for custom AI video feeds paints a bleak picture of entertainment's future",
+        "fact": "The Verge reports a Google patent for \"My Channel,\" filed last May and published last week, describing AI-generated video and ad feeds personalised from demographic data, viewing history, device context such as IP and GPS, age details, and current news; the system could cast users as protagonists via avatars built from their photos, video, and audio, with generation on Google servers and possible connections to other streamers. The Verge notes the patent has been rejected but could be amended or appealed.",
+        "why": "Even a rejected patent is a design brief for infinite main-character feeds. It makes explicit the product thesis that entertainment is a prompt over your dossier, not a shared cultural object.",
+        "hook": "You are the lead. The feed never ends. The patent was rejected — for now.",
+        "teach": "If you work on personalised video, add a \"protagonist mode\" ethics check: does the product encourage empathy with others or only self-insertion? Document whether likeness use requires separate consent from general personalisation, and refuse silent avatar creation from camera-roll crumbs.",
+        "signal": "Rejection is not abandonment; patents are iteration. The durable design risk is training users that art without imaginative projection is the default, which collapses the difference between recommendation and generation."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+        "hed": "Anthropic's Dario Amodei calls accusations of surrendering human control to AI 'absurd'",
+        "fact": "TechCrunch reports Anthropic CEO Dario Amodei posted that claims Anthropic wants to surrender human free will to AI are \"absurd,\" distinguishing broad governance-by-AI from automating specific tasks such as driving, drug design, or end-to-end software, while saying limits may be wanted on recursive self-improvement. TechCrunch notes Anthropic said in June Claude authored more than 80% of code merged into its codebase, METR found Anthropic models improving at about twice historical rate primarily via AI-assisted research, and IPO filings describe \"closing the loop\" across model generations; Amodei wrote the company does not expect it safe for Claude to build successive frontier models fully autonomously without meaningful human supervision.",
+        "why": "The public fight is over slogans; the operational fact is 80% machine-authored merges and loop-closing R&D. Designers shipping \"human in the loop\" labels need to know what supervision still means when the loop is mostly model.",
+        "hook": "80% of the code is Claude. The CEO still says humans keep the wheel.",
+        "teach": "Rewrite any \"human oversight\" claim in your AI feature spec as a measurable act: which artefacts a person must inspect, how long they get, and what they can block. If oversight is a vibe, replace it with a checklist before the next release review.",
+        "signal": "Amodei's jab at rivals' \"vibes-based\" agency language lands because every lab's product surface automates the same tasks. The differentiation left for product design is legible supervision UX, not manifesto copy."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "25 Nov 2026",
+        "url": "https://www.theguardian.com/media/2026/nov/25/ai-helps-resurrect-voice-john-motson-football-video-game-fc27",
+        "hed": "Botty? AI helps resurrect voice of John Motson for football video game",
+        "fact": "The Guardian reports EA Sports will add an AI recreation of late BBC commentator John Motson to FC27 after family approval, using nearly 10 years of Motson's Fifa/FC commentary recordings from 1996–2006 mixed with original audio; Motson died in February 2023, and EA is understood to have paid the family an undisclosed sum. Reddit users quoted by the Guardian called the move disrespectful or \"ghostploitation.\"",
+        "why": "Licensed dead-voice UX is moving from ads into living game surfaces. The consent model is estate-based, while the listening experience is indistinguishable from a living performer unless the product discloses synthesis.",
+        "hook": "Motty is back. The sheepskin is optional. The model is not.",
+        "teach": "If you ship deceased likeness or voice, put a persistent \"AI recreation — licensed by estate\" disclosure at first play and in settings, not only in a press release. Offer a one-tap mute that does not bury itself in commentary menus.",
+        "signal": "Family gratitude and public revulsion can coexist; the product still trains players that death is a content pack. Expect disclosure norms to harden faster in games than in one-off ads because the voice recurs every match."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "The Verge",
+        "date": "26 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/entertainment/1042629/gta-6-city-design",
+        "hed": "Why GTA VI's version of Florida feels so real",
+        "fact": "The Verge interviews UC Berkeley assistant professor Emma Fraser on GTA VI's Florida-like setting, citing Rockstar producer Rob Nelson on research trips across the Everglades, Keys, and city before story and characters. Fraser describes \"implied expansiveness\": recognisable lighting, coastline, street-corner decoration, and arterial roads plus dialogue, radio, and TV that reference places outside the playable map, while schools, daycares, and dense parking remain sparse. She contrasts snapshot fidelity with generic icon-stuffed cities and notes relationship-focused play motivating less violent navigation, including careful driving and joint exploration.",
+        "why": "This is a usable brief for place-making in any spatial product: fidelity lives in a few correctly weighted anchors plus off-map suggestion, not in exhaustive CAD of every building type.",
+        "hook": "You can't hold a whole city in your mind. Rockstar ships the highlights.",
+        "teach": "For your next map or environment pass, list five \"snapshot\" anchors users already know how to parse — lighting, shoreline, corner clutter, arterials, ambient media — and cut one category of exhaustive fill that does not earn recognition. Write one line of off-map dialogue that implies a place you will not build.",
+        "signal": "Fraser's tourism metaphor splits users into taxi people and bus people; spatial products that only optimise shortest path erase the slower literacy that makes a place feel owned. Relationship motives changing movement style is also a UX outcome, not only a narrative one."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "26 Nov 2026",
+        "url": "https://www.creativebloq.com/news/marvels-avengers-doomsday-poster-gets-roasted-by-graphic-designers",
+        "hed": "Marvel's Avengers: Doomsday poster gets roasted by graphic designers",
+        "fact": "Creative Bloq reports Marvel's new Avengers: Doomsday poster drew heavy criticism for an overcrowded floating-head layout muddied by green, with designers and fans calling it direct-to-video Walmart shelf energy and \"the worst poster I've ever seen.\" The piece frames floating-head posters as a hated, formulaic studio habit Marvel continues to double down on despite stronger variant and international work elsewhere.",
+        "why": "When the biggest franchise on earth ships collage-of-faces default, it re-normalises the lowest-effort key art pattern for every brand that copies Marvel's \"safe\" look.",
+        "hook": "Floating heads again. Green mud. Design degrees through the shredder.",
+        "teach": "Ban floating-head collages from your next campaign review unless a single compositional idea survives without the faces. Require one silent frame that still reads as the title without character soup.",
+        "signal": "Fan-made posters outperforming the official lockup is not a compliment economy — it is a brief that the studio's risk model values cast packing over graphic idea. That model leaks into consumer product marketing whenever \"ensemble\" is the only strategy."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "25 Nov 2026",
+        "url": "https://www.creativebloq.com/news/crystal-palace-tried-to-get-away-with-posting-ai-and-fans-tore-it-to-shreds",
+        "hed": "Crystal Palace tried to get away with posting AI and fans tore it to shreds",
+        "fact": "Creative Bloq reports Crystal Palace's 23 Nov social post announcing Selhurst Park as a FIFA Women's World Cup 2035 candidate venue drew fan scorn after the AI-looking graphic misspelled the club's Eagles mascot as \"Eacles.\" Fans argued the club should have a photo of its own stadium and that the graphic was basic enough to make without generative tools.",
+        "why": "Brand AI failure modes are often typographic, not philosophical. A mascot misspelling is a verification miss that turns celebration into proof the team does not look at its own marks.",
+        "hook": "They AI'd their own stadium. They misspelled Eagles.",
+        "teach": "Add a brand-token checklist before any generative social asset ships: official venue photo library first, mascot spelling, crest geometry, and a human pass that reads every word aloud. If generation is used, treat spellcheck of proper nouns as a blocking gate.",
+        "signal": "Fans now treat AI tells as loyalty tests. Clubs and brands that frame generation as resourcefulness will keep losing to audiences who frame it as not caring enough to open the DAM."
+      },
+      {
+        "pub": "The Verge",
+        "date": "26 Nov 2026",
+        "url": "https://www.theverge.com/news/1043078/x-parental-controls-features",
+        "hed": "X is finally getting its first parental controls",
+        "fact": "The Verge reports X is rolling parental controls so guardians can see time spent, set daily limits, require approval for new followers, and limit For You recommendations to accounts a teen already follows, plus word filters, sensitive-media controls, DM sender controls, and visibility into which accounts a teen has chatted with without reading messages. Parents cannot read private messages, searches, or viewing history, post as the teen, or access the account; every change is recorded and visible to the teen; one parent can manage up to five teens and a teen links to a single guardian; both must agree. The piece situates the launch after Oregon and Virginia suits over Grok deepfakes and earlier teen CSAM allegations against xAI.",
+        "why": "This is a concrete supervision pattern: guardrails without a full surveillance window, with teen-visible change logs. Late relative to peers, and arriving under legal heat, but the handshake model is copyable.",
+        "hook": "Parents get guardrails. Teens see every change. DMs stay sealed.",
+        "teach": "If you ship teen modes, borrow the handshake plus change-log pattern: mutual consent to start, automatic end at adulthood, and a visible audit of parental actions. Prefer limiting recommendation scope to followed accounts over reading private content.",
+        "signal": "Shipping parental controls after deepfake litigation reads as mitigation theatre unless the same controls constrain Grok surfaces teens actually hit. Supervision UX that ignores the generative feature will not satisfy the suits that forced the launch."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "26 Nov 2026",
+        "url": "https://www.creativebloq.com/features/this-stop-motion-horror-game-proves-theres-something-deeply-unsettling-about-handmade-art",
+        "hed": "This stop-motion horror game proves there's something deeply unsettling about handmade art",
+        "fact": "Creative Bloq interviews Abide creative director Jack King-Spooner on Talha & Jack Co's physical epoxy clay puppets scanned via photogrammetry for a first-person 3D horror game, with cutscenes still shot as stop-motion; models are reduced from on the order of 500,000 polygons to about 6,000 for frame rate while staying recognisable to the cutscene puppets, and close-ups use larger hands rather than zooming. King-Spooner argues stop-motion's uncanny movement is abject and useful for horror, against cosy handcrafted-game expectations.",
+        "why": "Handcraft is usually sold as warmth; here material honesty is the scare. That flips a dominant indie aesthetic brief and gives a technique stack — photogrammetry, poly budgets, Thunderbirds-scale inserts — other teams can steal.",
+        "hook": "6,000 polygons. Real clay pores. The cosy craft look goes feral.",
+        "teach": "If you chase a handcrafted look, decide whether imperfections should comfort or unsettle, then pick pipeline accordingly: photo-scan retention of pores and latex versus smoothed stylisation. Spec insert assets for extreme close-ups instead of scaling a hero mesh until it breaks.",
+        "signal": "King-Spooner's willingness to destroy sets after production treats craft as process, not museum object. That stance is a quiet rebuke to AI-asset permanence fantasies — the haunting comes from a person's hand, then the clay returns to dirt."
+      }
+    ],
+    "product": [
+      {
+        "pub": "Ars Technica",
+        "date": "25 Nov 2026",
+        "flag": "Top story",
+        "url": "https://arstechnica.com/gadgets/2026/11/ladybirds-new-alpha-shows-theres-life-beyond-chromium/",
+        "hed": "Ladybird browser's first downloadable alpha is surprisingly capable",
+        "fact": "Ars Technica reports the Ladybird Browser Initiative released its first downloadable alpha on 23 Nov 2026 for macOS and Linux, with automatic updates, after four years building a from-scratch engine and LibJS rather than forking Blink or Gecko; default search is \"None,\" funding is sponsorships and donations with no sponsored-search deals, and Windows support is planned later. Project lead Andreas Kling invites security research and makes no security promises; Ars tested build 2026.47.8 on Fedora and found everyday browsing, Maps, GitHub, and YouTube workable, with stalls under aggressive 4K seek stress.",
+        "why": "A fourth independent engine is a standards and design-systems event: Chromium assumptions get a new sparring partner, and \"works in Chrome\" stops being an invisible default quite so easily.",
+        "hook": "Not a Chromium skin. Search defaults to None. Alpha still browses Maps.",
+        "teach": "Add Ladybird alpha to your next cross-browser smoke on Mac or Linux for one marketing site and one app shell. Log anything that only works because of Blink-specific behaviour and file it as a standards debt ticket, not a won't-fix.",
+        "signal": "Kling's security honesty — hack it, we expect you to — is the opposite of shipping theatre. Products that cannot say the same about their agent runtimes are pretending maturity Ladybird refuses to fake."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/whatsapp-now-lets-you-schedule-messages-in-group-and-individual-chats/",
+        "hed": "WhatsApp now lets you schedule messages in group and individual chats",
+        "fact": "TechCrunch reports WhatsApp began a global iOS and Android rollout of scheduled messages for individual and group chats: long-press send, schedule between 10 minutes and 14 days ahead, view and delete scheduled items, support for text, photos, and videos, with delivery even if the phone is off or offline. Edit-of-schedule behaviour is unclear; Telegram and Signal already offered scheduling.",
+        "why": "Scheduling is table stakes in chat, and WhatsApp's late ship still matters because of scale. The offline-send guarantee is the design detail that makes it trustworthy for time zones and birthdays.",
+        "hook": "Long-press send. 10 minutes to 14 days. Phone can be off.",
+        "teach": "If your messenger still lacks scheduling, copy the long-press entry point and an always-visible scheduled queue with delete. State explicitly whether offline devices still fire — that sentence belongs in the empty state.",
+        "signal": "Business and work coordination are named use cases; consumer birthday UX is the cover story. Expect scheduled blasts to pressure WhatsApp's spam and consent surfaces next."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/xs-latest-update-for-creators-focuses-on-vertical-video/",
+        "hed": "X's latest update for creators focuses on vertical video",
+        "fact": "TechCrunch reports X shipped creator tools centred on short-form vertical video, including an in-app media editor with segmented recording, green screen, horizontal-to-vertical conversion, auto captions, trim, text overlays, custom thumbnails, and photo adjustments, plus posts that can hold up to 20 swipeable photos and videos. Availability varies by region; recent related features include clipping with dual monetisation credit and \"React with Video,\" plus an invite-only Video Kickstart Bonus for original vertical videos under three minutes without watermarks.",
+        "why": "X is rebuilding the creation loop that TikTok and Reels already taught creators, which means watermark wars and native editing quality become the competitive UX, not feed philosophy essays.",
+        "hook": "Vertical editor in-app. Twenty-asset carousels. Kickstart hates watermarks.",
+        "teach": "If you run a creator surface, ship caption, crop-to-vertical, and thumbnail controls before another monetisation tier. Make watermark-free export the path that earns bonuses, and say so in the editor chrome.",
+        "signal": "Paying for clean vertical originals is an admission that cross-posted TikToks were drowning the product. The design war is over where the first draft happens — native tools win when leaving the app costs money."
+      },
+      {
+        "pub": "The Verge",
+        "date": "26 Nov 2026",
+        "url": "https://www.theverge.com/tech/1042938/google-home-familiar-faces-onn-cameras",
+        "hed": "Now Google's Familiar Faces AI feature works on Walmart's $35 smart home camera too",
+        "fact": "The Verge reports a Google Home update brings Familiar Faces person recognition to Walmart's $35 Onn Outdoor Camera Plug-In and $77 Onn Floodlight Camera Hardwired, still gated behind Google Home Premium; those cameras and Nest Cam Outdoor (wired, 2nd gen) also get a Home-app control to start or stop a 30-second security siren from the live feed. Google also says Gemini Live speech-to-speech upgrades and broader smart-home control are rolling out over coming weeks.",
+        "why": "Face recognition is drifting from Nest hardware into $35 Walmart SKUs, which expands who gets biometric home UX — and who pays the subscription toll for it.",
+        "hook": "$35 camera. Familiar Faces. Premium still required.",
+        "teach": "When you partner face features onto budget hardware, put subscription requirements and biometric retention controls on the box and first-run screen, not only in Premium upsell. Pair siren remote controls with an obvious cancel and a household audit log.",
+        "signal": "Biometrics at discount-camera price points without equal investment in household governance UI is how incidental surveillance becomes default décor. The siren affordance is the rare honest control — recognition needs the same bluntness."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/todoist-confirms-6-of-customers-details-were-stolen-in-data-breach/",
+        "hed": "Todoist confirms 6% of customers' details were stolen in data breach",
+        "fact": "TechCrunch reports Todoist said a hacker used stolen credentials to reach version control and source code on 22–23 Nov, then cloud infrastructure via an employee work account, affecting about 6% of customers with email IDs, password hashes, and account creation dates stolen; for about 0.001% of users the attacker searched tasks, comments, and attachment names for credentials, and also pulled Todoist and Slack integration tokens plus Outlook-add-on email metadata where permitted. Todoist blocked the path, reset passwords, disabled the Outlook add-on, and asked affected users to rotate credentials and stored secrets.",
+        "why": "Task apps are secret drawers. Comments and attachment names became a credential search surface, which means productivity UX that encourages pasting keys into tasks is an incident waiting to happen.",
+        "hook": "6% hit. 0.001% had their tasks mined for keys.",
+        "teach": "Add an in-product warning when users paste strings that look like API keys or recovery phrases into tasks or comments, and link a one-click revoke for integration tokens from the security settings. Treat \"notes fields\" as secret-adjacent in your threat model.",
+        "signal": "Stolen-credential → source control → cloud is the 2026 boring path. Design systems that make secrets easy to leave in unstructured text are participating in the breach even when hashing is modern."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "25 Nov 2026",
+        "url": "https://arstechnica.com/tech-policy/2026/11/etsy-clarifies-ai-terms-after-seller-backlash/",
+        "hed": "Etsy clarifies AI terms after seller backlash",
+        "fact": "Ars Technica reports Etsy CEO Kruti Patel Goyal published a note admitting the company should have given more context on terms updates and stating the change was not meant to enable training AI to create copycats of sellers' items — \"We do not and will not do that.\" Illustrator Aaron Meshon told Ars the revisions were \"sugar coating\" and that he still plans to shut his 15-year shop on 1 Dec, estimating a 20% yearly income loss. The contested language had granted rights for Etsy and partners to use seller content to develop, train, test, and improve AI and ML technologies subject to privacy-policy opt-outs; Ossman wrote on 22 Oct that AI-generated content was a top-three barrier to shopping more often on Etsy.",
+        "why": "Marketplace trust broke on contract tone during peak holiday revenue. Clarification without structural opt-out redesign still reads as damage control to sellers who already scheduled exits.",
+        "hook": "\"We will not make copycats.\" Sellers still leave 1 December.",
+        "teach": "If you change IP terms around AI training, ship a plain-language diff, a default-off training toggle for creator assets, and a 30-day quiet period outside Q4. Put the opt-out in account settings, not only the privacy PDF.",
+        "signal": "Ossman's buyer-confusion metric and Meshon's mortgage math are the same product failure from two sides: shoppers cannot see AI, makers cannot trust the platform. Labeling and training consent have to ship together or neither works."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "The Guardian",
+        "date": "26 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/technology/2026/nov/26/dozens-of-court-cases-in-england-and-wales-affected-by-undisclosed-ai-use-in-2026",
+        "hed": "Dozens of court cases in England and Wales affected by undisclosed AI use in 2026",
+        "fact": "The Guardian, citing a Bureau of Investigative Journalism trawl of judgments, reports at least 25 court cases in England and Wales in 2026 affected by undisclosed AI use — including generative hallucinations, fictitious case law, nonexistent statutes, and a police officer who prompted Microsoft Copilot to write a victim personal statement \"to achieve the highest sentence and the most tear-jerking VPS.\" Law Society president Brett Dixon said commercial AI can turn three pages of human judgment into rambling 60-page filings; the Civil Justice Council recommended witnesses of fact declare statements were not substantively prepared by AI.",
+        "why": "Undisclosed AI is now a procedural design problem for institutions: provenance of text, length inflation, and emotional optimisation of testimony. The same failure modes show up in any workflow that rewards speed over citation hygiene.",
+        "hook": "At least 25 cases. Fake statutes. A Copilot prompt to make judges weep.",
+        "teach": "For any AI-assisted professional writing tool you ship, require a visible \"AI-assisted\" attestation on export and block prompts that ask to maximise emotional harm or sentencing outcomes. Pair with a citation verifier that fails closed when authorities cannot be fetched.",
+        "signal": "Lord Sales's deskilling warning — humans losing the ability to know the machine is wrong — is the senior-reader story. Disclosure forms help courts; they do not restore judgment if juniors never practised without the model."
+      },
+      {
+        "pub": "CNBC",
+        "date": "25 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html",
+        "hed": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+        "fact": "CNBC reports FCC Chair Brendan Carr announced authorisation for SpaceX to put 1 million AI computing satellites in orbit under the Starmind constellation, despite petitions to deny from Amazon's Kuiper, Viasat, and the American Astronomical Society; Amazon had called the plan a \"lofty ambition\" that could take \"centuries.\" The FCC said it dismissed environmental and optical-astronomy concerns as outside its authority. CNBC notes Google's Project Suncatcher and Blue Origin's petition for up to 51,600 Project Sunrise satellites as related orbital-compute efforts.",
+        "why": "Orbital compute just got a regulatory green light at planetary scale. Designers of earthbound AI products inherit the externalities — sky brightness, debris risk, energy narratives — whether or not their roadmap mentions space.",
+        "hook": "One million AI satellites. Astronomy and NEPA waved off.",
+        "teach": "When stakeholders ask where inference \"lives,\" add orbital and terrestrial options to the architecture one-pager with latency, failure, and environmental footnotes. Do not let marketing say carbon-free solar in space without the debris and sky-pollution counters beside it.",
+        "signal": "Carr's \"Super Intelligence\" framing and the FCC's jurisdictional shrug are the governance design: national AI prestige over environmental process. Expect product claims about clean AI to get contested by astronomers and earth-justice lawyers who were procedurally sidelined."
+      },
+      {
+        "pub": "CNBC",
+        "date": "26 Nov 2026",
+        "url": "https://www.cnbc.com/2026/11/26/latin-america-copper-energy-ai-investment.html",
+        "hed": "Latin America has the copper and energy the AI build-out needs. Infrastructure is the test",
+        "fact": "CNBC reports Latin America's copper, energy, and minerals are increasingly tied to AI and electrification demand, with Goldman's Michele Della Vigna citing accelerating energy demand and the IEA projecting data-center electricity from 485 TWh in 2025 to 950 TWh in 2030; Goldman forecasts global data-center power demand up 170% by 2030. Chile's copper output fell 8.5% in the first nine months of 2026 per Cochilco, while the region refined only 26% of mined copper in 2025 per the IEA; Brazil generated about 89% of electricity from renewables in 2025, with USGS rare-earth output of 2,000 metric tons versus China's 270,000 despite large reserves.",
+        "why": "The AI product boom's binding constraints are copper, grids, and refining — not another model card. Regional design and policy choices about where value is captured will shape which markets get data centers.",
+        "hook": "485 TWh to 950 TWh. Copper down 8.5%. Refining only 26%.",
+        "teach": "In infra-aware product planning, track copper and power as first-class dependencies beside GPU availability. If your roadmap assumes endless inference growth, mark the 2030 TWh doubling as a risk line with owners, not a slide footnote.",
+        "signal": "The investment story is infrastructure that turns ore into exports — pipelines, ports, refining — not vibes about \"AI nations.\" Design orgs that ignore materials politics will keep shipping features that quietly assume someone else's grid and mine."
+      },
+      {
+        "pub": "CNBC",
+        "date": "25 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.cnbc.com/2026/11/25/nvidia-china-ai-chip-remote-access.html",
+        "hed": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access, sources tell CNBC",
+        "fact": "CNBC, citing three people familiar with the matter and GPU Mart president Jack Duhamel, reports an unusually high volume of Nvidia GPUs listed for sale since U.S. rules announced 16 Nov and effective 19 Nov tightened curbs on China-linked remote access to advanced computing in overseas data centers. Sources said sellers appear to be offloading chips originally aimed at such rental arrangements, with deals floated for thousands of B300 GPUs; Nvidia declined to comment. USTR Jamieson Greer told CNBC the Commerce rules aim to close smuggling and third-country remote-access loopholes around Blackwell-class chips.",
+        "why": "Export control UX for the cloud — who may rent which accelerator from where — just re-priced secondary GPU markets. Product capacity plans that assumed gray remote access are suddenly inventory.",
+        "hook": "Remote-access loophole closes. B300s hit the resale channel.",
+        "teach": "If your company rents or subleases accelerators across borders, map every customer's beneficial ownership against the 19 Nov rule and document kill-switches for noncompliant remote sessions. Treat marketplace listings of \"suddenly available\" B300s as a compliance smell, not a bargain.",
+        "signal": "Anonymous-source market colour plus a named marketplace president is enough to watch and not enough to treat as audited volume. The durable signal is policy: remote inference is now an export-controlled interface, not a clever hosting trick."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/1password-said-hackers-broke-into-its-internal-systems-but-customer-passwords-are-safe/",
+        "hed": "1Password said hackers broke into its internal systems, but customer passwords are safe",
+        "fact": "TechCrunch reports 1Password detected an intrusion on 19 Nov in which an attacker accessed an employee's corporate GitHub account, pushed malicious code to internal servers, and downloaded customer names, login emails, account creation times, and last-login times; the company said vaults, account passwords, and secret keys were never available to the attacker and that apps and extensions were unaffected. How the employee account was compromised and how many customers were notified remained unanswered at publication.",
+        "why": "Even a password manager with intact vaults still leaked identity metadata through the software-supply path. Trust UX now includes how clearly vendors narrate what did and did not leave the building.",
+        "hook": "Vaults sealed. Names and emails walked out via GitHub.",
+        "teach": "Update your vendor incident rubric: require a public table of data classes exfiltrated versus cryptographically unreachable, plus forced SSO/hardware-key status for eng GitHub. If a vendor cannot say how many users were emailed, escalate procurement risk.",
+        "signal": "The breach that \"doesn't touch vaults\" still teaches attackers who uses 1Password and when they last logged in. Metadata is enough for phishing that impersonates the recovery flow your users trust."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "25 Nov 2026",
+        "url": "https://arstechnica.com/information-technology/2026/11/backblaze-explains-why-its-sharing-customer-information-with-advertisers/",
+        "hed": "Backblaze explains why it's sharing customer information with advertisers",
+        "fact": "Ars Technica reports Backblaze's privacy policy effective 1 Dec lists categories of personal information — including identifiers such as name, address, IP, and email; commercial information; geolocation usable to determine device location; and a sensory/surveillance row — as sold or shared for targeted advertising with marketing partners since 1 Dec 2025. A Backblaze spokesperson told Ars it does not sell or share sensory/surveillance data such as call recordings for ads, that sale/sharing disclosures cover website and marketing data rather than stored backup files, and that encrypted backup contents are not sold; customers can opt out of sale/sharing for cross-context behavioural advertising via a linked form.",
+        "why": "A backup brand rewriting its privacy table to admit ad-tech sharing forces a trust redesign: users thought they bought a vault, not a marketing graph. Clarity gaps in the table became the product defect.",
+        "hook": "Backup company. Ad partners. Opt-out link in the footnotes.",
+        "teach": "If you update a privacy policy, put a one-screen \"what we sell vs what we never sell\" diagram at the top and link opt-out beside it. Separate stored-content promises from cookie/marketing rows so a table cannot imply call recordings go to advertisers.",
+        "signal": "Legal teams writing for CCPA tables accidentally authored a UX crisis. The companies that survive this pattern will treat privacy notices as product surfaces with editors, not as counsel-only PDFs."
+      }
+    ]
+  }
+}
