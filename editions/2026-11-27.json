@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-27",
+  "label": "Friday, 27 November 2026",
+  "beats": {
+    "ai": [
+      {
+        "pub": "The Guardian",
+        "date": "27 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/business/2026/nov/27/ai-agent-cardless-transaction-pizza-papa-john-uk-fca-truelayer",
+        "hed": "Pizza history: AI agent’s cardless purchase is a first for UK",
+        "fact": "The Guardian reports that an order of nine Papa John’s mini margherita pizzas became the first UK retail purchase paid by an AI agent using cardless bank-to-bank rails, run inside the FCA’s regulated sandbox with Lloyds Bank and TrueLayer. TrueLayer CEO Francesco Simoneschi told BBC Radio 4 the agent held a Lloyds mandate with per-transaction and monthly spend caps and shared no account numbers or passwords; he also claimed it was the first time an AI agent had paid a UK retailer for a real customer. Earlier this week the FCA warned financial firms that AI agents must still obey existing rules. Muse, which launched in the UK on Tuesday, still pays with a customer’s bank card.",
+        "why": "Agent commerce just crossed from demo theatre into a regulated payment path with explicit spend mandates. The design problem is no longer whether an agent can place an order; it is how a user grants, inspects and revokes a money-moving permission without sharing credentials.",
+        "hook": "Nine pizzas. Zero card numbers. One spend mandate.",
+        "teach": "If your product lets an agent buy or book anything, ship a mandate screen before the chat: max per transaction, max per month, merchant scope, and a one-tap revoke. Put those caps in the confirmation copy the user sees after every agent purchase, not only in settings.",
+        "signal": "TrueLayer’s pitch that next Black Friday will be agents buying gifts is less important than the split it exposes: cardless account-to-account agents versus card-proxy agents like Muse. The first makes the bank the permission surface; the second keeps the existing checkout UX and inherits card fraud patterns. Design systems will have to support both, and the mandate UI is the new shared component."
+      },
+      {
+        "pub": "The Verge",
+        "date": "27 Nov 2026",
+        "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+        "hed": "Android’s DIY widgets are a bit of vibe-coding fun",
+        "fact": "The Verge’s Allison Johnson tested Google’s Create My Widget beta on a Pixel 11 Pro, part of Android’s Gemini Intelligence suite announced at I/O and only recently rolling to Pixels. She reports many widgets behave as prompt shortcuts that open Gemini on the home screen rather than as self-contained mini-apps, with templates covering countdowns, sports scores, search-backed suggestions and calendar actions. A requested real-time bus-arrivals widget became a “Bus Arrivals” tile that searched schedules via Gemini instead of listing live arrivals; a Jurassic Park quote widget took about 20 seconds to make.",
+        "why": "This is the clearest shipped example yet of generative UI collapsing into prompt launchers when the system cannot bind to live data. Home-screen AI is being sold as personal software and delivering templated Gemini deep links.",
+        "hook": "Vibe-coded widgets that still need Gemini to think.",
+        "teach": "When you ship an AI-built surface, label the failure mode in the empty state: “This tile opens a chat” versus “This tile shows live data.” If your widget cannot bind to an API, do not pretend it is glanceable; make the tap affordance look like a shortcut, not a dashboard.",
+        "signal": "The bus example is the product-management tell. Users ask for glanceable systems of record; the model returns prose about schedules. That gap will keep producing delightful demos and abandoned home screens until OS vendors give generative UI first-class data bindings, not just search and chat."
+      },
+      {
+        "pub": "Wired",
+        "date": "27 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+        "hed": "A New Breed of Chip Runs AI Models Using Waves of Light",
+        "fact": "Wired interviews Q.ANT founder Michael Förtsch on photonic processors meant to sit beside GPUs for nonlinear math rather than replace them. The company says its chips are in an IONOS cloud pilot with more than 30 engineering teams building models for photonic hardware. Förtsch says simulations show roughly four to five times energy reduction versus GPU-only paths, but acknowledges real hardware has not yet demonstrated that gain. He also notes 90nm-node fabrication and a supply-chain readiness gap if orders scaled to the hundreds of thousands.",
+        "why": "Energy cost is becoming a first-order constraint on which AI experiences can ship at consumer scale. Photonic co-processors are still early, but the framing matters for designers: not every generative feature will remain cheap enough to leave always-on.",
+        "hook": "Light as a coprocessor — if the simulations hold.",
+        "teach": "When scoping an always-listening or always-generating feature, add an energy/cost tier to the brief: full quality, deferred batch, and offline. Treat “this only works if inference stays cheap” as a product risk, not an infra footnote.",
+        "signal": "Förtsch’s admission that simulated gains are not yet shown in hardware is the line most vendor briefings bury. Until those numbers show up in a public cloud SKU, photonic AI is a procurement story, not a UX unlock — but the pressure it responds to is real, and it will show up first as throttles and tiered generation quality in consumer apps."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "27 Nov 2026",
+        "url": "https://www.theguardian.com/us-news/2026/nov/27/ai-retailer-consumer-guardrails",
+        "hed": "‘It’s not helping’: calls for guardrails and regulations as AI use rises at US retailers",
+        "fact": "The Guardian reports US retail workers and labour leaders pressing for AI guardrails as holiday shopping begins. A southern Oregon Walmart cashier described 10–15 phone safety alerts per shift that must be cleared with a photo before she can help customers, saying alerts often flag shadows or stickers. A National Retail Federation survey of 56 retail AI leaders (Dec 2025) found 75% using AI for coding, 73% for office productivity, 66% for cybersecurity/fraud, 59% for supply chain/warehouse, and 45% for marketing. Walmart cited an internal June 2026 survey claiming 84% of associates felt confident with digital tools; Kroger plans to cut 3,000 corporate jobs over three years citing AI. Worker names requesting anonymity are noted as such.",
+        "why": "In-store AI is landing on associate phones as interrupt-driven chores, not decision support. That is a frontline UX failure with labour-relations stakes, and designers who only see the customer-facing app are missing half the system.",
+        "hook": "Fifteen AI alerts. One crying customer. No override.",
+        "teach": "If you design an associate or ops tool, instrument false-positive rate and time-to-clear as primary UX metrics. Add a one-tap “not actionable / maintenance” path that does not require a photo upload, and show managers the interrupt count per shift next to task completion.",
+        "signal": "The NRF adoption stack is upside-down for store experience: coding and office tools lead; floor tools trail. That means corporate AI investment is optimizing HQ productivity while the customer journey still pays the interrupt tax. Bargaining language about “human before discipline” is becoming the real design constraint for workforce AI."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "26 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
+        "hed": "Grand Theft Auto VI proves why efficiency isn’t a virtue",
+        "fact": "TechCrunch reports GTA VI launched as Metacritic’s highest-rated game and made $3.79 billion on day one, while Anthropic’s IPO raised $81.3 billion in the same cultural week. Former Take-Two CEO Ben Feder says the game was made without generative AI and may be “the last game of its kind to be made this way,” with about 5,000 people working more than a decade and ~30,000 uniquely crafted NPCs. The piece contrasts that with AI-industry efficiency narratives and notes Rockstar delayed the game twice to keep iterating.",
+        "why": "The monoculture hit that designers envy was produced by expensive deletion and delay, not prompt throughput. That is an uncomfortable brief for product orgs that have made “ship faster with AI” the only virtue on the scorecard.",
+        "hook": "5,000 people, zero genAI, $3.79 billion day one.",
+        "teach": "Pick one surface this quarter where “efficient generation” is the wrong KPI. Budget an inefficiency sprint: time to delete, time to rework, and a hard stop against shipping the first acceptable AI draft.",
+        "signal": "Feder’s “last of its kind” line will be quoted into oblivion, but the design lesson is narrower: when audiences can tell intentional world-building from procedural filler, inefficiency becomes the differentiator. Consumer AI products that feel samey are not facing a model gap; they are facing a deletion gap."
+      },
+      {
+        "pub": "The Verge",
+        "date": "25 Nov 2026",
+        "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
+        "hed": "Nothing offers a full look at its AI earbuds and charging case",
+        "fact": "The Verge reports Nothing’s Ear Note earbuds, due 8 December, can record calls through the buds while the microphone-equipped charging case records, transcribes and summarises conversations via Talk and Record buttons. CEO Carl Pei called the case recording a “first step toward a hardware context layer for AI.” Bloomberg previously reported the companion app will manage recordings, transcriptions and AI summaries and support multiple AI agents plus Nothing’s own voice controls. The piece places Ear Note alongside Amazon Bee, Plaud Note Pro and Apple Watch Series 12 conversation recaps.",
+        "why": "Ambient note-taking is consolidating into wearable form factors where consent UX is weakest. A case with a Record button makes capture socially visible, but transcripts and agent routing still happen off-device in an opaque app.",
+        "hook": "The charging case is now a meeting recorder.",
+        "teach": "If you ship conversation capture, put a persistent recording indicator on both the hardware and the paired phone lock screen, and require an on-device “who was present?” confirmation before any cloud summary can leave the device.",
+        "signal": "Pei’s “hardware context layer” phrasing is the strategy: earbuds become the always-on memory bus for agents. The competitive fight will not be mic quality; it will be whose consent, retention and agent-routing model other people in the room will tolerate."
+      }
+    ],
+    "ux": [
+      {
+        "pub": "The Guardian",
+        "date": "25 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theguardian.com/games/2026/nov/25/the-secret-to-grand-theft-auto-vi-routine-rockstar-games",
+        "hed": "The unexpected joy hiding in Grand Theft Auto VI’s chaos? A little routine",
+        "fact": "Guardian games critic Keith Stuart argues GTA VI makes everyday routines — workouts, feeding pet snake Dolores, DIY, groceries — as compelling as its crime set pieces, with tactile feedback across mundane and violent interactions. He contrasts the series’ reputation for chaos with earlier chore systems such as Roman hangouts in GTA IV and Franklin’s towing in GTA V, and says VI’s visual acuity and relationship with Lucia make housekeeping pleasurable. Separately in the same newsletter, Rockstar’s claimed $3.79 billion day-one take and ~$2 billion development cost are cited.",
+        "why": "This is a rare mainstream articulation of habit loops as emotional design rather than engagement mechanics. The lesson travels far beyond games: routine becomes desirable when feedback is sensory and the stakes are relational.",
+        "hook": "The fantasy is drywall, not the getaway.",
+        "teach": "Audit one retention loop in your product. Replace a streak or points reward with a relational or sensory payoff — progress that another person or place in the system can notice. If the only reason to return is a counter, the loop is incomplete.",
+        "signal": "Stuart’s claim that games are “almost always about tidying up as efficiently as possible” reframes productivity UX. The products winning attention may not be adding more AI; they may be making ordinary maintenance feel authored. That is an art-direction problem disguised as a metrics problem."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "27 Nov 2026",
+        "url": "https://www.creativebloq.com/news/denver-design-districts-rebrand-is-the-ultimate-love-letter-to-creativity",
+        "hed": "Denver Design District’s rebrand is the ultimate love letter to creativity",
+        "fact": "Creative Bloq reports Denver Design District’s rebrand by Wunder Werkz with D4 Urban, shifting the trade hub toward a broader cultural destination. The identity centres on a compressed triple-D brandmark, a bespoke midweight sans called DDD Standard inspired by Herbert Bayer’s mid-century furniture forms, an icon system of silhouetted design products, and a palette of brick, blush, slate and deep yellow against the district’s tan and grey buildings. Partner Jon Hartman says trade remains important but is “no longer the whole story.”",
+        "why": "Place branding that has to work from a website headline to a warehouse façade is a useful stress test for systems thinking. The compressed-D motif is a rare mark that encodes change rather than just initials.",
+        "hook": "Three Ds, each a third smaller — the district shrinking its exclusivity.",
+        "teach": "When a brand expands its audience, redesign the mark to carry the strategic shift, not only the wordmark. Test the identity at two extremes this week: a 16px favicon and a building-scale mock, and kill any element that only works in the middle.",
+        "signal": "Hartman’s “trade remains… but is no longer the whole story” is the brief most B2B design brands are failing. Credibility without openness reads as clubhouse; openness without craft reads as lifestyle mall. The Bayer-derived type is doing the hard job: signalling industry lineage while inviting non-trade visitors."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "27 Nov 2026",
+        "url": "https://www.creativebloq.com/news/people-are-making-their-own-art-from-gta-vi-and-its-really-quite-beautiful",
+        "hed": "People are making their own art from GTA VI, and it's really quite beautiful",
+        "fact": "Creative Bloq surveys player-made art from GTA VI’s Photo Studio, which offers aspect ratio, aperture, depth of field, lighting, filters and post-processing from the pause menu. Examples include Photo.in.game’s edited sunset portraits, Cone Studio shots taken with a real Sony Alpha NEX-5N pointed at the screen, Fons de Haan’s in-game phone hyperlapses, Kindred Cameras’ Polaroid prints of virtual landscapes, and oil paintings of in-game scenes by artist Cayde.",
+        "why": "A first-party photo mode with real camera controls turns a game into a public creative tool. That is product-led community design: give people authorship affordances and they build the culture layer for you.",
+        "hook": "The pause menu shipped a camera department.",
+        "teach": "If your product produces visual output, ship a creator mode with adjustable framing, light and export presets — not only a share button. Measure how many users publish from that mode before you fund a separate community program.",
+        "signal": "The NEX-5N and Polaroid examples matter more than the in-engine shots: players are re-materialising a virtual world to claim authorship outside Rockstar’s platform. When digital products become places, the strongest brand extensions happen offline, and platforms that block high-quality capture will lose that free atelier."
+      },
+      {
+        "pub": "The Verge",
+        "date": "27 Nov 2026",
+        "url": "https://www.theverge.com/entertainment/1043362/grand-theft-auto-6-ending",
+        "hed": "Grand Theft Auto VI is a different kind of GTA — so it needed a different kind of ending",
+        "fact": "The Verge reports Rockstar North co-studio head and GTA VI producer Rob Nelson saying a conventional post-credits open world “didn’t make sense” for Jason and Lucia’s exit-from-crime story. After the finale, free roam requires rolling back to before a pivotal decision; players keep an elaborate safehouse but not their son Tomás — “the one thing that they wanted at the start.” Nelson says outcomes vary with money saved, criminal style and late decisions, and that the structure lets players sample alternate endings.",
+        "why": "Narrative coherence beat the open-world genre default. That is a high-stakes UX call: the sandbox remains, but the emotional ledger does not reset for free.",
+        "hook": "Postgame keeps the helipad. Not the kid.",
+        "teach": "When a flow has a meaningful ending, do not auto-restore the pre-climax state without making the cost visible. If you offer a “continue playing” mode after a terminal choice, label what the user keeps and what the story withholds.",
+        "signal": "Rockstar is teaching the industry that open-world completion screens are a design convention, not a law. Products with long-running user stories — finance, health, learning — usually wipe consequence when someone hits “done.” GTA VI’s rollback-with-absence model is a template for post-goal states that still have tension."
+      },
+      {
+        "pub": "Creative Bloq",
+        "date": "26 Nov 2026",
+        "url": "https://www.creativebloq.com/features/stranger-than-heaven-could-be-rgg-studios-answer-to-prestige-tvs-multilingual-period-epics",
+        "hed": "Stranger Than Heaven could be RGG Studio's answer to prestige TV's multilingual period epics",
+        "fact": "Creative Bloq’s Alan Wen reports hands-on with RGG Studio’s Stranger Than Heaven (15 Jan 2027), which spans five decades and cities from 1915 Kokura to 1965 Tokyo with a single multilingual audio track rather than separate dubs. Director Mikinobu Abe says subtle shifts in body language, mannerisms and Japanese pronunciation track the protagonist’s assimilation; art director Daishi Kanaya says fashion is not player-customisable so each era’s look conveys status and relationships. Maps are denser and city-specific — enterable Kokura buildings, vertical Kure, multi-tenant Minami — with vintage-lens visual research guiding a non-purely-photoreal look.",
+        "why": "Character progression expressed through pronunciation, posture and locked wardrobe is a design system for identity over time. Most products still treat localisation and customisation as orthogonal toggles.",
+        "hook": "One soundtrack. Five decades. Fashion you cannot reskin.",
+        "teach": "If your product spans long user lifetimes, specify how voice, visuals and permissions should age. Write a three-state style guide — newcomer, fluent, established — and stop offering cosmetic options that break the narrative of progress.",
+        "signal": "Killing avatar fashion customisation is heretical in games and instructive elsewhere. RGG is betting authorship of the character’s look communicates story better than player self-expression. In productivity and social products, unconstrained theming often dissolves the very hierarchy and status cues users need to orient."
+      },
+      {
+        "pub": "The Verge",
+        "date": "19 Nov 2026",
+        "url": "https://www.theverge.com/tech/1037558/microsoft-to-do-shutdown-planner",
+        "hed": "Microsoft is killing its great tasks app in favor of its worse tasks app",
+        "fact": "The Verge reports Microsoft will retire To Do apps on 30 June 2027, per a blog post on unified tasks for Copilot and Microsoft 365. Business users must move to Planner without automatic task migration; personal Microsoft account users are told to “choose another app.” Planner lacks a dedicated desktop app and some To Do sync/share features, and is unavailable on personal or family Microsoft 365. Microsoft did not respond to Verge’s request for comment.",
+        "why": "A beloved personal productivity surface is being collapsed into an enterprise Copilot container, with export and migration treated as the user’s problem. That is a trust failure dressed as platform unification.",
+        "hook": "Wunderlist’s heirs get a blog post and a door.",
+        "teach": "If you deprecate a consumer tool into an enterprise suite, ship a one-click export that preserves list structure, due dates and sharing links before you announce the kill date. Put the migration path in the first paragraph, not a buried FAQ.",
+        "signal": "Microsoft is openly exiting personal task management while asking workers to trust Copilot with the same domain. The strategic read: consumer goodwill is no longer a funnel for workplace AI. Designers at platform companies should assume personal-tier apps are hostages to Work IQ narratives, and document exit ramps while the data is still theirs."
+      }
+    ],
+    "product": [
+      {
+        "pub": "The Verge",
+        "date": "26 Nov 2026",
+        "flag": "Top story",
+        "url": "https://www.theverge.com/tech/1043228/android-play-store-google-developer-address-eu",
+        "hed": "Android app developers will soon have to share their address publicly",
+        "fact": "The Verge reports Google will require many Play developers to declare by 1 February 2027 whether they are “traders” under UK/EU law, with trader contact details — including phone number and address — published worldwide from 1 March 2027 to meet Digital Services Act rules. Hobbyist and non-commercial developers, or those not publishing in the UK/Europe, are exempt. Google rejects PO boxes for payment-profile addresses; Apple, under the same rules, will show addresses only in relevant European countries and allows PO boxes with proof linking them to a regular address. One indie told The Elec they were considering renting an office solely to comply.",
+        "why": "A compliance surface is becoming a global doxxing risk for solo makers. Store design choices — PO box policy, geographic scoping — now decide whether regulation protects consumers or endangers independents.",
+        "hook": "EU trader rules, worldwide address book.",
+        "teach": "If you run a marketplace, scope regulated identity displays to the jurisdictions that require them, and accept PO boxes or registered-agent addresses for individuals. Publish the exact trader definition and a safe compliance path before the declaration deadline, not after creators panic.",
+        "signal": "Google globalising a regional disclosure while Apple localises it is a product-philosophy split. Platforms that treat DSA fields as global schema will quietly raise the minimum viable company size for shipping software. Expect a wave of registered-agent startups — and a quieter exodus of hobby apps from EU storefronts."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "26 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/26/a-month-with-the-iphone-duo-has-changed-how-i-use-my-phone/",
+        "hed": "A month with the iPhone Duo has changed how I use my phone",
+        "fact": "TechCrunch’s Sarah Perez, after nearly a month on iPhone Duo, reports side-by-side multitasking became routine via drag-to-snap, closed-phone use feels like a mini for short tasks, and unfolded use dominates video, shopping and active app work. Apple said in mid-November that over 200,000 apps were Duo-ready; Perez finds most daily drivers adapted, with key Google apps like Gmail and Drive still showing black bars. She redesigned the closed Home Screen around widgets plus a dock, and notes novelty Duo apps (notebook, Walkman, typewriter) alongside adaptive layouts such as Sofa’s two-column unfold.",
+        "why": "A month in, the product story is behavioural, not camera specs. Foldables change when people open apps, not only how apps render.",
+        "hook": "Closed for texts. Unfolded for intent.",
+        "teach": "If you support a foldable, design two information densities and a deliberate open/closed default for each core task. On the closed face, prioritise widgets and glance states; reserve multi-column layouts for the unfolded posture and test the drag-to-snap pairings your users actually need.",
+        "signal": "Perez’s claim that the Duo makes her pause before opening the phone is the retention metric OEMs will not advertise: form factor as friction. Products that reduce mindless open rates while increasing intentional session quality will look worse on vanity engagement and better on outcomes."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "24 Nov 2026",
+        "url": "https://arstechnica.com/gadgets/2026/11/microsofts-historic-cloud-outage-exposed-an-engineering-fog-of-war/",
+        "hed": "Microsoft’s historic cloud outage exposed an engineering “fog of war”",
+        "fact": "Ars Technica, citing internal memos reviewed by Reuters, reports Microsoft declared a “Code Red” after the 12 November outage that hit Exchange Online, Teams and Outlook. Microsoft 365 Core President Jason Henderson called it the most customer-impactful incident in Exchange Online history; Amanda Silver described responders exchanging more than 11,000 messages across 11 Teams chats as a “fog of war.” The 20 November post-incident report blamed an undetected Windows scalability defect from July plus a Teams failover onto gateways already short ~14% capacity for maintenance. Microsoft targets one-hour worldwide resolution and one-hour urgent security deployment, and plans AI agents to help diagnose health data; it says the outage was not a cyberattack or AI-tooling failure.",
+        "why": "Status UX failed before the servers did: diagnosis lived in eleven chat threads. Reliability is becoming a collaboration-design problem as much as an infrastructure one.",
+        "hook": "11,000 messages. 11 chats. No single pane.",
+        "teach": "For any on-call or incident flow you design, require one canonical incident channel with structured severity, impact and next-action fields. Ban parallel diagnostic chats unless they write back to that source of truth every 15 minutes.",
+        "signal": "Microsoft’s fix includes AI agents to parse system health — automation layered on top of a human coordination failure. The deeper product lesson for SaaS designers: when your own collaboration suite becomes the outage war room, its UX failure modes are now systemic risk. Charles Lamanna’s line about “ten years’ worth of acceptable failures” is how technical debt sounds in an executive memo."
+      },
+      {
+        "pub": "Ars Technica",
+        "date": "24 Nov 2026",
+        "url": "https://arstechnica.com/gadgets/2026/11/one-terminal-command-gave-my-forgotten-android-device-a-desk-job/",
+        "hed": "One terminal command gave my forgotten Android device a desk job",
+        "fact": "Ars Technica reviews PhoneBox 0.9.29, an MIT-licensed open-source dashboard that turns Android 5.0+ devices into PC companion screens via a one-command Linux install over USB/ADB. The reviewer connected an AllDoCube iPlay 50 mini Pro and used widgets spanning Steam library launch, Home Assistant controls, RSS, clocks and system stats from a catalog of 131 add-ons. Wireless QR pairing failed in testing; Windows builds are unsigned; settings live in a PC web UI. A 20 November advisory covered a high-severity issue in 0.9.23 and earlier that could let another Android app execute host commands or read credentials — fixed by 0.9.29.",
+        "why": "A junk-drawer tablet becoming a desk peripheral is the sustainable hardware story consumers actually want. It also shows how quickly sideloaded companion tools accumulate serious privilege.",
+        "hook": "One curl script. One forgotten tablet. 131 widgets.",
+        "teach": "If you build device-pairing flows, ship USB and wireless paths that degrade gracefully, put critical settings on the companion device as well as the host, and surface the current app version plus security-advisory status in the first-run screen.",
+        "signal": "PhoneBox’s install-to-useful under a minute is the benchmark cloud-device onboarding still misses. The security advisory is the tax on that speed: deep system access without a store review. Expect more “old Android as HUD” tools, and expect enterprise IT to block them until signing and permission models mature."
+      },
+      {
+        "pub": "The Verge",
+        "date": "27 Nov 2026",
+        "url": "https://www.theverge.com/games/1043028/keychron-g6-he-hall-effect-magoptic-gaming-mouse-impressions",
+        "hed": "This gaming mouse should be a Logitech-killer, but it has one big flaw",
+        "fact": "The Verge’s hands-on with Keychron’s $90 G6 HE finds MagOptic Hall-effect/optical switches with browser-configurable actuation, but no haptics to match click feel to actuation depth — so shallow settings fire before a click is felt, and deep settings click before they register. Weight is 49g wireless or 40g wired without battery; cofounder Fab Chan told Verge users prefer traditional clicks and haptics add weight, with a haptic model planned. Hot-swappable batteries and a vacuum-tube RGB charging dock are highlights versus Logitech’s ~$180 Superstrike line.",
+        "why": "A customisable control that desyncs felt feedback from registered input is an interaction-design failure, not a missing feature. Adjustability without perceptual alignment creates phantom clicks.",
+        "hook": "Hair-trigger actuation. Standard-click feedback. Phantom presses.",
+        "teach": "Never ship a user-adjustable activation threshold unless the sensory confirmation moves with it. If hardware cannot haptic-match, hide depth tuning behind an advanced flag and default to matched mechanical behaviour.",
+        "signal": "Chan’s roadmap admission — haptics later, lighter mouse now — shows hardware teams still treating feel as a SKU differentiator rather than the contract that makes adjustable input usable. Hall-effect controls will keep shipping half-finished until someone owns perception/actuation parity as a P0."
+      }
+    ],
+    "industry": [
+      {
+        "pub": "TechCrunch",
+        "date": "26 Nov 2026",
+        "flag": "Top story",
+        "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+        "hed": "Nvidia hits pause on chip shipments to Southeast Asia",
+        "fact": "TechCrunch, citing the Wall Street Journal, reports Nvidia told manufacturing partners including Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand and Indonesia while it assesses whether regional partners meet US export rules. Chinese firms had been remotely tapping Nvidia chips from data centers there, a loophole the US Commerce Department closed earlier this month. The Journal notes the Institute for Progress estimates such remote data centers supply about 24% of China’s AI compute.",
+        "why": "Export control just became a logistics UX for the entire AI supply chain. Capacity planners and product teams that assumed Southeast Asian neoclouds as overflow will feel this as stalled features, not as a trade memo.",
+        "hook": "24% of China’s AI compute was a shipping address.",
+        "teach": "If your roadmap depends on rented GPU capacity, map which regions and landlords sit behind your queue and add an export-control dependency to the risk register. Dual-home any latency-sensitive AI feature across at least two non-correlated regions.",
+        "signal": "The pause is governance theatre with teeth: Nvidia is policing partners faster than paperwork can settle. Design and research orgs should expect more abrupt infra freezes, and stop treating “the model is ready” as synonymous with “the capacity is reachable.”"
+      },
+      {
+        "pub": "CNBC",
+        "date": "27 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html",
+        "hed": "German software firm SAP is reportedly cutting at least 10,000 jobs in AI push",
+        "fact": "CNBC reports Bloomberg’s account that SAP is preparing to eliminate at least 10,000 roles while reshaping for AI, with product, engineering and sales in focus across a workforce of more than 110,000. SAP told CNBC it continually reviews organisation needs amid AI change, that roles will evolve, and that “no decisions have been made regarding any further measures,” declining to comment on speculation. CNBC notes Challenger, Gray & Christmas counted 121,401 US job-cut announcements citing AI through October 2026, about 20% of the total, and that SAP cut around 10,000 roles in a 2024 reorganisation mainly via voluntary exits.",
+        "why": "Enterprise software’s AI transformation is again arriving as headcount arithmetic. Design and research functions inside large suites should assume reorg gravity even when official statements stay non-committal.",
+        "hook": "10,000 roles. “No decisions.” Same sentence week.",
+        "teach": "Document the human workflows your AI features still need — review, exception handling, customer empathy — in language executives can cost. If your team cannot show which cuts would break those workflows, you are invisible in the reorg model.",
+        "signal": "SAP’s same-day cybersecurity incident note sitting beside the cuts story is accidental journalism and a useful metaphor: AI restructuring and security stress are landing together. Challenger’s 20% figure means “AI” is now the socially acceptable label for layoffs; treat company-attributed AI job cuts as claims until named programmes and timelines appear."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "27 Nov 2026",
+        "url": "https://www.theguardian.com/environment/2026/nov/27/natural-england-objected-datacentre-ministers-abolish-bristol",
+        "hed": "Natural England objected to a datacentre. Weeks later ministers threatened to abolish the agency",
+        "fact": "The Guardian reports Natural England urged Bristol City Council to refuse a 40MW Avonmouth AI datacentre over risks to migratory birds in the Severn estuary SPA ~600 metres away and Hallen Marsh ~270 metres away; the Environment Agency flagged high flood risk and missing water-use data. More than 4,000 people objected; the council said significant environmental effects are likely and wants a full EIA. Across the UK, more than 300 datacentres await grid connection representing 73GW of demand — almost double UK peak winter demand. Government sources denied the objection drove Louise Haigh’s threat to abolish Natural England and the Environment Agency; developers can use the NSIP regime with ministers as decision-makers.",
+        "why": "AI infrastructure is colliding with nature regulation hard enough that the regulators themselves are being threatened. Site selection and community UX for datacentres are now political design problems.",
+        "hook": "40MW next to a bird SPA. Then abolish the adviser.",
+        "teach": "If your company publishes AI sustainability pages, add proximity to protected habitats, flood plains and water stress to the template — not only PUE and renewable PPAs. Treat local objection counts and statutory adviser responses as launch risks equal to latency.",
+        "signal": "73GW in the connection queue reframes “AI growth” as a national energy and land-use programme. Removing independent environmental advice while accelerating NSIP approvals would collapse the last non-ministerial check. Designers working on cloud trust centres should expect habitat and flood narratives to join carbon in the public objection toolkit."
+      },
+      {
+        "pub": "TechCrunch",
+        "date": "25 Nov 2026",
+        "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
+        "hed": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks",
+        "fact": "TechCrunch reports S&P Global Ratings is reviewing Nvidia for a possible cut from AA to AA- within 90 days, citing “weak executive oversight and lack of succession planning” and key-man risk after Jensen Huang’s ouster and reinstatement. A downgrade could raise Nvidia’s borrowing costs and, because Nvidia backstops neocloud financing — including plans discussed in August to arrange $500 billion in AI infrastructure financing with a 25% Nvidia guarantee — push lenders to demand larger guarantees or more collateral from weaker credits.",
+        "why": "Governance drama just priced into the credit stack that funds the GPUs behind every AI roadmap. Design orgs dependent on neocloud burst capacity are now exposed to succession risk at a chipmaker.",
+        "hook": "Key-man risk, rated.",
+        "teach": "Add counterparty concentration to your AI platform brief: what percentage of inference sits behind Nvidia-backed landlords, and what is the fallback if their financing terms tighten. Brief leadership in one page; do not wait for procurement to discover it.",
+        "signal": "S&P is saying the quiet part: the AI buildout’s credit quality is personal. Products that assumed infinite cheap tokens were actually assuming one CEO’s continuity. That is a fragile foundation for multi-year design systems."
+      },
+      {
+        "pub": "CNBC",
+        "date": "27 Nov 2026",
+        "flag": "Reported, not confirmed",
+        "url": "https://www.cnbc.com/2026/11/27/hackers-breach-us-air-force-flagship-cloud-one-computing-platform.html",
+        "hed": "Hackers breach U.S. Air Force flagship Cloud One computing platform",
+        "fact": "CNBC relays a Reuters report that hackers breached the Air Force’s Cloud One platform — built since 2017 on Microsoft, Amazon, Oracle and Alphabet capacity — with the intrusion found during upgrade work in the past month or so, per people familiar. Reuters could not establish attacker identity, full scope, or whether data was stolen. Sources said migrations paused, updates to running apps were blocked, some admin rights were revoked, and Cyber Command was called in; one source said intruders reached the control plane via a software vulnerability. The Air Force declined to comment on specific systems’ security posture. Attribution is to unnamed sources throughout.",
+        "why": "A multi-cloud military “one-stop shop” showing control-plane risk is a warning for every enterprise designing admin planes with god-mode defaults. Update freezes during vulnerability season compound the blast radius.",
+        "hook": "Universal remote for the Air Force — briefly someone else’s.",
+        "teach": "In any admin or control-plane UX, default to just-in-time elevation with expiry, and ensure security patches can ship on a channel that does not require the compromised control plane. Tabletop a “updates frozen” week and design the operator messaging now.",
+        "signal": "Cloud One’s 2023 claim of a “100% success rate” beating intrusions aged into irony in under three years. Multi-vendor cloud aggregation without multi-vendor blast-radius isolation is fashionable architecture; this incident will be cited in every public-sector procurement appendix about control-plane segmentation."
+      },
+      {
+        "pub": "The Guardian",
+        "date": "27 Nov 2026",
+        "url": "https://www.theguardian.com/technology/2026/nov/27/meta-whistleblower-sarah-wynn-williams-calls-on-burnham-to-go-further-with-ban-on-non-disclosure-agreements",
+        "hed": "Meta whistleblower calls on Burnham to go further with ban on NDAs",
+        "fact": "The Guardian reports Sarah Wynn-Williams, former Meta global public policy director and author of Careless People, used London’s Orwell Lecture to urge Andy Burnham to make forthcoming NDA curbs retrospective and broader. She argued NDAs create a “memory hole” that silences AI insiders who “will warn,” noting she remains restricted by a severance-related arbitration Meta secured; Meta disputes her book’s claims and calls her case a sales ploy. Burnham this week said victims of crime or workplace harassment should be free to speak despite NDAs.",
+        "why": "AI safety discourse depends on people inside labs being able to speak. Contract design is now part of the information architecture of the industry.",
+        "hook": "The warning system signed an NDA.",
+        "teach": "If you lead design or research in an AI org, ask counsel for a written map of what you can publish about model behaviour, evaluation failures and user harm. Build an internal “speakable findings” channel that does not require breaking a contract to escalate.",
+        "signal": "Wynn-Williams’s point that you must surrender speech rights to enter the building is the governance bug beneath every external AI safety board. Until NDAs carve out public-interest AI risk reporting the way some jurisdictions carve out harassment, outside auditors will keep hearing polished demos while the people with receipts stay quiet."
+      }
+    ]
+  }
+}
